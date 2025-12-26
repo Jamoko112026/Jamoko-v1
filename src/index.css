@@ -1,0 +1,143 @@
+/* --------------------------------------------------
+   JaMoKo – Global Calm-Energy Base
+-------------------------------------------------- */
+
+/* ---------- CSS-Variablen (Brand Core) ---------- */
+:root {
+  --jamoko-navy: #001821;
+  --jamoko-gold: #E5C58B;
+  --jamoko-teal: #1AC7A4;
+  --jamoko-text: #EDF2F7;
+  --jamoko-text-dim: #D6E0E7;
+
+  /* Zusatz für Glow-Highlights */
+  --jamoko-gold-glow: rgba(229, 197, 139, 0.35);
+  --jamoko-teal-glow: rgba(26, 199, 164, 0.40);
+}
+
+/* ---------- Tailwind Layer ---------- */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* --------------------------------------------------
+   JaMoKo – Navigation Underline (Calm Energy)
+-------------------------------------------------- */
+
+.nav-underline {
+  position: relative;
+  cursor: pointer;
+  transition: color 0.25s ease;
+}
+
+.nav-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--jamoko-gold), var(--jamoko-teal));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+  border-radius: 2px;
+  opacity: 0.85;
+}
+
+.nav-underline:hover::after {
+  transform: scaleX(1);
+}
+
+
+/* --------------------------------------------------
+   JaMoKo – Icons (Premium Glow Size)
+-------------------------------------------------- */
+
+.jamoko-icon {
+  width: 160px;
+  height: auto;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.jamoko-icon:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 14px var(--jamoko-teal-glow));
+}
+
+
+/* --------------------------------------------------
+   JaMoKo – Cards + Glass (Calm Energy)
+-------------------------------------------------- */
+
+.jamoko-card {
+  background: rgba(0, 24, 33, 0.65);
+  backdrop-filter: blur(24px);
+  border-radius: 18px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 0 26px rgba(0, 0, 0, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.jamoko-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 32px var(--jamoko-teal-glow);
+}
+
+
+/* --------------------------------------------------
+   JaMoKo – Micro Kraken Pattern (optional, very subtle)
+-------------------------------------------------- */
+
+.jamoko-pattern {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nNDAnIGhlaWdodD0nNDAnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTSAwIDIwIEMgMTUgMTUgMjUgMjUgNDAgMjAnIHN0cm9rZT0nI0U1QzU4Qicgc3Ryb2tlLXdpZHRoPScwLjcnIGZpbGw9J25vbmUnIG9wYWNpdHk9JzAuNScvPjwvc3ZnPg==");
+  opacity: 0.035;
+}
+
+
+/* --------------------------------------------------
+   JaMoKo – Glow Utilities (Premium)
+-------------------------------------------------- */
+
+.glow-gold {
+  box-shadow: 0 0 28px var(--jamoko-gold-glow);
+}
+
+.glow-teal {
+  box-shadow: 0 0 32px var(--jamoko-teal-glow);
+}
+
+.glow-soft {
+  box-shadow: 0 0 25px rgba(0, 24, 33, 0.6);
+}
+
+
+/* --------------------------------------------------
+   JaMoKo – Light Sweep (for Heros & Premium Cards)
+-------------------------------------------------- */
+
+.light-sweep {
+  position: relative;
+  overflow: hidden;
+}
+
+.light-sweep::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    var(--jamoko-gold) 0%,
+    transparent 40%,
+    var(--jamoko-teal) 100%
+  );
+  opacity: 0.15;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}

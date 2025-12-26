@@ -1,0 +1,14 @@
+diff --git a/node_modules/vite/dist/node/chunks/config.js b/node_modules/vite/dist/node/chunks/config.js
+--- a/node_modules/vite/dist/node/chunks/config.js
++++ b/node_modules/vite/dist/node/chunks/config.js
+@@ -10,7 +10,11 @@
+ // Fix: Esbuild path resolution for Node 22+
+ import { fileURLToPath } from 'node:url';
+ import { pathToFileURL } from 'node:url';
+-const esbuild = await import("esbuild");
++let esbuild;
++try {
++  esbuild = await import("esbuild");
++} catch {
++  esbuild = await import("esbuild/lib/main.js");
++}

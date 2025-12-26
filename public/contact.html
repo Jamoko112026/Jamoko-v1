@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="de">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kontakt · Jamoko</title>
+
+<style>
+  :root { --bg:#0b0f12; --fg:#e6e6e6; --muted:#a7b0b7; --accent:#E5C58B; --link:#1AC7A4; }
+  * { box-sizing: border-box; }
+  html,body { margin:0; padding:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, sans-serif; }
+  main { max-width: 880px; margin: 0 auto; padding: 40px 20px 80px; }
+  h1,h2,h3 { color:var(--fg); margin: 0 0 0.4em; }
+  h1 { font-size: 2rem; font-weight:700; letter-spacing:.2px; }
+  h2 { font-size: 1.25rem; margin-top:2rem; }
+  p { margin: 0 0 1rem; color:var(--fg); }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .muted { color: var(--muted); }
+  .card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 20px; }
+  .grid { display: grid; gap: 16px; }
+  .grid-2 { grid-template-columns: 1fr; }
+  @media (min-width: 720px) { .grid-2 { grid-template-columns: 1fr 1fr; } }
+  .hr { height:1px; background: rgba(255,255,255,0.1); margin: 24px 0; border:0; }
+  label { display:block; font-weight:600; margin-bottom:6px; }
+  input, textarea, button { width: 100%; padding: 12px 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); color: var(--fg); }
+  textarea { min-height: 140px; resize: vertical; }
+  button { cursor: pointer; background: linear-gradient(135deg, var(--accent), #1AC7A4); color:#0b0f12; font-weight:700; border: none; }
+  small { font-size: .9rem; }
+  .req { color: var(--accent); }
+  .legal-list { padding-left: 1.1rem; }
+  .legal-list li { margin-bottom: .5rem; }
+  header { margin-bottom: 1.2rem; }
+  header p { margin: .25rem 0 0; color: var(--muted); }
+  footer { margin-top: 3rem; color: var(--muted); font-size: .9rem; }
+</style>
+
+<main>
+  <header>
+    <h1>Kontakt</h1>
+    <p>Direkt, ruhig, persönlich – melde dich kurz und wir machen’s konkret.</p>
+  </header>
+
+  <section class="grid grid-2">
+    <div class="card">
+      <h2>Direkter Kontakt</h2>
+      <p><strong>JaMoKo – Community First</strong></p>
+      <p>Jan-Moritz („Mo“) Koch</p>
+      <p>Hainbuchenweg 2, 22299 Hamburg, Deutschland</p>
+      <p>Telefon: <a href="tel:004917682032127">+49 176 82032127</a></p>
+      <p>E‑Mail: <a href="mailto:moin@jamoko.de">moin@jamoko.de</a></p>
+      <p>Web: <a href="https://jamoko.de">https://jamoko.de</a></p>
+      <hr class="hr">
+      <p class="muted">Bevorzugt: kurze E‑Mail mit Stichpunkten (Ziel, Deadline, Materialien).</p>
+    </div>
+
+    <div class="card">
+      <h2>Nachricht senden</h2>
+      <form name="kontakt" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="kontakt">
+        <p style="display:none;">
+          <label>Für Menschen unsichtbar: <input name="company"></label>
+        </p>
+        <p>
+          <label>Dein Name <span class="req">*</span></label>
+          <input name="name" required>
+        </p>
+        <p>
+          <label>E‑Mail <span class="req">*</span></label>
+          <input name="email" type="email" required>
+        </p>
+        <p>
+          <label>Nachricht <span class="req">*</span></label>
+          <textarea name="message" required></textarea>
+        </p>
+        <p>
+          <label><input type="checkbox" required> Ich habe die <a href="/datenschutz.html" target="_blank" rel="noopener">Datenschutzhinweise</a> gelesen.</label>
+        </p>
+        <p><button type="submit">Senden</button></p>
+        <p class="muted"><small>Alternativ: E‑Mail an <a href="mailto:moin@jamoko.de">moin@jamoko.de</a></small></p>
+      </form>
+    </div>
+  </section>
+
+  <section class="card" style="margin-top:16px;">
+    <h2>Standort</h2>
+    <p>Hainbuchenweg 2, 22299 Hamburg</p>
+    <p class="muted"><small>Hinweis: Termin nach Vereinbarung.</small></p>
+  </section>
+
+  <footer>© JaMoKo – Community First</footer>
+</main>
+</html>

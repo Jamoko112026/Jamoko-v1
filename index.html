@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- ✅ SEO -->
+    <title>JaMoKo – Community First · Digitale Ruhe. Spürbare Wirkung.</title>
+    <meta
+      name="description"
+      content="Jan-Moritz Koch – Gründer von JaMoKo. Digitale Ruhe. Spürbare Wirkung. Ich verbinde Handwerk, Marketing und Menschlichkeit, um Marken zu gestalten, die Ruhe ausstrahlen und Wirkung zeigen – klar, ehrlich und mit Seele."
+    />
+    <meta
+      name="keywords"
+      content="JaMoKo, Jan-Moritz Koch, Hamburg, digitale Ruhe, Community First, Sichtbarkeit, Webdesign, Local SEO, Markenaufbau"
+    />
+    <meta name="author" content="Jan-Moritz Koch" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#001821" />
+
+    <!-- ✅ Open Graph / Social -->
+    <meta property="og:title" content="JaMoKo – Community First" />
+    <meta
+      property="og:description"
+      content="Digitale Ruhe. Spürbare Wirkung. Sichtbarkeit mit Seele und Struktur."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://splendid-bunny-04bebe.netlify.app"
+    />
+    <meta
+      property="og:image"
+      content="https://splendid-bunny-04bebe.netlify.app/icons/og-image.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="JaMoKo – Community First" />
+    <meta
+      name="twitter:description"
+      content="Digitale Ruhe. Spürbare Wirkung. Sichtbarkeit mit Seele und Struktur."
+    />
+    <meta
+      name="twitter:image"
+      content="https://splendid-bunny-04bebe.netlify.app/icons/og-image.png"
+    />
+
+    <!-- ✅ Icons & Manifest -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/icons/favicon-32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/icons/favicon-16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/icons/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- ✅ Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Nunito:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ✅ Structured Data: Organization -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "JaMoKo – Community First",
+        "url": "https://jamoko.de",
+        "logo": "https://splendid-bunny-04bebe.netlify.app/icons/favicon-512.png",
+        "description": "Digitale Ruhe. Spürbare Wirkung. Sichtbarkeit mit Seele und Struktur.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Hainbuchenweg 2",
+          "addressLocality": "Hamburg",
+          "postalCode": "22299",
+          "addressCountry": "DE"
+        },
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "email": "moin@jamoko.de",
+            "telephone": "+49 176 82032127",
+            "contactType": "Customer Service"
+          }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/jamoko.de/",
+          "https://www.linkedin.com/company/jamoko/"
+        ],
+        "founder": {
+          "@type": "Person",
+          "name": "Jan-Moritz Koch",
+          "jobTitle": "Gründer & Inhaber"
+        }
+      }
+    </script>
+
+    <!-- ✅ Structured Data: Person -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jan-Moritz Koch",
+        "jobTitle": "Gründer von JaMoKo – Community First",
+        "image": "https://splendid-bunny-04bebe.netlify.app/icons/jan-moritz-koch-profile.jpg",
+        "url": "https://jamoko.de",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "JaMoKo – Community First"
+        },
+        "description": "Jan-Moritz Koch – Gründer von JaMoKo. Digitale Ruhe. Spürbare Wirkung. Ich verbinde Handwerk, Marketing und Menschlichkeit, um Marken zu gestalten, die Ruhe ausstrahlen und Wirkung zeigen – klar, ehrlich und mit Seele.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Hamburg",
+          "addressCountry": "DE"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/jan-moritz-koch/",
+          "https://www.instagram.com/jamoko.de/"
+        ]
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- ✅ Netlify Forms (hidden registration for static builds) -->
+    <form
+      name="contact"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      hidden
+    >
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
+
+    <!-- ✅ App Root -->
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
