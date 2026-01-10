@@ -11,6 +11,7 @@ import Pricing from "./pages/Pricing";
 import About from "./pages/About";
 import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
+import HandwerkMiniSite from "./pages/handwerk/HandwerkMiniSite";
 
 export default function App() {
   return (
@@ -41,6 +42,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
+          <Route path="/beispiel" element={<HandwerkMiniSite />} />
         </Routes>
       </main>
 
