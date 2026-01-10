@@ -12,10 +12,13 @@ export default function HandwerkMiniSite() {
         {/* HERO */}
         <Hero />
 
+<div className="h-px w-24 mx-auto my-20 bg-gradient-to-r from-transparent via-jamoko-gold/40 to-transparent" />
+
         {/* CONTACT */}
-        <section className="py-36 px-6 max-w-5xl mx-auto">
-          <ContactSection />
-        </section>
+       <section className="pt-24 pb-36 px-6 max-w-5xl mx-auto">
+  <ContactSection />
+</section>
+
 
       </main>
     </GlowBackground>
