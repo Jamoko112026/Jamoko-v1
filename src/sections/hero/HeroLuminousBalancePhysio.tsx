@@ -62,6 +62,37 @@ export default function HeroLuminousBalancePhysio() {
           Eine übersichtliche Website, die Ihre Praxis professionell präsentiert
           und neuen Patientinnen und Patienten Sicherheit gibt.
         </motion.p>
+<div className="mt-10 flex flex-col sm:flex-row gap-6 justify-center items-center">
+
+  <a
+    href="/beispiel/physio"
+    className="
+      px-8 py-4
+      rounded-xl
+      bg-jamoko-gold
+      text-[#001821]
+      font-semibold
+      shadow-lg
+      hover:opacity-90
+      transition
+    "
+  >
+    Praxis-Beispiel ansehen
+  </a>
+
+  <a
+    href="#kontakt"
+    className="
+      text-sm
+      text-jamoko-text-dim
+      hover:text-jamoko-teal
+      transition
+    "
+  >
+    Unverbindlich sprechen (15 Min.)
+  </a>
+
+</div>
 
       </div>
     </section>
