@@ -3,25 +3,23 @@ export default function Start() {
     <main className="min-h-screen bg-[#001821] text-white flex flex-col items-center px-6">
 
       {/* HERO */}
-      <section className="max-w-3xl w-full py-28 text-center">
-        <h1 className="text-3xl md:text-4xl font-semibold leading-tight">
-          Ich helfe lokalen Betrieben, online klar sichtbar zu werden –
-          <span className="block text-jamoko-gold">
-            ohne Agentur-Stress und Technikchaos.
-          </span>
-        </h1>
+<section className="max-w-3xl w-full py-28 text-center">
+  <h1 className="text-3xl md:text-4xl font-semibold leading-tight">
+    Mini-Websites für lokale Betriebe,
+    <span className="block text-jamoko-gold">
+      die Kunden bringen.
+    </span>
+  </h1>
 
-        <p className="mt-6 text-lg text-white/80">
-          Eine ruhige Mini-Website, die zeigt, wer du bist, was du anbietest
-          und wie man dich erreicht. Verständlich. Persönlich. Funktional.
-        </p>
-
+  <p className="mt-6 text-jamoko-text-dim text-lg">
+    Klar. Ruhig. Wirksam. Ohne Agentur-Stress und Technikchaos.
+  </p>
         <a
-          href="#kontakt"
+          href="#contact"
           className="inline-block mt-10 px-7 py-3 rounded-full
                      bg-jamoko-gold text-[#001821] font-medium"
         >
-          Unverbindlich anfragen
+          Kostenloses Erstgespräch starten
         </a>
       </section>
 
@@ -59,7 +57,7 @@ export default function Start() {
 
       {/* KONTAKT */}
       <section
-        id="kontakt"
+        id="contact"
         className="max-w-3xl w-full py-24 text-center scroll-mt-32"
       >
         <p className="text-white/80 mb-10 leading-relaxed">
@@ -144,7 +142,7 @@ export default function Start() {
                        bg-jamoko-gold text-[#001821]
                        font-medium"
           >
-            Unverbindlich anfragen
+            Kostenloses Erstgespräch starten
           </button>
         </form>
       </section>
