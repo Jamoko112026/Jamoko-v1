@@ -73,7 +73,7 @@ export default function Header() {
             Feinkost
           </Link>
 
-          <button onClick={scrollToOffer} className="hover:text-jamoko-gold transition">
+          <button className="w-full text-left py-2" onClick={scrollToOffer} className="hover:text-jamoko-gold transition">
             Angebot
           </button>
 
@@ -105,14 +105,14 @@ export default function Header() {
       {open && (
         <div className="md:hidden flex flex-col bg-[#001821]/90 px-6 py-6 space-y-4 text-jamoko-text">
 
-          <Link to="/" onClick={() => setOpen(false)}>Home</Link>
+          <Link to="/" onClick={() => setOpen(false)} className="block py-2">Home</Link>
           <Link to="/minisite" onClick={() => setOpen(false)}>Mini-Site</Link>
 
           <Link to="/beispiel/handwerk" onClick={() => setOpen(false)}>Handwerk</Link>
           <Link to="/beispiel/physio" onClick={() => setOpen(false)}>Physiopraxis</Link>
           <Link to="/beispiel/feinkost" onClick={() => setOpen(false)}>Feinkost</Link>
 
-          <button onClick={scrollToOffer}>Angebot</button>
+          <button className="w-full text-left py-2" onClick={scrollToOffer}>Angebot</button>
 
           <Link to="/pricing" onClick={() => setOpen(false)}>Preise</Link>
           <Link to="/faq" onClick={() => setOpen(false)}>FAQ</Link>
