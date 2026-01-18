@@ -4,7 +4,8 @@ export default function Start() {
 
       {/* HERO */}
 <section className="max-w-3xl w-full py-28 text-center">
-  <h1 className="text-3xl md:text-4xl font-semibold leading-tight">
+  <h1 className="text-[28px] md:text-4xl leading-tight
+ font-semibold leading-tight">
     Mini-Websites für lokale Betriebe,
     <span className="block text-jamoko-gold">
       die Kunden bringen.
