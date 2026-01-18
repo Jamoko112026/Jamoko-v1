@@ -53,7 +53,7 @@ export default function HeroLuminousBalance() {
           className="
             text-5xl md:text-6xl
             font-semibold
-            text-jamoko-gold
+            block mt-2 text-jamoko-gold
             mb-6
             drop-shadow-[0_0_25px_rgba(229,197,139,0.35)]
           "

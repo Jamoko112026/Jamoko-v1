@@ -7,7 +7,7 @@ export default function Start() {
   <h1 className="text-[28px] md:text-4xl leading-tight
  font-semibold leading-tight">
     Mini-Websites für lokale Betriebe,
-    <span className="block text-jamoko-gold">
+    <span className="block block mt-2 text-jamoko-gold">
       die Kunden bringen.
     </span>
   </h1>
