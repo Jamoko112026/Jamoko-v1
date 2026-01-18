@@ -12,6 +12,11 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "types": ["vite/client"],
-    "skipLibCheck": true        // ← <— diese Zeile ergänzt!
+    "skipLibCheck": true,
+
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   }
 }
