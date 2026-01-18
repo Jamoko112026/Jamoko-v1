@@ -1,6 +1,6 @@
 export default function ContactForm() {
   return (
-    <section id="kontakt" className="py-32 px-6 bg-[#001821]">
+    <section id="contact" className="py-32 px-6 bg-[#001821]">
       <div className="max-w-3xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-headline text-[#E5C58B] mb-6">
           Kontakt

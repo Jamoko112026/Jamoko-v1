@@ -11,7 +11,11 @@ import Pricing from "./pages/Pricing";
 import About from "./pages/About";
 import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
-import HandwerkMiniSite from "./pages/handwerk/HandwerkMiniSite";
+
+// Beispiele
+import HandwerkMiniSite from "./pages/beispiele/HandwerkMiniSite";
+import PhysioMiniSite from "./pages/beispiele/PhysioMiniSite";
+import FeinkostMiniSite from "./pages/beispiele/FeinkostMiniSite";
 
 export default function App() {
   return (
@@ -42,7 +46,11 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
-          <Route path="/beispiel" element={<HandwerkMiniSite />} />
+
+          {/* Beispiele */}
+          <Route path="/beispiel/handwerk" element={<HandwerkMiniSite />} />
+          <Route path="/beispiel/physio" element={<PhysioMiniSite />} />
+          <Route path="/beispiel/feinkost" element={<FeinkostMiniSite />} />
         </Routes>
       </main>
 

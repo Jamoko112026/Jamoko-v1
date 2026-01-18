@@ -22,16 +22,16 @@ export default function MiniSitePricing() {
           className="space-y-6"
         >
           <h2 className="text-4xl md:text-5xl font-semibold text-jamoko-gold">
-            Angebote & Preise –
+            Mini-Website Pakete
           </h2>
 
           <p className="text-jamoko-gold/80 text-xl">
-            klar, transparent, ohne laufende Kosten.
+            ab Preise · transparent · ohne laufende Kosten
           </p>
 
           <p className="text-jamoko-text-dim max-w-2xl mx-auto leading-relaxed">
-            Jede Mini-Webseite entsteht individuell — keine Vorlagen, keine
-            Monatsgebühren, keine Überraschungen.
+            Jede Website wird individuell umgesetzt.  
+            Die Preise sind Einstiegspreise – der finale Umfang wird im kurzen Gespräch abgestimmt.
           </p>
         </motion.div>
 
@@ -47,25 +47,27 @@ export default function MiniSitePricing() {
                        backdrop-blur-xl shadow-xl space-y-6"
           >
             <h3 className="text-2xl font-semibold text-jamoko-gold">Starter</h3>
-            <p className="text-3xl font-bold text-jamoko-text">480 €</p>
+            <p className="text-3xl font-bold text-jamoko-text">ab 480 €</p>
 
-            <p className="text-jamoko-text-dim">Die ruhige Basis.</p>
+            <p className="text-jamoko-text-dim">
+              Der klare Einstieg für kleine Betriebe.
+            </p>
 
             <ul className="text-left text-jamoko-text-dim space-y-3 mt-6 opacity-90">
-              <li>• Calm-Energy Layout</li>
-              <li>• 1-Seiten Struktur</li>
-              <li>• Grundlegende Texte</li>
-              <li>• Lokale SEO-Basis</li>
-              <li>• Kontaktabschnitt</li>
+              <li>• Ruhiges Calm-Energy Grunddesign</li>
+              <li>• Übersichtliche Onepager-Struktur</li>
+              <li>• Starttexte auf Basis deiner Inhalte</li>
+              <li>• Lokale Basis-SEO</li>
+              <li>• Kontaktbereich mit klarer Handlungsführung</li>
             </ul>
 
             <a
-              href="/about#kontakt"
+              href="/about#contact"
               className="inline-block mt-6 px-6 py-3 rounded-full font-medium
                          bg-jamoko-gold/20 text-jamoko-gold border border-jamoko-gold/30
                          hover:bg-jamoko-gold/30 transition"
             >
-              Anfragen
+              Kostenloses Erstgespräch starten
             </a>
           </motion.div>
 
@@ -82,73 +84,88 @@ export default function MiniSitePricing() {
             <div className="absolute -top-5 left-1/2 -translate-x-1/2
                             bg-jamoko-gold text-[#001821]
                             text-xs font-semibold px-4 py-1 rounded-full shadow-lg">
-              MEIST GEWÄHLT
+              EMPFOHLEN
             </div>
 
-            <h3 className="text-2xl font-semibold text-jamoko-gold">Standard</h3>
-            <p className="text-3xl font-bold text-jamoko-text">830 €</p>
+            <h3 className="text-2xl font-semibold text-jamoko-gold">Business</h3>
+            <p className="text-3xl font-bold text-jamoko-text">ab 830 €</p>
 
-            <p className="text-jamoko-text-dim">Die perfekte Balance.</p>
+            <p className="text-jamoko-text-dim">
+              Die beste Balance aus Wirkung und Klarheit.
+            </p>
 
             <ul className="text-left text-jamoko-text-dim space-y-3 mt-6 opacity-90">
-              <li>• Calm-Energy Design (erweitert)</li>
-              <li>• Mehr Abschnitte & Inhalte</li>
-              <li>• Professionelle Textoptimierung</li>
-              <li>• Erweiterte lokale SEO</li>
-              <li>• Kontaktformular</li>
-              <li>• Mobile-Feintuning</li>
-              <li>• Support bis Abnahme</li>
+              <li>• Erweiterte Calm-Energy Gestaltung</li>
+              <li>• Strukturierte Inhaltsbereiche</li>
+              <li>• Professionell formulierte Website-Texte</li>
+              <li>• Starke lokale SEO-Optimierung</li>
+              <li>• Conversion-orientiertes Kontaktformular</li>
+              <li>• Mobile & Tablet Optimierung</li>
+              <li>• Persönlicher Support bis zur Abnahme</li>
             </ul>
 
+            <p className="text-xs text-jamoko-text-dim/80 mt-2">
+              Ideal für Handwerksbetriebe, Praxen & lokale Dienstleister.
+            </p>
+
             <a
-              href="/about#kontakt"
+              href="/about#contact"
               className="inline-block mt-6 px-6 py-3 rounded-full font-medium
                          bg-jamoko-gold text-[#001821] hover:bg-jamoko-gold/90 transition"
             >
-              Anfragen
+              Kostenloses Erstgespräch starten
             </a>
           </motion.div>
 
-          {/* PREMIUM */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.0 }}
-            className="p-10 rounded-3xl bg-[#022E37]/60 border border-jamoko-gold/30
-                       backdrop-blur-xl shadow-xl space-y-6"
-          >
-            <h3 className="text-2xl font-semibold text-jamoko-gold">Premium</h3>
-            <p className="text-3xl font-bold text-jamoko-text">1.480 €</p>
+         {/* PREMIUM / B2B */}
+<motion.div
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1.0 }}
+  className="p-10 rounded-3xl bg-[#022E37]/60 border border-jamoko-gold/30
+             backdrop-blur-xl shadow-xl space-y-6"
+>
+  <h3 className="text-2xl font-semibold text-jamoko-gold">Business Pro</h3>
+  <p className="text-3xl font-bold text-jamoko-text">ab 1.480 €</p>
 
-            <p className="text-jamoko-text-dim">Ruhige Premium-Präsenz.</p>
+  <p className="text-jamoko-text-dim">
+    Für anspruchsvolle Betriebe & Firmenprojekte.
+  </p>
 
-            <ul className="text-left text-jamoko-text-dim space-y-3 mt-6 opacity-90">
-              <li>• Calm-Energy Premium Design</li>
-              <li>• Individuelle Layouts</li>
-              <li>• Galerie / Bewertungen</li>
-              <li>• SEO Pro</li>
-              <li>• Performance-Feintuning</li>
-              <li>• Erweiterter Support</li>
-              <li>• Launch & Übergabe</li>
-            </ul>
+  <ul className="text-left text-jamoko-text-dim space-y-3 mt-6 opacity-90">
+    <li>• Individuelles Premium-Design</li>
+    <li>• Maßgeschneiderte Seitenstruktur</li>
+    <li>• Projekt- & Leistungsdarstellungen</li>
+    <li>• SEO Pro Setup</li>
+    <li>• Performance-Optimierung</li>
+    <li>• Erweiterter persönlicher Support</li>
+    <li>• Launch-Begleitung & Übergabe</li>
+  </ul>
 
-            <a
-              href="/about#kontakt"
-              className="inline-block mt-6 px-6 py-3 rounded-full font-medium
-                         bg-jamoko-teal/30 text-jamoko-teal border border-jamoko-teal/30
-                         hover:bg-jamoko-teal/40 transition"
-            >
-              Anfragen
-            </a>
+  <a
+    href="/about#contact"
+    className="inline-block mt-6 px-6 py-3 rounded-full font-medium
+               bg-jamoko-teal/30 text-jamoko-teal border border-jamoko-teal/30
+               hover:bg-jamoko-teal/40 transition"
+  >
+    Kostenloses Erstgespräch starten
+  </a>
           </motion.div>
-        </div>
+        </div> {/* GRID ENDE */}
 
         {/* FOOTNOTE */}
         <p className="text-jamoko-text-dim mt-10 opacity-80">
-          Nicht sicher, welches Paket passt?  
+          Nicht sicher, welches Paket passt?
           <br />Ich berate dich gern kostenlos & unverbindlich.
         </p>
-      </div>
+
+        {/* MwSt Hinweis */}
+        <p className="text-xs text-jamoko-text-dim/70 mt-6">
+          Alle Preise sind Endpreise gemäß §19 UStG (Kleinunternehmerregelung).
+          Es wird keine Umsatzsteuer ausgewiesen.
+        </p>
+
+      </div> {/* CONTENT WRAPPER ENDE */}
     </section>
   );
 }

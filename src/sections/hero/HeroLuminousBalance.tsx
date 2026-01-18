@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import JellyCubeHero from "../../assets/jamoko/hero/cube/Jamoko_JellyCube_Hero_v1.png";
+import HandwerkHero from "../../assets/jamoko/hero/handwerk/Handwerk_Hero_v1.jpg";
 
 export default function HeroLuminousBalance() {
   return (
@@ -18,15 +18,15 @@ export default function HeroLuminousBalance() {
       {/* SIGNATURE GLOW FRAME */}
       <div className="relative max-w-5xl mx-auto rounded-[32px] overflow-hidden shadow-[0_0_45px_rgba(0,0,0,0.45)]">
 
-        {/* Glow Frame */}
+        {/* Handwerk Glow – wärmer, erdiger */}
         <div
           className="
             absolute inset-0 z-10
             pointer-events-none
             rounded-[32px]
             bg-[radial-gradient(circle_at_center,
-              rgba(229,197,139,0.25),
-              rgba(26,199,164,0.15),
+              rgba(229,197,139,0.22),
+              rgba(160,120,60,0.10),
               transparent 70%)
             ]
           "
@@ -34,8 +34,8 @@ export default function HeroLuminousBalance() {
 
         {/* Hero Image */}
         <img
-          src={JellyCubeHero}
-          alt="JaMoKo JellyCube Hero"
+          src={HandwerkHero}
+          alt="Handwerksbetrieb bei der Arbeit"
           className="
             w-full h-full object-cover 
             rounded-[32px]
@@ -61,7 +61,7 @@ export default function HeroLuminousBalance() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Websites für lokale Betriebe, die einfach funktionieren.
+          Mini-Websites für lokale Betriebe, die Kunden bringen.
         </motion.h1>
 
         <motion.h2
@@ -75,7 +75,7 @@ export default function HeroLuminousBalance() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          Klar. Übersichtlich. Zuverlässig.
+          Klar. Übersichtlich. Vertrauenswürdig.
         </motion.h2>
 
         <motion.p
@@ -92,15 +92,15 @@ export default function HeroLuminousBalance() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.7, duration: 1 }}
         >
-          Klare Mini-Websites für Handwerks- und lokale Betriebe –  
-          ohne Marketing-Lärm, ohne Umwege.
+          In 7–14 Tagen zu deiner professionellen Online-Präsenz –  
+          ohne Agentur-Stress, ohne Technikchaos, ohne Baukasten-Frust.
         </motion.p>
 
         {/* CTA */}
         <div className="mt-10 flex flex-col sm:flex-row gap-6 justify-center items-center">
 
           <a
-            href="/beispiel"
+            href="/beispiel/handwerk"
             className="
               px-8 py-4
               rounded-xl
@@ -112,11 +112,11 @@ export default function HeroLuminousBalance() {
               transition
             "
           >
-            Beispiel ansehen
+            Handwerks-Beispiel ansehen
           </a>
 
           <a
-            href="#kontakt"
+            href="#contact"
             className="
               text-sm
               text-jamoko-text-dim
@@ -124,10 +124,15 @@ export default function HeroLuminousBalance() {
               transition
             "
           >
-            Unverbindlich sprechen (15 Minuten)
+            Kostenloses Erstgespräch starten (15 Minuten)
           </a>
 
         </div>
+
+        {/* TRUST LINE */}
+        <p className="mt-4 text-xs text-jamoko-text-dim">
+          Für Handwerk, Dienstleister & lokale Betriebe in Hamburg & Umgebung
+        </p>
 
       </div>
     </section>
