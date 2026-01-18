@@ -53,39 +53,39 @@ export default function Header() {
         {/* DESKTOP NAV */}
         <nav className="hidden md:flex gap-10 text-jamoko-text text-lg items-center">
 
-          <Link to="/" className="hover:text-jamoko-gold transition">
+          <Link to="/">
             Home
           </Link>
 
-          <Link to="/minisite" className="hover:text-jamoko-gold transition">
+          <Link to="/minisite">
             Mini-Site
           </Link>
 
-          <Link to="/beispiel/handwerk" className="hover:text-jamoko-gold transition">
+          <Link to="/beispiel/handwerk">
             Handwerk
           </Link>
 
-          <Link to="/beispiel/physio" className="hover:text-jamoko-gold transition">
+          <Link to="/beispiel/physio">
             Physiopraxis
           </Link>
 
-          <Link to="/beispiel/feinkost" className="hover:text-jamoko-gold transition">
+          <Link to="/beispiel/feinkost">
             Feinkost
           </Link>
 
-          <button className="w-full text-left py-2" onClick={scrollToOffer} className="hover:text-jamoko-gold transition">
+          <button className="w-full text-left py-2 hover:text-jamoko-gold transition" onClick={scrollToOffer}>
             Angebot
           </button>
 
-          <Link to="/pricing" className="hover:text-jamoko-gold transition">
+          <Link to="/pricing">
             Preise
           </Link>
 
-          <Link to="/faq" className="hover:text-jamoko-gold transition">
+          <Link to="/faq">
             FAQ
           </Link>
 
-          <Link to="/kontakt" className="hover:text-jamoko-gold transition">
+          <Link to="/kontakt">
             Kontakt
           </Link>
 
@@ -112,7 +112,7 @@ export default function Header() {
           <Link to="/beispiel/physio" onClick={() => setOpen(false)}>Physiopraxis</Link>
           <Link to="/beispiel/feinkost" onClick={() => setOpen(false)}>Feinkost</Link>
 
-          <button className="w-full text-left py-2" onClick={scrollToOffer}>Angebot</button>
+          <button className="w-full text-left py-2 hover:text-jamoko-gold transition" onClick={scrollToOffer}>Angebot</button>
 
           <Link to="/pricing" onClick={() => setOpen(false)}>Preise</Link>
           <Link to="/faq" onClick={() => setOpen(false)}>FAQ</Link>
