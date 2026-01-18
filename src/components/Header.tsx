@@ -103,7 +103,7 @@ export default function Header() {
 
       {/* MOBILE MENU */}
       {open && (
-        <div className="md:hidden bg-[#001821]/90 px-6 py-6 space-y-4 text-jamoko-text">
+        <div className="md:hidden flex flex-col bg-[#001821]/90 px-6 py-6 space-y-4 text-jamoko-text">
 
           <Link to="/" onClick={() => setOpen(false)}>Home</Link>
           <Link to="/minisite" onClick={() => setOpen(false)}>Mini-Site</Link>

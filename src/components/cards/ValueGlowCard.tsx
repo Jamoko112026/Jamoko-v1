@@ -2,15 +2,15 @@
 
 interface ValueGlowCardProps {
   title?: string;
-  icon?: React.ReactNode;   // <-- ICON IST JETZT REACTNODE
+  icon?: React.ReactNode;
   children: React.ReactNode;
-  borderStrength?: string;  // falls du das nutzen möchtest
+  borderStrength?: string;
 }
 
 export default function ValueGlowCard({
   title,
   icon,
-  borderStrength = "15",     // ✅ Default
+  borderStrength = "15",
   children,
 }: ValueGlowCardProps) {
   return (
@@ -34,14 +34,16 @@ export default function ValueGlowCard({
       )}
 
       {/* TITLE */}
-      <h3 className="text-2xl font-semibold text-jamoko-gold mb-4">
-        {title}
-      </h3>
+      {title && (
+        <h3 className="text-2xl font-semibold text-jamoko-gold mb-4">
+          {title}
+        </h3>
+      )}
 
       {/* DESCRIPTION */}
-      <p className="text-jamoko-text-dim leading-relaxed">
+      <div className="text-jamoko-text-dim leading-relaxed space-y-3">
         {children}
-      </p>
+      </div>
     </div>
   );
 }
