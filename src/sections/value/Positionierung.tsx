@@ -20,28 +20,31 @@ export default function Positionierung() {
           <h3 className="text-2xl font-semibold text-jamoko-gold mb-4">
             Klarer Fokus
           </h3>
-          <p className="text-jamoko-text-dim">
+          <p>
             Zeig genau das, was dich stark macht –
             und lass alles weg, was ablenkt.
           </p>
+
         </ValueGlowCard>
 
         <ValueGlowCard>
           <h3 className="text-2xl font-semibold text-jamoko-gold mb-4">
             Authentische Wirkung
           </h3>
-          <p className="text-jamoko-text-dim">
+          <p>
             Menschen spüren, ob etwas echt ist. Authentizität zieht an.
           </p>
+
         </ValueGlowCard>
 
         <ValueGlowCard>
           <h3 className="text-2xl font-semibold text-jamoko-gold mb-4">
             Deine Energie zählt
           </h3>
-          <p className="text-jamoko-text-dim">
+          <p>
             Stärke entsteht, wenn Form, Gefühl und Ausdruck übereinstimmen.
           </p>
+
         </ValueGlowCard>
 
       </div>

@@ -21,7 +21,7 @@ export default function CareGrowth() {
           <h3 className="text-2xl font-semibold text-jamoko-gold mb-4">
             Klare Schritte
           </h3>
-          <p className="text-jamoko-text-dim">
+          <p>
             Struktur, Fokus und ruhige Umsetzung – ein Weg, der trägt.
           </p>
         </ValueGlowCard>
@@ -30,7 +30,7 @@ export default function CareGrowth() {
           <h3 className="text-2xl font-semibold text-jamoko-gold mb-4">
             Nachhaltige Wirkung
           </h3>
-          <p className="text-jamoko-text-dim">
+          <p>
             Kundenbindung entsteht durch Ehrlichkeit, Ruhe und Beständigkeit.
           </p>
         </ValueGlowCard>
@@ -39,7 +39,7 @@ export default function CareGrowth() {
           <h3 className="text-2xl font-semibold text-jamoko-gold mb-4">
             Verbunden bleiben
           </h3>
-          <p className="text-jamoko-text-dim">
+          <p>
             Wirkung entsteht aus Beziehung – nicht aus Hektik.
           </p>
         </ValueGlowCard>

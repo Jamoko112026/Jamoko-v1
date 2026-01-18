@@ -15,7 +15,7 @@ export default function WhyVisibility() {
           <h3 className="text-2xl font-semibold text-jamoko-gold mb-4">
             Nähe schafft Vertrauen
           </h3>
-          <p className="text-jamoko-text-dim">
+          <p>
             Menschen suchen lokal – wer sichtbar ist, wird gefunden.
           </p>
         </ValueGlowCard>
@@ -24,7 +24,7 @@ export default function WhyVisibility() {
           <h3 className="text-2xl font-semibold text-jamoko-gold mb-4">
             Ruhige Präsenz
           </h3>
-          <p className="text-jamoko-text-dim">
+          <p>
             Ein klarer Auftritt sorgt für Struktur, Orientierung und Wirkung.
           </p>
         </ValueGlowCard>
@@ -33,7 +33,7 @@ export default function WhyVisibility() {
           <h3 className="text-2xl font-semibold text-jamoko-gold mb-4">
             Wahrnehmung → Vertrauen
           </h3>
-          <p className="text-jamoko-text-dim">
+          <p>
             Sichtbarkeit ist der erste Schritt zu echter Verbindung.
           </p>
         </ValueGlowCard>
