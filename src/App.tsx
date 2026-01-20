@@ -1,23 +1,10 @@
 // src/App.tsx
-import { Routes, Route } from "react-router-dom";
+import AnimatedRoutes from "./components/AnimatedRoutes";
 
 import Header from "./components/Header";
 import FooterGlass from "./components/FooterGlass";
-
-// Pages
-import Start from "./pages/Start";
-import MiniSite from "./pages/MiniSite";
-import Pricing from "./pages/Pricing";
-import FAQ from "./pages/FAQ";
-import Kontakt from "./pages/Kontakt";
-import About from "./pages/About";
-import Impressum from "./pages/Impressum";
-import Datenschutz from "./pages/Datenschutz";
-
-// Beispiele
-import HandwerkMiniSite from "./pages/beispiele/HandwerkMiniSite";
-import PhysioMiniSite from "./pages/beispiele/PhysioMiniSite";
-import FeinkostMiniSite from "./pages/beispiele/FeinkostMiniSite";
+import FooterMobileLegal from "./components/FooterMobileLegal";
+import StickyMobileCTA from "./components/StickyMobileCTA";
 
 export default function App() {
   return (
@@ -41,31 +28,29 @@ export default function App() {
       <Header />
 
       {/* Main Content */}
-      <main id="main" role="main" className="flex-1 pt-24">
-        <Routes>
-
-          {/* Core Pages */}
-          <Route path="/" element={<Start />} />
-          <Route path="/minisite" element={<MiniSite />} />
-          <Route path="/pricing" element={<Pricing />} />
-          <Route path="/faq" element={<FAQ />} />
-          <Route path="/kontakt" element={<Kontakt />} />
-
-          {/* Legal */}
-          <Route path="/about" element={<About />} />
-          <Route path="/impressum" element={<Impressum />} />
-          <Route path="/datenschutz" element={<Datenschutz />} />
-
-          {/* Beispiele */}
-          <Route path="/beispiel/handwerk" element={<HandwerkMiniSite />} />
-          <Route path="/beispiel/physio" element={<PhysioMiniSite />} />
-          <Route path="/beispiel/feinkost" element={<FeinkostMiniSite />} />
-
-        </Routes>
+      {/* pb-28 = Platz für Sticky Mobile CTA */}
+      <main
+        id="main"
+        role="main"
+        className="flex-1 pt-24 pb-28"
+      >
+        <AnimatedRoutes />
       </main>
 
-      {/* Footer */}
-      <FooterGlass />
+      {/* Desktop Footer */}
+      <div className="hidden md:block">
+        <FooterGlass />
+      </div>
+
+      {/* Mobile Sticky CTA */}
+      <div className="md:hidden">
+        <StickyMobileCTA />
+      </div>
+
+      {/* Mobile Legal Footer */}
+      <div className="md:hidden">
+        <FooterMobileLegal />
+      </div>
 
     </div>
   );

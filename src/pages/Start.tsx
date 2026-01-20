@@ -1,64 +1,101 @@
+import { motion } from "framer-motion";
+
 export default function Start() {
   return (
-    <main className="min-h-screen bg-[#001821] text-white flex flex-col items-center px-6">
+    <main className="min-h-screen bg-[#001821] text-white flex flex-col items-center px-6 scroll-smooth">
 
       {/* HERO */}
-<section className="max-w-3xl w-full py-28 text-center">
-  <h1 className="text-[28px] md:text-4xl leading-tight
- font-semibold leading-tight">
-    Mini-Websites für lokale Betriebe,
-    <span className="block block mt-2 text-jamoko-gold">
-      die Kunden bringen.
-    </span>
-  </h1>
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.9, ease: "easeOut" }}
+        className="max-w-3xl w-full py-28 text-center scroll-mt-32"
+      >
+        <h1 className="text-[28px] md:text-4xl font-semibold leading-tight">
+          Mini-Websites für lokale Betriebe,
+          <span className="block mt-2 text-jamoko-gold">
+            die Kunden bringen.
+          </span>
+        </h1>
 
-  <p className="mt-6 text-jamoko-text-dim text-lg">
-    Klar. Ruhig. Wirksam. Ohne Agentur-Stress und Technikchaos.
-  </p>
+        <p className="mt-6 text-jamoko-text-dim text-lg">
+          Klar. Ruhig. Wirksam. Ohne Agentur-Stress und Technikchaos.
+        </p>
+
         <a
           href="#contact"
-          className="inline-block mt-10 px-7 py-3 rounded-full
-                     bg-jamoko-gold text-[#001821] font-medium"
+          className="
+            inline-block mt-10 px-7 py-3 rounded-full
+            bg-jamoko-gold text-[#001821] font-medium
+            shadow-[0_0_18px_rgba(229,197,139,0.35)]
+            hover:shadow-[0_0_28px_rgba(229,197,139,0.55)]
+            transition-all duration-300 ease-out
+          "
         >
           Kostenloses Erstgespräch starten
         </a>
-      </section>
+      </motion.section>
 
       {/* FÜR WEN */}
-      <section className="max-w-3xl w-full py-16">
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+        className="max-w-3xl w-full py-16 scroll-mt-32"
+      >
         <h2 className="text-xl font-semibold mb-6">Für wen das ist</h2>
+
         <ul className="space-y-3 text-white/80">
           <li>• lokale Betriebe ohne Lust auf Technik</li>
           <li>• Menschen, die keinen Agenturapparat brauchen</li>
           <li>• Klarheit statt Marketing-Lärm</li>
           <li>• eine einfache, ehrliche Online-Präsenz</li>
         </ul>
-      </section>
+      </motion.section>
 
       {/* LEISTUNG */}
-      <section className="max-w-3xl w-full py-16">
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+        className="max-w-3xl w-full py-16 scroll-mt-32"
+      >
         <h2 className="text-xl font-semibold mb-6">Was ich konkret mache</h2>
+
         <p className="text-white/80 leading-relaxed">
           Ich erstelle eine klare Mini-Website, die ruhig gestaltet ist,
           auf allen Geräten funktioniert und die wichtigsten Informationen bündelt.
           Ohne Baukasten-Chaos. Ohne Fachchinesisch.
         </p>
-      </section>
+      </motion.section>
 
       {/* ABLAUF */}
-      <section className="max-w-3xl w-full py-16">
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+        className="max-w-3xl w-full py-16 scroll-mt-32"
+      >
         <h2 className="text-xl font-semibold mb-6">So läuft es ab</h2>
+
         <ol className="space-y-3 text-white/80">
           <li>1. Kurzes Gespräch</li>
           <li>2. Strukturierte Umsetzung</li>
           <li>3. Feinschliff</li>
           <li>4. Online gehen</li>
         </ol>
-      </section>
+      </motion.section>
 
       {/* KONTAKT */}
-      <section
+      <motion.section
         id="contact"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
         className="max-w-3xl w-full py-24 text-center scroll-mt-32"
       >
         <p className="text-white/80 mb-10 leading-relaxed">
@@ -80,10 +117,12 @@ export default function Start() {
               type="text"
               name="Name"
               required
-              className="w-full px-4 py-2 rounded
-                         bg-white/5 border border-white/10
-                         text-white focus:outline-none
-                         focus:border-jamoko-gold"
+              className="
+                w-full px-4 py-2 rounded
+                bg-white/5 border border-white/10
+                text-white focus:outline-none
+                focus:border-jamoko-gold
+              "
             />
           </div>
 
@@ -95,10 +134,12 @@ export default function Start() {
               type="email"
               name="Email"
               required
-              className="w-full px-4 py-2 rounded
-                         bg-white/5 border border-white/10
-                         text-white focus:outline-none
-                         focus:border-jamoko-gold"
+              className="
+                w-full px-4 py-2 rounded
+                bg-white/5 border border-white/10
+                text-white focus:outline-none
+                focus:border-jamoko-gold
+              "
             />
           </div>
 
@@ -110,10 +151,12 @@ export default function Start() {
               name="Nachricht"
               rows={3}
               placeholder="Ein paar Stichworte reichen."
-              className="w-full px-4 py-2 rounded
-                         bg-white/5 border border-white/10
-                         text-white focus:outline-none
-                         focus:border-jamoko-gold"
+              className="
+                w-full px-4 py-2 rounded
+                bg-white/5 border border-white/10
+                text-white focus:outline-none
+                focus:border-jamoko-gold
+              "
             />
           </div>
 
@@ -131,7 +174,10 @@ export default function Start() {
             <span>
               Ich stimme zu, dass meine Angaben zur Kontaktaufnahme verarbeitet werden.
               Weitere Informationen findest du in der{" "}
-              <a href="/datenschutz" className="underline hover:text-white">
+              <a
+                href="/datenschutz"
+                className="underline hover:text-white transition-colors"
+              >
                 Datenschutzerklärung
               </a>.
             </span>
@@ -139,14 +185,19 @@ export default function Start() {
 
           <button
             type="submit"
-            className="w-full mt-4 px-6 py-3 rounded-full
-                       bg-jamoko-gold text-[#001821]
-                       font-medium"
+            className="
+              w-full mt-4 px-6 py-3 rounded-full
+              bg-jamoko-gold text-[#001821]
+              font-medium
+              shadow-[0_0_18px_rgba(229,197,139,0.35)]
+              hover:shadow-[0_0_28px_rgba(229,197,139,0.55)]
+              transition-all duration-300 ease-out
+            "
           >
             Kostenloses Erstgespräch starten
           </button>
         </form>
-      </section>
+      </motion.section>
 
     </main>
   );
