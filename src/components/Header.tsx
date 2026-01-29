@@ -12,16 +12,21 @@ export default function Header() {
   const location = useLocation();
   const navigate = useNavigate();
 
+  // === ROUTE CHECKS ===
   const isMiniSite = location.pathname === "/minisite";
+  const isSLB = location.pathname.startsWith("/slb");
 
-  // Scroll Blur
+  // 👉 Header NUR für SL BauTec anzeigen
+  if (!isSLB) return null;
+
+  // === Scroll Blur Effekt ===
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Angebot Scroll
+  // === Angebot Scroll Logic ===
   const scrollToOffer = () => {
 
     const run = () => {
@@ -65,10 +70,9 @@ export default function Header() {
       {/* MAIN BAR */}
       <div className="max-w-7xl mx-auto h-full px-6 flex items-center justify-between">
 
-        {/* LOGO + BAR */}
-        <Link to="/" className="flex items-center gap-4 shrink-0">
+        {/* LOGO */}
+        <Link to="/slb" className="flex items-center gap-4 shrink-0">
 
-          {/* LOGO */}
           <img
             src={SLLogo}
             alt="SL BauTec GmbH"
@@ -82,7 +86,7 @@ export default function Header() {
             "
           />
 
-          {/* ORANGE BRAND BAR */}
+          {/* Brand Bar */}
           <div
             className="
               h-[64px]
@@ -100,9 +104,13 @@ export default function Header() {
         {/* DESKTOP NAV */}
         <nav className="hidden md:flex items-center gap-8 text-white/90 text-sm">
 
-          <Link to="/" className="hover:text-yellow-400 transition">Start</Link>
+          <Link to="/slb" className="hover:text-yellow-400 transition">
+            Start
+          </Link>
 
-          <Link to="/minisite" className="hover:text-yellow-400 transition">Leistungen</Link>
+          <Link to="/slb#leistungen" className="hover:text-yellow-400 transition">
+            Leistungen
+          </Link>
 
           <button
             onClick={scrollToOffer}
@@ -111,13 +119,17 @@ export default function Header() {
             Angebot
           </button>
 
-          <Link to="/pricing" className="hover:text-yellow-400 transition">Preise</Link>
+          <Link to="/pricing" className="hover:text-yellow-400 transition">
+            Preise
+          </Link>
 
-          <Link to="/kontakt" className="hover:text-yellow-400 transition">Kontakt</Link>
+          <Link to="/slb#kontakt" className="hover:text-yellow-400 transition">
+            Kontakt
+          </Link>
 
         </nav>
 
-        {/* MOBILE BUTTON */}
+        {/* MOBILE MENU BUTTON */}
         <button
           onClick={() => setOpen(!open)}
           className="md:hidden text-yellow-400 p-2 rounded-md hover:bg-white/10 transition"
@@ -133,13 +145,13 @@ export default function Header() {
 
           <div className="flex flex-col px-6 py-5 space-y-2 text-white/90">
 
-            <Link to="/" onClick={() => setOpen(false)}>Start</Link>
-            <Link to="/minisite" onClick={() => setOpen(false)}>Leistungen</Link>
+            <Link to="/slb" onClick={() => setOpen(false)}>Start</Link>
+            <Link to="/slb#leistungen" onClick={() => setOpen(false)}>Leistungen</Link>
 
             <button onClick={scrollToOffer}>Angebot</button>
 
             <Link to="/pricing" onClick={() => setOpen(false)}>Preise</Link>
-            <Link to="/kontakt" onClick={() => setOpen(false)}>Kontakt</Link>
+            <Link to="/slb#kontakt" onClick={() => setOpen(false)}>Kontakt</Link>
 
           </div>
 

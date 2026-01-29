@@ -1,12 +1,19 @@
 // src/components/FooterGlass.tsx
+
 import { motion } from "framer-motion";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 import InstagramIcon from "../assets/icons/instagram_gold.svg";
 import LinkedInIcon from "../assets/icons/linkedin_gold.svg";
 
 export default function FooterGlass() {
+
   const year = new Date().getFullYear();
+  const location = useLocation();
+
+  // 👉 SL BauTec Preview bekommt KEIN JaMoKo Footer
+  const isSLB = location.pathname.startsWith("/slb");
+  if (isSLB) return null;
 
   return (
     <motion.footer
@@ -20,7 +27,7 @@ export default function FooterGlass() {
       {/* Gold Glow Divider */}
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#E5C58B]/40 to-transparent" />
 
-      {/* Hintergrund-Glow */}
+      {/* Background Glow */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.12 }}
@@ -30,7 +37,7 @@ export default function FooterGlass() {
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 space-y-6">
 
-        {/* Identität */}
+        {/* Identity */}
         <div className="space-y-1">
           <h3 className="text-lg font-headline text-[#E5C58B]">
             JaMoKo – Community First
@@ -48,16 +55,14 @@ export default function FooterGlass() {
           </a>
         </div>
 
-        {/* Rechtliches */}
+        {/* Legal */}
         <div className="text-xs text-jamoko-text/60 flex items-center justify-center gap-2">
 
           <NavLink
             to="/impressum"
             className={({ isActive }) =>
               `transition-all duration-300 ease-out ${
-                isActive
-                  ? "text-[#E5C58B]"
-                  : "hover:text-[#E5C58B]"
+                isActive ? "text-[#E5C58B]" : "hover:text-[#E5C58B]"
               }`
             }
           >
@@ -70,9 +75,7 @@ export default function FooterGlass() {
             to="/datenschutz"
             className={({ isActive }) =>
               `transition-all duration-300 ease-out ${
-                isActive
-                  ? "text-[#E5C58B]"
-                  : "hover:text-[#E5C58B]"
+                isActive ? "text-[#E5C58B]" : "hover:text-[#E5C58B]"
               }`
             }
           >
@@ -85,9 +88,7 @@ export default function FooterGlass() {
             to="/agb"
             className={({ isActive }) =>
               `transition-all duration-300 ease-out ${
-                isActive
-                  ? "text-[#E5C58B]"
-                  : "hover:text-[#E5C58B]"
+                isActive ? "text-[#E5C58B]" : "hover:text-[#E5C58B]"
               }`
             }
           >
@@ -98,6 +99,7 @@ export default function FooterGlass() {
 
         {/* Social */}
         <div className="flex items-center justify-center gap-5 pt-2">
+
           <a
             href="https://www.instagram.com/jamoko30"
             target="_blank"
@@ -117,6 +119,7 @@ export default function FooterGlass() {
           >
             <img src={LinkedInIcon} alt="" className="w-[18px] h-[18px]" />
           </a>
+
         </div>
 
         {/* Copyright */}

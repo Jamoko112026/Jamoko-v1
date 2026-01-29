@@ -1,4 +1,4 @@
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 
 // Standard Pages
@@ -37,28 +37,47 @@ export default function AnimatedRoutes() {
       >
         <Routes location={location}>
 
-          {/* Hauptseiten */}
+          {/* =========================
+              HAUPTSEITEN (JaMoKo)
+          ========================= */}
+
           <Route path="/" element={<Start />} />
           <Route path="/minisite" element={<MiniSite />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/kontakt" element={<Kontakt />} />
 
-          {/* Rechtliches */}
+          {/* =========================
+              RECHTLICHES
+          ========================= */}
+
           <Route path="/about" element={<About />} />
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
           <Route path="/agb" element={<AGB />} />
 
-          {/* Kundenprojekte */}
-          <Route path="/slb" element={<SLB />} />
+          {/* =========================
+              KUNDENPROJEKTE
+          ========================= */}
 
-          {/* Showcase Beispiele */}
+          {/* Alte Route sauber umleiten */}
+          <Route path="/slb" element={<Navigate to="/sl-bautec" replace />} />
+
+          {/* Neue saubere Kunden-Preview-URL */}
+          <Route path="/sl-bautec" element={<SLB />} />
+
+          {/* =========================
+              SHOWCASE BEISPIELE
+          ========================= */}
+
           <Route path="/beispiel/handwerk" element={<HandwerkMiniSite />} />
           <Route path="/beispiel/physio" element={<PhysioMiniSite />} />
           <Route path="/beispiel/feinkost" element={<FeinkostMiniSite />} />
 
-          {/* Preview Demos */}
+          {/* =========================
+              PREVIEW DEMOS
+          ========================= */}
+
           <Route path="/preview/physio" element={<PhysioPreview />} />
 
         </Routes>

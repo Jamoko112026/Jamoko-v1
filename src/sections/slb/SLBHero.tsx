@@ -1,63 +1,60 @@
-import HeroImage from "@/assets/slb/hero/SLB_Hero_Main_v2.jpg";
+import HeroImage from "../../assets/slb/hero/SLB_Hero_Main_v2.jpg";
 
 export default function SLBHero() {
   return (
-    <section
-      className="
-        relative
-        min-h-[60vh] md:min-h-[72vh]
-        flex items-center justify-center
-        pt-28 md:pt-32
-        px-4
-        bg-cover bg-[center_35%]
-      "
-      style={{ backgroundImage: `url(${HeroImage})` }}
-    >
+    <section className="relative text-white px-5 pt-16 md:pt-28 pb-20 md:pb-24 overflow-hidden">
 
-      {/* Overlay */}
+      {/* Background Image */}
       <div
-        className="
-          absolute inset-0
-          bg-gradient-to-b
-          from-[rgba(8,14,22,0.35)]
-          to-[rgba(6,10,18,0.78)]
-          pointer-events-none
-        "
+        className="absolute inset-0 bg-cover bg-center scale-[1.02]"
+        style={{ backgroundImage: `url(${HeroImage})` }}
       />
 
-      {/* CONTENT */}
-      <div className="relative z-10 text-center max-w-3xl px-4 md:px-6">
+      {/* Premium Business Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0f1720]/70 via-[#0f1720]/78 to-[#0f1720]/88" />
 
-        <h1 className="text-3xl md:text-5xl font-bold mb-4 text-white tracking-wide">
-          SL BauTec GmbH
+      {/* Content */}
+      <div className="relative max-w-6xl mx-auto text-center">
+
+        {/* Headline */}
+        <h1 className="text-[26px] leading-snug md:text-5xl md:leading-tight tracking-tight font-semibold mb-5">
+          Straßen- und Tiefbau<br className="hidden md:block" />
+          für den Großraum Hamburg & Schleswig-Holstein
         </h1>
 
-        <p className="text-base md:text-lg text-white/80 mb-7 leading-relaxed">
-          Straßenbau · Tiefbau · Glasfasertechnik<br />
-          Infrastrukturprojekte für Hamburg & Schleswig-Holstein
+        {/* Subline */}
+        <p className="text-[15px] leading-relaxed md:text-xl text-white/85 max-w-3xl mx-auto mb-8">
+          Glasfaser, Pflasterbau, Betonarbeiten und Entwässerung – zuverlässig umgesetzt
+          für öffentliche und gewerbliche Auftraggeber.
         </p>
 
-        <a
-          href="#contact"
-          className="
-            inline-block
-            px-8 md:px-10
-            py-3
-            rounded-md
-            font-semibold
-            text-[#111]
-            bg-gradient-to-b from-[#FFD08A] to-[#F28C28]
-            shadow-[0_12px_30px_rgba(0,0,0,0.45)]
-            hover:-translate-y-[2px]
-            hover:shadow-[0_18px_40px_rgba(0,0,0,0.6)]
-            transition-all duration-200
-          "
-        >
-          Projekt anfragen
-        </a>
+        {/* CTA */}
+        <div className="flex justify-center">
+          <a
+            href="#kontakt"
+            className="
+              bg-[#f2b705]
+              text-black
+              font-medium
+              px-8 py-3.5
+              md:px-9 md:py-4
+              rounded-md
+              shadow-md
+              hover:bg-[#ffd24a]
+              hover:shadow-lg
+              transition
+            "
+          >
+            Projekt anfragen
+          </a>
+        </div>
+
+        {/* Trust Line */}
+        <div className="mt-6 text-xs md:text-sm text-white/70">
+          ✔ Termintreu · ✔ Fachgerecht · ✔ Regional im Einsatz
+        </div>
 
       </div>
-
     </section>
   );
 }
