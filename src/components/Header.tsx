@@ -1,85 +1,126 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
+import SLLogo from "../assets/slb-logo.png";
+
 export default function Header() {
+
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
   const location = useLocation();
   const navigate = useNavigate();
 
   const isMiniSite = location.pathname === "/minisite";
 
-  // Scroll nur für Angebot auf Minisite
+  // Scroll Blur
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Angebot Scroll
   const scrollToOffer = () => {
-    const doScroll = () => {
+
+    const run = () => {
       const el = document.getElementById("minisite-offer");
       if (!el) return;
 
-      const headerOffset = 96;
-      const y =
-        el.getBoundingClientRect().top +
-        window.pageYOffset -
-        headerOffset;
+      const offset = 110;
+      const y = el.getBoundingClientRect().top + window.scrollY - offset;
 
       window.scrollTo({
         top: y,
-        behavior: "smooth",
+        behavior: "smooth"
       });
     };
 
     if (!isMiniSite) {
       navigate("/minisite");
-      setTimeout(doScroll, 250);
+      setTimeout(run, 300);
     } else {
-      doScroll();
+      run();
     }
 
     setOpen(false);
   };
 
-  const mobileItem =
-    "py-3 px-3 rounded-lg hover:bg-white/5 transition text-left";
-
   return (
-    <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-[#001821]/70 border-b border-jamoko-gold/10">
+    <header
+      className={`
+        fixed top-0 left-0 w-full z-50
+        h-[110px]
+        transition-all duration-300
+        border-b border-yellow-400/20
+        ${
+          scrolled
+            ? "bg-[#0b1220]/90 backdrop-blur-xl shadow-[0_8px_28px_rgba(0,0,0,0.45)]"
+            : "bg-[#0f1720]"
+        }
+      `}
+    >
 
-      <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-4 flex items-center justify-between">
+      {/* MAIN BAR */}
+      <div className="max-w-7xl mx-auto h-full px-6 flex items-center justify-between">
 
-        {/* LOGO */}
-        <Link
-          to="/"
-          className="text-jamoko-gold font-semibold text-xl tracking-wide"
-        >
-          JaMoKo
+        {/* LOGO + BAR */}
+        <Link to="/" className="flex items-center gap-4 shrink-0">
+
+          {/* LOGO */}
+          <img
+            src={SLLogo}
+            alt="SL BauTec GmbH"
+            className="
+              h-[88px]
+              md:h-[100px]
+              w-auto
+              object-contain
+              block
+              select-none
+            "
+          />
+
+          {/* ORANGE BRAND BAR */}
+          <div
+            className="
+              h-[64px]
+              w-[4px]
+              rounded-full
+              bg-gradient-to-b
+              from-[#FFD08A]
+              to-[#F28C28]
+              shadow-[0_0_10px_rgba(242,140,40,0.45)]
+            "
+          />
+
         </Link>
 
         {/* DESKTOP NAV */}
-        <nav className="hidden md:flex gap-10 text-jamoko-text text-lg items-center">
+        <nav className="hidden md:flex items-center gap-8 text-white/90 text-sm">
 
-          <Link to="/">Home</Link>
-          <Link to="/minisite">Mini-Site</Link>
-          <Link to="/beispiel/handwerk">Handwerk</Link>
-          <Link to="/beispiel/physio">Physiopraxis</Link>
-          <Link to="/beispiel/feinkost">Feinkost</Link>
+          <Link to="/" className="hover:text-yellow-400 transition">Start</Link>
+
+          <Link to="/minisite" className="hover:text-yellow-400 transition">Leistungen</Link>
 
           <button
             onClick={scrollToOffer}
-            className="hover:text-jamoko-gold transition"
+            className="hover:text-yellow-400 transition"
           >
             Angebot
           </button>
 
-          <Link to="/pricing">Preise</Link>
-          <Link to="/faq">FAQ</Link>
-          <Link to="/kontakt">Kontakt</Link>
+          <Link to="/pricing" className="hover:text-yellow-400 transition">Preise</Link>
+
+          <Link to="/kontakt" className="hover:text-yellow-400 transition">Kontakt</Link>
 
         </nav>
 
         {/* MOBILE BUTTON */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-jamoko-gold p-2 rounded-lg hover:bg-white/5 transition"
-          aria-label="Menü öffnen"
+          className="md:hidden text-yellow-400 p-2 rounded-md hover:bg-white/10 transition"
         >
           {open ? <X size={26} /> : <Menu size={26} />}
         </button>
@@ -88,50 +129,20 @@ export default function Header() {
 
       {/* MOBILE MENU */}
       {open && (
-        <div className="md:hidden bg-[#001821]/95 backdrop-blur-xl border-t border-jamoko-gold/10">
+        <div className="md:hidden bg-[#0b1220]/95 backdrop-blur-xl border-t border-yellow-400/20">
 
-          <div className="flex flex-col px-6 py-6 space-y-2 text-jamoko-text text-lg">
+          <div className="flex flex-col px-6 py-5 space-y-2 text-white/90">
 
-            <Link to="/" onClick={() => setOpen(false)} className={mobileItem}>
-              Home
-            </Link>
+            <Link to="/" onClick={() => setOpen(false)}>Start</Link>
+            <Link to="/minisite" onClick={() => setOpen(false)}>Leistungen</Link>
 
-            <Link to="/minisite" onClick={() => setOpen(false)} className={mobileItem}>
-              Mini-Site
-            </Link>
+            <button onClick={scrollToOffer}>Angebot</button>
 
-            <Link to="/beispiel/handwerk" onClick={() => setOpen(false)} className={mobileItem}>
-              Handwerk
-            </Link>
-
-            <Link to="/beispiel/physio" onClick={() => setOpen(false)} className={mobileItem}>
-              Physiopraxis
-            </Link>
-
-            <Link to="/beispiel/feinkost" onClick={() => setOpen(false)} className={mobileItem}>
-              Feinkost
-            </Link>
-
-            <button
-              onClick={scrollToOffer}
-              className={`${mobileItem} hover:text-jamoko-gold`}
-            >
-              Angebot
-            </button>
-
-            <Link to="/pricing" onClick={() => setOpen(false)} className={mobileItem}>
-              Preise
-            </Link>
-
-            <Link to="/faq" onClick={() => setOpen(false)} className={mobileItem}>
-              FAQ
-            </Link>
-
-            <Link to="/kontakt" onClick={() => setOpen(false)} className={mobileItem}>
-              Kontakt
-            </Link>
+            <Link to="/pricing" onClick={() => setOpen(false)}>Preise</Link>
+            <Link to="/kontakt" onClick={() => setOpen(false)}>Kontakt</Link>
 
           </div>
+
         </div>
       )}
 

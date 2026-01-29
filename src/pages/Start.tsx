@@ -2,201 +2,145 @@ import { motion } from "framer-motion";
 
 export default function Start() {
   return (
-    <main className="min-h-screen bg-[#001821] text-white flex flex-col items-center px-6 scroll-smooth">
+    <main className="min-h-screen bg-sl-navy text-white flex flex-col items-center px-6 scroll-smooth">
 
-      {/* HERO */}
+      {/* ======================
+          HERO — SL BAUTEC
+      ====================== */}
+
       <motion.section
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, ease: "easeOut" }}
-        className="max-w-3xl w-full py-28 text-center scroll-mt-32"
+        className="
+          relative w-full flex justify-center py-28
+          scroll-mt-32
+        "
       >
-        <h1 className="text-[28px] md:text-4xl font-semibold leading-tight">
-          Mini-Websites für lokale Betriebe,
-          <span className="block mt-2 text-jamoko-gold">
-            die Kunden bringen.
-          </span>
-        </h1>
+        {/* Background Layer */}
+        <div className="absolute inset-0 bg-gradient-to-b from-sl-navyLight via-sl-navy to-sl-navyDark" />
+        <div className="absolute inset-0 bg-black/40" />
 
-        <p className="mt-6 text-jamoko-text-dim text-lg">
-          Klar. Ruhig. Wirksam. Ohne Agentur-Stress und Technikchaos.
-        </p>
-
-        <a
-          href="#contact"
+        {/* Content Card */}
+        <div
           className="
-            inline-block mt-10 px-7 py-3 rounded-full
-            bg-jamoko-gold text-[#001821] font-medium
-            shadow-[0_0_18px_rgba(229,197,139,0.35)]
-            hover:shadow-[0_0_28px_rgba(229,197,139,0.55)]
-            transition-all duration-300 ease-out
+            relative z-10 max-w-3xl w-full
+            text-center px-10 py-14
+            rounded-2xl
+            bg-white/5 backdrop-blur-xl
+            border border-white/10
+            shadow-2xl
           "
         >
-          Kostenloses Erstgespräch starten
-        </a>
+          <h1 className="text-[28px] md:text-4xl font-bold uppercase tracking-wide leading-tight">
+            SL BauTec GmbH
+          </h1>
+
+          {/* Tech Line */}
+          <div className="mx-auto mt-4 mb-5 w-20 h-[3px] bg-sl-green rounded-full" />
+
+          <p className="text-sl-textSoft text-lg">
+            Straßenbau · Tiefbau · Glasfasertechnik
+          </p>
+
+          <p className="mt-4 text-sl-textSoft text-sm max-w-xl mx-auto">
+            Infrastrukturprojekte für Hamburg & Schleswig-Holstein.
+            Zuverlässig. Technisch sauber. Termintreu umgesetzt.
+          </p>
+
+          {/* CTA */}
+          <a
+            href="#kontakt"
+            className="
+              inline-block mt-8 px-10 py-3 rounded-lg
+              bg-gradient-to-b from-[#FFD08A] to-sl-orange
+              text-black font-semibold
+              shadow-xl shadow-orange-500/30
+              hover:scale-[1.04]
+              transition-all duration-300 ease-out
+            "
+          >
+            Projekt anfragen
+          </a>
+        </div>
       </motion.section>
 
-      {/* FÜR WEN */}
+      {/* ======================
+          LEISTUNGEN
+      ====================== */}
+
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.7, ease: "easeOut" }}
-        className="max-w-3xl w-full py-16 scroll-mt-32"
+        className="max-w-3xl w-full py-20 scroll-mt-32"
       >
-        <h2 className="text-xl font-semibold mb-6">Für wen das ist</h2>
+        <h2 className="text-xl font-semibold mb-8 text-center">
+          Unsere Leistungen
+        </h2>
 
-        <ul className="space-y-3 text-white/80">
-          <li>• lokale Betriebe ohne Lust auf Technik</li>
-          <li>• Menschen, die keinen Agenturapparat brauchen</li>
-          <li>• Klarheit statt Marketing-Lärm</li>
-          <li>• eine einfache, ehrliche Online-Präsenz</li>
+        <ul className="space-y-4 text-sl-textSoft">
+          <li>• Glasfaserausbau (Tiefbau & Technik)</li>
+          <li>• Straßen- und Tiefbauarbeiten</li>
+          <li>• Pflasterarbeiten & Außenanlagen</li>
+          <li>• Betonflächen & Entwässerungssysteme</li>
+          <li>• Garten-, Wege- und Terrassenbau</li>
         </ul>
       </motion.section>
 
-      {/* LEISTUNG */}
+      {/* ======================
+          ARBEITSWEISE
+      ====================== */}
+
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.7, ease: "easeOut" }}
-        className="max-w-3xl w-full py-16 scroll-mt-32"
+        className="max-w-3xl w-full py-20 scroll-mt-32"
       >
-        <h2 className="text-xl font-semibold mb-6">Was ich konkret mache</h2>
+        <h2 className="text-xl font-semibold mb-8 text-center">
+          So arbeiten wir
+        </h2>
 
-        <p className="text-white/80 leading-relaxed">
-          Ich erstelle eine klare Mini-Website, die ruhig gestaltet ist,
-          auf allen Geräten funktioniert und die wichtigsten Informationen bündelt.
-          Ohne Baukasten-Chaos. Ohne Fachchinesisch.
-        </p>
-      </motion.section>
-
-      {/* ABLAUF */}
-      <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
-        className="max-w-3xl w-full py-16 scroll-mt-32"
-      >
-        <h2 className="text-xl font-semibold mb-6">So läuft es ab</h2>
-
-        <ol className="space-y-3 text-white/80">
-          <li>1. Kurzes Gespräch</li>
-          <li>2. Strukturierte Umsetzung</li>
-          <li>3. Feinschliff</li>
-          <li>4. Online gehen</li>
+        <ol className="space-y-3 text-sl-textSoft">
+          <li>1. Projektbesprechung & Bedarfsklärung</li>
+          <li>2. Planung & technische Vorbereitung</li>
+          <li>3. Umsetzung vor Ort</li>
+          <li>4. Übergabe & Dokumentation</li>
         </ol>
       </motion.section>
 
-      {/* KONTAKT */}
+      {/* ======================
+          KONTAKT
+      ====================== */}
+
       <motion.section
-        id="contact"
+        id="kontakt"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.7, ease: "easeOut" }}
         className="max-w-3xl w-full py-24 text-center scroll-mt-32"
       >
-        <p className="text-white/80 mb-10 leading-relaxed">
-          Nach deiner Anfrage melde ich mich persönlich bei dir zurück.
-          Wir klären in einem kurzen, unverbindlichen Gespräch,
-          ob und wie ich dich unterstützen kann.
+        <p className="text-sl-textSoft mb-10 leading-relaxed">
+          Nehmen Sie Kontakt mit unserer Disposition auf.
+          Wir melden uns zeitnah zurück und besprechen Ihr Projekt.
         </p>
 
-        {/* FORMULAR */}
-        <form
-          action="mailto:moin@jamoko.de"
-          method="POST"
-          encType="text/plain"
-          className="space-y-4 text-left max-w-md mx-auto"
+        <a
+          href="mailto:dispo@slbautec.de"
+          className="
+            inline-block px-10 py-3 rounded-lg
+            bg-sl-orange text-black font-semibold
+            shadow-xl shadow-orange-500/30
+            hover:bg-sl-orangeHover
+            transition
+          "
         >
-          <div>
-            <label className="block text-sm mb-1 text-white/70">Name</label>
-            <input
-              type="text"
-              name="Name"
-              required
-              className="
-                w-full px-4 py-2 rounded
-                bg-white/5 border border-white/10
-                text-white focus:outline-none
-                focus:border-jamoko-gold
-              "
-            />
-          </div>
-
-          <div>
-            <label className="block text-sm mb-1 text-white/70">
-              E-Mail-Adresse
-            </label>
-            <input
-              type="email"
-              name="Email"
-              required
-              className="
-                w-full px-4 py-2 rounded
-                bg-white/5 border border-white/10
-                text-white focus:outline-none
-                focus:border-jamoko-gold
-              "
-            />
-          </div>
-
-          <div>
-            <label className="block text-sm mb-1 text-white/70">
-              Worum geht es kurz?
-            </label>
-            <textarea
-              name="Nachricht"
-              rows={3}
-              placeholder="Ein paar Stichworte reichen."
-              className="
-                w-full px-4 py-2 rounded
-                bg-white/5 border border-white/10
-                text-white focus:outline-none
-                focus:border-jamoko-gold
-              "
-            />
-          </div>
-
-          <p className="text-xs text-white/50">
-            Deine Anfrage wird vertraulich behandelt und nur zur Kontaktaufnahme genutzt.
-          </p>
-
-          {/* OPT-IN */}
-          <div className="flex items-start gap-2 text-xs text-white/60">
-            <input
-              type="checkbox"
-              required
-              className="mt-1 accent-jamoko-gold"
-            />
-            <span>
-              Ich stimme zu, dass meine Angaben zur Kontaktaufnahme verarbeitet werden.
-              Weitere Informationen findest du in der{" "}
-              <a
-                href="/datenschutz"
-                className="underline hover:text-white transition-colors"
-              >
-                Datenschutzerklärung
-              </a>.
-            </span>
-          </div>
-
-          <button
-            type="submit"
-            className="
-              w-full mt-4 px-6 py-3 rounded-full
-              bg-jamoko-gold text-[#001821]
-              font-medium
-              shadow-[0_0_18px_rgba(229,197,139,0.35)]
-              hover:shadow-[0_0_28px_rgba(229,197,139,0.55)]
-              transition-all duration-300 ease-out
-            "
-          >
-            Kostenloses Erstgespräch starten
-          </button>
-        </form>
+          Anfrage senden
+        </a>
       </motion.section>
 
     </main>

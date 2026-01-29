@@ -1,7 +1,7 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 
-// Pages
+// Standard Pages
 import Start from "../pages/Start";
 import MiniSite from "../pages/MiniSite";
 import Pricing from "../pages/Pricing";
@@ -12,10 +12,16 @@ import Impressum from "../pages/Impressum";
 import Datenschutz from "../pages/Datenschutz";
 import AGB from "../pages/AGB";
 
+// Kundenprojekte
+import SLB from "../pages/SLB";
+
 // Beispiele
 import HandwerkMiniSite from "../pages/beispiele/HandwerkMiniSite";
 import PhysioMiniSite from "../pages/beispiele/PhysioMiniSite";
 import FeinkostMiniSite from "../pages/beispiele/FeinkostMiniSite";
+
+// Preview Demos
+import PhysioPreview from "../pages/Physio/PhysioPreview";
 
 export default function AnimatedRoutes() {
   const location = useLocation();
@@ -31,20 +37,29 @@ export default function AnimatedRoutes() {
       >
         <Routes location={location}>
 
+          {/* Hauptseiten */}
           <Route path="/" element={<Start />} />
           <Route path="/minisite" element={<MiniSite />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/kontakt" element={<Kontakt />} />
 
+          {/* Rechtliches */}
           <Route path="/about" element={<About />} />
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
           <Route path="/agb" element={<AGB />} />
 
+          {/* Kundenprojekte */}
+          <Route path="/slb" element={<SLB />} />
+
+          {/* Showcase Beispiele */}
           <Route path="/beispiel/handwerk" element={<HandwerkMiniSite />} />
           <Route path="/beispiel/physio" element={<PhysioMiniSite />} />
           <Route path="/beispiel/feinkost" element={<FeinkostMiniSite />} />
+
+          {/* Preview Demos */}
+          <Route path="/preview/physio" element={<PhysioPreview />} />
 
         </Routes>
       </motion.div>
