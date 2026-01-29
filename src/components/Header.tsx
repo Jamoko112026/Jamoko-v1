@@ -14,7 +14,7 @@ export default function Header() {
 
   // === ROUTE CHECKS ===
   const isMiniSite = location.pathname === "/minisite";
-  const isSLB = location.pathname.startsWith("/slb");
+  const isSLB = location.pathname === "/slb";
 
   // 👉 Header NUR für SL BauTec anzeigen
   if (!isSLB) return null;

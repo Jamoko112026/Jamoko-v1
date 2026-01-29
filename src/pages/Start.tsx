@@ -2,146 +2,87 @@ import { motion } from "framer-motion";
 
 export default function Start() {
   return (
-    <main className="min-h-screen bg-sl-navy text-white flex flex-col items-center px-6 scroll-smooth">
+    <main className="bg-[#001821] text-jamoko-text">
 
-      {/* ======================
-          HERO — SL BAUTEC
-      ====================== */}
+      {/* HERO SECTION */}
+      <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
 
-      <motion.section
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9, ease: "easeOut" }}
-        className="
-          relative w-full flex justify-center py-28
-          scroll-mt-32
-        "
-      >
-        {/* Background Layer */}
-        <div className="absolute inset-0 bg-gradient-to-b from-sl-navyLight via-sl-navy to-sl-navyDark" />
-        <div className="absolute inset-0 bg-black/40" />
+        {/* Background Glow */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#001821] via-[#001821]/95 to-[#001821]" />
 
-        {/* Content Card */}
-        <div
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(229,197,139,0.12),transparent_65%)]" />
+
+        {/* Content */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
           className="
-            relative z-10 max-w-3xl w-full
-            text-center px-10 py-14
-            rounded-2xl
-            bg-white/5 backdrop-blur-xl
+            relative z-10
+            max-w-3xl mx-auto
+            text-center
+            px-8 py-16
+            rounded-3xl
+            bg-white/5
+            backdrop-blur-xl
             border border-white/10
-            shadow-2xl
+            shadow-[0_0_60px_rgba(0,0,0,0.45)]
           "
         >
-          <h1 className="text-[28px] md:text-4xl font-bold uppercase tracking-wide leading-tight">
-            SL BauTec GmbH
+
+          <h1 className="text-3xl md:text-5xl font-headline text-[#E5C58B] mb-6">
+            Ruhige Mini-Websites<br />für lokale Betriebe
           </h1>
 
-          {/* Tech Line */}
-          <div className="mx-auto mt-4 mb-5 w-20 h-[3px] bg-sl-green rounded-full" />
-
-          <p className="text-sl-textSoft text-lg">
-            Straßenbau · Tiefbau · Glasfasertechnik
+          <p className="text-lg text-jamoko-text/80 leading-relaxed mb-10">
+            Klar. Persönlich. Wirksam.<br />
+            Digitale Präsenz ohne Stress – für echte Menschen.
           </p>
 
-          <p className="mt-4 text-sl-textSoft text-sm max-w-xl mx-auto">
-            Infrastrukturprojekte für Hamburg & Schleswig-Holstein.
-            Zuverlässig. Technisch sauber. Termintreu umgesetzt.
-          </p>
+          <div className="flex justify-center gap-4 flex-wrap">
 
-          {/* CTA */}
-          <a
-            href="#kontakt"
-            className="
-              inline-block mt-8 px-10 py-3 rounded-lg
-              bg-gradient-to-b from-[#FFD08A] to-sl-orange
-              text-black font-semibold
-              shadow-xl shadow-orange-500/30
-              hover:scale-[1.04]
-              transition-all duration-300 ease-out
-            "
-          >
-            Projekt anfragen
-          </a>
-        </div>
-      </motion.section>
+            <a
+              href="/minisite"
+              className="
+                px-8 py-4 rounded-lg
+                bg-[#E5C58B]
+                text-[#001821]
+                font-semibold
+                shadow-lg
+                hover:bg-[#ffdca3]
+                transition
+              "
+            >
+              Beispiel ansehen
+            </a>
 
-      {/* ======================
-          LEISTUNGEN
-      ====================== */}
+            <a
+              href="/kontakt"
+              className="
+                px-8 py-4 rounded-lg
+                border border-[#E5C58B]/40
+                text-[#E5C58B]
+                hover:bg-[#E5C58B]/10
+                transition
+              "
+            >
+              Kontakt aufnehmen
+            </a>
 
-      <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
-        className="max-w-3xl w-full py-20 scroll-mt-32"
-      >
-        <h2 className="text-xl font-semibold mb-8 text-center">
-          Unsere Leistungen
-        </h2>
+          </div>
 
-        <ul className="space-y-4 text-sl-textSoft">
-          <li>• Glasfaserausbau (Tiefbau & Technik)</li>
-          <li>• Straßen- und Tiefbauarbeiten</li>
-          <li>• Pflasterarbeiten & Außenanlagen</li>
-          <li>• Betonflächen & Entwässerungssysteme</li>
-          <li>• Garten-, Wege- und Terrassenbau</li>
-        </ul>
-      </motion.section>
+        </motion.div>
 
-      {/* ======================
-          ARBEITSWEISE
-      ====================== */}
+      </section>
 
-      <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
-        className="max-w-3xl w-full py-20 scroll-mt-32"
-      >
-        <h2 className="text-xl font-semibold mb-8 text-center">
-          So arbeiten wir
-        </h2>
+      {/* TRUST LINE */}
+      <section className="py-20 text-center">
 
-        <ol className="space-y-3 text-sl-textSoft">
-          <li>1. Projektbesprechung & Bedarfsklärung</li>
-          <li>2. Planung & technische Vorbereitung</li>
-          <li>3. Umsetzung vor Ort</li>
-          <li>4. Übergabe & Dokumentation</li>
-        </ol>
-      </motion.section>
-
-      {/* ======================
-          KONTAKT
-      ====================== */}
-
-      <motion.section
-        id="kontakt"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
-        className="max-w-3xl w-full py-24 text-center scroll-mt-32"
-      >
-        <p className="text-sl-textSoft mb-10 leading-relaxed">
-          Nehmen Sie Kontakt mit unserer Disposition auf.
-          Wir melden uns zeitnah zurück und besprechen Ihr Projekt.
+        <p className="text-jamoko-text/70 text-sm tracking-wide">
+          Community First · Digitale Ruhe · Nachhaltige Wirkung
         </p>
 
-        <a
-          href="mailto:dispo@slbautec.de"
-          className="
-            inline-block px-10 py-3 rounded-lg
-            bg-sl-orange text-black font-semibold
-            shadow-xl shadow-orange-500/30
-            hover:bg-sl-orangeHover
-            transition
-          "
-        >
-          Anfrage senden
-        </a>
-      </motion.section>
+      </section>
 
     </main>
   );
