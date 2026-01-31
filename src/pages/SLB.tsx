@@ -1,3 +1,10 @@
+// src/pages/SLB.tsx
+import { useEffect } from "react";
+
+// SLB Theme (isoliert nur für /slb)
+import "../assets/themes/slb_theme.css";
+
+// Sections
 import SLBHero from "../sections/slb/SLBHero";
 import SLBServices from "../sections/slb/SLBServices";
 import SLBTrust from "../sections/slb/SLBTrust";
@@ -9,9 +16,14 @@ import SLBFooter from "../sections/slb/SLBFooter";
 import SLBMobileCTA from "../sections/slb/SLBMobileCTA";
 
 export default function SLB() {
+  // Aktiviert SLB Tokens nur auf dieser Route
+  useEffect(() => {
+    document.documentElement.classList.add("brand-slb");
+    return () => document.documentElement.classList.remove("brand-slb");
+  }, []);
+
   return (
     <div className="theme-sl min-h-screen">
-
       <SLBHero />
       <SLBServices />
       <SLBTrust />
@@ -23,10 +35,15 @@ export default function SLB() {
       {/* Final CTA */}
       <SLBCTA />
 
-      <SLBContact />
+      {/* Kontakt muss eine ID bekommen, wenn MobileCTA dahin scrollen soll */}
+      <div id="slb-kontakt">
+        <SLBContact />
+      </div>
+
       <SLBFooter />
 
-<SLBMobileCTA />
+      {/* Sticky Mobile CTA: immer als letztes rendern */}
+      <SLBMobileCTA />
     </div>
   );
 }
