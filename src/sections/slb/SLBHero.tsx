@@ -2,56 +2,75 @@ import HeroImage from "../../assets/slb/hero/SLB_Hero_Main_v2.jpg";
 
 export default function SLBHero() {
   return (
-    <section className="relative text-white px-5 pt-16 md:pt-28 pb-20 md:pb-24 overflow-hidden">
+    <section className="relative px-6 pt-40 pb-36 overflow-hidden">
 
-      {/* Background Image */}
+      {/* BACKGROUND IMAGE */}
       <div
-        className="absolute inset-0 bg-cover bg-center scale-[1.02]"
+        className="
+          absolute inset-0
+          bg-cover bg-center
+          scale-[1.04]
+          brightness-[0.9]
+          contrast-[1.05]
+        "
         style={{ backgroundImage: `url(${HeroImage})` }}
       />
 
-      {/* Premium Business Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0f1720]/70 via-[#0f1720]/78 to-[#0f1720]/88" />
+      {/* DARK BASE OVERLAY */}
+      <div className="absolute inset-0 bg-black/45" />
 
-      {/* Content */}
+      {/* OLIVE INDUSTRIAL DEPTH */}
+      <div className="absolute inset-0 bg-gradient-to-t from-[rgba(30,38,28,0.75)] via-[rgba(30,38,28,0.35)] to-transparent" />
+
+      {/* CONTENT */}
       <div className="relative max-w-6xl mx-auto text-center">
 
-        {/* Headline */}
-        <h1 className="text-[26px] leading-snug md:text-5xl md:leading-tight tracking-tight font-semibold mb-5">
-          Straßen- und Tiefbau<br className="hidden md:block" />
-          für den Großraum Hamburg & Schleswig-Holstein
+        {/* EYEBROW */}
+        <p className="uppercase tracking-widest text-sm text-white/70 mb-5">
+          Straßenbau · Tiefbau · Infrastruktur
+        </p>
+
+        {/* HEADLINE */}
+        <h1 className="text-3xl md:text-5xl font-semibold leading-tight mb-6 text-[#E8E3D8]">
+          Zuverlässiger Partner
+          <br className="hidden md:block" />
+          für Tiefbau & Infrastrukturprojekte
         </h1>
 
-        {/* Subline */}
-        <p className="text-[15px] leading-relaxed md:text-xl text-white/85 max-w-3xl mx-auto mb-8">
-          Glasfaser, Pflasterbau, Betonarbeiten und Entwässerung – zuverlässig umgesetzt
-          für öffentliche und gewerbliche Auftraggeber.
+        {/* SUBLINE */}
+        <p className="text-base md:text-lg text-white/80 max-w-3xl mx-auto mb-12 leading-relaxed">
+          Glasfaserausbau, Straßenbau, Betonarbeiten und Entwässerung.
+          Strukturierte Projektabwicklung für öffentliche Auftraggeber,
+          Versorger und gewerbliche Bauprojekte im Norden.
         </p>
 
         {/* CTA */}
-        <div className="flex justify-center">
-          <a
-            href="#kontakt"
-            className="
-              bg-[#f2b705]
-              text-black
-              font-medium
-              px-8 py-3.5
-              md:px-9 md:py-4
-              rounded-md
-              shadow-md
-              hover:bg-[#ffd24a]
-              hover:shadow-lg
-              transition
-            "
-          >
-            Projekt anfragen
-          </a>
-        </div>
+<div className="flex flex-col items-center gap-4">
 
-        {/* Trust Line */}
-        <div className="mt-6 text-xs md:text-sm text-white/70">
-          ✔ Termintreu · ✔ Fachgerecht · ✔ Regional im Einsatz
+  <a
+    href="#kontakt"
+    className="
+      sl-btn
+      px-12 py-4
+      rounded-lg
+      shadow-lg
+      hover:shadow-xl
+    "
+  >
+    Unverbindliche Projektanfrage
+  </a>
+
+  {/* Trust Line */}
+  <div className="text-sm text-white/70 tracking-wide">
+    ✓ Antwort innerhalb 24h · ✓ Unverbindlich · ✓ Regionaler Ansprechpartner
+  </div>
+
+</div>
+
+
+        {/* TRUST LINE */}
+        <div className="mt-10 text-sm text-white/65 tracking-wide">
+          Termintreu · Normgerecht · Regional im Einsatz
         </div>
 
       </div>

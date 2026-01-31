@@ -1,50 +1,66 @@
 export default function SLBTrust() {
   return (
-    <section className="bg-[#0f1720] text-white py-24 px-6">
+    <section className="sl-section py-24 px-6">
 
-      <div className="max-w-6xl mx-auto">
+      {/* HEADLINE */}
+      <div className="max-w-6xl mx-auto text-center mb-16">
+        <h2 className="text-3xl md:text-4xl font-semibold mb-4">
+          Warum SL Bautec
+        </h2>
 
-        {/* Headline */}
-        <div className="text-center mb-16">
-          <h2 className="text-2xl md:text-4xl font-semibold mb-4">
-            Warum SL BauTec
-          </h2>
-          <p className="text-white/70 max-w-2xl mx-auto">
-            Zuverlässiger Partner für Infrastrukturprojekte im Großraum Hamburg & Schleswig-Holstein.
+        <p className="sl-text-muted max-w-2xl mx-auto leading-relaxed">
+          Erfahrung, Zuverlässigkeit und professionelle Umsetzung
+          für öffentliche Auftraggeber und Unternehmen.
+        </p>
+      </div>
+
+      {/* TRUST GRID */}
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        {/* TRUST CARD */}
+        <div className="sl-card text-center">
+
+          <h3 className="text-lg font-semibold mb-3">
+            Termintreue
+          </h3>
+
+          <p className="sl-text-muted text-sm leading-relaxed">
+            Verlässliche Planung und pünktliche Umsetzung –
+            auch bei komplexen Infrastrukturprojekten.
           </p>
+
         </div>
 
-        {/* Trust Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* TRUST CARD */}
+        <div className="sl-card text-center">
 
-          {/* Trust Card */}
-          <div className="bg-[#141e2a] rounded-xl p-8 border border-white/5">
-            <h3 className="text-lg font-semibold mb-3">Erfahrung & Fachkompetenz</h3>
-            <p className="text-white/70">
-              Eingespieltes Team mit Erfahrung im Straßenbau, Tiefbau und Glasfaserausbau
-              für anspruchsvolle Infrastrukturprojekte.
-            </p>
-          </div>
+          <h3 className="text-lg font-semibold mb-3">
+            Fachkompetenz
+          </h3>
 
-          <div className="bg-[#141e2a] rounded-xl p-8 border border-white/5">
-            <h3 className="text-lg font-semibold mb-3">Großprojekt-Erfahrung</h3>
-            <p className="text-white/70">
-              Umsetzung von Projekten für Netzbetreiber und kommunale Auftraggeber
-              mit hohen Qualitäts- und Terminanforderungen.
-            </p>
-          </div>
+          <p className="sl-text-muted text-sm leading-relaxed">
+            Erfahrene Teams, moderne Technik und Arbeiten
+            nach aktuellen Normen und Standards.
+          </p>
 
-          <div className="bg-[#141e2a] rounded-xl p-8 border border-white/5">
-            <h3 className="text-lg font-semibold mb-3">Regional & Einsatzbereit</h3>
-            <p className="text-white/70">
-              Aktiv im Großraum Hamburg und Schleswig-Holstein –
-              kurze Wege, schnelle Reaktionszeiten, direkte Kommunikation.
-            </p>
-          </div>
+        </div>
+
+        {/* TRUST CARD */}
+        <div className="sl-card text-center">
+
+          <h3 className="text-lg font-semibold mb-3">
+            Regionale Stärke
+          </h3>
+
+          <p className="sl-text-muted text-sm leading-relaxed">
+            Einsatzgebiet Hamburg & Schleswig-Holstein –
+            kurze Wege, schnelle Reaktionszeiten.
+          </p>
 
         </div>
 
       </div>
+
     </section>
   );
 }
