@@ -24,7 +24,13 @@ export default function SLB() {
 
   return (
     <div className="theme-sl min-h-screen">
+      {/* HERO */}
       <SLBHero />
+
+      {/* Marker: ab hier darf der Mobile CTA erscheinen */}
+      <div id="slb-after-hero" />
+
+      {/* CONTENT */}
       <SLBServices />
       <SLBTrust />
       <SLBProcess />
@@ -35,7 +41,7 @@ export default function SLB() {
       {/* Final CTA */}
       <SLBCTA />
 
-      {/* Kontakt muss eine ID bekommen, wenn MobileCTA dahin scrollen soll */}
+      {/* Kontakt-Anker: sobald sichtbar, soll der Mobile CTA verschwinden */}
       <div id="slb-kontakt">
         <SLBContact />
       </div>
