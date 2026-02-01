@@ -118,3 +118,16 @@
 .brand-slb .sl-accent {
   color: var(--sl-accent-main);
 }
+/* ======================
+   FORCE PAGE BACKGROUND (Fallback)
+====================== */
+
+html.brand-slb,
+html.brand-slb body {
+  background: linear-gradient(
+    180deg,
+    var(--sl-olive-main) 0%,
+    var(--sl-olive-dark) 100%
+  );
+  color: var(--sl-text-main);
+}
