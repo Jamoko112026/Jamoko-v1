@@ -13,7 +13,8 @@ export default function App() {
   const isSLB = pathname.startsWith("/slb");
 
   return (
-    <div className="min-h-screen flex flex-col">
+  <div className={`min-h-screen flex flex-col ${!isSLB ? "bg-[#001821] text-jamoko-text" : ""}`}>
+
 
       {/* Accessibility Skip Link */}
       <a
@@ -37,17 +38,14 @@ export default function App() {
       {/* =========================
          MAIN CONTENT
       ========================= */}
-      <main
-        id="main"
-        role="main"
-        className={`flex-1 ${
-          !isSLB
-            ? "pt-24 pb-28 bg-[#001821] text-jamoko-text"
-            : ""
-        }`}
-      >
-        <AnimatedRoutes />
-      </main>
+    <main
+  id="main"
+  role="main"
+  className={`flex-1 ${!isSLB ? "pt-24 pb-28" : ""}`}
+>
+  <AnimatedRoutes />
+</main>
+
 
       {/* =========================
          JAMOKO FOOTER
