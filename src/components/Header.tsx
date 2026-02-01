@@ -5,12 +5,16 @@ import { Menu, X } from "lucide-react";
 import SLLogo from "../assets/slb-logo.png";
 
 export default function Header() {
-
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   const location = useLocation();
+
+  // SLB hat eigenen Header → globalen Header hier deaktivieren
+  if (location.pathname.startsWith("/slb")) return null;
+
   const navigate = useNavigate();
+
 
   // === ROUTE CHECKS ===
   const isMiniSite = location.pathname === "/minisite";

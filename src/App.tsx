@@ -1,16 +1,21 @@
 // src/App.tsx
+import { useLocation } from "react-router-dom";
 import AnimatedRoutes from "./components/AnimatedRoutes";
 
+// Jamoko Layout
 import Header from "./components/Header";
 import FooterGlass from "./components/FooterGlass";
 import FooterMobileLegal from "./components/FooterMobileLegal";
 import StickyMobileCTA from "./components/StickyMobileCTA";
 
 export default function App() {
-  return (
-    <div className="min-h-screen flex flex-col bg-[#001821] text-jamoko-text">
+  const { pathname } = useLocation();
+  const isSLB = pathname.startsWith("/slb");
 
-      {/* Accessibility Skip-Link */}
+  return (
+    <div className="min-h-screen flex flex-col">
+
+      {/* Accessibility Skip Link */}
       <a
         href="#main"
         className="
@@ -24,33 +29,43 @@ export default function App() {
         Zum Inhalt springen
       </a>
 
-      {/* Header */}
-      <Header />
+      {/* =========================
+         JAMOKO HEADER
+      ========================= */}
+      {!isSLB && <Header />}
 
-      {/* Main Content */}
-      {/* pb-28 = Platz für Sticky Mobile CTA */}
+      {/* =========================
+         MAIN CONTENT
+      ========================= */}
       <main
         id="main"
         role="main"
-        className="flex-1 pt-24 pb-28"
+        className={`flex-1 ${
+          !isSLB
+            ? "pt-24 pb-28 bg-[#001821] text-jamoko-text"
+            : ""
+        }`}
       >
         <AnimatedRoutes />
       </main>
 
-      {/* Desktop Footer */}
-      <div className="hidden md:block">
-        <FooterGlass />
-      </div>
+      {/* =========================
+         JAMOKO FOOTER
+      ========================= */}
+      {!isSLB && (
+        <>
+          {/* Desktop Footer */}
+          <div className="hidden md:block">
+            <FooterGlass />
+          </div>
 
-      {/* Mobile Sticky CTA */}
-      <div className="md:hidden">
-        <StickyMobileCTA />
-      </div>
-
-      {/* Mobile Legal Footer */}
-      <div className="md:hidden">
-        <FooterMobileLegal />
-      </div>
+          {/* Mobile Footer + CTA */}
+          <div className="md:hidden">
+            <StickyMobileCTA />
+            <FooterMobileLegal />
+          </div>
+        </>
+      )}
 
     </div>
   );
