@@ -1,4 +1,5 @@
 // src/App.tsx
+
 import { useLocation } from "react-router-dom";
 import AnimatedRoutes from "./components/AnimatedRoutes";
 
@@ -6,22 +7,32 @@ import AnimatedRoutes from "./components/AnimatedRoutes";
 import Header from "./components/Header";
 import FooterGlass from "./components/FooterGlass";
 import FooterMobileLegal from "./components/FooterMobileLegal";
-import StickyMobileCTA from "./components/StickyMobileCTA";
+
+// Landing CTA
+import StickyLandingCTA from "./components/StickyLandingCTA";
 
 export default function App() {
   const { pathname } = useLocation();
+
+  // SL Bautec Bereich trennen
   const isSLB = pathname.startsWith("/slb");
 
   return (
-  <div className={`min-h-screen flex flex-col ${!isSLB ? "bg-[#001821] text-jamoko-text" : ""}`}>
+    <div
+      className={`
+        min-h-screen flex flex-col
+        ${!isSLB ? "bg-[#001821] text-jamoko-text" : ""}
+      `}
+    >
 
-
-      {/* Accessibility Skip Link */}
+      {/* =========================
+         ACCESSIBILITY SKIP LINK
+      ========================= */}
       <a
         href="#main"
         className="
-          absolute left-2 top-2 z-50
-          px-3 py-2 rounded
+          absolute left-3 top-3 z-50
+          px-4 py-2 rounded-lg
           bg-jamoko-gold text-[#001821]
           opacity-0 focus:opacity-100
           transition
@@ -38,14 +49,21 @@ export default function App() {
       {/* =========================
          MAIN CONTENT
       ========================= */}
-    <main
-  id="main"
-  role="main"
-  className={`flex-1 ${!isSLB ? "pt-24 pb-28" : ""}`}
->
-  <AnimatedRoutes />
-</main>
+      <main
+        id="main"
+        role="main"
+        className={`
+          flex-1
+          ${!isSLB ? "pt-24 pb-28" : ""}
+        `}
+      >
+        <AnimatedRoutes />
+      </main>
 
+      {/* =========================
+         MOBILE STICKY CTA
+      ========================= */}
+      {!isSLB && <StickyLandingCTA />}
 
       {/* =========================
          JAMOKO FOOTER
@@ -57,9 +75,8 @@ export default function App() {
             <FooterGlass />
           </div>
 
-          {/* Mobile Footer + CTA */}
+          {/* Mobile Legal Footer */}
           <div className="md:hidden">
-            <StickyMobileCTA />
             <FooterMobileLegal />
           </div>
         </>

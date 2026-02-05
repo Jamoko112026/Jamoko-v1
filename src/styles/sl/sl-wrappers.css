@@ -1,0 +1,42 @@
+/* =========================
+   SL BAUTEC WRAPPER SYSTEM
+========================= */
+
+/* PAGE BASE */
+.sl-page {
+  background-color: #1C241A;
+  min-height: 100vh;
+}
+
+/* SECTIONS */
+.sl-section {
+  background: linear-gradient(180deg, #222B1F, #1A2218);
+  padding: 5rem 1.5rem;
+}
+
+/* CARDS / BOXES */
+.sl-card {
+  background: linear-gradient(180deg, #2A3426, #1F281D);
+  border-radius: 18px;
+  padding: 2rem;
+  box-shadow: 0 14px 40px rgba(0,0,0,.35);
+}
+
+/* BUTTONS */
+.sl-button {
+  background: #D97A2B;
+  color: #0F1720;
+  padding: .7rem 1.2rem;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all .2s ease;
+}
+
+.sl-button:hover {
+  background: #C96B22;
+}
+
+/* TEXT */
+.sl-text {
+  color: #E2E7E0;
+}

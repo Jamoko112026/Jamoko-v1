@@ -1,25 +1,18 @@
-// src/main.tsx
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 
-// Theme zuerst
 import "./assets/jamoko_theme.css";
-
-// Danach Tailwind
 import "./index.css";
-
 import App from "./App";
-
-// PricingContext IMPORT
-import { PricingProvider } from "./state/PricingContext";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <PricingProvider>
+    <HelmetProvider>
+      <BrowserRouter>
         <App />
-      </PricingProvider>
-    </BrowserRouter>
+      </BrowserRouter>
+    </HelmetProvider>
   </React.StrictMode>
 );

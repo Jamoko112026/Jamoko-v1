@@ -15,6 +15,7 @@ export default function SLBFooter() {
         borderColor: "var(--sl-border)",
       }}
     >
+      {/* CONTENT */}
       <div className="mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-between gap-6">
 
         {/* COMPANY */}
@@ -42,6 +43,13 @@ export default function SLBFooter() {
           >
             Datenschutz
           </Link>
+
+          <Link
+            to="/slb/rechtliche-hinweise"
+            className="hover:text-[var(--sl-accent-main)] transition-colors"
+          >
+            Rechtliche Hinweise
+          </Link>
         </div>
 
       </div>
@@ -50,6 +58,7 @@ export default function SLBFooter() {
       <div className="mt-6 text-center text-xs text-white/40">
         © {new Date().getFullYear()} SL BauTec GmbH · Alle Rechte vorbehalten
       </div>
+
     </footer>
   );
 }

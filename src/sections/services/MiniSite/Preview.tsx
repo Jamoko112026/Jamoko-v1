@@ -2,77 +2,69 @@ import { motion } from "framer-motion";
 
 export default function MiniSitePreview() {
   return (
-    <section
+    <motion.section
       id="minisite-preview"
-      className="relative py-32 px-6 
-                 bg-gradient-to-b from-[#001821] via-[#012533] to-[#013542]
-                 overflow-hidden"
+      className="
+        relative
+        py-32 px-6
+        bg-gradient-to-b
+        from-[#001821]
+        via-[#001f2a]
+        to-[#001821]
+        overflow-hidden
+      "
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-120px" }}
+      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
     >
-      {/* Radial Glow */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 0.25 }}
-        transition={{ duration: 1.4 }}
-        className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,
-                 rgba(229,197,139,0.18),transparent_75%)]"
-      />
 
-      <div className="relative z-10 max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-center">
+      <div className="relative z-10 max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
 
-        {/* IMAGE / PREVIEW */}
+        {/* IMAGE PREVIEW */}
         <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.9 }}
+          initial={{ opacity: 0, scale: 0.96 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
           className="
-            relative 
-            rounded-[32px] 
-            overflow-hidden  
-            shadow-[0_0_45px_rgba(0,0,0,0.45)]
+            relative
+            rounded-2xl
+            overflow-hidden
+            shadow-[0_18px_45px_rgba(0,0,0,0.45)]
           "
         >
-          {/* Glow Frame */}
-          <div
-            className="
-              absolute inset-0 z-10 
-              pointer-events-none
-              rounded-[32px]
-              bg-[radial-gradient(circle_at_center,
-                rgba(229,197,139,0.22),
-                rgba(26,199,164,0.12),
-                transparent 70%)
-              ]
-            "
-          />
-
-          {/* ARD Preview Image */}
           <img
             src="/ard/preview.webp"
             alt="Altonaer Reifendienst MiniSite Vorschau"
-            className="w-full h-full object-cover rounded-[32px]"
+            className="w-full h-auto object-cover"
+            draggable={false}
           />
+
+          {/* Calm Overlay */}
+          <div className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-[#001821]/35 via-transparent to-transparent" />
         </motion.div>
 
         {/* TEXT CONTENT */}
-        <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.9 }}
-          className="text-left"
-        >
+        <div className="text-left">
+
           <h3
-            className="text-3xl md:text-4xl font-semibold 
-                       text-jamoko-gold mb-4"
+            className="
+              text-2xl sm:text-3xl md:text-4xl
+              font-light
+              text-jamoko-gold
+              mb-6
+            "
           >
-            Projekt: Altonaer Reifendienst
+            Beispielprojekt: Altonaer Reifendienst
           </h3>
 
-          <p className="text-jamoko-text-dim mb-6 leading-relaxed">
+          <p className="text-jamoko-text-dim leading-relaxed mb-6 max-w-md">
             Ziel: Lokale Sichtbarkeit erhöhen und Kundenanfragen vereinfachen —
-            ohne Marketing-Agentur, ohne Technikstress.
+            ruhig, verständlich und ohne Technikstress.
           </p>
 
-          <ul className="space-y-3 text-sm text-jamoko-text mb-8">
+          <ul className="space-y-3 text-sm text-jamoko-text-dim mb-8">
             <li>✓ Klare Startseite für lokale Kunden</li>
             <li>✓ Mobil optimierte Kontaktführung</li>
             <li>✓ WhatsApp Direktkontakt</li>
@@ -80,22 +72,28 @@ export default function MiniSitePreview() {
             <li>✓ Google-Business Integration</li>
           </ul>
 
-          <a
-            href="#contact"
+          <motion.a
+            href="#kontakt"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.97 }}
+            transition={{ type: "spring", stiffness: 280, damping: 18 }}
             className="
               inline-block
               px-6 py-3
               rounded-xl
-              border border-white/20
-              hover:border-[#E5C58B]
+              border border-jamoko-gold/40
+              text-jamoko-gold
+              hover:bg-jamoko-gold/10
               transition
             "
           >
             Ähnliches Projekt anfragen
-          </a>
-        </motion.div>
+          </motion.a>
+
+        </div>
 
       </div>
-    </section>
+
+    </motion.section>
   );
 }

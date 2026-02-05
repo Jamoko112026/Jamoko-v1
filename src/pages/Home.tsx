@@ -2,109 +2,119 @@
 
 import GlowBackground from "../components/backgrounds/GlowBackground";
 
-// Calm-Energy Divider
-import CalmEnergyLightline from "../components/CalmEnergyLightline";
+// SEO
+import SEO from "@/components/SEO";
 
-// ArcGlow-Assets
-import PlanetArcGlowHero from "../components/PlanetArcGlowHero";
+// Visual Accents
 import PlanetArcGlowMini from "../components/PlanetArcGlowMini";
-import PlanetArcGlowDark from "../components/PlanetArcGlowDark";
 import PlanetArcGlowVertical from "../components/PlanetArcGlowVertical";
 
 // HERO
 import HeroLuminousBalance from "../sections/hero/HeroLuminousBalance";
 
-// BRAND ESSENCE
+// CONTENT
 import BrandEssence from "../components/sections/BrandEssence";
-
-// MINI-SITE
 import MiniSiteOffer from "../sections/services/MiniSite/Offer";
 import MiniSitePreview from "../sections/services/MiniSite/Preview";
 import MiniSitePricing from "../sections/services/MiniSite/Pricing";
-
-// KLARHEITSSYSTEM
 import Klarheitssystem from "../sections/Klarheitssystem";
-
-// MARKENWERTE
 import Positionierung from "../sections/value/Positionierung";
 import WhyVisibility from "../sections/value/WhyVisibility";
-
-// CONTACT
 import ContactSection from "../sections/end/ContactSection";
 
 export default function Home() {
   return (
-    <GlowBackground className="text-jamoko-text">
-      {/* HERO */}
-      <section className="pt-32 pb-36 text-center px-6 relative">
-        <HeroLuminousBalance />
-      </section>
+    <>
+      {/* ======================
+          SEO META
+      ====================== */}
+      <SEO
+        title="JaMoKo – Ruhige Mini-Websites für lokale Betriebe"
+        description="Mini-Websites für Handwerk & lokale Betriebe. Klar. Persönlich. Wirksam. Digitale Präsenz ohne Stress."
+        url="https://jamoko.de"
+      />
 
-      <PlanetArcGlowHero />
+      <GlowBackground className="text-jamoko-text">
 
-      {/* BRAND ESSENCE */}
-      <CalmEnergyLightline />
+        {/* ======================
+            HERO
+        ====================== */}
+        <section className="pt-32 pb-28 px-6 relative">
+          <HeroLuminousBalance />
+        </section>
 
-      <section className="py-32 px-6 max-w-5xl mx-auto">
-        <BrandEssence />
-      </section>
+        {/* Soft Transition */}
+        <div className="h-28 bg-gradient-to-b from-transparent to-[#001821]" />
 
-      <div className="h-24 bg-gradient-to-b from-transparent to-[#001821]" />
+        {/* ======================
+            BRAND ESSENCE
+        ====================== */}
+        <section className="py-28 md:py-32 px-6 max-w-5xl mx-auto">
+          <BrandEssence />
+        </section>
 
-      {/* OFFER */}
-      <section id="minisite-offer" className="py-24 px-6 max-w-5xl mx-auto">
-        <MiniSiteOffer />
-      </section>
+        {/* ======================
+            OFFER
+        ====================== */}
+        <section
+          id="minisite-offer"
+          className="py-28 px-6 max-w-5xl mx-auto"
+        >
+          <MiniSiteOffer />
+        </section>
 
-      <PlanetArcGlowMini />
-      <CalmEnergyLightline />
+        <PlanetArcGlowMini />
 
-      {/* PREVIEW */}
-      <section className="py-32 px-6">
-        <MiniSitePreview />
-      </section>
+        {/* ======================
+            PREVIEW
+        ====================== */}
+        <section className="py-28 md:py-32 px-6">
+          <MiniSitePreview />
+        </section>
 
-      <PlanetArcGlowDark />
-      <CalmEnergyLightline />
+        {/* ======================
+            PRICING
+        ====================== */}
+        <section className="py-28 px-6 max-w-5xl mx-auto">
+          <MiniSitePricing />
+        </section>
 
-      {/* PRICING */}
-      <section className="py-28 px-6 max-w-5xl mx-auto">
-        <MiniSitePricing />
-      </section>
+        {/* ======================
+            KLARHEITSSYSTEM
+        ====================== */}
+        <section
+          id="klarheit"
+          className="py-28 md:py-32 px-6 max-w-5xl mx-auto"
+        >
+          <Klarheitssystem />
+        </section>
 
-      <CalmEnergyLightline />
+        {/* ======================
+            MARKENWERTE
+        ====================== */}
+        <section
+          id="werte"
+          className="py-28 md:py-32 px-6 max-w-5xl mx-auto space-y-32"
+        >
 
-      <div className="h-24 bg-gradient-to-b from-[#001821] via-[#001f2a] to-[#001821]" />
+          <Positionierung />
 
-      {/* KLARHEITSSYSTEM */}
-      <section id="klarheit" className="py-32 px-6 max-w-5xl mx-auto">
-        <Klarheitssystem />
-      </section>
+          <div className="w-full flex justify-center">
+            <PlanetArcGlowVertical />
+          </div>
 
-      <PlanetArcGlowMini />
-      <CalmEnergyLightline />
+          <WhyVisibility />
 
-      {/* MARKENWERTE */}
-      <section id="werte" className="py-32 px-6 max-w-5xl mx-auto space-y-40">
-        <Positionierung />
+        </section>
 
-        {/* Vertical Glow */}
-        <div className="w-full flex justify-center">
-          <PlanetArcGlowVertical />
-        </div>
+        {/* ======================
+            CONTACT (FINAL CTA)
+        ====================== */}
+        <section className="py-36 px-6">
+          <ContactSection />
+        </section>
 
-        <CalmEnergyLightline />
-
-        <WhyVisibility />
-      </section>
-
-      <PlanetArcGlowMini />
-      <CalmEnergyLightline />
-
-      {/* CONTACT */}
-      <section className="py-36 px-6">
-        <ContactSection />
-      </section>
-    </GlowBackground>
+      </GlowBackground>
+    </>
   );
 }

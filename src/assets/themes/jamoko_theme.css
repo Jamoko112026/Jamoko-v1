@@ -1,0 +1,247 @@
+/* ────────────────────────────────────────────────
+   JaMoKo Theme — Luminous Balance v1.4
+   Digitale Ruhe · Spürbare Wirkung
+──────────────────────────────────────────────── */
+
+:root {
+
+  /* ===== CORE COLORS ===== */
+
+  --jamoko-navy: #001821;
+  --jamoko-gold: #E5C58B;
+  --jamoko-teal: #1AC7A4;
+
+  --jamoko-text-main: #EDF2F7;
+  --jamoko-text-soft: #D6E0E7;
+
+
+  /* ===== EFFECT COLORS ===== */
+
+  --jamoko-line: rgba(26,199,164,0.35);
+  --jamoko-glow: rgba(229,197,139,0.28);
+
+
+  /* ===== BACKGROUND SYSTEM ===== */
+
+  --jamoko-bg-gradient: linear-gradient(
+    145deg,
+    #001821 0%,
+    #04242c 100%
+  );
+
+
+  /* ===== TYPO ===== */
+
+  --font-headline: "Montserrat", "Satoshi", system-ui, sans-serif;
+  --font-body: "Nunito", "Open Sans", system-ui, sans-serif;
+
+
+  /* ===== SPACING / UI ===== */
+
+  --section-padding: 6rem;
+  --card-radius: 1.6rem;
+  --card-blur: 14px;
+}
+
+
+
+/* ======================
+   JAMOKO THEME WRAPPER
+====================== */
+
+.theme-jamoko {
+  color: var(--jamoko-text-main);
+  font-family: var(--font-body);
+  letter-spacing: .01em;
+  -webkit-font-smoothing: antialiased;
+
+  background: var(--jamoko-bg-gradient);
+}
+
+
+
+
+
+/* ======================
+   TYPOGRAPHY
+====================== */
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-headline);
+  color: var(--jamoko-gold);
+  letter-spacing: .02em;
+}
+
+p {
+  margin: .5rem 0 1.25rem;
+  color: var(--jamoko-text-soft);
+  line-height: 1.7;
+}
+
+
+
+/* ======================
+   DIVIDERS
+====================== */
+
+hr,
+.divider {
+  border: none;
+  border-bottom: 1px solid var(--jamoko-line);
+  margin: 2rem 0;
+  opacity: .85;
+}
+
+
+
+/* ======================
+   GLASS CARDS
+====================== */
+
+.card-glass {
+  background: rgba(0,24,33,0.65);
+  backdrop-filter: blur(var(--card-blur));
+  border-radius: var(--card-radius);
+  padding: 2rem;
+  border: 1px solid rgba(255,255,255,0.08);
+
+  box-shadow:
+    0 0 22px rgba(229,197,139,0.18);
+
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.card-glass:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 34px rgba(229,197,139,0.28);
+}
+
+
+
+/* ======================
+   LINKS
+====================== */
+
+a {
+  color: var(--jamoko-teal);
+  text-decoration: none;
+  transition: .25s ease;
+}
+
+a:hover {
+  color: var(--jamoko-gold);
+  text-shadow: 0 0 6px rgba(26,199,164,.35);
+}
+
+
+
+/* ======================
+   HELPERS
+====================== */
+
+.text-gold { color: var(--jamoko-gold); }
+.text-teal { color: var(--jamoko-teal); }
+.text-soft { color: var(--jamoko-text-soft); }
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.section {
+  padding: var(--section-padding) 1.5rem;
+}
+
+
+
+/* ======================
+   JAMOKO SOFT GLOW
+====================== */
+
+.jamoko-soft-glow {
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(229,197,139,0.12),
+      transparent 70%
+    );
+}
+
+
+
+/* ======================
+   BUTTON SYSTEM
+====================== */
+
+.jamoko-button {
+  display: inline-block;
+  padding: 0.8rem 1.2rem;
+  border-radius: 1rem;
+  font-weight: 500;
+  transition: .25s ease;
+}
+
+
+.jamoko-button-primary {
+  background: linear-gradient(
+    135deg,
+    var(--jamoko-gold),
+    var(--jamoko-teal)
+  );
+
+  color: var(--jamoko-navy);
+}
+
+.jamoko-button-primary:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 0 20px rgba(229,197,139,.35);
+}
+
+
+.jamoko-button-outline {
+  border: 1px solid var(--jamoko-line);
+  color: var(--jamoko-text-main);
+}
+
+.jamoko-button-outline:hover {
+  border-color: var(--jamoko-gold);
+  color: var(--jamoko-gold);
+}
+
+
+
+/* ======================
+   FOOTER BASE
+====================== */
+
+footer {
+  color: var(--jamoko-text-soft);
+  font-size: .9rem;
+  text-align: center;
+  padding: 3rem 1rem;
+  border-top: 1px solid var(--jamoko-line);
+}
+
+
+
+/* ======================
+   OPTIONAL: SL BAUTEC PROFILE
+   (nur aktivieren wenn nötig)
+====================== */
+
+/*
+:root {
+
+  --jamoko-navy: #1f241b;
+  --jamoko-gold: #d4a35f;
+  --jamoko-teal: #6aa06a;
+
+  --jamoko-text-main: #f1f3ee;
+  --jamoko-text-soft: #c6cbbb;
+
+}
+*/

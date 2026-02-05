@@ -53,9 +53,9 @@ export default function SLBHero() {
             text-[#F2EFE6]
           "
         >
-          Zuverlässiger Partner
-          <br className="hidden md:block" />
-          für Tiefbau & Infrastrukturprojekte
+Zuverlässiger Partner{" "}
+<br className="hidden md:block" />
+für Tiefbau & Infrastrukturprojekte
         </h1>
 
         {/* Subline */}
