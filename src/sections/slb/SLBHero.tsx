@@ -47,14 +47,14 @@ export default function SLBHero() {
         </p>
 
         {/* Headline */}
-  <h1 className="mb-8 text-[32px] md:text-5xl lg:text-6xl font-semibold leading-[1.12] tracking-tight text-white drop-shadow-[0_3px_8px_rgba(0,0,0,0.45)]">
+<h1 className="mb-8 text-[32px] md:text-5xl lg:text-6xl font-semibold leading-[1.12] tracking-tight text-white drop-shadow-[0_3px_8px_rgba(0,0,0,0.45)]">
   Zuverlässiger{" "}
-  <span className="whitespace-nowrap">Partner&nbsp;für</span>
+  <span className="whitespace-nowrap">
+    Partner<span className="inline-block w-[0.25em]" />für
+  </span>
   <br className="hidden md:block" />
   Tiefbau & Infrastrukturprojekte
 </h1>
-
-
         {/* Subline */}
         <p className="mx-auto mb-12 max-w-2xl text-[15.5px] md:text-lg leading-[1.7] text-white/90 drop-shadow-[0_2px_6px_rgba(0,0,0,0.35)]">
           Glasfaserausbau, Straßenbau, Betonarbeiten und Entwässerung.
