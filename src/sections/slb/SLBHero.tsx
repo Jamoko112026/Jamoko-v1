@@ -10,53 +10,72 @@ export default function SLBHero() {
       <div
         className="
           absolute inset-0
-          bg-cover bg-center
+          bg-cover
+          bg-[position:62%_center]
           scale-[1.02]
-          brightness-[1.08]
-          contrast-[1.12]
-          saturate-[1.01]
+          brightness-[1.06]
+          contrast-[1.10]
+          saturate-[1.02]
         "
         style={{ backgroundImage: `url(${HeroImage})` }}
       />
 
-      {/* ================= Main Overlay ================= */}
+      {/* ================= Bottom Depth Overlay ================= */}
       <div
         className="
           absolute inset-0
           bg-gradient-to-b
-          from-[rgba(18,24,30,0.12)]
+          from-[rgba(18,24,30,0.10)]
           via-[rgba(18,24,30,0.28)]
-          to-[rgba(18,24,30,0.55)]
+          to-[rgba(18,24,30,0.60)]
         "
+      />
+
+      {/* ================= Left Balance Fade ================= */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: `linear-gradient(
+            to right,
+            rgba(10,14,18,0.55) 0%,
+            rgba(10,14,18,0.35) 28%,
+            rgba(10,14,18,0.0) 60%
+          )`
+        }}
       />
 
       {/* ================= Light Focus ================= */}
       <div
-        className="
-          absolute inset-0
-          bg-[radial-gradient(circle_at_48%_30%,rgba(255,255,255,0.10),transparent_65%)]
-        "
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: `radial-gradient(
+            circle at 48% 30%,
+            rgba(255,255,255,0.08),
+            transparent 65%
+          )`
+        }}
       />
 
       {/* ================= Content ================= */}
-      <div className="relative mx-auto max-w-6xl px-5 text-center">
+      <div className="relative z-10 mx-auto max-w-6xl px-5 text-center">
 
         {/* Eyebrow */}
-        <p className="mb-6 text-sm uppercase tracking-[0.28em] text-white/75">
+        <p className="mb-6 text-sm uppercase tracking-[0.28em] text-white/70">
           Straßenbau · Tiefbau · Infrastruktur
         </p>
 
         {/* Headline */}
-<h1 className="mb-8 text-[32px] md:text-5xl lg:text-6xl font-semibold leading-[1.12] tracking-tight text-white drop-shadow-[0_3px_8px_rgba(0,0,0,0.45)]">
-  Zuverlässiger{" "}
-  <span className="whitespace-nowrap">
-    Partner<span className="inline-block w-[0.25em]" />für
-  </span>
-  <br className="hidden md:block" />
-  Tiefbau & Infrastrukturprojekte
-</h1>
+        <h1 className="mb-8 text-[32px] md:text-5xl lg:text-6xl font-semibold leading-[1.15] tracking-tight text-white drop-shadow-[0_3px_8px_rgba(0,0,0,0.45)]">
+          Zuverlässiger{" "}
+          <span className="whitespace-nowrap">
+            Partner <span className="mx-[0.08em]">für</span>
+          </span>
+          <br className="hidden md:block" />
+          Tiefbau & Infrastrukturprojekte
+        </h1>
+
         {/* Subline */}
-        <p className="mx-auto mb-12 max-w-2xl text-[15.5px] md:text-lg leading-[1.7] text-white/90 drop-shadow-[0_2px_6px_rgba(0,0,0,0.35)]">
+        <p className="mx-auto mb-12 max-w-2xl text-[15.5px] md:text-lg leading-[1.7] text-white/88 drop-shadow-[0_2px_6px_rgba(0,0,0,0.35)]">
           Glasfaserausbau, Straßenbau, Betonarbeiten und Entwässerung.
           Strukturierte Projektabwicklung für öffentliche Auftraggeber,
           Versorger und gewerbliche Bauprojekte im Norden.
@@ -79,14 +98,14 @@ export default function SLBHero() {
             Unverbindliche Projektanfrage
           </a>
 
-          <div className="text-sm text-white/75 tracking-wide">
+          <div className="text-sm text-white/70 tracking-wide">
             ✓ Antwort innerhalb 24h · ✓ Unverbindlich · ✓ Regionaler Ansprechpartner
           </div>
 
         </div>
 
         {/* Trust Line */}
-        <div className="mt-12 text-sm text-white/70 tracking-wide">
+        <div className="mt-12 text-sm text-white/65 tracking-wide">
           Termintreu · Normgerecht · Regional im Einsatz
         </div>
 
