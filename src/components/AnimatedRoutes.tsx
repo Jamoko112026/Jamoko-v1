@@ -40,9 +40,19 @@ export default function AnimatedRoutes() {
         <Routes location={location}>
 
           {/* =========================
-              JAMOKO (ROOT)
+              SL BAUTEC = ROOT
           ========================= */}
-          <Route path="/" element={<JamokoLayout />}>
+          <Route path="/" element={<SLBLayout />}>
+            <Route index element={<SLB />} />
+            <Route path="impressum" element={<SLBImpressum />} />
+            <Route path="datenschutz" element={<SLBDatenschutz />} />
+            <Route path="rechtliche-hinweise" element={<SLBRechtlicheHinweise />} />
+          </Route>
+
+          {/* =========================
+              JAMOKO (SUBPATH)
+          ========================= */}
+          <Route path="/jamoko" element={<JamokoLayout />}>
             <Route index element={<Home />} />
             <Route path="minisite" element={<MiniSite />} />
             <Route path="business" element={<Business />} />
@@ -51,20 +61,9 @@ export default function AnimatedRoutes() {
             <Route path="kontakt" element={<Kontakt />} />
             <Route path="about" element={<About />} />
 
-            {/* Legal */}
             <Route path="impressum" element={<Impressum />} />
             <Route path="datenschutz" element={<Datenschutz />} />
             <Route path="agb" element={<AGB />} />
-          </Route>
-
-          {/* =========================
-              SL BAUTEC
-          ========================= */}
-          <Route path="/slb" element={<SLBLayout />}>
-            <Route index element={<SLB />} />
-            <Route path="impressum" element={<SLBImpressum />} />
-            <Route path="datenschutz" element={<SLBDatenschutz />} />
-            <Route path="rechtliche-hinweise" element={<SLBRechtlicheHinweise />} />
           </Route>
 
         </Routes>
