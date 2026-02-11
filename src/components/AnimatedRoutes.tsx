@@ -1,11 +1,15 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 
-// Layouts
+/* =========================
+   LAYOUTS
+========================= */
 import JamokoLayout from "../layouts/JamokoLayout";
 import SLBLayout from "../layouts/SLBLayout";
 
-// Jamoko Pages
+/* =========================
+   JAMOKO PAGES
+========================= */
 import Home from "../pages/Home";
 import MiniSite from "../pages/MiniSite";
 import Pricing from "../pages/Pricing";
@@ -14,12 +18,14 @@ import Kontakt from "../pages/Kontakt";
 import About from "../pages/About";
 import Business from "../pages/Business";
 
-// Jamoko Legal
+/* JAMOKO LEGAL */
 import Impressum from "../pages/Impressum";
 import Datenschutz from "../pages/Datenschutz";
 import AGB from "../pages/AGB";
 
-// SLB Pages
+/* =========================
+   SL BAUTEC PAGES
+========================= */
 import SLB from "../pages/SLB";
 import SLBImpressum from "../pages/slb/SLBImpressum";
 import SLBDatenschutz from "../pages/slb/SLBDatenschutz";
@@ -40,41 +46,37 @@ export default function AnimatedRoutes() {
         <Routes location={location}>
 
           {/* =========================
-              JAMOKO CORE
+              ROOT → SL BAUTEC
           ========================= */}
-
-          <Route element={<JamokoLayout />}>
-
-            {/* Public Pages */}
-            <Route path="/" element={<Home />} />
-            <Route path="/minisite" element={<MiniSite />} />
-            <Route path="/business" element={<Business />} />
-            <Route path="/pricing" element={<Pricing />} />
-            <Route path="/faq" element={<FAQ />} />
-            <Route path="/kontakt" element={<Kontakt />} />
-            <Route path="/about" element={<About />} />
-
-            {/* Legal */}
-            <Route path="/impressum" element={<Impressum />} />
-            <Route path="/datenschutz" element={<Datenschutz />} />
-            <Route path="/agb" element={<AGB />} />
-
+          <Route path="/" element={<SLBLayout />}>
+            <Route index element={<SLB />} />
+            <Route path="impressum" element={<SLBImpressum />} />
+            <Route path="datenschutz" element={<SLBDatenschutz />} />
+            <Route
+              path="rechtliche-hinweise"
+              element={<SLBRechtlicheHinweise />}
+            />
           </Route>
 
           {/* =========================
-    SL BAUTEC SYSTEM
-========================= */}
+              JAMOKO SYSTEM (/jamoko)
+          ========================= */}
+          <Route path="/jamoko" element={<JamokoLayout />}>
 
-<Route path="/slb" element={<SLBLayout />}>
-  <Route index element={<SLB />} />
-  <Route path="impressum" element={<SLBImpressum />} />
-  <Route path="datenschutz" element={<SLBDatenschutz />} />
-  <Route
-    path="rechtliche-hinweise"
-    element={<SLBRechtlicheHinweise />}
-  />
-</Route>
+            <Route index element={<Home />} />
+            <Route path="minisite" element={<MiniSite />} />
+            <Route path="business" element={<Business />} />
+            <Route path="pricing" element={<Pricing />} />
+            <Route path="faq" element={<FAQ />} />
+            <Route path="kontakt" element={<Kontakt />} />
+            <Route path="about" element={<About />} />
 
+            {/* Legal */}
+            <Route path="impressum" element={<Impressum />} />
+            <Route path="datenschutz" element={<Datenschutz />} />
+            <Route path="agb" element={<AGB />} />
+
+          </Route>
 
         </Routes>
       </motion.div>
