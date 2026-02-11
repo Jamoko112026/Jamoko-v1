@@ -34,12 +34,15 @@ export default function Home() {
         url="https://jamoko.de"
       />
 
+      {/* ======================
+          BACKGROUND WRAPPER
+      ====================== */}
       <GlowBackground className="text-jamoko-text">
 
         {/* ======================
             HERO
         ====================== */}
-        <section className="pt-32 pb-28 px-6 relative">
+        <section className="relative pt-32 pb-28 px-6">
           <HeroLuminousBalance />
         </section>
 
@@ -47,14 +50,15 @@ export default function Home() {
         <div className="h-28 bg-gradient-to-b from-transparent to-[#001821]" />
 
         {/* ======================
-            BRAND ESSENCE
+            PROBLEM / WIRKUNG
+            (BrandEssence)
         ====================== */}
         <section className="py-28 md:py-32 px-6 max-w-5xl mx-auto">
           <BrandEssence />
         </section>
 
         {/* ======================
-            OFFER
+            LÖSUNG – MINI-SITE
         ====================== */}
         <section
           id="minisite-offer"
@@ -66,21 +70,21 @@ export default function Home() {
         <PlanetArcGlowMini />
 
         {/* ======================
-            PREVIEW
+            VERTRAUEN / PREVIEW
         ====================== */}
         <section className="py-28 md:py-32 px-6">
           <MiniSitePreview />
         </section>
 
         {/* ======================
-            PRICING
+            ANGEBOT / PREIS
         ====================== */}
         <section className="py-28 px-6 max-w-5xl mx-auto">
           <MiniSitePricing />
         </section>
 
         {/* ======================
-            KLARHEITSSYSTEM
+            METHODE – KLARHEITSSYSTEM
         ====================== */}
         <section
           id="klarheit"
@@ -90,13 +94,12 @@ export default function Home() {
         </section>
 
         {/* ======================
-            MARKENWERTE
+            POSITIONIERUNG / WARUM JAMOKO
         ====================== */}
         <section
           id="werte"
           className="py-28 md:py-32 px-6 max-w-5xl mx-auto space-y-32"
         >
-
           <Positionierung />
 
           <div className="w-full flex justify-center">
@@ -104,11 +107,10 @@ export default function Home() {
           </div>
 
           <WhyVisibility />
-
         </section>
 
         {/* ======================
-            CONTACT (FINAL CTA)
+            FINAL CTA / KONTAKT
         ====================== */}
         <section className="py-36 px-6">
           <ContactSection />

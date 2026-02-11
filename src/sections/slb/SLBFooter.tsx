@@ -23,8 +23,29 @@ export default function SLBFooter() {
           <div className="font-semibold text-white">
             SL BauTec GmbH
           </div>
+
           <div className="text-white/60">
             Barsbüttel · Hamburg & Schleswig-Holstein
+          </div>
+
+          {/* TELEFON */}
+          <div className="mt-3 flex items-center justify-center md:justify-start gap-2 text-white/85">
+            <span className="text-white/45 tracking-wide">
+              Tel.
+            </span>
+
+            <a
+              href="tel:+494050091310"
+              className="
+                font-semibold
+                tracking-[0.02em]
+                text-white/90
+                hover:text-[var(--sl-accent-main)]
+                transition-colors
+              "
+            >
+              040&nbsp;/&nbsp;50091310
+            </a>
           </div>
         </div>
 

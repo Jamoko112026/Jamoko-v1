@@ -19,8 +19,8 @@ export default function HeroLuminousBalance() {
       }}
     >
 
-      {/* Calm Overlay Layer */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#001821]/85 via-[#001821]/55 to-[#001821]/20" />
+      {/* Calm Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#001821]/88 via-[#001821]/60 to-[#001821]/25" />
 
       {/* CONTENT */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-28">
@@ -38,15 +38,17 @@ export default function HeroLuminousBalance() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         >
-          Ruhige Mini-Websites<br />
-          für lokale Betriebe
+          Ihr Betrieb.<br />
+          Klar gezeigt.<br />
+          Ruhig geführt.<br />
+          Digital wirksam.
         </motion.h1>
 
         {/* SUBLINE */}
         <motion.p
           className="
             mt-6
-            max-w-xl
+            max-w-2xl
             text-jamoko-text-dim
             text-base sm:text-lg
             leading-relaxed
@@ -55,11 +57,16 @@ export default function HeroLuminousBalance() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.35, duration: 0.8 }}
         >
-          Klar. Persönlich. Wirksam.<br />
-          Digitale Präsenz ohne Stress – für echte Menschen.
+          Ruhige, klare Websites für Betriebe, die einfach funktionieren —  
+          damit Kunden sofort verstehen, was Sie tun und Vertrauen entsteht.
         </motion.p>
 
-        {/* CTA ROW */}
+        {/* TRUST MICRO LINE */}
+        <p className="mt-4 text-xs text-jamoko-text-dim/80 tracking-wide">
+          Für Handwerk & lokale Betriebe · Ohne Agenturstress · Klar geführt
+        </p>
+
+        {/* CTA */}
         <motion.div
           className="mt-9 flex flex-wrap gap-4"
           initial={{ opacity: 0, y: 14 }}
@@ -67,9 +74,9 @@ export default function HeroLuminousBalance() {
           transition={{ delay: 0.55, duration: 0.7 }}
         >
 
-          {/* Primary CTA */}
+          {/* Primary */}
           <motion.a
-            href="/minisite"
+            href="#kontakt"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
             transition={{ type: "spring", stiffness: 300, damping: 18 }}
@@ -82,12 +89,12 @@ export default function HeroLuminousBalance() {
               shadow-lg
             "
           >
-            Beispiel ansehen
+            Unverbindlich anfragen
           </motion.a>
 
-          {/* Secondary CTA */}
+          {/* Secondary */}
           <a
-            href="#kontakt"
+            href="/slb"
             className="
               px-7 py-3
               rounded-xl
@@ -97,19 +104,14 @@ export default function HeroLuminousBalance() {
               transition
             "
           >
-            Kontakt aufnehmen
+            Beispiel ansehen
           </a>
 
         </motion.div>
 
-        {/* TRUST LINE */}
-        <p className="mt-6 text-xs text-jamoko-text-dim tracking-wide">
-          Für lokale Betriebe · Handwerk · Dienstleister
-        </p>
-
       </div>
 
-      {/* BOTTOM FADE TRANSITION */}
+      {/* Bottom Fade */}
       <div className="
         absolute bottom-0 left-0 w-full h-40
         bg-gradient-to-b

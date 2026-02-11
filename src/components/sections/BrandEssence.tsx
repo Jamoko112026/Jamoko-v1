@@ -20,8 +20,8 @@ export default function BrandEssence() {
           tracking-wide
         "
       >
-        Digitale Ruhe.<br className="hidden sm:block" />
-        Spürbare Wirkung.
+        Gute Arbeit —<br className="hidden sm:block" />
+        aber wirkt Ihr Betrieb auch so?
       </h2>
 
       {/* Content */}
@@ -36,24 +36,27 @@ export default function BrandEssence() {
       >
 
         <p>
-          JaMoKo steht für Technologie, die entlastet statt überfordert.
-          Wir gestalten digitale Lösungen, die Klarheit schaffen,
-          Orientierung geben und Menschen in ihrer Selbstständigkeit stärken.
+          Viele Betriebe leisten starke Arbeit, doch ihr Außenauftritt zeigt das nicht.
+          Websites sind unklar, veraltet oder erklären nicht sofort, was wirklich getan wird.
+          Kunden müssen nachfragen, Vertrauen entsteht langsamer und der Betrieb wirkt schwächer, als er ist.
         </p>
 
         <p>
-          Technologie ist für uns kein Selbstzweck.
-          Sie dient dem Menschen – leise, zuverlässig und verständlich.
-          Echte Barrierefreiheit beginnt dort, wo Technologie begleitet
-          und Beziehung zulässt.
+          Oft liegt das Problem nicht in der Arbeit selbst, sondern im Auftritt.
+          Viele wissen: <em>Eigentlich sind wir besser, als wir online wirken.</em>
+          Digital fühlt sich kompliziert an — statt unterstützend.
         </p>
 
         <p>
-          JaMoKo richtet sich an Selbständige und kleine Unternehmen,
-          die einen ruhigen, professionellen Online-Auftritt wollen
-          und persönliche Begleitung schätzen.
-          Nicht für Baukästen, nicht für lautes Marketing –
-          sondern für Klarheit.
+          Genau hier setzt JaMoKo an.
+          Wir bringen Klarheit, Struktur und Ruhe in den Außenauftritt — ohne Technikstress,
+          ohne Agentur-Chaos, ohne unnötige Komplexität.
+        </p>
+
+        <p>
+          Der Betrieb wirkt klar, verständlich und vertrauenswürdig.
+          Kunden verstehen sofort, was Sie tun — und melden sich.
+          Digital arbeitet mit Ihnen, nicht gegen Sie.
         </p>
 
       </div>
@@ -69,7 +72,7 @@ export default function BrandEssence() {
           tracking-wide
         "
       >
-        Reduktion ist Qualität. Beziehung steht vor Funktion.
+        Ihr Außen passt zu Ihrer echten Arbeit.
       </p>
 
     </motion.section>
