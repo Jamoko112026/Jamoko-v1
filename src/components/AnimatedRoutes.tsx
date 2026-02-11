@@ -40,24 +40,25 @@ export default function AnimatedRoutes() {
         <Routes location={location}>
 
           {/* =========================
-              JAMOKO CORE
+              JAMOKO (ROOT)
           ========================= */}
-          <Route element={<JamokoLayout />}>
-            <Route path="/" element={<Home />} />
-            <Route path="/minisite" element={<MiniSite />} />
-            <Route path="/business" element={<Business />} />
-            <Route path="/pricing" element={<Pricing />} />
-            <Route path="/faq" element={<FAQ />} />
-            <Route path="/kontakt" element={<Kontakt />} />
-            <Route path="/about" element={<About />} />
+          <Route path="/" element={<JamokoLayout />}>
+            <Route index element={<Home />} />
+            <Route path="minisite" element={<MiniSite />} />
+            <Route path="business" element={<Business />} />
+            <Route path="pricing" element={<Pricing />} />
+            <Route path="faq" element={<FAQ />} />
+            <Route path="kontakt" element={<Kontakt />} />
+            <Route path="about" element={<About />} />
 
-            <Route path="/impressum" element={<Impressum />} />
-            <Route path="/datenschutz" element={<Datenschutz />} />
-            <Route path="/agb" element={<AGB />} />
+            {/* Legal */}
+            <Route path="impressum" element={<Impressum />} />
+            <Route path="datenschutz" element={<Datenschutz />} />
+            <Route path="agb" element={<AGB />} />
           </Route>
 
           {/* =========================
-              SL BAUTEC SYSTEM
+              SL BAUTEC
           ========================= */}
           <Route path="/slb" element={<SLBLayout />}>
             <Route index element={<SLB />} />
