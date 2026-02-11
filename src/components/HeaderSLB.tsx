@@ -7,8 +7,6 @@ export default function HeaderSLB() {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
-  // Nur im SLB Bereich anzeigen
-  if (!location.pathname.startsWith("/slb")) return null;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
