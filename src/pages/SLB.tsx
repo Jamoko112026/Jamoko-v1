@@ -8,7 +8,6 @@ import SLBProcess from "../sections/slb/SLBProcess";
 import SLBMidCTA from "../sections/slb/SLBMidCTA";
 import SLBCTA from "../sections/slb/SLBCTA";
 import SLBContact from "../sections/slb/SLBContact";
-import SLBFooter from "../sections/slb/SLBFooter";
 import SLBMobileCTA from "../sections/slb/SLBMobileCTA";
 
 export default function SLB() {
@@ -42,7 +41,7 @@ export default function SLB() {
       </div>
 
       {/* FOOTER */}
-      <SLBFooter />
+  
 
       {/* MOBILE CTA */}
       <SLBMobileCTA />
