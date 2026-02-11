@@ -14,20 +14,22 @@ import StickyLandingCTA from "./components/StickyLandingCTA";
 export default function App() {
   const { pathname } = useLocation();
 
-  // SL Bautec Bereich trennen
-  const isSLB = pathname.startsWith("/slb");
+  /**
+   * SLB ist jetzt ROOT (/)
+   * → Alles außer /jamoko gehört zu SLB
+   */
+  const isJamoko = pathname.startsWith("/jamoko");
+  const isSLB = !isJamoko;
 
   return (
     <div
       className={`
         min-h-screen flex flex-col
-        ${!isSLB ? "bg-[#001821] text-jamoko-text" : ""}
+        ${isJamoko ? "bg-[#001821] text-jamoko-text" : ""}
       `}
     >
 
-      {/* =========================
-         ACCESSIBILITY SKIP LINK
-      ========================= */}
+      {/* Skip Link */}
       <a
         href="#main"
         className="
@@ -41,47 +43,35 @@ export default function App() {
         Zum Inhalt springen
       </a>
 
-      {/* =========================
-         JAMOKO HEADER
-      ========================= */}
-      {!isSLB && <Header />}
+      {/* JAMOKO HEADER */}
+      {isJamoko && <Header />}
 
-      {/* =========================
-         MAIN CONTENT
-      ========================= */}
+      {/* MAIN */}
       <main
         id="main"
         role="main"
         className={`
           flex-1
-          ${!isSLB ? "pt-24 pb-28" : ""}
+          ${isJamoko ? "pt-24 pb-28" : ""}
         `}
       >
         <AnimatedRoutes />
       </main>
 
-      {/* =========================
-         MOBILE STICKY CTA
-      ========================= */}
-      {!isSLB && <StickyLandingCTA />}
+      {/* JAMOKO CTA */}
+      {isJamoko && <StickyLandingCTA />}
 
-      {/* =========================
-         JAMOKO FOOTER
-      ========================= */}
-      {!isSLB && (
+      {/* JAMOKO FOOTER */}
+      {isJamoko && (
         <>
-          {/* Desktop Footer */}
           <div className="hidden md:block">
             <FooterGlass />
           </div>
-
-          {/* Mobile Legal Footer */}
           <div className="md:hidden">
             <FooterMobileLegal />
           </div>
         </>
       )}
-
     </div>
   );
 }
