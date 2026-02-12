@@ -37,36 +37,37 @@ export default function AnimatedRoutes() {
         exit={{ opacity: 0, y: -8 }}
         transition={{ duration: 0.3, ease: "easeOut" }}
       >
-        <Routes location={location}>
+<Routes location={location}>
 
-          {/* =========================
-              SL BAUTEC = ROOT
-          ========================= */}
-          <Route path="/" element={<SLBLayout />}>
-            <Route index element={<SLB />} />
-            <Route path="impressum" element={<SLBImpressum />} />
-            <Route path="datenschutz" element={<SLBDatenschutz />} />
-            <Route path="rechtliche-hinweise" element={<SLBRechtlicheHinweise />} />
-          </Route>
+  {/* =========================
+      JAMOKO = ROOT
+  ========================= */}
+  <Route path="/" element={<JamokoLayout />}>
+    <Route index element={<Home />} />
+    <Route path="minisite" element={<MiniSite />} />
+    <Route path="business" element={<Business />} />
+    <Route path="pricing" element={<Pricing />} />
+    <Route path="faq" element={<FAQ />} />
+    <Route path="kontakt" element={<Kontakt />} />
+    <Route path="about" element={<About />} />
 
-          {/* =========================
-              JAMOKO (SUBPATH)
-          ========================= */}
-          <Route path="/jamoko" element={<JamokoLayout />}>
-            <Route index element={<Home />} />
-            <Route path="minisite" element={<MiniSite />} />
-            <Route path="business" element={<Business />} />
-            <Route path="pricing" element={<Pricing />} />
-            <Route path="faq" element={<FAQ />} />
-            <Route path="kontakt" element={<Kontakt />} />
-            <Route path="about" element={<About />} />
+    {/* Legal */}
+    <Route path="impressum" element={<Impressum />} />
+    <Route path="datenschutz" element={<Datenschutz />} />
+    <Route path="agb" element={<AGB />} />
+  </Route>
 
-            <Route path="impressum" element={<Impressum />} />
-            <Route path="datenschutz" element={<Datenschutz />} />
-            <Route path="agb" element={<AGB />} />
-          </Route>
+  {/* =========================
+      SLB = SUBPAGE
+  ========================= */}
+  <Route path="/slb" element={<SLBLayout />}>
+    <Route index element={<SLB />} />
+    <Route path="impressum" element={<SLBImpressum />} />
+    <Route path="datenschutz" element={<SLBDatenschutz />} />
+    <Route path="rechtliche-hinweise" element={<SLBRechtlicheHinweise />} />
+  </Route>
 
-        </Routes>
+</Routes>
       </motion.div>
     </AnimatePresence>
   );
