@@ -1,5 +1,7 @@
 // src/pages/SLB.tsx
 
+import { Helmet } from "react-helmet-async";
+
 import SLBHero from "../sections/slb/SLBHero";
 import SLBServices from "../sections/slb/SLBServices";
 import SLBTrust from "../sections/slb/SLBTrust";
@@ -13,6 +15,23 @@ import SLBMobileCTA from "../sections/slb/SLBMobileCTA";
 export default function SLB() {
   return (
     <>
+      {/* =====================
+          SEO / TAB TITLE
+      ====================== */}
+      <Helmet>
+        <title>SL Bautec – Glasfaser & Tiefbau Hamburg</title>
+        <meta
+          name="description"
+          content="SL Bautec – Glasfaserbau, Tiefbau und Infrastruktur in Hamburg. Zuverlässig, strukturiert, professionell."
+        />
+        <meta property="og:title" content="SL Bautec – Glasfaser & Tiefbau Hamburg" />
+        <meta
+          property="og:description"
+          content="Glasfaserbau, Tiefbau und Infrastruktur. Strukturiert. Zuverlässig. Professionell."
+        />
+        <meta property="og:url" content="https://slbautec.de" />
+      </Helmet>
+
       {/* HERO */}
       <SLBHero />
       <div id="slb-after-hero" />
@@ -23,7 +42,7 @@ export default function SLB() {
       {/* VERTRAUEN / KERN */}
       <SLBTrust />
 
-      {/* NEU: ZERTIFIKATE + REFERENZEN */}
+      {/* ZERTIFIKATE + REFERENZEN */}
       <SLBTrustExtended />
 
       {/* ABLAUF */}
@@ -39,9 +58,6 @@ export default function SLB() {
       <div id="slb-kontakt">
         <SLBContact />
       </div>
-
-      {/* FOOTER */}
-  
 
       {/* MOBILE CTA */}
       <SLBMobileCTA />
