@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function MiniSitePreview() {
   return (
@@ -6,7 +7,7 @@ export default function MiniSitePreview() {
       id="minisite-preview"
       className="
         relative
-        py-32 px-6
+        py-36 px-6
         bg-gradient-to-b
         from-[#001821]
         via-[#001f2a]
@@ -18,65 +19,100 @@ export default function MiniSitePreview() {
       viewport={{ once: true, margin: "-120px" }}
       transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
     >
+      <div className="relative z-10 max-w-6xl mx-auto grid md:grid-cols-2 gap-20 items-center">
 
-      <div className="relative z-10 max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-
-        {/* IMAGE PREVIEW */}
+        {/* CLICKABLE MOCKUP */}
         <motion.div
           initial={{ opacity: 0, scale: 0.96 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="
-            relative
-            rounded-2xl
-            overflow-hidden
-            shadow-[0_18px_45px_rgba(0,0,0,0.45)]
-          "
+          className="relative"
         >
-          <img
-            src="/ard/preview.webp"
-            alt="Altonaer Reifendienst MiniSite Vorschau"
-            className="w-full h-auto object-cover"
-            draggable={false}
-          />
+          <Link to="/demo" className="block group">
 
-          {/* Calm Overlay */}
-          <div className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-[#001821]/35 via-transparent to-transparent" />
+            {/* Glow Frame */}
+            <div className="
+              absolute -inset-1
+              bg-gradient-to-r
+              from-jamoko-gold/30
+              via-transparent
+              to-jamoko-gold/30
+              blur-xl
+              opacity-40
+              group-hover:opacity-70
+              transition
+            " />
+
+            {/* Card */}
+            <div className="
+              relative
+              bg-[#002433]
+              rounded-3xl
+              p-6
+              shadow-[0_25px_60px_rgba(0,0,0,0.6)]
+              transition
+              group-hover:scale-[1.02]
+            ">
+
+              {/* Fake Browser Bar */}
+              <div className="flex gap-2 mb-4">
+                <div className="w-3 h-3 rounded-full bg-red-400/70" />
+                <div className="w-3 h-3 rounded-full bg-yellow-400/70" />
+                <div className="w-3 h-3 rounded-full bg-green-400/70" />
+              </div>
+
+              {/* Hero Block */}
+              <div className="rounded-xl bg-gradient-to-br from-[#003347] to-[#00465f] p-8 mb-6">
+                <h4 className="text-white text-xl font-light mb-2">
+                  Musterbetrieb Hamburg
+                </h4>
+                <p className="text-jamoko-text-dim text-sm">
+                  Klar. Persönlich. Wirksam.
+                </p>
+              </div>
+
+              {/* Content Lines */}
+              <div className="space-y-4">
+                <div className="h-4 w-3/4 bg-[#003b50] rounded" />
+                <div className="h-4 w-1/2 bg-[#003b50] rounded" />
+                <div className="h-4 w-5/6 bg-[#003b50] rounded" />
+              </div>
+
+            </div>
+
+          </Link>
         </motion.div>
 
-        {/* TEXT CONTENT */}
+        {/* TEXT SIDE */}
         <div className="text-left">
 
-          <h3
-            className="
-              text-2xl sm:text-3xl md:text-4xl
+          <h3 className="
+              text-3xl md:text-4xl
               font-light
               text-jamoko-gold
               mb-6
-            "
-          >
-            Beispielprojekt: Altonaer Reifendienst
+              tracking-wide
+            ">
+            Struktur statt Chaos
           </h3>
 
           <p className="text-jamoko-text-dim leading-relaxed mb-6 max-w-md">
-            Ziel: Lokale Sichtbarkeit erhöhen und Kundenanfragen vereinfachen —
-            ruhig, verständlich und ohne Technikstress.
+            Jede Mini-Site folgt einer klaren Architektur:
+            Leistungen, Vertrauen, Kontakt.
+            Keine Spielereien – sondern Fokus.
           </p>
 
-          <ul className="space-y-3 text-sm text-jamoko-text-dim mb-8">
-            <li>✓ Klare Startseite für lokale Kunden</li>
-            <li>✓ Mobil optimierte Kontaktführung</li>
-            <li>✓ WhatsApp Direktkontakt</li>
-            <li>✓ Ruhiges, professionelles Design</li>
-            <li>✓ Google-Business Integration</li>
+          <ul className="space-y-3 text-sm text-jamoko-text-dim mb-10">
+            <li>✓ Klare Startseitenführung</li>
+            <li>✓ Vertrauensbildende Struktur</li>
+            <li>✓ Mobile Optimierung</li>
+            <li>✓ Schnelle Kontaktaufnahme</li>
+            <li>✓ SEO-Grundlage integriert</li>
           </ul>
 
-          <motion.a
-            href="#kontakt"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.97 }}
-            transition={{ type: "spring", stiffness: 280, damping: 18 }}
+          <Link
+            to="/demo"
             className="
               inline-block
               px-6 py-3
@@ -87,13 +123,12 @@ export default function MiniSitePreview() {
               transition
             "
           >
-            Ähnliches Projekt anfragen
-          </motion.a>
+            Live-Demo ansehen
+          </Link>
 
         </div>
 
       </div>
-
     </motion.section>
   );
 }

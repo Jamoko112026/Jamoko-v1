@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 
-import "./assets/jamoko_theme.css";
+import "./assets/themes/jamoko_theme.css";
 import "./index.css";
 import App from "./App";
 

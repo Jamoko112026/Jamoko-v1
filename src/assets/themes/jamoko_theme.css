@@ -245,3 +245,82 @@ footer {
 
 }
 */
+/* =========================
+   JAMOKO TYPO SYSTEM
+   ========================= */
+
+/* HERO – Hauptführung */
+.jmk-hero-title {
+  font-size: clamp(40px, 5vw, 64px);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--jamoko-gold);
+}
+
+.jmk-hero-sub {
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.75);
+  max-width: 720px;
+}
+
+/* SECTION – Struktur */
+.jmk-section-title {
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  color: rgba(255,255,255,0.88);
+}
+
+.jmk-section-sub {
+  font-size: 15px;
+  color: rgba(255,255,255,0.55);
+}
+
+/* BODY – Lesetext */
+.jmk-body {
+  font-size: 16px;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.75);
+}
+
+/* EMPHASIS – ruhiger Fokus */
+.jmk-emphasis {
+  color: var(--jamoko-gold);
+  font-weight: 400;
+}
+
+/* SMALL / CAPTION */
+.jmk-caption {
+  font-size: 13px;
+  color: rgba(255,255,255,0.45);
+}/* =========================
+   JAMOKO SPACING SYSTEM
+   ========================= */
+
+.jmk-section {
+  padding-top: clamp(80px, 10vh, 140px);
+  padding-bottom: clamp(80px, 10vh, 140px);
+}
+
+.jmk-section-tight {
+  padding-top: clamp(50px, 6vh, 80px);
+  padding-bottom: clamp(50px, 6vh, 80px);
+}
+
+.jmk-container {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.jmk-reading {
+  max-width: 720px;
+}
+
+.jmk-flow > * + * {
+  margin-top: 1.6em;
+}

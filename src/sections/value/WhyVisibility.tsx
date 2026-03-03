@@ -9,7 +9,7 @@ export default function WhyVisibility() {
         Warum Sichtbarkeit zählt
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-stretch">
 
         <ValueGlowCard>
           <h3 className="text-2xl font-semibold text-jamoko-gold mb-4">
