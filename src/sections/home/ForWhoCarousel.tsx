@@ -6,7 +6,7 @@ type Slide = {
   title: string;
   reality: string;
   impact: string;
-  image: string; // path/URL
+  image: string;
   alt: string;
 };
 
@@ -43,7 +43,7 @@ export default function ForWhoCarousel() {
         reality: "Seriosität zählt – nicht Marketing-Lärm.",
         impact: "Ruhig professionell. Klar strukturiert. Verlässlich.",
         image: "/images/carousel/b2b.jpg",
-        alt: "Seriöse B2B-Szene: Planung, Büro, Baustellenkoordination",
+        alt: "Seriöse B2B-Szene",
       },
       {
         key: "solo",
@@ -51,7 +51,7 @@ export default function ForWhoCarousel() {
         reality: "Du machst viel – aber der Auftritt ist nicht klar genug.",
         impact: "Fokus, Ordnung, Ruhe. Damit es stimmig wirkt.",
         image: "/images/carousel/solo.jpg",
-        alt: "Ruhige Szene am Schreibtisch eines Selbständigen",
+        alt: "Ruhige Szene eines Selbständigen",
       },
     ],
     []
@@ -66,6 +66,7 @@ export default function ForWhoCarousel() {
   return (
     <section className="py-28 md:py-32 px-6">
       <div className="max-w-7xl mx-auto">
+
         {/* Head */}
         <div className="max-w-3xl mb-10">
           <h2 className="text-3xl md:text-4xl font-light text-jamoko-gold tracking-wide">
@@ -77,9 +78,10 @@ export default function ForWhoCarousel() {
           </p>
         </div>
 
-        {/* Card */}
+        {/* Layout */}
         <div className="grid lg:grid-cols-2 gap-10 items-stretch">
-          {/* Image */}
+
+          {/* IMAGE CARD */}
           <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <AnimatePresence mode="wait">
               <motion.img
@@ -87,69 +89,71 @@ export default function ForWhoCarousel() {
                 src={current.image}
                 alt={current.alt}
                 className="w-full h-[360px] md:h-[460px] object-cover"
-                initial={{ opacity: 0, scale: 1.02 }}
+                initial={{ opacity: 0, scale: 1.03 }}
                 animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 1.01 }}
+                exit={{ opacity: 0 }}
                 transition={{ duration: 0.35 }}
                 loading="lazy"
               />
             </AnimatePresence>
 
-            {/* soft overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-[#001821]/65 via-transparent to-transparent" />
           </div>
 
-          {/* Text */}
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-7 md:p-9 flex flex-col justify-between">
+          {/* TEXT CARD */}
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-8 md:p-10 flex flex-col gap-6 h-full">
+
             <AnimatePresence mode="wait">
               <motion.div
                 key={current.key}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -8 }}
+                exit={{ opacity: 0 }}
                 transition={{ duration: 0.25 }}
               >
-                <p className="text-xs tracking-wide text-jamoko-text-dim/80">
+
+                <p className="text-xs text-jamoko-text-dim/70">
                   Slide {index + 1} / {slides.length}
                 </p>
 
-                <h3 className="mt-3 text-2xl md:text-3xl font-medium text-jamoko-gold">
+                <h3 className="text-xl md:text-2xl font-medium text-jamoko-gold leading-snug">
                   {current.title}
                 </h3>
 
-                <p className="mt-6 text-jamoko-text-dim leading-relaxed">
-                  <span className="opacity-80">Realität: </span>
+                <p className="text-sm text-jamoko-text-dim leading-relaxed break-words">
+                  <span className="opacity-70">Realität: </span>
                   {current.reality}
                 </p>
 
-                <p className="mt-4 text-jamoko-text-dim leading-relaxed">
-                  <span className="opacity-80">Wirkung: </span>
+                <p className="text-sm text-jamoko-text-dim leading-relaxed break-words">
+                  <span className="opacity-70">Wirkung: </span>
                   {current.impact}
                 </p>
 
-                <div className="mt-8 flex flex-wrap gap-3">
+                <div className="mt-4 flex flex-wrap gap-3">
                   <a
                     href="#kontakt"
-                    className="px-6 py-3 rounded-xl bg-jamoko-gold text-[#001821] font-medium shadow-lg"
+                    className="px-5 py-2.5 rounded-xl bg-jamoko-gold text-[#001821] font-medium"
                   >
                     Unverbindlich anfragen
                   </a>
+
                   <a
                     href="/slb"
-                    className="px-6 py-3 rounded-xl border border-jamoko-gold/40 text-jamoko-gold hover:bg-jamoko-gold/10 transition"
+                    className="px-5 py-2.5 rounded-xl border border-jamoko-gold/40 text-jamoko-gold hover:bg-jamoko-gold/10 transition"
                   >
                     Beispiel ansehen
                   </a>
                 </div>
+
               </motion.div>
             </AnimatePresence>
 
             {/* Controls */}
-            <div className="mt-10 flex items-center justify-between gap-4">
+            <div className="mt-auto flex items-center justify-between">
               <button
                 onClick={prev}
                 className="px-4 py-2 rounded-lg border border-white/10 text-jamoko-text-dim hover:bg-white/5 transition"
-                aria-label="Vorherige Slide"
               >
                 ← Zurück
               </button>
@@ -160,9 +164,8 @@ export default function ForWhoCarousel() {
                     key={s.key}
                     onClick={() => setIndex(i)}
                     className={`h-2.5 w-2.5 rounded-full transition ${
-                      i === index ? "bg-jamoko-gold" : "bg-white/15 hover:bg-white/25"
+                      i === index ? "bg-jamoko-gold" : "bg-white/20"
                     }`}
-                    aria-label={`Slide ${i + 1}`}
                   />
                 ))}
               </div>
@@ -170,11 +173,11 @@ export default function ForWhoCarousel() {
               <button
                 onClick={next}
                 className="px-4 py-2 rounded-lg border border-white/10 text-jamoko-text-dim hover:bg-white/5 transition"
-                aria-label="Nächste Slide"
               >
                 Weiter →
               </button>
             </div>
+
           </div>
         </div>
       </div>

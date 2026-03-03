@@ -1,119 +1,112 @@
-// src/pages/Home.tsx
-
 import GlowBackground from "../components/backgrounds/GlowBackground";
-
-// SEO
 import SEO from "@/components/SEO";
-
-// Visual Accents
-import PlanetArcGlowMini from "../components/PlanetArcGlowMini";
-import PlanetArcGlowVertical from "../components/PlanetArcGlowVertical";
+import Reveal from "../components/Reveal";
 
 // HERO
-import HeroLuminousBalance from "../sections/hero/HeroLuminousBalance";
+import HeroSoft from "../components/HeroSoft";
 
-// CONTENT
+// CORE
 import BrandEssence from "../components/sections/BrandEssence";
+import SpartenCarousel from "../components/SpartenCarousel";
+
+// OFFER
 import MiniSiteOffer from "../sections/services/MiniSite/Offer";
 import MiniSitePreview from "../sections/services/MiniSite/Preview";
 import MiniSitePricing from "../sections/services/MiniSite/Pricing";
+
+// SYSTEM
 import Klarheitssystem from "../sections/Klarheitssystem";
+
+// POSITION
 import Positionierung from "../sections/value/Positionierung";
 import WhyVisibility from "../sections/value/WhyVisibility";
+
+// FINAL
 import ContactSection from "../sections/end/ContactSection";
+
+// VISUAL
+import PlanetArcGlowMini from "../components/PlanetArcGlowMini";
+import PlanetArcGlowVertical from "../components/PlanetArcGlowVertical";
 
 export default function Home() {
   return (
     <>
-      {/* ======================
-          SEO META
-      ====================== */}
+      {/* ================= SEO ================= */}
       <SEO
         title="JaMoKo – Ruhige Mini-Websites für lokale Betriebe"
         description="Mini-Websites für Handwerk & lokale Betriebe. Klar. Persönlich. Wirksam. Digitale Präsenz ohne Stress."
         url="https://jamoko.de"
       />
 
-      {/* ======================
-          BACKGROUND WRAPPER
-      ====================== */}
       <GlowBackground className="text-jamoko-text">
 
-        {/* ======================
-            HERO
-        ====================== */}
-        <section className="relative pt-32 pb-28 px-6">
-          <HeroLuminousBalance />
+        {/* ================= HERO ================= */}
+        <HeroSoft />
+
+        {/* SOFT TRANSITION */}
+        <div className="h-32 bg-gradient-to-b from-transparent to-[#001821]" />
+
+        {/* ================= ERKENNEN ================= */}
+        <section className="py-28 px-6 max-w-3xl mx-auto">
+          <Reveal>
+            <BrandEssence />
+          </Reveal>
         </section>
 
-        {/* Soft Transition */}
-        <div className="h-28 bg-gradient-to-b from-transparent to-[#001821]" />
-
-        {/* ======================
-            PROBLEM / WIRKUNG
-            (BrandEssence)
-        ====================== */}
-        <section className="py-28 md:py-32 px-6 max-w-5xl mx-auto">
-          <BrandEssence />
+        {/* ================= FÜR WEN ================= */}
+        <section className="py-28 px-6">
+          <Reveal>
+            <SpartenCarousel />
+          </Reveal>
         </section>
 
-        {/* ======================
-            LÖSUNG – MINI-SITE
-        ====================== */}
-        <section
-          id="minisite-offer"
-          className="py-28 px-6 max-w-5xl mx-auto"
-        >
-          <MiniSiteOffer />
+        {/* ================= LÖSUNG ================= */}
+        <section className="py-28 px-6 max-w-4xl mx-auto space-y-24">
+          <Reveal>
+            <MiniSiteOffer />
+          </Reveal>
+
+          <PlanetArcGlowMini />
+
+          <Reveal>
+            <MiniSitePreview />
+          </Reveal>
         </section>
 
-        <PlanetArcGlowMini />
-
-        {/* ======================
-            VERTRAUEN / PREVIEW
-        ====================== */}
-        <section className="py-28 md:py-32 px-6">
-          <MiniSitePreview />
+        {/* ================= SYSTEM ================= */}
+        <section className="py-28 px-6 max-w-3xl mx-auto">
+          <Reveal>
+            <Klarheitssystem />
+          </Reveal>
         </section>
 
-        {/* ======================
-            ANGEBOT / PREIS
-        ====================== */}
-        <section className="py-28 px-6 max-w-5xl mx-auto">
-          <MiniSitePricing />
+        {/* ================= PREISE ================= */}
+        <section className="py-32 px-6 max-w-4xl mx-auto">
+          <Reveal>
+            <MiniSitePricing />
+          </Reveal>
         </section>
 
-        {/* ======================
-            METHODE – KLARHEITSSYSTEM
-        ====================== */}
-        <section
-          id="klarheit"
-          className="py-28 md:py-32 px-6 max-w-5xl mx-auto"
-        >
-          <Klarheitssystem />
-        </section>
+        {/* ================= HALTUNG ================= */}
+        <section className="py-32 px-6 max-w-3xl mx-auto space-y-24">
+          <Reveal>
+            <Positionierung />
+          </Reveal>
 
-        {/* ======================
-            POSITIONIERUNG / WARUM JAMOKO
-        ====================== */}
-        <section
-          id="werte"
-          className="py-28 md:py-32 px-6 max-w-5xl mx-auto space-y-32"
-        >
-          <Positionierung />
-
-          <div className="w-full flex justify-center">
+          <div className="flex justify-center">
             <PlanetArcGlowVertical />
           </div>
 
-          <WhyVisibility />
+          <Reveal>
+            <WhyVisibility />
+          </Reveal>
         </section>
 
-        {/* ======================
-            FINAL CTA / KONTAKT
-        ====================== */}
-        <section className="py-36 px-6">
-          <ContactSection />
+        {/* ================= CTA ================= */}
+        <section id="kontakt" className="py-36 px-6">
+          <Reveal>
+            <ContactSection />
+          </Reveal>
         </section>
 
       </GlowBackground>

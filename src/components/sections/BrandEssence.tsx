@@ -11,29 +11,14 @@ export default function BrandEssence() {
     >
 
       {/* Headline */}
-      <h2
-        className="
-          text-3xl sm:text-4xl md:text-5xl
-          font-light
-          text-jamoko-gold
-          mb-10
-          tracking-wide
-        "
-      >
-        Gute Arbeit —<br className="hidden sm:block" />
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-light text-jamoko-gold mb-12 tracking-wide leading-tight">
+        Gute Arbeit —
+        <br className="hidden sm:block" />
         aber wirkt Ihr Betrieb auch so?
       </h2>
 
-      {/* Content */}
-      <div
-        className="
-          space-y-7
-          text-base sm:text-lg
-          text-jamoko-text-dim
-          leading-relaxed
-          max-w-3xl
-        "
-      >
+      {/* Text Block (ruhig + stabil) */}
+      <div className="space-y-6 text-base sm:text-lg text-jamoko-text-dim leading-relaxed max-w-3xl">
 
         <p>
           Viele Betriebe leisten starke Arbeit, doch ihr Außenauftritt zeigt das nicht.
@@ -61,17 +46,8 @@ export default function BrandEssence() {
 
       </div>
 
-      {/* Signature Line */}
-      <p
-        className="
-          mt-12
-          text-sm
-          italic
-          text-jamoko-text-dim
-          opacity-70
-          tracking-wide
-        "
-      >
+      {/* Signature */}
+      <p className="mt-14 text-sm italic text-jamoko-text-dim opacity-70 tracking-wide">
         Ihr Außen passt zu Ihrer echten Arbeit.
       </p>
 

@@ -16,7 +16,9 @@ export default function ValueGlowCard({
   return (
     <div
       className={`
-        group p-10 rounded-3xl
+        group
+        rounded-3xl
+        p-8 md:p-9
         bg-[#01212d]/70
         backdrop-blur-md
         border border-jamoko-gold/${borderStrength}
@@ -24,24 +26,30 @@ export default function ValueGlowCard({
         transition-all duration-300
         hover:shadow-[0_0_45px_rgba(229,197,139,0.18)]
         hover:border-jamoko-gold/30
+
+        /* ===== STABILITY FIX ===== */
+        flex flex-col
+        justify-start
+        h-full
+        overflow-hidden
       `}
     >
       {/* ICON */}
       {icon && (
-        <div className="text-4xl mb-6 opacity-80 group-hover:opacity-100 transition">
+        <div className="text-4xl mb-5 opacity-80 group-hover:opacity-100 transition">
           {icon}
         </div>
       )}
 
       {/* TITLE */}
       {title && (
-        <h3 className="text-2xl font-semibold text-jamoko-gold mb-4">
+        <h3 className="text-xl md:text-2xl leading-snug text-jamoko-gold mb-3 break-words">
           {title}
         </h3>
       )}
 
       {/* DESCRIPTION */}
-      <div className="text-jamoko-text-dim leading-relaxed space-y-3">
+      <div className="text-jamoko-text-dim leading-relaxed space-y-2 break-words">
         {children}
       </div>
     </div>
