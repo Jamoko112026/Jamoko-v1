@@ -11,7 +11,7 @@ export default function PhysioDemo() {
           className="absolute inset-0 w-full h-full object-cover"
         />
 
-        <div className="absolute inset-0 bg-[#001821]/60"></div>
+        <div className="absolute inset-0 bg-[#001821]/65"></div>
 
         <div className="relative z-10 max-w-3xl">
 
@@ -19,8 +19,8 @@ export default function PhysioDemo() {
             Physiotherapie in Hamburg-Altona
           </h1>
 
-          <p className="text-xl text-gray-300 mb-8">
-            Beweglichkeit. Stabilität. Lebensqualität.
+          <p className="text-lg md:text-xl text-gray-300 mb-10">
+            Beweglichkeit. Stabilität. Lebensqualität im Alltag.
           </p>
 
           <button className="px-8 py-3 rounded-xl bg-jamoko-gold text-black font-medium hover:opacity-90 transition">
@@ -36,9 +36,9 @@ export default function PhysioDemo() {
 
 
       {/* PRAXIS */}
-      <section className="py-24 px-6 text-center">
+      <section className="py-28 px-6">
 
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto text-center">
 
           <h2 className="text-3xl mb-6 font-light">
             Ihre Physiotherapie in Altona
@@ -47,7 +47,7 @@ export default function PhysioDemo() {
           <p className="text-gray-300 leading-relaxed">
             Unsere Praxis begleitet Menschen auf dem Weg zu mehr Beweglichkeit
             und weniger Schmerzen. Mit moderner Physiotherapie und persönlicher
-            Betreuung helfen wir Ihnen dabei, Ihren Alltag wieder aktiv
+            Betreuung unterstützen wir Sie dabei, Ihren Alltag wieder aktiv
             und beschwerdefrei zu gestalten.
           </p>
 
@@ -57,7 +57,7 @@ export default function PhysioDemo() {
 
 
       {/* BEHANDLUNGEN */}
-      <section className="py-24 px-6 bg-[#01212d]">
+      <section className="py-28 px-6 bg-[#01212d]">
 
         <div className="max-w-5xl mx-auto">
 
@@ -79,7 +79,7 @@ export default function PhysioDemo() {
 
             <div>
               <h3 className="text-xl mb-2 text-white">Lymphdrainage</h3>
-              <p>Unterstützung des Lymphsystems zur Reduzierung von Schwellungen.</p>
+              <p>Sanfte Therapie zur Unterstützung des Lymphsystems.</p>
             </div>
 
             <div>
@@ -95,7 +95,7 @@ export default function PhysioDemo() {
 
 
       {/* PRAXIS EINBLICKE */}
-      <section className="py-24 px-6">
+      <section className="py-28 px-6">
 
         <div className="max-w-4xl mx-auto text-center">
 
@@ -104,9 +104,9 @@ export default function PhysioDemo() {
           </h2>
 
           <p className="text-gray-300 leading-relaxed">
-            Unsere Praxis steht für eine ruhige Atmosphäre, moderne
-            Behandlungsräume und persönliche Betreuung. Patienten sollen
-            sich vom ersten Moment an wohlfühlen.
+            Eine ruhige Atmosphäre, moderne Behandlungsräume und persönliche
+            Betreuung stehen bei uns im Mittelpunkt. Patienten sollen sich
+            vom ersten Moment an gut aufgehoben fühlen.
           </p>
 
         </div>
@@ -115,7 +115,7 @@ export default function PhysioDemo() {
 
 
       {/* WEBSITE ERKLÄRUNG */}
-      <section className="py-24 px-6 bg-[#01212d]">
+      <section className="py-28 px-6 bg-[#01212d]">
 
         <div className="max-w-6xl mx-auto">
 
@@ -132,12 +132,13 @@ export default function PhysioDemo() {
               </h3>
 
               <ul className="text-gray-300 space-y-2">
-                <li>• viele lange Texte</li>
+                <li>• lange Texte</li>
                 <li>• unübersichtliche Struktur</li>
                 <li>• Termin schwer zu finden</li>
               </ul>
 
             </div>
+
 
             <div className="p-10 rounded-2xl bg-[#001821] border border-jamoko-gold/30">
 
@@ -161,7 +162,7 @@ export default function PhysioDemo() {
 
 
       {/* PATIENTENREISE */}
-      <section className="py-24 px-6">
+      <section className="py-28 px-6">
 
         <div className="max-w-6xl mx-auto text-center">
 
@@ -173,22 +174,22 @@ export default function PhysioDemo() {
 
             <div>
               <h3 className="text-white mb-3">1. Suche</h3>
-              <p>Patient sucht Physiotherapie in der Nähe.</p>
+              <p>Patient sucht Physiotherapie in seiner Nähe.</p>
             </div>
 
             <div>
               <h3 className="text-white mb-3">2. Finden</h3>
-              <p>Er entdeckt die Praxis bei Google.</p>
+              <p>Er entdeckt die Praxis über Google.</p>
             </div>
 
             <div>
               <h3 className="text-white mb-3">3. Vertrauen</h3>
-              <p>Website zeigt Praxis und Behandlungen klar.</p>
+              <p>Die Website zeigt klar Praxis und Leistungen.</p>
             </div>
 
             <div>
               <h3 className="text-white mb-3">4. Termin</h3>
-              <p>Patient vereinbart einen Termin.</p>
+              <p>Der Patient vereinbart einen Termin.</p>
             </div>
 
           </div>
@@ -199,7 +200,7 @@ export default function PhysioDemo() {
 
 
       {/* BEWERTUNGEN */}
-      <section className="py-24 px-6 bg-[#01212d]">
+      <section className="py-28 px-6 bg-[#01212d]">
 
         <div className="max-w-6xl mx-auto text-center">
 
@@ -208,27 +209,27 @@ export default function PhysioDemo() {
           </h2>
 
           <p className="text-gray-400 mb-16">
-            Über 120 zufriedene Patientenbewertungen
+            Über 120 zufriedene Bewertungen
           </p>
 
           <div className="grid md:grid-cols-3 gap-10">
 
             <div className="p-8 rounded-2xl bg-[#001821] border border-white/10">
-              <p className="text-jamoko-gold mb-3">★★★★★</p>
+              <p className="text-jamoko-gold mb-3 text-lg">★★★★★</p>
               <p className="text-gray-300">
                 Sehr freundliches Team und kompetente Behandlung.
               </p>
             </div>
 
             <div className="p-8 rounded-2xl bg-[#001821] border border-white/10">
-              <p className="text-jamoko-gold mb-3">★★★★★</p>
+              <p className="text-jamoko-gold mb-3 text-lg">★★★★★</p>
               <p className="text-gray-300">
                 Schnelle Terminvergabe und angenehme Atmosphäre.
               </p>
             </div>
 
             <div className="p-8 rounded-2xl bg-[#001821] border border-white/10">
-              <p className="text-jamoko-gold mb-3">★★★★★</p>
+              <p className="text-jamoko-gold mb-3 text-lg">★★★★★</p>
               <p className="text-gray-300">
                 Sehr professionelle Betreuung nach meiner Verletzung.
               </p>
@@ -242,7 +243,7 @@ export default function PhysioDemo() {
 
 
       {/* TERMIN */}
-      <section className="py-24 px-6 text-center">
+      <section className="py-28 px-6 text-center">
 
         <h2 className="text-3xl mb-6 font-light">
           Termin vereinbaren
@@ -260,15 +261,15 @@ export default function PhysioDemo() {
 
 
       {/* KONTAKT */}
-      <section className="py-24 px-6 text-center bg-[#01212d]">
+      <section className="py-28 px-6 text-center bg-[#01212d]">
 
         <h2 className="text-3xl mb-6 font-light">
           Kontakt
         </h2>
 
         <p className="text-gray-300">
-          Physiotherapie Altona <br/>
-          Musterstraße 12 <br/>
+          Physiotherapie Altona <br />
+          Musterstraße 12 <br />
           22765 Hamburg
         </p>
 
@@ -279,5 +280,5 @@ export default function PhysioDemo() {
       </section>
 
     </main>
-  );
+  )
 }
