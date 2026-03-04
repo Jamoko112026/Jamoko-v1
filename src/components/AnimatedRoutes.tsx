@@ -17,7 +17,7 @@ import Business from "../pages/Business";
 
 // Case Studies
 import SLBautec from "../pages/SLBautec";
-import Demo from "../pages/Demo";
+import PhysioDemo from "../pages/PhysioDemo";
 
 // Legal
 import Impressum from "../pages/Impressum";
@@ -55,7 +55,7 @@ export default function AnimatedRoutes() {
             <Route path="sl-bautec" element={<SLBautec />} />
 
             {/* Demo */}
-            <Route path="demo" element={<Demo />} />
+            <Route path="physio-demo" element={<PhysioDemo />} />
 
             {/* Legal */}
             <Route path="impressum" element={<Impressum />} />
