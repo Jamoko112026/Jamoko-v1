@@ -1,37 +1,38 @@
-import GlowBackground from "../components/backgrounds/GlowBackground";
-import SEO from "@/components/SEO";
-import Reveal from "../components/Reveal";
+import GlowBackground from "../components/backgrounds/GlowBackground"
+import SEO from "@/components/SEO"
+import Reveal from "../components/Reveal"
 
 // HERO
-import HeroSoft from "../components/HeroSoft";
+import HeroSoft from "../components/HeroSoft"
 
 // CORE
-import BrandEssence from "../components/sections/BrandEssence";
-import SpartenCarousel from "../components/SpartenCarousel";
+import BrandEssence from "../components/sections/BrandEssence"
+import SpartenCarousel from "../components/SpartenCarousel"
 
 // OFFER
-import MiniSiteOffer from "../sections/services/MiniSite/Offer";
-import MiniSitePreview from "../sections/services/MiniSite/Preview";
-import MiniSitePricing from "../sections/services/MiniSite/Pricing";
+import MiniSiteOffer from "../sections/services/MiniSite/Offer"
+import MiniSitePreview from "../sections/services/MiniSite/Preview"
+import MiniSitePricing from "../sections/services/MiniSite/Pricing"
 
 // SYSTEM
-import Klarheitssystem from "../sections/Klarheitssystem";
+import Klarheitssystem from "../sections/Klarheitssystem"
 
 // POSITION
-import Positionierung from "../sections/value/Positionierung";
-import WhyVisibility from "../sections/value/WhyVisibility";
+import Positionierung from "../sections/value/Positionierung"
+import WhyVisibility from "../sections/value/WhyVisibility"
 
 // FINAL
-import ContactSection from "../sections/end/ContactSection";
+import ContactSection from "../sections/end/ContactSection"
 
 // VISUAL
-import PlanetArcGlowMini from "../components/PlanetArcGlowMini";
-import PlanetArcGlowVertical from "../components/PlanetArcGlowVertical";
+import PlanetArcGlowMini from "../components/PlanetArcGlowMini"
+import PlanetArcGlowVertical from "../components/PlanetArcGlowVertical"
 
 export default function Home() {
   return (
     <>
       {/* ================= SEO ================= */}
+
       <SEO
         title="JaMoKo – Ruhige Mini-Websites für lokale Betriebe"
         description="Mini-Websites für Handwerk & lokale Betriebe. Klar. Persönlich. Wirksam. Digitale Präsenz ohne Stress."
@@ -40,28 +41,52 @@ export default function Home() {
 
       <GlowBackground className="text-jamoko-text">
 
-        {/* ================= HERO ================= */}
+        {/* ==================================================
+            HERO
+        ================================================== */}
+
         <HeroSoft />
 
-        {/* SOFT TRANSITION */}
+        {/* Soft Hero Transition */}
+
         <div className="h-32 bg-gradient-to-b from-transparent to-[#001821]" />
 
-        {/* ================= ERKENNEN ================= */}
-        <section className="py-28 px-6 max-w-3xl mx-auto">
+
+
+        {/* ==================================================
+            ERKENNEN
+        ================================================== */}
+
+        <section className="section-md container-narrow">
+
           <Reveal>
             <BrandEssence />
           </Reveal>
+
         </section>
 
-        {/* ================= FÜR WEN ================= */}
-        <section className="py-28 px-6">
+
+
+        {/* ==================================================
+            FÜR WEN
+        ================================================== */}
+
+        <section className="section-md container-full">
+
           <Reveal>
             <SpartenCarousel />
           </Reveal>
+
         </section>
 
-        {/* ================= LÖSUNG ================= */}
-        <section className="py-28 px-6 max-w-4xl mx-auto space-y-24">
+
+
+        {/* ==================================================
+            LÖSUNG
+        ================================================== */}
+
+        <section className="section-md container-wide space-y-24">
+
           <Reveal>
             <MiniSiteOffer />
           </Reveal>
@@ -71,24 +96,45 @@ export default function Home() {
           <Reveal>
             <MiniSitePreview />
           </Reveal>
+
         </section>
 
-        {/* ================= SYSTEM ================= */}
-        <section className="py-28 px-6 max-w-3xl mx-auto">
+
+
+        {/* ==================================================
+            SYSTEM
+        ================================================== */}
+
+        <section className="section-md container-narrow">
+
           <Reveal>
             <Klarheitssystem />
           </Reveal>
+
         </section>
 
-        {/* ================= PREISE ================= */}
-        <section className="py-32 px-6 max-w-4xl mx-auto">
+
+
+        {/* ==================================================
+            PREISE
+        ================================================== */}
+
+        <section className="section-lg container-wide">
+
           <Reveal>
             <MiniSitePricing />
           </Reveal>
+
         </section>
 
-        {/* ================= HALTUNG ================= */}
-        <section className="py-32 px-6 max-w-3xl mx-auto space-y-24">
+
+
+        {/* ==================================================
+            HALTUNG
+        ================================================== */}
+
+        <section className="section-lg container-narrow space-y-24">
+
           <Reveal>
             <Positionierung />
           </Reveal>
@@ -100,16 +146,27 @@ export default function Home() {
           <Reveal>
             <WhyVisibility />
           </Reveal>
+
         </section>
 
-        {/* ================= CTA ================= */}
-        <section id="kontakt" className="py-36 px-6">
+
+
+        {/* ==================================================
+            CTA
+        ================================================== */}
+
+        <section
+          id="kontakt"
+          className="section-lg container-narrow"
+        >
+
           <Reveal>
             <ContactSection />
           </Reveal>
+
         </section>
 
       </GlowBackground>
     </>
-  );
+  )
 }

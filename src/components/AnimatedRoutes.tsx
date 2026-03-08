@@ -2,6 +2,7 @@
 
 import { Routes, Route, useLocation } from "react-router-dom"
 import { AnimatePresence, motion } from "framer-motion"
+import { useEffect } from "react"
 
 // Layout
 import JamokoLayout from "../layouts/JamokoLayout"
@@ -25,20 +26,30 @@ import Datenschutz from "../pages/Datenschutz"
 import AGB from "../pages/AGB"
 
 export default function AnimatedRoutes() {
+
   const location = useLocation()
 
+  // Scroll Reset bei Seitenwechsel
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" })
+  }, [location.pathname])
+
   return (
+
     <AnimatePresence mode="wait">
-      <motion.div
+
+      <motion.main
         key={location.pathname}
-        initial={{ opacity: 0, y: 12 }}
+        style={{ willChange: "transform, opacity" }}
+        initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -8 }}
+        exit={{ opacity: 0, y: -10 }}
         transition={{
-          duration: 0.35,
+          duration: 0.45,
           ease: [0.22, 1, 0.36, 1],
         }}
       >
+
         <Routes location={location}>
 
           <Route path="/" element={<JamokoLayout />}>
@@ -59,7 +70,7 @@ export default function AnimatedRoutes() {
             {/* Case Study */}
             <Route path="sl-bautec" element={<SLBautec />} />
 
-            {/* Demo Pages */}
+            {/* Demo */}
             <Route path="physio" element={<PhysioDemo />} />
 
             {/* Legal */}
@@ -70,7 +81,10 @@ export default function AnimatedRoutes() {
           </Route>
 
         </Routes>
-      </motion.div>
+
+      </motion.main>
+
     </AnimatePresence>
+
   )
 }
