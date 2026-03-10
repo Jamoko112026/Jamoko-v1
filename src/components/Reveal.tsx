@@ -5,8 +5,14 @@ export default function Reveal({ children }: any) {
     <motion.div
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: true, margin: "-80px" }}
+      transition={{
+        duration: 0.6,
+        ease: [0.22, 1, 0.36, 1]
+      }}
+      style={{
+        willChange: "transform, opacity"
+      }}
     >
       {children}
     </motion.div>

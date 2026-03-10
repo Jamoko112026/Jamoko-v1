@@ -1,41 +1,40 @@
 // src/components/AnimatedRoutes.tsx
 
-import { Routes, Route, useLocation } from "react-router-dom"
-import { AnimatePresence, motion } from "framer-motion"
-import { useEffect } from "react"
+import { Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
+import { useLayoutEffect } from "react";
 
 // Layout
-import JamokoLayout from "../layouts/JamokoLayout"
+import JamokoLayout from "../layouts/JamokoLayout";
 
 // Core Pages
-import Home from "../pages/Home"
-import MiniSite from "../pages/MiniSite"
-import Pricing from "../pages/Pricing"
-import FAQ from "../pages/FAQ"
-import Kontakt from "../pages/Kontakt"
-import About from "../pages/About"
-import Business from "../pages/Business"
+import Home from "../pages/Home";
+import MiniSite from "../pages/MiniSite";
+import Pricing from "../pages/Pricing";
+import FAQ from "../pages/FAQ";
+import Kontakt from "../pages/Kontakt";
+import About from "../pages/About";
+import Business from "../pages/Business";
 
 // Case Studies / Demos
-import SLBautec from "../pages/SLBautec"
-import PhysioDemo from "../pages/PhysioDemo"
+import SLBautec from "../pages/SLBautec";
+import PhysioDemo from "../pages/PhysioDemo";
 
 // Legal
-import Impressum from "../pages/Impressum"
-import Datenschutz from "../pages/Datenschutz"
-import AGB from "../pages/AGB"
+import Impressum from "../pages/Impressum";
+import Datenschutz from "../pages/Datenschutz";
+import AGB from "../pages/AGB";
 
 export default function AnimatedRoutes() {
 
-  const location = useLocation()
+  const location = useLocation();
 
-  // Scroll Reset bei Seitenwechsel
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "instant" })
-  }, [location.pathname])
+  // Scroll sofort bei Routewechsel
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
-
     <AnimatePresence mode="wait">
 
       <motion.main
@@ -50,7 +49,7 @@ export default function AnimatedRoutes() {
         }}
       >
 
-        <Routes location={location}>
+        <Routes location={location} key={location.pathname}>
 
           <Route path="/" element={<JamokoLayout />}>
 
@@ -85,6 +84,5 @@ export default function AnimatedRoutes() {
       </motion.main>
 
     </AnimatePresence>
-
-  )
+  );
 }
