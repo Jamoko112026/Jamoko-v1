@@ -2,12 +2,14 @@ import GlowBackground from "@/components/backgrounds/GlowBackground";
 import GlowSection from "@/components/sections/GlowSection";
 import ContactSection from "@/sections/end/ContactSection";
 
-// HERO
-import HeroLuminousBalance from "@/sections/hero/HeroLuminousBalance";
+// ✅ DEIN RICHTIGER HERO
+import MiniSiteHero from "@/sections/services/MiniSite/MiniSiteHero";
+
+// BEISPIELE (bleiben)
 import HeroLuminousBalanceFeinkost from "@/sections/hero/HeroLuminousBalanceFeinkost";
 import HeroLuminousBalancePhysio from "@/sections/hero/HeroLuminousBalancePhysio";
 
-// VALUE (ersetzt Offer, Features, Process, Pricing, Comparison, FAQ)
+// VALUE
 import CareGrowth from "@/sections/value/CareGrowth";
 import Positionierung from "@/sections/value/Positionierung";
 import WhyVisibility from "@/sections/value/WhyVisibility";
@@ -26,12 +28,12 @@ export default function MiniSite() {
 
       <main className="relative z-10 w-full overflow-visible">
 
-        {/* HERO */}
-        <HeroLuminousBalance />
+        {/* 🔥 HERO (JETZT RICHTIG) */}
+        <MiniSiteHero />
         <PlanetArcGlowHero />
         <CalmEnergyLightline />
 
-        {/* ANGEBOT / VALUE */}
+        {/* VALUE / ANGEBOT */}
         <section id="minisite-offer">
           <GlowSection className="py-32 md:py-40">
             <div className="max-w-5xl mx-auto space-y-32">

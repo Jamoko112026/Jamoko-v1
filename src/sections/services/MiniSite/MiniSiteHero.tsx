@@ -1,72 +1,55 @@
-// src/sections/services/MiniSite/MiniSiteHero.tsx
-import HeroImg from "../../../assets/minisite/Jamoko_MiniSite_Hero_v1.png";
+import heroImage from "@/assets/jamoko/hero/hero-minisite.webp";
 
 export default function MiniSiteHero() {
   return (
-    <section
-      id="minisite-hero"
-      className="
-        relative w-full pt-40 pb-32 px-6 text-center overflow-hidden
-      "
-    >
-      {/* Background Glow */}
-      <div
-        className="
-          absolute inset-0 
-          bg-[radial-gradient(ellipse_at_center,rgba(229,197,139,0.18),transparent_70%)]
-          opacity-70
-          pointer-events-none
-        "
-      />
+    <section className="relative min-h-[82vh] overflow-hidden flex items-center">
 
-      {/* Hero Image */}
+      {/* Bild (ruhig, ohne Animation) */}
       <img
-        src={HeroImg}
-        alt="Mini-Site Hero"
-        className="
-          relative mx-auto w-full max-w-5xl
-          rounded-3xl shadow-[0_0_45px_rgba(0,0,0,0.45)]
-        "
+        src={heroImage}
+        alt="JaMoKo MiniSite"
+        loading="eager"
+        decoding="async"
+        className="absolute inset-0 w-full h-full object-cover scale-[1.02]"
       />
 
-      {/* Text Block */}
-      <div className="relative mt-14 max-w-3xl mx-auto">
-        <h1
-          className="
-            text-4xl md:text-5xl font-semibold 
-            text-jamoko-gold tracking-tight mb-4
-          "
-        >
-          Mini-Site in 7 Tagen
-        </h1>
+      {/* Fokus-Verlauf von links */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,24,33,0.92)_0%,rgba(0,24,33,0.75)_30%,rgba(0,24,33,0.4)_55%,rgba(0,24,33,0.1)_75%,rgba(0,24,33,0)_100%)]" />
 
-        <p
-          className="
-            text-lg md:text-xl text-jamoko-text-dim
-            leading-relaxed max-w-2xl mx-auto
-          "
-        >
-          Der klarste, ruhigste und schnellste Weg  
-          zu einer professionellen Web-Präsenz für lokale Unternehmen.
-        </p>
+      {/* subtiler Gold-Akzent */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_50%,rgba(229,197,139,0.14),transparent_60%)]" />
 
-        {/* CTA */}
-        <button
-          onClick={() => {
-            const section = document.getElementById("minisite-offer");
-            if (section) section.scrollIntoView({ behavior: "smooth" });
-          }}
-          className="
-            mt-10 px-8 py-4 rounded-full
-            bg-jamoko-gold/20 border border-jamoko-gold/40
-            text-jamoko-gold font-medium
-            hover:bg-jamoko-gold/30
-            transition backdrop-blur-lg
-          "
-        >
-          Zum Angebot
-        </button>
+      {/* leichter globaler Dark Layer */}
+      <div className="absolute inset-0 bg-[#001821]/20" />
+
+      {/* sanfter Übergang nach unten */}
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-b from-transparent to-[#001821]" />
+
+      {/* Content */}
+      <div className="relative z-10 w-full px-6 md:px-12 lg:px-20">
+
+        <div className="max-w-xl">
+
+          <h1 className="text-4xl md:text-6xl font-light text-[#E5C58B] leading-tight">
+            Mini-Website in 7 Tagen.
+          </h1>
+
+          <p className="mt-6 text-lg text-[#D6E0E7] leading-relaxed">
+            Ruhige Mini-Websites für lokale Betriebe.<br />
+            Klar. Persönlich. Wirksam.
+          </p>
+
+          <button className="mt-8 px-6 py-3 rounded-full 
+            bg-[#E5C58B] text-[#001821] 
+            font-medium 
+            transition duration-300 
+            hover:opacity-90">
+            Unverbindlich anfragen
+          </button>
+
+        </div>
       </div>
+
     </section>
   );
 }

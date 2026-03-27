@@ -1,5 +1,3 @@
-// src/components/AnimatedRoutes.tsx
-
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { useLayoutEffect } from "react";
@@ -19,6 +17,7 @@ import Business from "../pages/Business";
 // Case Studies / Demos
 import SLBautec from "../pages/SLBautec";
 import PhysioDemo from "../pages/PhysioDemo";
+import SushiDemo from "../pages/SushiDemo"; // 👈 NEU
 
 // Legal
 import Impressum from "../pages/Impressum";
@@ -26,17 +25,15 @@ import Datenschutz from "../pages/Datenschutz";
 import AGB from "../pages/AGB";
 
 export default function AnimatedRoutes() {
-
   const location = useLocation();
 
-  // Scroll sofort bei Routewechsel
+  // Scroll bei Routewechsel
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
   return (
     <AnimatePresence mode="wait">
-
       <motion.main
         key={location.pathname}
         style={{ willChange: "transform, opacity" }}
@@ -48,7 +45,6 @@ export default function AnimatedRoutes() {
           ease: [0.22, 1, 0.36, 1],
         }}
       >
-
         <Routes location={location} key={location.pathname}>
 
           <Route path="/" element={<JamokoLayout />}>
@@ -66,11 +62,12 @@ export default function AnimatedRoutes() {
             <Route path="kontakt" element={<Kontakt />} />
             <Route path="about" element={<About />} />
 
-            {/* Case Study */}
+            {/* Case Studies */}
             <Route path="sl-bautec" element={<SLBautec />} />
 
-            {/* Demo */}
+            {/* Demos */}
             <Route path="physio" element={<PhysioDemo />} />
+            <Route path="sushi" element={<SushiDemo />} /> {/* 👈 NEU */}
 
             {/* Legal */}
             <Route path="impressum" element={<Impressum />} />
@@ -80,9 +77,7 @@ export default function AnimatedRoutes() {
           </Route>
 
         </Routes>
-
       </motion.main>
-
     </AnimatePresence>
   );
 }
