@@ -1,18 +1,46 @@
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 export default function StickyMobileCTA() {
-  const [visible, setVisible] = useState(true);
-  let lastScrollY = window.scrollY;
+  const [visible, setVisible] = useState(false);
+  const lastScrollY = useRef(0);
+  const heroVisible = useRef(true);
 
   useEffect(() => {
+    const hero = document.getElementById("hero");
+
+    if (!hero) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        heroVisible.current = entry.isIntersecting;
+        if (entry.isIntersecting) {
+          setVisible(false); // im Hero → kein CTA
+        }
+      },
+      { threshold: 0.4 }
+    );
+
+    observer.observe(hero);
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    lastScrollY.current = window.scrollY;
+
     const onScroll = () => {
-      if (window.scrollY < lastScrollY) {
-        setVisible(true);
-      } else {
-        setVisible(false);
+      const currentScroll = window.scrollY;
+
+      if (!heroVisible.current) {
+        if (currentScroll < lastScrollY.current) {
+          setVisible(true); // hochscrollen → zeigen
+        } else if (currentScroll > lastScrollY.current + 5) {
+          setVisible(false); // runter → verstecken
+        }
       }
-      lastScrollY = window.scrollY;
+
+      lastScrollY.current = currentScroll;
     };
 
     window.addEventListener("scroll", onScroll);
@@ -35,13 +63,12 @@ export default function StickyMobileCTA() {
           to="/kontakt"
           className="
             w-full text-center
-            bg-jamoko-gold text-[#001821]
-            font-medium
+            bg-[#E5C58B] text-[#001821]
+            font-medium tracking-wide
             py-3 rounded-xl
             shadow-[0_0_18px_rgba(229,197,139,0.35)]
-            hover:shadow-[0_0_28px_rgba(229,197,139,0.55)]
             transition-all duration-300 ease-out
-            animate-pulse-subtle
+            active:scale-[0.98]
           "
         >
           Unverbindlich anfragen

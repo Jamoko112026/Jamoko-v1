@@ -7,12 +7,12 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
-  // SLB komplett ausblenden
   if (location.pathname.startsWith("/slb")) return null;
 
-  // Scroll Status
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 10);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -20,69 +20,57 @@ export default function Header() {
   return (
     <header
       className={`
-        fixed top-0 left-0 w-full z-50 h-[90px]
-        transition-all duration-300 border-b border-white/5
+        fixed top-0 left-0 w-full z-50
+        transition-all duration-300 ease-out
         ${
           scrolled
-            ? "bg-[#001821]/85 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.45)]"
-            : "bg-[#001821]"
+            ? "bg-[#001821]/85 backdrop-blur-md border-b border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.25)]"
+            : "bg-transparent"
         }
       `}
     >
-      <div className="max-w-7xl mx-auto h-full px-6 flex items-center justify-between relative">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 h-16 flex items-center justify-between relative">
 
         {/* LOGO */}
         <Link
           to="/"
-          className="text-jamoko-gold text-xl font-semibold tracking-wide transition hover:opacity-80"
+          className="text-[#E5C58B] text-lg font-medium tracking-wide transition hover:opacity-80"
         >
           JaMoKo
         </Link>
 
         {/* DESKTOP NAV */}
-        <nav className="hidden md:flex items-center gap-8 text-white/80 text-sm">
+        <nav className="hidden md:flex items-center gap-8 text-white/70 text-sm">
 
-          <Link to="/" className="hover:text-jamoko-teal transition duration-300">
+          <Link to="/" className="hover:text-[#1AC7A4] transition duration-300">
             Start
           </Link>
 
-          <Link to="/minisite" className="hover:text-jamoko-teal transition duration-300">
+          <Link to="/minisite" className="hover:text-[#1AC7A4] transition duration-300">
             Beispiel
           </Link>
 
-          <Link to="/pricing" className="hover:text-jamoko-teal transition duration-300">
+          <Link to="/pricing" className="hover:text-[#1AC7A4] transition duration-300">
             Preise
-          </Link>
-
-          <Link
-            to="/kontakt"
-            className="
-              px-5 py-2 rounded-full
-              bg-jamoko-teal text-black font-medium
-              hover:bg-jamoko-gold
-              transition duration-300
-              shadow-[0_0_15px_rgba(26,199,164,0.25)]
-              hover:shadow-[0_0_25px_rgba(229,197,139,0.35)]
-            "
-          >
-            Jetzt starten
           </Link>
 
         </nav>
 
-        {/* STICKY CTA (nur beim Scroll) */}
+        {/* CTA Desktop (erscheint erst beim Scroll) */}
         {scrolled && (
-          <div className="hidden md:block absolute right-6 top-1/2 -translate-y-1/2">
+          <div className="hidden md:block">
             <Link
               to="/kontakt"
               className="
-                px-4 py-1.5 text-sm rounded-full
-                bg-jamoko-gold text-[#001821]
-                shadow-[0_0_20px_rgba(229,197,139,0.35)]
-                hover:opacity-90 transition
+                px-5 py-2 rounded-full
+                bg-[#E5C58B] text-[#001821]
+                text-sm font-medium tracking-wide
+                shadow-[0_0_18px_rgba(229,197,139,0.25)]
+                hover:opacity-90
+                transition duration-300
               "
             >
-              Kontakt
+              Anfragen
             </Link>
           </div>
         )}
@@ -90,23 +78,22 @@ export default function Header() {
         {/* MOBILE BUTTON */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-jamoko-teal p-2"
+          className="md:hidden text-[#1AC7A4] p-2"
         >
-          {open ? <X size={26} /> : <Menu size={26} />}
+          {open ? <X size={24} /> : <Menu size={24} />}
         </button>
 
       </div>
 
       {/* MOBILE MENU */}
       {open && (
-        <div className="md:hidden bg-[#001821]/95 backdrop-blur-xl">
+        <div className="md:hidden bg-[#001821]/95 backdrop-blur-xl border-t border-white/10">
           <div className="flex flex-col px-6 py-6 space-y-5 text-white/80 text-base">
 
-            {/* CTA zuerst */}
             <Link
               to="/kontakt"
               onClick={() => setOpen(false)}
-              className="bg-jamoko-teal text-black px-4 py-2 rounded-full text-center font-medium"
+              className="bg-[#E5C58B] text-[#001821] px-4 py-2 rounded-full text-center font-medium"
             >
               Jetzt starten
             </Link>
