@@ -3,7 +3,7 @@ export default function PhysioDemo() {
     <main className="w-full bg-[#001821] text-white">
 
       {/* HERO */}
-      <section className="relative min-h-[75vh] flex items-center justify-center text-center px-6 overflow-hidden">
+      <section className="relative min-h-[80vh] flex items-center justify-center text-center px-6 overflow-hidden">
 
         <img
           src="/physio/physio_hero.jpg"
@@ -11,24 +11,35 @@ export default function PhysioDemo() {
           className="absolute inset-0 w-full h-full object-cover"
         />
 
-        <div className="absolute inset-0 bg-[#001821]/65"></div>
+        {/* Overlay + Blickführung */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#001821]/40 via-[#001821]/70 to-[#001821]/90"></div>
+
+        {/* JaMoKo Glow */}
+        <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_top_left,rgba(229,197,139,0.15),transparent_60%)]"></div>
 
         <div className="relative z-10 max-w-3xl">
 
-          <h1 className="text-4xl md:text-5xl font-light mb-6">
+          <h1 className="text-4xl md:text-5xl font-light mb-6 leading-tight">
             Physiotherapie in Hamburg-Altona
+            <span className="block text-jamoko-gold mt-2">
+              Termine ohne Umwege
+            </span>
           </h1>
 
-          <p className="text-lg md:text-xl text-gray-300 mb-10">
+          <p className="text-lg md:text-xl text-gray-300 mb-8">
             Beweglichkeit. Stabilität. Lebensqualität im Alltag.
           </p>
 
-          <button className="px-8 py-3 rounded-xl bg-jamoko-gold text-black font-medium hover:opacity-90 transition">
-            Termin vereinbaren
+          <button className="px-8 py-3 rounded-xl bg-jamoko-gold text-black font-medium hover:opacity-90 transition shadow-[0_0_30px_rgba(229,197,139,0.25)]">
+            Termin anfragen
           </button>
 
-          <p className="mt-6 text-gray-300">
-            Telefon: 040 / 123456
+          <p className="mt-4 text-gray-400 text-sm">
+            Oder direkt anrufen: 040 / 123456
+          </p>
+
+          <p className="mt-3 text-gray-500 text-sm">
+            ✓ Termine oft innerhalb weniger Tage verfügbar
           </p>
 
         </div>
@@ -45,10 +56,9 @@ export default function PhysioDemo() {
           </h2>
 
           <p className="text-gray-300 leading-relaxed">
-            Unsere Praxis begleitet Menschen auf dem Weg zu mehr Beweglichkeit
-            und weniger Schmerzen. Mit moderner Physiotherapie und persönlicher
-            Betreuung unterstützen wir Sie dabei, Ihren Alltag wieder aktiv
-            und beschwerdefrei zu gestalten.
+            Wir begleiten Menschen auf dem Weg zu mehr Beweglichkeit und weniger Schmerzen.
+            Mit moderner Physiotherapie und persönlicher Betreuung helfen wir Ihnen,
+            Ihren Alltag wieder aktiv und beschwerdefrei zu gestalten.
           </p>
 
         </div>
@@ -69,22 +79,22 @@ export default function PhysioDemo() {
 
             <div>
               <h3 className="text-xl mb-2 text-white">Krankengymnastik</h3>
-              <p>Individuelle Übungen zur Verbesserung von Beweglichkeit und Kraft.</p>
+              <p>Gezielte Übungen für mehr Beweglichkeit und Stabilität.</p>
             </div>
 
             <div>
               <h3 className="text-xl mb-2 text-white">Manuelle Therapie</h3>
-              <p>Behandlung von Funktionsstörungen an Gelenken, Muskeln und Nerven.</p>
+              <p>Behandlung von Gelenken, Muskeln und Nerven.</p>
             </div>
 
             <div>
               <h3 className="text-xl mb-2 text-white">Lymphdrainage</h3>
-              <p>Sanfte Therapie zur Unterstützung des Lymphsystems.</p>
+              <p>Sanfte Unterstützung des Lymphsystems.</p>
             </div>
 
             <div>
               <h3 className="text-xl mb-2 text-white">Sportphysiotherapie</h3>
-              <p>Begleitung bei Rehabilitation und sportlicher Belastung.</p>
+              <p>Rehabilitation und Betreuung bei sportlicher Belastung.</p>
             </div>
 
           </div>
@@ -94,64 +104,37 @@ export default function PhysioDemo() {
       </section>
 
 
-      {/* PRAXIS EINBLICKE */}
-      <section className="py-28 px-6">
-
-        <div className="max-w-4xl mx-auto text-center">
-
-          <h2 className="text-3xl mb-6 font-light">
-            Ein Blick in unsere Praxis
-          </h2>
-
-          <p className="text-gray-300 leading-relaxed">
-            Eine ruhige Atmosphäre, moderne Behandlungsräume und persönliche
-            Betreuung stehen bei uns im Mittelpunkt. Patienten sollen sich
-            vom ersten Moment an gut aufgehoben fühlen.
-          </p>
-
-        </div>
-
-      </section>
-
-
       {/* WEBSITE ERKLÄRUNG */}
-      <section className="py-28 px-6 bg-[#01212d]">
+      <section className="py-28 px-6">
 
         <div className="max-w-6xl mx-auto">
 
           <h2 className="text-3xl text-center mb-16 font-light">
-            Warum eine klare Praxis-Website wichtig ist
+            Klarheit schafft Vertrauen
           </h2>
 
           <div className="grid md:grid-cols-2 gap-12">
 
-            <div className="p-10 rounded-2xl bg-[#001821] border border-white/10">
-
+            <div className="p-10 rounded-2xl bg-[#01212d] border border-white/10">
               <h3 className="text-xl mb-4 text-white">
-                Typische Praxis-Website
+                Viele Praxis-Websites
               </h3>
-
               <ul className="text-gray-300 space-y-2">
-                <li>• lange Texte</li>
-                <li>• unübersichtliche Struktur</li>
-                <li>• Termin schwer zu finden</li>
+                <li>• unübersichtlich</li>
+                <li>• zu viele Informationen</li>
+                <li>• Termin schwer auffindbar</li>
               </ul>
-
             </div>
 
-
-            <div className="p-10 rounded-2xl bg-[#001821] border border-jamoko-gold/30">
-
+            <div className="p-10 rounded-2xl bg-[#01212d] border border-jamoko-gold/30">
               <h3 className="text-xl mb-4 text-jamoko-gold">
-                JaMoKo Praxis-Website
+                JaMoKo Ansatz
               </h3>
-
               <ul className="text-gray-300 space-y-2">
                 <li>• ruhiger Einstieg</li>
                 <li>• klare Struktur</li>
                 <li>• Termin sofort erreichbar</li>
               </ul>
-
             </div>
 
           </div>
@@ -167,29 +150,29 @@ export default function PhysioDemo() {
         <div className="max-w-6xl mx-auto text-center">
 
           <h2 className="text-3xl mb-16 font-light">
-            Der Weg eines Patienten
+            So finden Patienten zu Ihnen
           </h2>
 
           <div className="grid md:grid-cols-4 gap-10 text-gray-300">
 
             <div>
               <h3 className="text-white mb-3">1. Suche</h3>
-              <p>Patient sucht Physiotherapie in seiner Nähe.</p>
+              <p>Physiotherapie in Hamburg wird gesucht.</p>
             </div>
 
             <div>
               <h3 className="text-white mb-3">2. Finden</h3>
-              <p>Er entdeckt die Praxis über Google.</p>
+              <p>Ihre Praxis erscheint klar und verständlich.</p>
             </div>
 
             <div>
               <h3 className="text-white mb-3">3. Vertrauen</h3>
-              <p>Die Website zeigt klar Praxis und Leistungen.</p>
+              <p>Der erste Eindruck überzeugt sofort.</p>
             </div>
 
             <div>
               <h3 className="text-white mb-3">4. Termin</h3>
-              <p>Der Patient vereinbart einen Termin.</p>
+              <p>Der Patient entscheidet sich schnell.</p>
             </div>
 
           </div>
@@ -205,11 +188,11 @@ export default function PhysioDemo() {
         <div className="max-w-6xl mx-auto text-center">
 
           <h2 className="text-3xl mb-6 font-light">
-            Was unsere Patienten sagen
+            Vertrauen durch Erfahrung
           </h2>
 
           <p className="text-gray-400 mb-16">
-            Über 120 zufriedene Bewertungen
+            Über 120 zufriedene Patienten
           </p>
 
           <div className="grid md:grid-cols-3 gap-10">
@@ -217,21 +200,21 @@ export default function PhysioDemo() {
             <div className="p-8 rounded-2xl bg-[#001821] border border-white/10">
               <p className="text-jamoko-gold mb-3 text-lg">★★★★★</p>
               <p className="text-gray-300">
-                Sehr freundliches Team und kompetente Behandlung.
+                Ich habe schnell einen Termin bekommen und mich direkt gut aufgehoben gefühlt.
               </p>
             </div>
 
             <div className="p-8 rounded-2xl bg-[#001821] border border-white/10">
               <p className="text-jamoko-gold mb-3 text-lg">★★★★★</p>
               <p className="text-gray-300">
-                Schnelle Terminvergabe und angenehme Atmosphäre.
+                Sehr angenehme Atmosphäre und professionelle Behandlung.
               </p>
             </div>
 
             <div className="p-8 rounded-2xl bg-[#001821] border border-white/10">
               <p className="text-jamoko-gold mb-3 text-lg">★★★★★</p>
               <p className="text-gray-300">
-                Sehr professionelle Betreuung nach meiner Verletzung.
+                Ich konnte meine Beschwerden deutlich verbessern.
               </p>
             </div>
 
@@ -278,6 +261,14 @@ export default function PhysioDemo() {
         </p>
 
       </section>
+
+
+      {/* MOBILE STICKY CTA */}
+      <div className="fixed bottom-4 left-4 right-4 md:hidden z-50">
+        <button className="w-full py-4 rounded-xl bg-jamoko-gold text-black font-medium shadow-lg">
+          Termin anfragen
+        </button>
+      </div>
 
     </main>
   )
