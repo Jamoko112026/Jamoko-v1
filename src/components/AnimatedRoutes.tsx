@@ -18,7 +18,8 @@ import Business from "../pages/Business";
 import SLBautec from "../pages/SLBautec";
 import PhysioDemo from "../pages/PhysioDemo";
 import SushiDemo from "../pages/SushiDemo";
-import UliGlaserDemo from "../pages/UliGlaserDemo"; // 🔥 NEU
+import UliGlaserDemo from "../pages/UliGlaserDemo";
+import SabinePreview from "../pages/SabinePreview"; // 🧠 NEU
 
 // Legal
 import Impressum from "../pages/Impressum";
@@ -68,7 +69,10 @@ export default function AnimatedRoutes() {
             {/* 🎯 DEMOS */}
             <Route path="physio" element={<PhysioDemo />} />
             <Route path="sushi" element={<SushiDemo />} />
-            <Route path="uli-glaser" element={<UliGlaserDemo />} /> {/* 💥 DEIN LINK */}
+            <Route path="uli-glaser" element={<UliGlaserDemo />} />
+
+            {/* 🧠 SABINE PREVIEW */}
+            <Route path="sabine" element={<SabinePreview />} />
 
             {/* ⚖️ Legal */}
             <Route path="impressum" element={<Impressum />} />

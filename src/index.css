@@ -1,6 +1,6 @@
 /* ==================================================
-   JaMoKo – Global Calm-Energy Base
-   ruhig • stabil • konsistent • ohne Konflikte
+   JaMoKo – Calm Core System (Stable Version)
+   ruhig • stabil • performant • konsistent
 ================================================== */
 
 
@@ -14,24 +14,38 @@
 
 
 /* ==================================================
+   GLOBAL RESET + SCROLL SYSTEM (CRITICAL)
+================================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100svh;
+  overflow-x: hidden;
+  background: #001821;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* ==================================================
    BRAND VARIABLES
 ================================================== */
 
 :root {
 
-  /* Brand Colors */
   --jamoko-navy: #001821;
   --jamoko-gold: #E5C58B;
   --jamoko-teal: #1AC7A4;
 
-  /* Typography */
   --jamoko-text: #EDF2F7;
   --jamoko-text-dim: #D6E0E7;
 
-  /* Glow System */
-  --jamoko-gold-glow: rgba(229,197,139,0.35);
-  --jamoko-teal-glow: rgba(26,199,164,0.40);
-
+  --jamoko-gold-glow: rgba(229,197,139,0.30);
+  --jamoko-teal-glow: rgba(26,199,164,0.30);
 }
 
 
@@ -46,9 +60,7 @@
 }
 
 .nav-underline::after {
-
   content: "";
-
   position: absolute;
   left: 0;
   bottom: -4px;
@@ -68,7 +80,7 @@
   transform-origin: left;
 
   transition: transform .35s ease;
-  opacity: .85;
+  opacity: .8;
 }
 
 .nav-underline:hover::after {
@@ -77,65 +89,58 @@
 
 
 /* ==================================================
-   ICON SYSTEM – CALM GLOW
+   ICON SYSTEM
 ================================================== */
 
 .jamoko-icon {
-
   width: 160px;
   max-width: 100%;
-  height: auto;
+  margin: 0 auto;
 
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-
-  transition:
-    transform .25s ease,
-    filter .25s ease;
-
+  transition: transform .25s ease, filter .25s ease;
 }
 
 .jamoko-icon:hover {
-
-  transform: scale(1.05);
-
-  filter: drop-shadow(
-    0 0 14px var(--jamoko-teal-glow)
-  );
-
+  transform: scale(1.04);
+  filter: drop-shadow(0 0 12px var(--jamoko-teal-glow));
 }
 
 
 /* ==================================================
-   LEGACY GLASS CARD
+   CALM CARD SYSTEM (UNIFIED)
 ================================================== */
 
-.jamoko-card {
+.jmk-card {
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255,255,255,0.08);
 
-  background: rgba(0,24,33,0.65);
-  backdrop-filter: blur(24px);
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(10px);
 
-  border-radius: 18px;
-
-  padding: 24px;
-
-  border: 1px solid rgba(255,255,255,0.06);
-
-  box-shadow: 0 0 26px rgba(0,0,0,0.35);
+  padding: 1.6rem 1.5rem;
 
   transition:
-    transform .25s ease,
-    box-shadow .25s ease;
-
+    background .25s ease,
+    transform .2s ease,
+    border-color .25s ease;
 }
 
-.jamoko-card:hover {
+.jmk-card:hover {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.16);
+  transform: translateY(-2px);
+}
 
-  transform: translateY(-3px);
 
-  box-shadow: 0 0 32px var(--jamoko-teal-glow);
+/* ==================================================
+   TYPO SAFETY (NO BREAK CHAOS)
+================================================== */
 
+.jmk-card h2,
+.jmk-card h3,
+.jmk-card p {
+  word-break: normal;
+  overflow-wrap: normal;
 }
 
 
@@ -144,157 +149,16 @@
 ================================================== */
 
 .glow-gold {
-  box-shadow: 0 0 28px var(--jamoko-gold-glow);
+  box-shadow: 0 0 22px var(--jamoko-gold-glow);
 }
 
 .glow-teal {
-  box-shadow: 0 0 32px var(--jamoko-teal-glow);
-}
-
-.glow-soft {
-  box-shadow: 0 0 25px rgba(0,24,33,0.6);
+  box-shadow: 0 0 26px var(--jamoko-teal-glow);
 }
 
 
 /* ==================================================
-   LIGHT SWEEP
-   Hero / Premium Cards
-================================================== */
-
-.light-sweep {
-
-  position: relative;
-  overflow: hidden;
-
-}
-
-.light-sweep::before {
-
-  content: "";
-
-  position: absolute;
-  inset: 0;
-
-  background: linear-gradient(
-    135deg,
-    var(--jamoko-gold) 0%,
-    transparent 40%,
-    var(--jamoko-teal) 100%
-  );
-
-  opacity: .15;
-
-  pointer-events: none;
-  mix-blend-mode: screen;
-
-}
-
-
-/* ==================================================
-   JMK BUBBLE SYSTEM
-   ersetzt alte Card-Konflikte
-================================================== */
-
-.jmk-bubble {
-
-  border-radius: 1.25rem;
-
-  border: 1px solid rgba(255,255,255,0.08);
-
-  background: rgba(255,255,255,0.04);
-
-  backdrop-filter: blur(8px);
-
-  padding: 1.6rem 1.5rem;
-
-  display: flex;
-  flex-direction: column;
-
-  overflow: hidden;
-
-  transition:
-    border-color .25s ease,
-    background .25s ease,
-    transform .2s ease,
-    box-shadow .25s ease;
-
-}
-
-.jmk-bubble:hover {
-
-  border-color: rgba(255,255,255,0.16);
-
-  background: rgba(255,255,255,0.06);
-
-  transform: translateY(-1px);
-
-}
-
-
-/* ---------- Density Variants ---------- */
-
-.jmk-bubble-tight {
-  padding: 1.25rem 1.2rem;
-}
-
-.jmk-bubble-loose {
-  padding: 1.9rem 1.7rem;
-}
-
-
-/* ---------- Text Safety ---------- */
-
-.jmk-bubble h2,
-.jmk-bubble h3,
-.jmk-bubble h4,
-.jmk-bubble p,
-.jmk-bubble span {
-
-  word-break: break-word;
-  overflow-wrap: anywhere;
-
-}
-
-
-/* ---------- Bubble Typography ---------- */
-
-.jmk-bubble-title {
-
-  font-size: 1.1rem;
-
-  line-height: 1.35;
-
-  color: var(--jamoko-gold);
-
-  margin-bottom: .45rem;
-
-  letter-spacing: .02em;
-
-}
-
-.jmk-bubble-text {
-
-  font-size: .95rem;
-
-  line-height: 1.65;
-
-  color: var(--jamoko-text-dim);
-
-}
-
-
-/* ---------- Subtle Calm Glow ---------- */
-
-.jmk-bubble-glow {
-
-  box-shadow:
-    0 0 0 1px rgba(255,255,255,0.04),
-    0 12px 38px rgba(0,0,0,0.35);
-
-}
-/* ==================================================
-   JAMOKO LIGHT SYSTEM
-   ruhiges Seitenlicht
+   LIGHT SYSTEM (FIXED + STABLE)
 ================================================== */
 
 .page-light {
@@ -308,62 +172,48 @@
   height: 60vh;
 
   background:
-    radial-gradient(
-      circle at 30% 40%,
-      rgba(229,197,139,0.08),
-      transparent 60%
-    ),
-    radial-gradient(
-      circle at 70% 60%,
-      rgba(26,199,164,0.07),
-      transparent 65%
-    );
+    radial-gradient(circle at 30% 40%, rgba(229,197,139,0.08), transparent 60%),
+    radial-gradient(circle at 70% 60%, rgba(26,199,164,0.07), transparent 65%);
 
   pointer-events: none;
   z-index: 0;
-}/* ==================================================
-   JAMOKO SECTION SYSTEM
-   ruhiger vertikaler Flow
+
+  will-change: transform;
+}
+
+
+/* ==================================================
+   SECTION SYSTEM (SMOOTH + RESPONSIVE)
 ================================================== */
 
 .section-sm {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding: clamp(4rem, 6vw, 6rem) 1.5rem;
 }
 
 .section-md {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding: clamp(5rem, 8vw, 8rem) 1.5rem;
 }
 
 .section-lg {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding: clamp(6rem, 10vw, 10rem) 1.5rem;
 }
 
 
-/* Container */
+/* ==================================================
+   CONTAINERS
+================================================== */
 
 .container-narrow {
   max-width: 720px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 .container-wide {
   max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 .container-full {
   max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }

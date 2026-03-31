@@ -2,90 +2,43 @@ import GlowBackground from "../components/backgrounds/GlowBackground"
 import SEO from "@/components/SEO"
 import Reveal from "../components/Reveal"
 
-// HERO
-import HeroSoft from "../components/HeroSoft"
+// ENTRY
+import HeroMinimal from "../components/HeroMinimal"
+import TrustStrip from "../components/TrustStrip"
 
 // CORE
-import BrandEssence from "../components/sections/BrandEssence"
-import SpartenCarousel from "../components/SpartenCarousel"
-
-// OFFER
 import MiniSiteOffer from "../sections/services/MiniSite/Offer"
 import MiniSitePreview from "../sections/services/MiniSite/Preview"
 import MiniSitePricing from "../sections/services/MiniSite/Pricing"
 
-// SYSTEM
-import Klarheitssystem from "../sections/Klarheitssystem"
+// ✅ NEU (ersetzt Positionierung)
+import ValueCards from "../components/ValueCards"
 
-// POSITION
-import Positionierung from "../sections/value/Positionierung"
-import WhyVisibility from "../sections/value/WhyVisibility"
-
-// FINAL
+// CTA
 import ContactSection from "../sections/end/ContactSection"
 
 // VISUAL
 import PlanetArcGlowMini from "../components/PlanetArcGlowMini"
-import PlanetArcGlowVertical from "../components/PlanetArcGlowVertical"
 
 export default function Home() {
   return (
     <>
-      {/* ================= SEO ================= */}
-
       <SEO
         title="JaMoKo – Ruhige Mini-Websites für lokale Betriebe"
-        description="Mini-Websites für Handwerk & lokale Betriebe. Klar. Persönlich. Wirksam. Digitale Präsenz ohne Stress."
+        description="Klar. Persönlich. Wirksam. Mini-Websites ohne Stress."
         url="https://jamoko.de"
       />
 
       <GlowBackground className="text-jamoko-text">
 
-        {/* ==================================================
-            HERO
-        ================================================== */}
-
-        <HeroSoft />
-
-        {/* Soft Hero Transition */}
-
-        <div className="h-32 bg-gradient-to-b from-transparent to-[#001821]" />
+        {/* ================= ENTRY ================= */}
+        <HeroMinimal />
+        <TrustStrip />
 
 
 
-        {/* ==================================================
-            ERKENNEN
-        ================================================== */}
-
-        <section className="section-md container-narrow">
-
-          <Reveal>
-            <BrandEssence />
-          </Reveal>
-
-        </section>
-
-
-
-        {/* ==================================================
-            FÜR WEN
-        ================================================== */}
-
-        <section className="section-md container-full">
-
-          <Reveal>
-            <SpartenCarousel />
-          </Reveal>
-
-        </section>
-
-
-
-        {/* ==================================================
-            LÖSUNG
-        ================================================== */}
-
-        <section className="section-md container-wide space-y-24">
+        {/* ================= ANGEBOT ================= */}
+        <section className="section-md container-wide space-y-16">
 
           <Reveal>
             <MiniSiteOffer />
@@ -101,69 +54,29 @@ export default function Home() {
 
 
 
-        {/* ==================================================
-            SYSTEM
-        ================================================== */}
-
+        {/* ================= VALUE (FIX 🔥) ================= */}
         <section className="section-md container-narrow">
-
           <Reveal>
-            <Klarheitssystem />
+            <ValueCards />
           </Reveal>
-
         </section>
 
 
 
-        {/* ==================================================
-            PREISE
-        ================================================== */}
-
-        <section className="section-lg container-wide">
-
+        {/* ================= PREISE ================= */}
+        <section className="section-md container-wide">
           <Reveal>
             <MiniSitePricing />
           </Reveal>
-
         </section>
 
 
 
-        {/* ==================================================
-            HALTUNG
-        ================================================== */}
-
-        <section className="section-lg container-narrow space-y-24">
-
-          <Reveal>
-            <Positionierung />
-          </Reveal>
-
-          <div className="flex justify-center">
-            <PlanetArcGlowVertical />
-          </div>
-
-          <Reveal>
-            <WhyVisibility />
-          </Reveal>
-
-        </section>
-
-
-
-        {/* ==================================================
-            CTA
-        ================================================== */}
-
-        <section
-          id="kontakt"
-          className="section-lg container-narrow"
-        >
-
+        {/* ================= CTA ================= */}
+        <section id="kontakt" className="section-lg container-narrow">
           <Reveal>
             <ContactSection />
           </Reveal>
-
         </section>
 
       </GlowBackground>
