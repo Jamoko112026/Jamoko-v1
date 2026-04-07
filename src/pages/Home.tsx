@@ -1,26 +1,26 @@
-import GlowBackground from "../components/backgrounds/GlowBackground"
-import SEO from "@/components/SEO"
-import Reveal from "../components/Reveal"
+import GlowBackground from "../components/backgrounds/GlowBackground";
+import SEO from "@/components/SEO";
+import Reveal from "../components/Reveal";
 
 // ENTRY
-import HeroMinimal from "../components/HeroMinimal"
-import TrustStrip from "../components/TrustStrip"
-import DemoSection from "../sections/home/DemoSection"
-import ProcessSection from "../sections/home/ProcessSection" // ✅ NEU
+import HeroMinimal from "../components/HeroMinimal";
+import TrustStrip from "../components/TrustStrip";
+import DemoSection from "../sections/home/DemoSection";
+import ProcessSection from "../sections/home/ProcessSection";
 
 // CORE
-import MiniSiteOffer from "../sections/services/MiniSite/Offer"
-import MiniSitePreview from "../sections/services/MiniSite/Preview"
-import MiniSitePricing from "../sections/services/MiniSite/Pricing"
+import MiniSiteOffer from "../sections/services/MiniSite/Offer";
+import MiniSitePreview from "../sections/services/MiniSite/Preview";
+import MiniSitePricing from "../sections/services/MiniSite/Pricing";
 
 // VALUE
-import ValueCards from "../components/ValueCards"
+import ValueCards from "../components/ValueCards";
 
 // CTA
-import ContactSection from "../sections/end/ContactSection"
+import ContactSection from "../sections/end/ContactSection";
 
 // VISUAL
-import PlanetArcGlowMini from "../components/PlanetArcGlowMini"
+import PlanetArcGlowMini from "../components/PlanetArcGlowMini";
 
 export default function Home() {
   return (
@@ -33,16 +33,22 @@ export default function Home() {
 
       <GlowBackground className="text-jamoko-text">
 
-        {/* ================= ENTRY ================= */}
+        {/* ================= HERO ================= */}
         <HeroMinimal />
+
+        {/* ================= VERTRAUEN ================= */}
         <TrustStrip />
+
+        {/* ================= BEISPIELE ================= */}
         <DemoSection />
-        <ProcessSection /> {/* 🔥 NEUER CONVERSION BLOCK */}
+
+        {/* ================= PROZESS ================= */}
+        <ProcessSection />
 
 
 
         {/* ================= ANGEBOT ================= */}
-        <section className="section-md container-wide space-y-16">
+        <section className="section-md container-wide space-y-20">
 
           <Reveal>
             <MiniSiteOffer />
@@ -58,7 +64,7 @@ export default function Home() {
 
 
 
-        {/* ================= VALUE ================= */}
+        {/* ================= MEHRWERT ================= */}
         <section className="section-md container-narrow">
           <Reveal>
             <ValueCards />
@@ -76,7 +82,7 @@ export default function Home() {
 
 
 
-        {/* ================= CTA ================= */}
+        {/* ================= KONTAKT ================= */}
         <section id="kontakt" className="section-lg container-narrow">
           <Reveal>
             <ContactSection />
@@ -85,5 +91,5 @@ export default function Home() {
 
       </GlowBackground>
     </>
-  )
+  );
 }
