@@ -13,23 +13,20 @@ export default function HeroMinimal() {
 
         {/* HEADLINE */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-light leading-tight tracking-tight mb-5 text-jamoko-gold">
-          Ruhige Mini-Websites,
-          <br className="hidden sm:block" />
-          die Anfragen bringen.
+          Ruhige Mini-Websites für lokale Betriebe.
         </h1>
 
         {/* SUBLINE */}
         <p className="text-base sm:text-lg md:text-xl text-white/70 mb-8 max-w-xl mx-auto leading-relaxed">
-          Für Praxen, Dienstleister und Handwerk –
-          klar aufgebaut, schnell online und gemacht,
-          damit Kunden dich sofort verstehen.
+          Klar strukturiert. Persönlich gestaltet.<br />
+          Damit Menschen dich finden – und Vertrauen aufbauen.
         </p>
 
         {/* CTA */}
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mt-8">
 
           <button className="w-full sm:w-auto px-6 py-4 rounded-xl bg-jamoko-gold text-black font-medium transition hover:opacity-90 active:scale-[0.98]">
-            Kostenfreie Vorschau sehen
+            Kostenloses Kennenlernen (15 Minuten)
           </button>
 
           <button className="w-full sm:w-auto px-6 py-4 rounded-xl border border-white/20 text-white hover:bg-white/5 transition active:scale-[0.98]">

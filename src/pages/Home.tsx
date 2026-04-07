@@ -5,13 +5,15 @@ import Reveal from "../components/Reveal"
 // ENTRY
 import HeroMinimal from "../components/HeroMinimal"
 import TrustStrip from "../components/TrustStrip"
+import DemoSection from "../sections/home/DemoSection"
+import ProcessSection from "../sections/home/ProcessSection" // ✅ NEU
 
 // CORE
 import MiniSiteOffer from "../sections/services/MiniSite/Offer"
 import MiniSitePreview from "../sections/services/MiniSite/Preview"
 import MiniSitePricing from "../sections/services/MiniSite/Pricing"
 
-// ✅ NEU (ersetzt Positionierung)
+// VALUE
 import ValueCards from "../components/ValueCards"
 
 // CTA
@@ -34,6 +36,8 @@ export default function Home() {
         {/* ================= ENTRY ================= */}
         <HeroMinimal />
         <TrustStrip />
+        <DemoSection />
+        <ProcessSection /> {/* 🔥 NEUER CONVERSION BLOCK */}
 
 
 
@@ -54,7 +58,7 @@ export default function Home() {
 
 
 
-        {/* ================= VALUE (FIX 🔥) ================= */}
+        {/* ================= VALUE ================= */}
         <section className="section-md container-narrow">
           <Reveal>
             <ValueCards />
