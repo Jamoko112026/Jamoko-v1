@@ -1,6 +1,8 @@
-// src/sections/ARD/ARDGallery.tsx
+import { useState } from "react";
 
 export default function ARDGallery() {
+  const [activeImage, setActiveImage] = useState<string | null>(null);
+
   const images = [
     "Hero_1920w_ARDlook.jpg",
     "Felgen_1920w_ARDlook.jpg",
@@ -8,27 +10,47 @@ export default function ARDGallery() {
     "Werkzeugwand_1920w_ARDlook.jpg",
     "ReifenPerspektive_1920w_ARDlook.jpg",
     "Halle_1920w_ARDlook.jpg",
-    "Felgen_1920w_ARDlook.jpg",
-    "ReifenLicht_1920w_ARDlook.jpg",
-    "Werkzeugwand_1920w_ARDlook.jpg",
   ];
 
   return (
-    <section className="py-20 px-6 bg-[#0A1F35] text-white">
-      <h2 className="text-3xl font-light text-center mb-10">
-        Einblicke in die Werkstatt
-      </h2>
+    <section className="py-24 px-6 bg-white text-[#0A1F35]">
+      <div className="max-w-6xl mx-auto">
 
-      {/* Masonry Grid */}
-      <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 max-w-6xl mx-auto space-y-4">
-        {images.map((img, i) => (
-          <img
-            key={i}
-            src={`/ard/${img}`}
-            alt={img}
-            className="w-full rounded-xl shadow-md mb-4 break-inside-avoid object-cover"
-          />
-        ))}
+        <h2 className="text-2xl md:text-3xl font-light mb-12 text-center">
+          Einblicke in die Werkstatt
+        </h2>
+
+        {/* GRID */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {images.map((img, i) => (
+            <div
+              key={i}
+              className="cursor-pointer overflow-hidden rounded-2xl group"
+              onClick={() => setActiveImage(img)}
+            >
+              <img
+                src={`/ard/${img}`}
+                alt=""
+                className="w-full h-[260px] object-cover transition duration-500 group-hover:scale-[1.03]"
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* LIGHTBOX */}
+        {activeImage && (
+          <div
+            className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-6"
+            onClick={() => setActiveImage(null)}
+          >
+            <img
+              src={`/ard/${activeImage}`}
+              alt=""
+              className="max-w-full max-h-full rounded-xl shadow-2xl"
+            />
+          </div>
+        )}
+
       </div>
     </section>
   );

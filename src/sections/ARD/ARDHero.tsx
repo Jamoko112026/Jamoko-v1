@@ -1,49 +1,54 @@
-// src/sections/ARD/ARDHero.tsx
-
 export default function ARDHero() {
   return (
-    <section className="relative h-[60vh] md:h-[70vh] w-full flex items-center justify-center text-center">
+    <section className="relative h-[65vh] md:h-[75vh] w-full flex items-center justify-center text-center overflow-hidden">
 
-      {/* Hintergrundbild */}
+      {/* Background */}
       <img
         src="/ard/Hero_1920w_ARDlook.jpg"
-        alt="Altonaer Reifendienst Hero"
+        alt="Altonaer Reifendienst Werkstatt"
         className="absolute inset-0 w-full h-full object-cover"
       />
 
-      {/* Dunkles Overlay */}
-      <div className="absolute inset-0 bg-black/55"></div>
+      {/* Overlay (wichtiger für Wirkung) */}
+      <div className="absolute inset-0 bg-black/65" />
 
-      {/* Text */}
-      <div className="relative z-10 px-6 text-white">
-        <h1 className="text-4xl md:text-5xl font-light mb-3 drop-shadow-lg">
-          Altonaer Reifendienst
+      {/* Content */}
+      <div className="relative z-10 px-6 text-white max-w-2xl">
+
+        {/* Headline */}
+        <h1 className="text-4xl md:text-5xl font-light mb-4 tracking-wide">
+          Reifenservice in Hamburg-Altona
         </h1>
 
-        <h2 className="text-2xl md:text-3xl font-light text-blue-200 mb-6 drop-shadow">
+        {/* Subline */}
+        <h2 className="text-xl md:text-2xl font-light text-white/80 mb-6">
           Schnell. Ehrlich. Lokal.
         </h2>
 
-        <p className="max-w-xl mx-auto text-lg mb-10 text-blue-100 leading-relaxed drop-shadow">
-          Reifenwechsel • Einlagerung • Profilcheck  
-          – direkt in Hamburg-Altona.
+        {/* Description */}
+        <p className="text-base md:text-lg text-white/70 leading-relaxed mb-10">
+          Reifenwechsel · Einlagerung · Profilcheck  
+          <br className="hidden md:block" />
+          direkt vor Ort – ohne Umwege.
         </p>
 
-        {/* Buttons */}
+        {/* CTA */}
         <div className="flex justify-center gap-4 flex-wrap">
+
           <a
             href="https://wa.me/"
-            className="bg-white text-[#0A1F35] px-6 py-3 rounded-xl font-semibold shadow-lg"
+            className="bg-white text-[#0A1F35] px-6 py-3 rounded-xl font-medium shadow-md hover:scale-[1.02] transition"
           >
-            WhatsApp Termin
+            Termin per WhatsApp
           </a>
 
           <a
             href="tel:+4940434993"
-            className="bg-[#D40000] px-6 py-3 rounded-xl text-white font-semibold shadow-lg"
+            className="bg-[#D40000] px-6 py-3 rounded-xl text-white font-medium shadow-md hover:scale-[1.02] transition"
           >
-            Anrufen
+            Jetzt anrufen
           </a>
+
         </div>
       </div>
     </section>

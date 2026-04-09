@@ -5,7 +5,7 @@ import { useLayoutEffect } from "react";
 // Layout
 import JamokoLayout from "../layouts/JamokoLayout";
 
-// Pages
+// Core Pages
 import Home from "../pages/Home";
 import MiniSite from "../pages/MiniSite";
 import Pricing from "../pages/Pricing";
@@ -14,13 +14,17 @@ import Kontakt from "../pages/Kontakt";
 import About from "../pages/About";
 import Business from "../pages/Business";
 
-// Demos
+// Cases (echte Kunden)
 import SLBautec from "../pages/SLBautec";
+import ARD from "../pages/ARD";
+
+// Demos
 import PhysioDemo from "../pages/PhysioDemo";
 import SushiDemo from "../pages/SushiDemo";
 import SabinePreview from "../pages/SabinePreview";
 import UweHaberstroh from "../pages/UweHaberstroh";
-import UliGlaserDemo from "../pages/UliGlaserDemo"; // ✅ NEU
+import UliGlaserDemo from "../pages/UliGlaserDemo";
+import ARDDemo from "../pages/ARDDemo"; // 🔥 NEU
 
 // Legal
 import Impressum from "../pages/Impressum";
@@ -30,9 +34,9 @@ import AGB from "../pages/AGB";
 export default function AnimatedRoutes() {
   const location = useLocation();
 
-  // 🔧 sauberer Scroll Reset
+  // 🔧 sauberer Scroll Reset (stabil)
   useLayoutEffect(() => {
-    window.scrollTo({ top: 0, behavior: "auto" });
+    window.scrollTo(0, 0);
   }, [location.pathname]);
 
   return (
@@ -47,28 +51,30 @@ export default function AnimatedRoutes() {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<JamokoLayout />}>
 
-            {/* Core */}
+            {/* ================= CORE ================= */}
             <Route index element={<Home />} />
             <Route path="minisite" element={<MiniSite />} />
             <Route path="business" element={<Business />} />
             <Route path="pricing" element={<Pricing />} />
 
-            {/* Info */}
+            {/* ================= INFO ================= */}
             <Route path="faq" element={<FAQ />} />
             <Route path="kontakt" element={<Kontakt />} />
             <Route path="about" element={<About />} />
 
-            {/* Cases */}
-            <Route path="sl-bautec" element={<SLBautec />} />
+            {/* ================= CASES (ECHT) ================= */}
+            <Route path="cases/sl-bautec" element={<SLBautec />} />
+            <Route path="cases/reifendienst" element={<ARD />} />
 
-            {/* Demos (JETZT KLAR STRUKTURIERT) */}
+            {/* ================= DEMOS (VERKAUF) ================= */}
             <Route path="demos/physio" element={<PhysioDemo />} />
             <Route path="demos/sushi" element={<SushiDemo />} />
             <Route path="demos/sabine" element={<SabinePreview />} />
             <Route path="demos/uwe" element={<UweHaberstroh />} />
-            <Route path="demos/uli-glaser" element={<UliGlaserDemo />} /> {/* ✅ */}
+            <Route path="demos/uli-glaser" element={<UliGlaserDemo />} />
+            <Route path="demos/reifendienst" element={<ARDDemo />} /> {/* 🔥 wichtig */}
 
-            {/* Legal */}
+            {/* ================= LEGAL ================= */}
             <Route path="impressum" element={<Impressum />} />
             <Route path="datenschutz" element={<Datenschutz />} />
             <Route path="agb" element={<AGB />} />

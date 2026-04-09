@@ -5,7 +5,11 @@ import Reveal from "../components/Reveal";
 // ENTRY
 import HeroMinimal from "../components/HeroMinimal";
 import TrustStrip from "../components/TrustStrip";
+
+// DEMO / BEWEIS
 import DemoSection from "../sections/home/DemoSection";
+
+// FLOW
 import ProcessSection from "../sections/home/ProcessSection";
 
 // CORE
@@ -39,13 +43,19 @@ export default function Home() {
         {/* ================= VERTRAUEN ================= */}
         <TrustStrip />
 
-        {/* ================= BEISPIELE ================= */}
-        <DemoSection />
+        {/* ================= DEMO (WICHTIG!) ================= */}
+        <section className="section-md container-wide">
+          <Reveal>
+            <DemoSection />
+          </Reveal>
+        </section>
 
         {/* ================= PROZESS ================= */}
-        <ProcessSection />
-
-
+        <section className="section-md container-wide">
+          <Reveal>
+            <ProcessSection />
+          </Reveal>
+        </section>
 
         {/* ================= ANGEBOT ================= */}
         <section className="section-md container-wide space-y-20">
@@ -62,8 +72,6 @@ export default function Home() {
 
         </section>
 
-
-
         {/* ================= MEHRWERT ================= */}
         <section className="section-md container-narrow">
           <Reveal>
@@ -71,16 +79,12 @@ export default function Home() {
           </Reveal>
         </section>
 
-
-
         {/* ================= PREISE ================= */}
         <section className="section-md container-wide">
           <Reveal>
             <MiniSitePricing />
           </Reveal>
         </section>
-
-
 
         {/* ================= KONTAKT ================= */}
         <section id="kontakt" className="section-lg container-narrow">
