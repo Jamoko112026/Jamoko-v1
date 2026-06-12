@@ -33,7 +33,7 @@ export default function ChatWindow({ onClose }: ChatWindowProps) {
       };
 
       setMessages((prev) => [...prev, bot]);
-    } catch (err) {
+    } catch {
       setMessages((prev) => [
         ...prev,
         { from: "assistant", text: "Fehler beim Analysieren." },

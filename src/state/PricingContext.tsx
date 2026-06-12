@@ -1,20 +1,7 @@
 // src/state/PricingContext.tsx
 
-import { createContext, useContext, useState } from "react";
-
-type Cycle = "monthly" | "yearly";
-
-interface PricingContextValue {
-  cycle: Cycle;
-  toggleCycle: () => void;
-  setCycle: (v: Cycle) => void;
-}
-
-const PricingContext = createContext<PricingContextValue>({
-  cycle: "monthly",
-  toggleCycle: () => {},
-  setCycle: () => {},
-});
+import { useState } from "react";
+import { PricingContext, type Cycle } from "./pricing-context";
 
 export function PricingProvider({ children }: { children: React.ReactNode }) {
   const [cycle, setCycle] = useState<Cycle>("monthly");
@@ -29,5 +16,3 @@ export function PricingProvider({ children }: { children: React.ReactNode }) {
     </PricingContext.Provider>
   );
 }
-
-export const usePricing = () => useContext(PricingContext);

@@ -4,3 +4,8 @@ export interface JamokoResponse {
   empfehlung: string;
   vorschlag: string;
 }
+
+export interface JamokoChatMessage {
+  from: "user" | "bot";
+  text: unknown;
+}

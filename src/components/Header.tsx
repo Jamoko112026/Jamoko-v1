@@ -7,8 +7,6 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
-  if (location.pathname.startsWith("/slb")) return null;
-
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -16,6 +14,8 @@ export default function Header() {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  if (location.pathname.startsWith("/slb")) return null;
 
   return (
     <header

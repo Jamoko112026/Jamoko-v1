@@ -15,13 +15,13 @@ export default function Datenschutz() {
         <ul className="list-disc pl-5 space-y-1 text-white/90">
           <li>Bereitstellung der Website (Art. 6 Abs. 1 lit. f DSGVO)</li>
           <li>Kontaktanfragen (Art. 6 Abs. 1 lit. b/f DSGVO)</li>
-          <li>Optionale Formulare (z. B. Netlify-Form): Verarbeitung der eingegebenen Daten</li>
+          <li>Optionale Formulare (z. B. Netlify-Form): Verarbeitung der eingegebenen Daten</li>
         </ul>
       </section>
 
       <section className="rounded-2xl border border-white/10 bg-white/5 p-5">
         <h2 className="mb-2 text-lg font-semibold">3. Server‑Logs & Hosting</h2>
-        <p>Beim Aufruf der Seiten verarbeitet der Hosting‑Provider u. a. IP‑Adresse, Zeitstempel, Ressource, Referrer, User‑Agent zur technischen Bereitstellung und Sicherheit.</p>
+        <p>Beim Aufruf der Seiten verarbeitet der Hosting-Provider u. a. IP-Adresse, Zeitstempel, Ressource, Referrer und User-Agent zur technischen Bereitstellung und Sicherheit.</p>
       </section>
 
       <section className="rounded-2xl border border-white/10 bg-white/5 p-5">
@@ -49,7 +49,7 @@ export default function Datenschutz() {
         <ul className="list-disc pl-5 space-y-1 text-white/90">
           <li>Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit</li>
           <li>Widerspruch (Art. 21 DSGVO)</li>
-          <li>Beschwerde bei einer Aufsichtsbehörde (z. B. HmbBfDI)</li>
+          <li>Beschwerde bei einer Aufsichtsbehörde (z. B. HmbBfDI)</li>
         </ul>
       </section>
 

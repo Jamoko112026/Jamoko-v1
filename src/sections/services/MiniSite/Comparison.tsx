@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
-import { usePricing } from "../../../state/PricingContext";
+import { usePricing } from "../../../state/pricing-context";
 
 type State = "ok" | "mid" | "no";
 

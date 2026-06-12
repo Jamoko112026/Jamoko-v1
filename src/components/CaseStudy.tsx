@@ -1,11 +1,19 @@
-import Reveal from "@/components/Reveal"
+import type { ReactNode } from "react";
+import Reveal from "@/components/Reveal";
+
+interface CaseStudyProps {
+  title: ReactNode;
+  problem: ReactNode;
+  solution: ReactNode;
+  result: ReactNode;
+}
 
 export default function CaseStudy({
   title,
   problem,
   solution,
   result
-}: any) {
+}: CaseStudyProps) {
   return (
     <section className="section-lg container-narrow">
 
@@ -35,5 +43,5 @@ export default function CaseStudy({
       </Reveal>
 
     </section>
-  )
+  );
 }

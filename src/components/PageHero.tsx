@@ -28,7 +28,7 @@ export default function PageHero({ title, subtitle }: { title: string; subtitle:
           transition={{ duration: 1 }}
           className="text-4xl md:text-5xl font-semibold text-jamoko-gold"
         >
-          Digitale Ruhe für deine Marke.
+          {title}
         </motion.h1>
 
         {/* Untertitel */}
@@ -38,7 +38,7 @@ export default function PageHero({ title, subtitle }: { title: string; subtitle:
           transition={{ duration: 1.3 }}
           className="text-lg md:text-xl text-jamoko-text-dim leading-relaxed"
         >
-          Sichtbar. Klar. Wirklich wirksam.
+          {subtitle}
         </motion.p>
 
       </div>

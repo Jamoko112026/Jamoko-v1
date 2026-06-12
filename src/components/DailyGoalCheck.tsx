@@ -1,6 +1,6 @@
 // src/components/DailyGoalCheck.tsx
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function DailyGoalCheck() {
   const STORAGE_KEY = "jamoko_daily_goal_done";
@@ -8,12 +8,6 @@ export default function DailyGoalCheck() {
 
   const [done, setDone] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
-
-  // ⭐ Minimaler ruhiger Klick-Sound
-  const clickSound = new Audio(
-    "data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAgD4AAIA+AAABAAgAZGF0YQAAAAA="
-  );
-  clickSound.volume = 0.08;
 
   useEffect(() => {
     const saved = localStorage.getItem(STORAGE_KEY);
@@ -43,9 +37,15 @@ export default function DailyGoalCheck() {
     setDone(newVal);
     localStorage.setItem(STORAGE_KEY, newVal.toString());
 
-    // 🪶 Ruhiger Sound
-    clickSound.currentTime = 0;
-    clickSound.play().catch(() => {});
+    if (!audioRef.current) {
+      audioRef.current = new Audio(
+        "data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAgD4AAIA+AAABAAgAZGF0YQAAAAA="
+      );
+      audioRef.current.volume = 0.08;
+    }
+
+    audioRef.current.currentTime = 0;
+    audioRef.current.play().catch(() => {});
   }
 
   // ⭐ Energielevel (0% oder 100%)

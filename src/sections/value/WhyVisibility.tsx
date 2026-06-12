@@ -1,6 +1,5 @@
 import GlowSection from "../../components/sections/GlowSection";
 import ValueGlowCard from "../../components/cards/ValueGlowCard";
-import GlowDivider from "../../components/GlowDivider";
 
 export default function WhyVisibility() {
   return (

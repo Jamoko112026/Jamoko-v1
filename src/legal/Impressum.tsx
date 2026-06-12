@@ -1,4 +1,5 @@
-import LegalLayout, { useTitle } from "./LegalLayout";
+import { useTitle } from "../hooks/useTitle";
+import LegalLayout from "./LegalLayout";
 import { ORG } from "../org";
 
 export default function Impressum() {

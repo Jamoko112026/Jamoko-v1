@@ -1,13 +1,13 @@
-import { FormEvent, useState } from "react";
+import { useState } from "react";
 import { ORG } from "../org";
-import { useTitle } from "../legal/LegalLayout";
+import { useTitle } from "../hooks/useTitle";
 
 export default function Kontakt() {
   useTitle("Kontakt · Jamoko");
   const [sent, setSent] = useState(false);
 
   // For static hosts: Netlify-ready form
-  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const onSubmit = () => {
     if (typeof window !== "undefined" && "fetch" in window) {
       // Let Netlify handle normally; no JS hijack
     }

@@ -1,3 +1,3 @@
-export function logClientInteraction(message: string, response: any) {
+export function logClientInteraction(message: string, response: unknown) {
   console.log("📘 JaMoKo Client Log:", { message, response });
 }

@@ -28,7 +28,7 @@ export default function DailyEnergyPremium() {
 
   // Load data
   useEffect(() => {
-    const saved = { ...goals };
+    const saved: Record<string, boolean> = {};
     GOALS.forEach((g) => {
       const v = localStorage.getItem(STORAGE_PREFIX + g.key);
       saved[g.key] = v === "true";
@@ -48,14 +48,16 @@ export default function DailyEnergyPremium() {
     const allDone = GOALS.every((g) => goals[g.key]);
     if (allDone) {
       const dayIndex = new Date().getDay(); // 0 = So, 1 = Mo…
-      const updated = [...week];
-      updated[dayIndex] = true;
-      setWeek(updated);
-      localStorage.setItem(DAY_TRACK_KEY, JSON.stringify(updated));
+      setWeek((currentWeek) => {
+        const updated = [...currentWeek];
+        updated[dayIndex] = true;
+        localStorage.setItem(DAY_TRACK_KEY, JSON.stringify(updated));
 
-      // Micro Reward
-      const trueDays = updated.filter((d) => d).length;
-      if (trueDays >= 3) setReward(true);
+        const trueDays = updated.filter((d) => d).length;
+        if (trueDays >= 3) setReward(true);
+
+        return updated;
+      });
     }
   }, [goals]);
 

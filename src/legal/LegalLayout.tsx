@@ -1,12 +1,5 @@
-import { ReactNode, useEffect } from "react";
-
-export function useTitle(title: string) {
-  useEffect(() => {
-    const prev = document.title;
-    document.title = title;
-    return () => { document.title = prev; };
-  }, [title]);
-}
+import type { ReactNode } from "react";
+import { useTitle } from "../hooks/useTitle";
 
 export default function LegalLayout({ title, children }: { title: string; children: ReactNode; }) {
   useTitle(title);

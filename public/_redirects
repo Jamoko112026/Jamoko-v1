@@ -1,1 +1,4 @@
+http://jamoko.de/* https://jamoko.de/:splat 301!
+https://www.jamoko.de/* https://jamoko.de/:splat 301!
+http://www.jamoko.de/* https://jamoko.de/:splat 301!
 /* /index.html 200

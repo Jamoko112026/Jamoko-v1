@@ -28,11 +28,15 @@ export default function GlowCard({
 
   return (
     <div
+      style={{
+        boxShadow: `0 0 40px ${glowColors[tone]}${glowStrength[glow]})`,
+      }}
       className={`
         p-8 md:p-10 rounded-2xl
-        bg-[#00202b]/70 backdrop-blur-xl border border-[#013542]/40
-        shadow-[0_0_40px_${glowColors[tone]}${glowStrength[glow]}]
-        hover:shadow-[0_0_70px_${glowColors[tone]}0.4]
+        bg-[#00202b]/70
+        backdrop-blur-xl
+        border border-[#013542]/40
+        hover:shadow-2xl
         transition-all duration-300
         ${className}
       `}

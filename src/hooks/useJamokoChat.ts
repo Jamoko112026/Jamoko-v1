@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { sendJamokoMessage } from "../lib/jamokoChat/sendMessage";
+import type { JamokoChatMessage } from "../lib/jamokoChat/types";
 
 export function useJamokoChat() {
-  const [messages, setMessages] = useState<any[]>([]);
+  const [messages, setMessages] = useState<JamokoChatMessage[]>([]);
   const [loading, setLoading] = useState(false);
 
   async function sendMessage(text: string) {
