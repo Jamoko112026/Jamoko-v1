@@ -24,10 +24,10 @@ export default function FooterMobileLegal() {
 
         <div className="flex flex-col gap-1">
           <a
-            href="mailto:info@jamoko.de"
+            href="mailto:moin@jamoko.de"
             className="hover:text-white transition"
           >
-            info@jamoko.de
+            moin@jamoko.de
           </a>
 
           <a

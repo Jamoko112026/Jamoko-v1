@@ -153,15 +153,17 @@
          NETLIFY FORM REGISTER
     ====================== -->
 
-    <form
-      name="contact"
-      data-netlify="true"
-      netlify-honeypot="bot-field"
-      hidden
-    >
+    <form name="kontakt" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="kontakt" />
+      <input type="text" name="bot-field" />
       <input type="text" name="name" />
       <input type="email" name="email" />
+      <input type="text" name="company" />
+      <select name="project">
+        <option value="Neue Website">Neue Website</option>
+      </select>
       <textarea name="message"></textarea>
+      <input type="checkbox" name="consent" value="accepted" />
     </form>
 
     <!-- =====================

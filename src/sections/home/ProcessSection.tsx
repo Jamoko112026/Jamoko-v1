@@ -1,71 +1,64 @@
+import { ArrowRight } from "lucide-react";
+
+const steps = [
+  {
+    number: "01",
+    title: "Kennenlernen",
+    text: "Wir klären Angebot, Zielgruppe und was deine Website für dich leisten soll.",
+  },
+  {
+    number: "02",
+    title: "Konzept & Vorschau",
+    text: "Du siehst früh, wie Struktur, Inhalte und Gestaltung zusammenspielen.",
+  },
+  {
+    number: "03",
+    title: "Umsetzung & Go-Live",
+    text: "Nach deiner Freigabe optimiere ich alles für Mobilgeräte und bringe die Seite online.",
+  },
+];
+
 export default function ProcessSection() {
   return (
-    <section className="py-20 px-6 bg-[#001821] text-center">
-      <div className="max-w-5xl mx-auto">
-
-        <h2 className="text-2xl md:text-4xl font-light text-white mb-4">
-          So läuft die Zusammenarbeit
-        </h2>
-
-        <p className="text-white/60 mb-12 max-w-2xl mx-auto">
-          Einfach, persönlich und ohne unnötigen Aufwand.
-          Du konzentrierst dich auf dein Geschäft –
-          ich kümmere mich um den digitalen Teil.
+    <div>
+      <div className="mx-auto mb-14 max-w-2xl text-center md:mb-16">
+        <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-[#E5C58B]">
+          Zusammenarbeit
         </p>
-
-        <div className="grid md:grid-cols-3 gap-8 text-left">
-
-          <div className="p-6 border border-white/10 rounded-2xl">
-            <div className="text-[#E5C58B] text-sm mb-3">
-              Schritt 01
-            </div>
-
-            <h3 className="text-white text-xl mb-3">
-              Kennenlernen
-            </h3>
-
-            <p className="text-white/60 text-sm leading-relaxed">
-              In einem kurzen Gespräch lernen wir uns kennen.
-              Gemeinsam schauen wir, was du brauchst und welche
-              Ziele du erreichen möchtest.
-            </p>
-          </div>
-
-          <div className="p-6 border border-white/10 rounded-2xl">
-            <div className="text-[#E5C58B] text-sm mb-3">
-              Schritt 02
-            </div>
-
-            <h3 className="text-white text-xl mb-3">
-              Vorschau erhalten
-            </h3>
-
-            <p className="text-white/60 text-sm leading-relaxed">
-              Du erhältst eine erste Vorschau deiner neuen Website.
-              So kannst du dir alles in Ruhe ansehen, bevor eine
-              Entscheidung getroffen wird.
-            </p>
-          </div>
-
-          <div className="p-6 border border-white/10 rounded-2xl">
-            <div className="text-[#E5C58B] text-sm mb-3">
-              Schritt 03
-            </div>
-
-            <h3 className="text-white text-xl mb-3">
-              Umsetzung & Go-Live
-            </h3>
-
-            <p className="text-white/60 text-sm leading-relaxed">
-              Nach deiner Freigabe setze ich die Website um,
-              optimiere sie für Mobilgeräte und veröffentliche sie
-              für deine Kunden.
-            </p>
-          </div>
-
-        </div>
-
+        <h2 className="text-3xl font-light text-white sm:text-4xl md:text-5xl">
+          Klarer Prozess.
+          <span className="block text-white/40">Wenig Aufwand für dich.</span>
+        </h2>
+        <p className="mt-6 leading-relaxed text-white/55">
+          Du kennst dein Geschäft. Ich übersetze seine Qualität in einen
+          verständlichen digitalen Auftritt.
+        </p>
       </div>
-    </section>
+
+      <div className="grid gap-4 lg:grid-cols-3">
+        {steps.map((step, index) => (
+          <article
+            key={step.number}
+            className="relative rounded-3xl border border-white/10 bg-white/[0.025] p-7 sm:p-8"
+          >
+            <div className="mb-14 flex items-center justify-between">
+              <span className="text-sm tracking-[0.2em] text-[#E5C58B]">
+                {step.number}
+              </span>
+              {index < steps.length - 1 && (
+                <ArrowRight
+                  className="hidden h-4 w-4 text-white/20 lg:block"
+                  aria-hidden="true"
+                />
+              )}
+            </div>
+            <h3 className="text-xl font-medium text-white">{step.title}</h3>
+            <p className="mt-4 text-sm leading-relaxed text-white/50">
+              {step.text}
+            </p>
+          </article>
+        ))}
+      </div>
+    </div>
   );
 }

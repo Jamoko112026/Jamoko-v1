@@ -1,98 +1,62 @@
-import GlowBackground from "../components/backgrounds/GlowBackground";
 import SEO from "@/components/SEO";
-import Reveal from "../components/Reveal";
-
-// ENTRY
+import GlowBackground from "../components/backgrounds/GlowBackground";
 import HeroMinimal from "../components/HeroMinimal";
+import Reveal from "../components/Reveal";
 import TrustStrip from "../components/TrustStrip";
-
-// DEMO / BEWEIS
-import DemoSection from "../sections/home/DemoSection";
-
-// FLOW
-import ProcessSection from "../sections/home/ProcessSection";
-
-// CORE
-import MiniSiteOffer from "../sections/services/MiniSite/Offer";
-import MiniSitePreview from "../sections/services/MiniSite/Preview";
-import MiniSitePricing from "../sections/services/MiniSite/Pricing";
-
-// VALUE
 import ValueCards from "../components/ValueCards";
-
-// CTA
 import ContactSection from "../sections/end/ContactSection";
-
-// VISUAL
-import PlanetArcGlowMini from "../components/PlanetArcGlowMini";
+import DemoSection from "../sections/home/DemoSection";
+import ProcessSection from "../sections/home/ProcessSection";
+import MiniSitePricing from "../sections/services/MiniSite/Pricing";
 
 export default function Home() {
   return (
     <>
       <SEO
-        title="JaMoKo – Ruhige Mini-Websites für lokale Betriebe"
-        description="Klar. Persönlich. Wirksam. Mini-Websites ohne Stress."
+        title="JaMoKo – Webdesign für lokale Unternehmen"
+        description="Persönlich gestaltete Websites für lokale Unternehmen. Klar strukturiert, mobil optimiert und ohne laufende Agenturkosten."
         url="https://jamoko.de"
       />
 
       <GlowBackground className="text-jamoko-text">
-
-        {/* ================= HERO ================= */}
         <HeroMinimal />
-
-        {/* ================= VERTRAUEN ================= */}
         <TrustStrip />
 
-        {/* ================= DEMO (WICHTIG!) ================= */}
-        <section className="section-md container-wide">
-          <Reveal>
-            <DemoSection />
-          </Reveal>
-        </section>
+        <div className="mx-auto max-w-6xl px-6 sm:px-8">
+          <section className="py-24 md:py-32">
+            <Reveal>
+              <DemoSection />
+            </Reveal>
+          </section>
 
-        {/* ================= PROZESS ================= */}
-        <section className="section-md container-wide">
-          <Reveal>
-            <ProcessSection />
-          </Reveal>
-        </section>
+          <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
-        {/* ================= ANGEBOT ================= */}
-        <section className="section-md container-wide space-y-20">
+          <section className="py-24 md:py-32">
+            <Reveal>
+              <ProcessSection />
+            </Reveal>
+          </section>
 
-          <Reveal>
-            <MiniSiteOffer />
-          </Reveal>
+          <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
-          <PlanetArcGlowMini />
+          <section className="py-24 md:py-32">
+            <Reveal>
+              <ValueCards />
+            </Reveal>
+          </section>
+        </div>
 
-          <Reveal>
-            <MiniSitePreview />
-          </Reveal>
-
-        </section>
-
-        {/* ================= MEHRWERT ================= */}
-        <section className="section-md container-narrow">
-          <Reveal>
-            <ValueCards />
-          </Reveal>
-        </section>
-
-        {/* ================= PREISE ================= */}
-        <section className="section-md container-wide">
+        <section className="border-y border-white/10 bg-white/[0.025]">
           <Reveal>
             <MiniSitePricing />
           </Reveal>
         </section>
 
-        {/* ================= KONTAKT ================= */}
-        <section id="kontakt" className="section-lg container-narrow">
+        <section>
           <Reveal>
             <ContactSection />
           </Reveal>
         </section>
-
       </GlowBackground>
     </>
   );
