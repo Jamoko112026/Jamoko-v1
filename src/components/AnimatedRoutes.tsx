@@ -1,5 +1,6 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { useLayoutEffect } from "react";
 
 // Layout
@@ -13,6 +14,8 @@ import FAQ from "../pages/FAQ";
 import Kontakt from "../pages/Kontakt";
 import About from "../pages/About";
 import Business from "../pages/Business";
+import Projects from "../pages/Projects";
+import NotFound from "../pages/NotFound";
 
 // Cases (echte Kunden)
 import SLBautec from "../pages/SLBautec";
@@ -48,6 +51,12 @@ export default function AnimatedRoutes() {
         exit={{ opacity: 0, y: -4 }}
         transition={{ duration: 0.25, ease: "easeOut" }}
       >
+        {location.pathname.startsWith("/demos/") && (
+          <Helmet>
+            <meta name="robots" content="noindex, nofollow" />
+          </Helmet>
+        )}
+
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<JamokoLayout />}>
 
@@ -56,6 +65,7 @@ export default function AnimatedRoutes() {
             <Route path="minisite" element={<MiniSite />} />
             <Route path="business" element={<Business />} />
             <Route path="pricing" element={<Pricing />} />
+            <Route path="projekte" element={<Projects />} />
 
             {/* ================= INFO ================= */}
             <Route path="faq" element={<FAQ />} />
@@ -79,6 +89,8 @@ export default function AnimatedRoutes() {
             <Route path="impressum" element={<Impressum />} />
             <Route path="datenschutz" element={<Datenschutz />} />
             <Route path="agb" element={<AGB />} />
+
+            <Route path="*" element={<NotFound />} />
 
           </Route>
         </Routes>

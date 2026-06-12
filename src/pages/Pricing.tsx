@@ -1,171 +1,250 @@
-// src/sections/services/MiniSite/Pricing.tsx
+import {
+  ArrowUpRight,
+  Check,
+  CircleHelp,
+  CreditCard,
+  Server,
+  ShieldCheck,
+} from "lucide-react";
+import { Link } from "react-router-dom";
 
-import { motion } from "framer-motion";
+import SEO from "@/components/SEO";
+import MiniSitePricing from "@/sections/services/MiniSite/Pricing";
 
-export default function MiniSitePricing() {
+const included = [
+  "Konzeption und klare Seitenstruktur",
+  "Individuelle Gestaltung im JaMoKo-Stil",
+  "Optimierung für Smartphone und Tablet",
+  "Technische Umsetzung und Veröffentlichung",
+  "SEO-Grundlage und Performance-Optimierung",
+  "Persönliche Begleitung bis zur Abnahme",
+];
+
+const costNotes = [
+  {
+    icon: CreditCard,
+    title: "Einmaliger Projektpreis",
+    text: "Der vereinbarte Preis deckt den festgelegten Umfang für Konzeption, Gestaltung und Umsetzung ab.",
+  },
+  {
+    icon: Server,
+    title: "Domain & Hosting",
+    text: "Diese externen Dienste laufen idealerweise direkt auf deinen Namen und kosten je nach Anbieter separat.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Betreuung nach Wunsch",
+    text: "Es gibt keinen verpflichtenden Agenturvertrag. Pflege und Erweiterungen kannst du bei Bedarf beauftragen.",
+  },
+];
+
+const pricingFaq = [
+  {
+    question: "Welches Paket passt zu meinem Betrieb?",
+    answer:
+      "Basic passt für einen kompakten Auftritt mit wenigen klaren Seiten. Plus bietet mehr Raum für Leistungen, Vertrauen, Referenzen und eine umfangreichere Suchmaschinen-Grundlage. Im Erstgespräch bekommst du eine ehrliche Empfehlung.",
+  },
+  {
+    question: "Kann der Preis vom Paketpreis abweichen?",
+    answer:
+      "Ja, wenn besondere Funktionen oder ein deutlich größerer Umfang gewünscht sind. Solche Punkte werden vor Projektstart besprochen und transparent angeboten. Es entstehen keine unangekündigten Zusatzkosten.",
+  },
+  {
+    question: "Wann wird bezahlt?",
+    answer:
+      "Vor dem Kennenlerngespräch ist keine Zahlung nötig. Zahlungszeitpunkt und mögliche Teilzahlungen werden im verbindlichen Angebot klar festgehalten.",
+  },
+];
+
+export default function Pricing() {
   return (
-    <section
-      id="pricing"
-      className="relative py-40 px-6 text-center
-                 bg-gradient-to-b from-[#001821] via-[#01212f] to-[#001821]"
-    >
-      {/* Hintergrund Glow */}
-      <div className="absolute inset-0 opacity-[0.13] bg-[radial-gradient(circle_at_center,rgba(229,197,139,0.25),transparent_75%)]" />
+    <>
+      <SEO
+        title="Website-Preise für lokale Betriebe | JaMoKo"
+        description="Transparente Einmalpreise für individuelle Mini-Sites: klarer Leistungsumfang, keine verpflichtenden Agenturkosten und persönliche Beratung."
+        url="https://jamoko.de/pricing"
+      />
 
-      <div className="relative z-10 max-w-6xl mx-auto space-y-20">
-
-        {/* HEADLINE */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="space-y-6"
+      <main className="overflow-hidden bg-[#001821] text-white">
+        <section
+          id="hero"
+          className="relative border-b border-white/10 px-6 pb-20 pt-16 sm:px-8 sm:pb-28 sm:pt-24"
         >
-          <h2 className="text-4xl md:text-5xl font-semibold text-jamoko-gold">
-            Mini-Website Pakete
-          </h2>
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute left-1/2 top-0 h-[32rem] w-[44rem] -translate-x-1/2 rounded-full bg-[#E5C58B]/[0.08] blur-[135px]"
+          />
 
-          <p className="text-jamoko-gold/80 text-xl">
-            ab Preise · transparent · ohne laufende Kosten
-          </p>
-
-          <p className="text-jamoko-text-dim max-w-2xl mx-auto leading-relaxed">
-            Jede Website wird individuell umgesetzt.  
-            Die Preise sind Einstiegspreise – der finale Umfang wird im kurzen Gespräch abgestimmt.
-          </p>
-        </motion.div>
-
-        {/* GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-
-          {/* STARTER */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="p-10 rounded-3xl bg-[#01212b]/60 border border-jamoko-gold/20
-                       backdrop-blur-xl shadow-xl space-y-6"
-          >
-            <h3 className="text-2xl font-semibold text-jamoko-gold">Starter</h3>
-            <p className="text-3xl font-bold text-jamoko-text">ab 480 €</p>
-
-            <p className="text-jamoko-text-dim">
-              Der klare Einstieg für kleine Betriebe.
+          <div className="relative mx-auto max-w-6xl text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#E5C58B]">
+              Preise
+            </p>
+            <h1 className="mx-auto mt-6 max-w-4xl text-4xl font-semibold leading-[1.08] tracking-[-0.04em] sm:text-5xl lg:text-6xl">
+              Eine gute Website braucht einen{" "}
+              <span className="text-[#E5C58B]">klaren Rahmen.</span>
+            </h1>
+            <p className="mx-auto mt-7 max-w-2xl text-lg leading-relaxed text-white/60">
+              Du erhältst einen nachvollziehbaren Projektpreis, einen
+              festgelegten Leistungsumfang und einen direkten Ansprechpartner.
+              Ohne verpflichtenden Wartungsvertrag.
             </p>
 
-            <ul className="text-left text-jamoko-text-dim space-y-3 mt-6 opacity-90">
-              <li>• Ruhiges Calm-Energy Grunddesign</li>
-              <li>• Übersichtliche Onepager-Struktur</li>
-              <li>• Starttexte auf Basis deiner Inhalte</li>
-              <li>• Lokale Basis-SEO</li>
-              <li>• Kontaktbereich mit klarer Handlungsführung</li>
-            </ul>
+            <div className="mt-9 flex flex-wrap justify-center gap-x-7 gap-y-3 text-sm text-white/48">
+              {[
+                "Keine Zahlung vorab",
+                "Persönliche Beratung",
+                "Transparenter Umfang",
+              ].map((item) => (
+                <span key={item} className="flex items-center gap-2">
+                  <Check className="h-4 w-4 text-[#1AC7A4]" />
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </section>
 
-            <a
-              href="/about#contact"
-              className="inline-block mt-6 px-6 py-3 rounded-full font-medium
-                         bg-jamoko-gold/20 text-jamoko-gold border border-jamoko-gold/30
-                         hover:bg-jamoko-gold/30 transition"
-            >
-              Kostenloses Erstgespräch starten
-            </a>
-          </motion.div>
+        <section className="border-b border-white/10 bg-white/[0.02]">
+          <MiniSitePricing />
+        </section>
 
-          {/* STANDARD – MEIST GEWÄHLT */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.85 }}
-            className="p-10 rounded-3xl bg-[#013542]/80 border border-jamoko-gold/40
-                       backdrop-blur-xl shadow-[0_0_35px_rgba(229,197,139,0.2)]
-                       scale-[1.03] space-y-6 relative"
-          >
-            {/* Badge */}
-            <div className="absolute -top-5 left-1/2 -translate-x-1/2
-                            bg-jamoko-gold text-[#001821]
-                            text-xs font-semibold px-4 py-1 rounded-full shadow-lg">
-              EMPFOHLEN
+        <section className="px-6 py-24 sm:px-8 sm:py-32">
+          <div className="mx-auto grid max-w-6xl gap-14 lg:grid-cols-[0.75fr_1.25fr] lg:gap-24">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#E5C58B]">
+                Im Projekt enthalten
+              </p>
+              <h2 className="mt-5 text-3xl font-semibold leading-tight tracking-[-0.03em] sm:text-4xl">
+                Mehr als eine schöne Oberfläche.
+              </h2>
+              <p className="mt-6 leading-relaxed text-white/52">
+                Beide Pakete verbinden Strategie, Gestaltung und Technik. Der
+                Unterschied liegt vor allem im Umfang und in der Tiefe der
+                Inhalte.
+              </p>
             </div>
 
-            <h3 className="text-2xl font-semibold text-jamoko-gold">Business</h3>
-            <p className="text-3xl font-bold text-jamoko-text">ab 830 €</p>
+            <div className="grid gap-x-8 gap-y-4 sm:grid-cols-2">
+              {included.map((item) => (
+                <div
+                  key={item}
+                  className="flex gap-3 border-b border-white/10 py-5 text-white/68"
+                >
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#E5C58B]/12 text-[#E5C58B]">
+                    <Check className="h-3 w-3" strokeWidth={2.5} />
+                  </span>
+                  <span className="leading-relaxed">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-            <p className="text-jamoko-text-dim">
-              Die beste Balance aus Wirkung und Klarheit.
+        <section className="border-y border-white/10 bg-white/[0.025] px-6 py-24 sm:px-8 sm:py-32">
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-2xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#E5C58B]">
+                Laufende Kosten
+              </p>
+              <h2 className="mt-5 text-3xl font-semibold tracking-[-0.03em] sm:text-4xl">
+                Klar getrennt. Verständlich erklärt.
+              </h2>
+            </div>
+
+            <div className="mt-14 grid gap-5 md:grid-cols-3">
+              {costNotes.map(({ icon: Icon, title, text }) => (
+                <article
+                  key={title}
+                  className="rounded-3xl border border-white/10 bg-[#001821]/70 p-7"
+                >
+                  <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#E5C58B]/10 text-[#E5C58B]">
+                    <Icon className="h-5 w-5" strokeWidth={1.7} />
+                  </div>
+                  <h3 className="mt-7 text-lg font-semibold">{title}</h3>
+                  <p className="mt-4 leading-relaxed text-white/52">{text}</p>
+                </article>
+              ))}
+            </div>
+
+            <p className="mt-8 text-sm leading-relaxed text-white/35">
+              Alle genannten Preise sind Endpreise gemäß § 19 UStG. Es wird
+              keine Umsatzsteuer ausgewiesen.
             </p>
+          </div>
+        </section>
 
-            <ul className="text-left text-jamoko-text-dim space-y-3 mt-6 opacity-90">
-              <li>• Erweiterte Calm-Energy Gestaltung</li>
-              <li>• Strukturierte Inhaltsbereiche</li>
-              <li>• Professionell formulierte Website-Texte</li>
-              <li>• Starke lokale SEO-Optimierung</li>
-              <li>• Conversion-orientiertes Kontaktformular</li>
-              <li>• Mobile & Tablet Optimierung</li>
-              <li>• Persönlicher Support bis zur Abnahme</li>
-            </ul>
+        <section className="px-6 py-24 sm:px-8 sm:py-32">
+          <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.7fr_1.3fr] lg:gap-24">
+            <div>
+              <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#E5C58B]/10 text-[#E5C58B]">
+                <CircleHelp className="h-5 w-5" strokeWidth={1.7} />
+              </div>
+              <h2 className="mt-6 text-3xl font-semibold tracking-[-0.03em]">
+                Fragen zu den Preisen
+              </h2>
+              <p className="mt-4 leading-relaxed text-white/48">
+                Die wichtigsten Punkte vor einer Entscheidung, kurz und
+                verbindlich beantwortet.
+              </p>
+            </div>
 
-            <p className="text-xs text-jamoko-text-dim/80 mt-2">
-              Ideal für Handwerksbetriebe, Praxen & lokale Dienstleister.
-            </p>
+            <div className="divide-y divide-white/10 border-y border-white/10">
+              {pricingFaq.map((item) => (
+                <details key={item.question} className="group py-6">
+                  <summary className="flex cursor-pointer list-none items-start justify-between gap-6 text-lg font-medium text-white/80 marker:content-none">
+                    {item.question}
+                    <span
+                      aria-hidden="true"
+                      className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-white/12 text-xl font-light text-[#E5C58B] transition group-open:rotate-45"
+                    >
+                      +
+                    </span>
+                  </summary>
+                  <p className="max-w-2xl pr-10 pt-5 leading-relaxed text-white/52">
+                    {item.answer}
+                  </p>
+                </details>
+              ))}
 
-            <a
-              href="/about#contact"
-              className="inline-block mt-6 px-6 py-3 rounded-full font-medium
-                         bg-jamoko-gold text-[#001821] hover:bg-jamoko-gold/90 transition"
+              <div className="py-6">
+                <Link
+                  to="/faq"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-[#E5C58B] transition hover:text-[#efd49f]"
+                >
+                  Alle häufigen Fragen ansehen
+                  <ArrowUpRight className="h-4 w-4" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="px-6 pb-24 sm:px-8 sm:pb-32">
+          <div className="mx-auto flex max-w-6xl flex-col justify-between gap-8 rounded-[2rem] bg-[#E5C58B] p-8 text-[#001821] sm:p-12 lg:flex-row lg:items-center">
+            <div className="max-w-2xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#001821]/55">
+                Noch unsicher?
+              </p>
+              <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-[-0.03em] sm:text-4xl">
+                Wir finden den Umfang, der wirklich zu deinem Betrieb passt.
+              </h2>
+              <p className="mt-4 leading-relaxed text-[#001821]/68">
+                Im ersten Gespräch klären wir Bedarf und Prioritäten. Danach
+                weißt du, welches Paket sinnvoll ist und womit du rechnen
+                kannst.
+              </p>
+            </div>
+
+            <Link
+              to="/kontakt"
+              className="inline-flex min-h-12 shrink-0 items-center justify-center gap-2 rounded-full bg-[#001821] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#07303d]"
             >
-              Kostenloses Erstgespräch starten
-            </a>
-          </motion.div>
-
-         {/* PREMIUM / B2B */}
-<motion.div
-  initial={{ opacity: 0, y: 30 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 1.0 }}
-  className="p-10 rounded-3xl bg-[#022E37]/60 border border-jamoko-gold/30
-             backdrop-blur-xl shadow-xl space-y-6"
->
-  <h3 className="text-2xl font-semibold text-jamoko-gold">Business Pro</h3>
-  <p className="text-3xl font-bold text-jamoko-text">ab 1.480 €</p>
-
-  <p className="text-jamoko-text-dim">
-    Für anspruchsvolle Betriebe & Firmenprojekte.
-  </p>
-
-  <ul className="text-left text-jamoko-text-dim space-y-3 mt-6 opacity-90">
-    <li>• Individuelles Premium-Design</li>
-    <li>• Maßgeschneiderte Seitenstruktur</li>
-    <li>• Projekt- & Leistungsdarstellungen</li>
-    <li>• SEO Pro Setup</li>
-    <li>• Performance-Optimierung</li>
-    <li>• Erweiterter persönlicher Support</li>
-    <li>• Launch-Begleitung & Übergabe</li>
-  </ul>
-
-  <a
-    href="/about#contact"
-    className="inline-block mt-6 px-6 py-3 rounded-full font-medium
-               bg-jamoko-teal/30 text-jamoko-teal border border-jamoko-teal/30
-               hover:bg-jamoko-teal/40 transition"
-  >
-    Kostenloses Erstgespräch starten
-  </a>
-          </motion.div>
-        </div> {/* GRID ENDE */}
-
-        {/* FOOTNOTE */}
-        <p className="text-jamoko-text-dim mt-10 opacity-80">
-          Nicht sicher, welches Paket passt?
-          <br />Ich berate dich gern kostenlos & unverbindlich.
-        </p>
-
-        {/* MwSt Hinweis */}
-        <p className="text-xs text-jamoko-text-dim/70 mt-6">
-          Alle Preise sind Endpreise gemäß §19 UStG (Kleinunternehmerregelung).
-          Es wird keine Umsatzsteuer ausgewiesen.
-        </p>
-
-      </div> {/* CONTENT WRAPPER ENDE */}
-    </section>
+              Projekt besprechen
+              <ArrowUpRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </section>
+      </main>
+    </>
   );
 }

@@ -1,24 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <url>
     <loc>https://jamoko.de/</loc>
   </url>
-
   <url>
     <loc>https://jamoko.de/minisite</loc>
   </url>
-
+  <url>
+    <loc>https://jamoko.de/projekte</loc>
+  </url>
   <url>
     <loc>https://jamoko.de/pricing</loc>
   </url>
-
+  <url>
+    <loc>https://jamoko.de/about</loc>
+  </url>
   <url>
     <loc>https://jamoko.de/faq</loc>
   </url>
-
   <url>
     <loc>https://jamoko.de/kontakt</loc>
   </url>
-
+  <url>
+    <loc>https://jamoko.de/cases/uli-glaser</loc>
+  </url>
+  <url>
+    <loc>https://jamoko.de/cases/sl-bautec</loc>
+  </url>
 </urlset>

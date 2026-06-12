@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import workspaceImage from "@/assets/jamoko/hero/jamoko_hero_workspace_v1.jpeg";
 
 export default function UweHaberstroh() {
   return (
@@ -9,8 +10,8 @@ export default function UweHaberstroh() {
 
         {/* IMAGE (ersetzen) */}
         <img
-          src="/uwe/uwe_hero.jpg"
-          alt="Uwe Haberstroh"
+          src={workspaceImage}
+          alt="Ruhiger Arbeitsplatz als Motiv für das Beratungskonzept"
           className="absolute inset-0 w-full h-full object-cover"
         />
 

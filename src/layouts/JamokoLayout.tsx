@@ -2,7 +2,6 @@
 
 import Header from "@/components/Header";
 import FooterGlass from "@/components/FooterGlass";
-import FooterMobileLegal from "@/components/FooterMobileLegal";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 import { Outlet } from "react-router-dom";
 
@@ -25,21 +24,20 @@ export default function JamokoLayout() {
       </div>
 
       {/* ===== MAIN CONTENT ===== */}
-      <main className="relative z-10 flex-1 pt-24 pb-28">
+      <main className="relative z-10 flex-1 pt-24">
 
         <Outlet />
 
       </main>
 
-      {/* ===== DESKTOP FOOTER ===== */}
-      <div className="relative z-10 hidden md:block">
+      {/* ===== GLOBAL FOOTER ===== */}
+      <div className="relative z-10">
         <FooterGlass />
       </div>
 
-      {/* ===== MOBILE FOOTER SYSTEM ===== */}
+      {/* ===== MOBILE CTA ===== */}
       <div className="relative z-10 md:hidden">
         <StickyMobileCTA />
-        <FooterMobileLegal />
       </div>
 
     </div>

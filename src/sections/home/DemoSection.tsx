@@ -89,6 +89,16 @@ export default function DemoSection() {
           </Link>
         ))}
       </div>
+
+      <div className="mt-10 text-center">
+        <Link
+          to="/projekte"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-[#E5C58B] transition hover:text-[#efd49f]"
+        >
+          Alle Projekte und Konzepte ansehen
+          <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+        </Link>
+      </div>
     </div>
   );
 }

@@ -5,6 +5,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 const navigation = [
   { label: "Start", to: "/" },
   { label: "Mini-Site", to: "/minisite" },
+  { label: "Projekte", to: "/projekte" },
   { label: "Preise", to: "/pricing" },
   { label: "Über Jamoko", to: "/about" },
 ];

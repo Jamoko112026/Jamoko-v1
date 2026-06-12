@@ -29,7 +29,7 @@ export default function MiniSitePreview() {
           transition={{ duration: 0.8 }}
           className="relative"
         >
-          <Link to="/demo" className="block group">
+          <Link to="/projekte" className="block group">
 
             {/* Glow Frame */}
             <div className="
@@ -112,7 +112,7 @@ export default function MiniSitePreview() {
           </ul>
 
           <Link
-            to="/demo"
+            to="/projekte"
             className="
               inline-block
               px-6 py-3
@@ -123,7 +123,7 @@ export default function MiniSitePreview() {
               transition
             "
           >
-            Live-Demo ansehen
+            Projekte ansehen
           </Link>
 
         </div>

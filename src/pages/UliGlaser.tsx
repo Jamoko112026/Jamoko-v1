@@ -1,5 +1,6 @@
+import SEO from "@/components/SEO";
 import { ArrowUpRight, Check } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const measures = [
   {
@@ -47,8 +48,20 @@ const galleryImages = [
 ];
 
 export default function UliGlaser() {
+  const location = useLocation();
+  const isDemo = location.pathname.startsWith("/demos/");
+
   return (
-    <main className="overflow-hidden bg-[#001821] text-white">
+    <>
+      <SEO
+        title="Uli Glaser Design · Webdesign-Referenz von JaMoKo"
+        description="Website und Positionierung für Uli Glaser Design: Handwerkskunst, Tradition und persönliche Beratung klar digital vermittelt."
+        url="https://jamoko.de/cases/uli-glaser"
+        image="/cases/uli-glaser/Jamoko_Referenz_UliGlaser_Hero.png"
+        noIndex={isDemo}
+      />
+
+      <main className="overflow-hidden bg-[#001821] text-white">
       <section className="relative px-6 pb-24 pt-24 sm:px-8 md:pb-32 md:pt-32">
         <div
           className="pointer-events-none absolute inset-0"
@@ -290,6 +303,7 @@ export default function UliGlaser() {
           </div>
         </div>
       </section>
-    </main>
+      </main>
+    </>
   );
 }

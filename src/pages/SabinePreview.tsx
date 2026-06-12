@@ -46,8 +46,8 @@ export default function SabinePreview() {
         {/* Bild */}
         <div className="relative">
           <img
-            src="/sabine/sabine_portrait_v1.jpg"
-            alt="Sabine"
+            src="/sabine/jamoko_sabine_hero_v1.jpg"
+            alt="Atmosphärisches Motiv für das Beratungskonzept"
             className="rounded-2xl object-cover w-full h-[420px]"
           />
           <div className="absolute inset-0 rounded-2xl bg-[radial-gradient(circle_at_top_left,rgba(229,197,139,0.2),transparent_60%)]" />
