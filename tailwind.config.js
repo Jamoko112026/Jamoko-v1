@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
@@ -13,6 +14,20 @@ export default {
       ====================== */
 
       colors: {
+        calm: {
+          navy: "#001821",
+          cream: "#001821",
+          paper: "#EDF2F7",
+          ink: "#EDF2F7",
+          muted: "#D6E0E7",
+          line: "#214654",
+          sage: "#013542",
+          panel: "#012633",
+          panelSoft: "#013542",
+          green: "#1AC7A4",
+          blue: "#E5C58B",
+          gold: "#E5C58B",
+        },
 
         /* JAMOKO BRAND */
 

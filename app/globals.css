@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Nunito:wght@400;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: #001821;
+  --color-paper: #edf2f7;
+  --color-ink: #edf2f7;
+  --color-muted: #d6e0e7;
+  --color-line: #214654;
+  --color-sage: #013542;
+  --color-green: #1ac7a4;
+  --color-gold: #e5c58b;
+  --jamoko-navy: #001821;
+  --jamoko-gold: #e5c58b;
+  --jamoko-teal: #1ac7a4;
+  --jamoko-text: #edf2f7;
+  --jamoko-text-dim: #d6e0e7;
+  --jamoko-gold-glow: rgba(229, 197, 139, 0.3);
+  --jamoko-teal-glow: rgba(26, 199, 164, 0.3);
+  --font-headline: "Montserrat", "Satoshi", system-ui, sans-serif;
+  --font-body: "Nunito", "Open Sans", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100svh;
+  margin: 0;
+  overflow-x: hidden;
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-headline);
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-bg);
+}
+
+a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+:focus-visible {
+  outline: 3px solid rgba(229, 197, 139, 0.55);
+  outline-offset: 3px;
+}
+
+details > summary {
+  list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
