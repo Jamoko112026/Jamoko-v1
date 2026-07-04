@@ -14,11 +14,25 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Mini-Site",
+  title: "Mini-Website Hamburg",
   description:
-    "Die JaMoKo Mini-Website erklärt lokale Betriebe klar, ruhig und mobil verständlich. Ein guter Start, der später wachsen kann.",
+    "Die JaMoKo Mini-Website ist ein klarer Start für lokale Unternehmen in Hamburg. Ruhig, mobil verständlich und später erweiterbar.",
   alternates: {
     canonical: "https://jamoko.de/mini-site",
+  },
+  openGraph: {
+    title: "Mini-Website Hamburg · JaMoKo",
+    description:
+      "Klein starten, klar wachsen: Mini-Websites für lokale Unternehmen, Handwerker und Dienstleister.",
+    url: "https://jamoko.de/mini-site",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "JaMoKo Mini-Website Hamburg",
+      },
+    ],
   },
 };
 
@@ -171,7 +185,7 @@ export default function MiniSitePage() {
             <p className="mt-6 max-w-2xl text-lg leading-8 text-white/58">
               Eine JaMoKo Mini-Website ist ein ruhiger digitaler Startpunkt. Sie
               erklärt, wer du bist, was du anbietest und wie Menschen dich
-              erreichen.
+              erreichen. Für lokale Unternehmen in Hamburg und darüber hinaus.
             </p>
             <Link
               href="/kontakt"
@@ -195,10 +209,21 @@ export default function MiniSitePage() {
           Vertrauen, Standort und Kontakt. Nicht mehr als nötig. Aber genug, um
           eine gute Entscheidung leichter zu machen.
         </p>
-        <p>
-          Sie ist besonders dann sinnvoll, wenn ein Betrieb sichtbar werden
-          möchte, ohne sofort ein großes Projekt daraus zu machen.
-        </p>
+          <p>
+            Sie ist besonders dann sinnvoll, wenn ein Betrieb sichtbar werden
+            möchte, ohne sofort ein großes Projekt daraus zu machen.
+          </p>
+          <p>
+            Wenn du vorher wissen möchtest, wie JaMoKo Preise einordnet, findest
+            du eine ruhige Übersicht auf der{" "}
+            <Link
+              href="/preise"
+              className="font-semibold text-[#E5C58B] transition hover:text-[#efd49f]"
+            >
+              Preiseseite
+            </Link>
+            .
+          </p>
       </TextSection>
 
       <section className="border-y border-white/10 bg-white/[0.025] px-6 py-20 sm:px-8 md:py-28">

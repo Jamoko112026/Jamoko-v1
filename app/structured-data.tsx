@@ -1,10 +1,12 @@
+import { faqItems } from "./faq/faq-data";
+
 const siteUrl = "https://jamoko.de";
 const organizationId = `${siteUrl}/#organization`;
 const websiteId = `${siteUrl}/#website`;
 const serviceId = `${siteUrl}/#mini-website-service`;
 
 const siteDescription =
-  "JaMoKo erstellt ruhige, schnelle Mini-Websites für Handwerker, Dienstleister und lokale Unternehmen.";
+  "JaMoKo erstellt ruhige, schnelle Mini-Websites und Webdesign für lokale Unternehmen in Hamburg.";
 
 const areaServed = [
   {
@@ -36,13 +38,14 @@ export const siteJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "ProfessionalService",
+      "@type": ["Organization", "ProfessionalService"],
       "@id": organizationId,
       name: "JaMoKo",
       url: siteUrl,
       logo: `${siteUrl}/favicon-512.png`,
       image: `${siteUrl}/og-image.png`,
       email: "moin@jamoko.de",
+      telephone: "+49 176 82032127",
       description: siteDescription,
       slogan: "Erst Mensch, dann Marke, dann Mechanik.",
       founder: {
@@ -59,12 +62,17 @@ export const siteJsonLd = {
         "@type": "ContactPoint",
         contactType: "Kundenanfragen",
         email: "moin@jamoko.de",
+        telephone: "+49 176 82032127",
         areaServed: "DE",
         availableLanguage: "de-DE",
       },
       knowsAbout: [
         "Mini-Websites",
+        "Webdesign Hamburg",
         "Webdesign für lokale Betriebe",
+        "Webdesign für lokale Unternehmen",
+        "Mini-Website Hamburg",
+        "Websites für Handwerker und Dienstleister",
         "Mobile Optimierung",
         "Verständliche Website-Texte",
       ],
@@ -92,7 +100,7 @@ export const homePageJsonLd = {
       url: siteUrl,
       name: "JaMoKo – Ruhige Websites für lokale Unternehmen",
       description:
-        "Ruhige, schnelle Mini-Websites für lokale Betriebe. Klar, persönlich und ohne unnötige Technik.",
+        "Ruhiges Webdesign aus Hamburg für lokale Unternehmen, Handwerker und Dienstleister.",
       inLanguage: "de-DE",
       isPartOf: {
         "@id": websiteId,
@@ -119,7 +127,7 @@ export const homePageJsonLd = {
       areaServed,
       audience,
       description:
-        "JaMoKo erstellt klare Mini-Websites für Handwerker, Dienstleister und lokale Unternehmen.",
+        "JaMoKo erstellt klare Mini-Websites für Handwerker, Dienstleister und lokale Unternehmen in Hamburg.",
       offers: {
         "@type": "Offer",
         name: "Kostenloses Erstgespräch",
@@ -153,6 +161,31 @@ export const contactPageJsonLd = {
     areaServed: "DE",
     availableLanguage: "de-DE",
   },
+};
+
+export const faqPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": `${siteUrl}/faq#faq`,
+  url: `${siteUrl}/faq`,
+  name: "Häufige Fragen zu JaMoKo Mini-Websites",
+  description:
+    "Antworten auf häufige Fragen zu Mini-Websites, Preisen, Ablauf und Zusammenarbeit mit JaMoKo.",
+  inLanguage: "de-DE",
+  isPartOf: {
+    "@id": websiteId,
+  },
+  about: {
+    "@id": organizationId,
+  },
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
 };
 
 export function StructuredData({ data }: { data: unknown }) {

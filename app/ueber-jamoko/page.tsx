@@ -12,9 +12,23 @@ import {
 export const metadata: Metadata = {
   title: "Über JaMoKo",
   description:
-    "Warum es JaMoKo gibt: ruhige Websites, klare Zusammenarbeit und digitale Sichtbarkeit für lokale Unternehmen.",
+    "Warum es JaMoKo gibt: Webdesign Hamburg mit ruhiger Zusammenarbeit, klarer Sprache und digitaler Sichtbarkeit für lokale Unternehmen.",
   alternates: {
     canonical: "https://jamoko.de/ueber-jamoko",
+  },
+  openGraph: {
+    title: "Über JaMoKo · Webdesign Hamburg",
+    description:
+      "Erst Mensch, dann Marke, dann Mechanik. Die Haltung hinter JaMoKo.",
+    url: "https://jamoko.de/ueber-jamoko",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Über JaMoKo",
+      },
+    ],
   },
 };
 

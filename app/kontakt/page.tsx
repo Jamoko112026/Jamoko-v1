@@ -4,11 +4,25 @@ import { ContactForm } from "@/components/landing/ContactForm";
 import { StructuredData, contactPageJsonLd } from "../structured-data";
 
 export const metadata: Metadata = {
-  title: "Kontakt",
+  title: "Kontakt für Webdesign Hamburg",
   description:
-    "Nimm direkt Kontakt mit JaMoKo auf. Ruhige Mini-Websites für lokale Unternehmen aus Hamburg.",
+    "Nimm direkt Kontakt mit JaMoKo in Hamburg auf. Ruhiges Webdesign und Mini-Websites für lokale Unternehmen, Handwerker und Dienstleister.",
   alternates: {
     canonical: "https://jamoko.de/kontakt",
+  },
+  openGraph: {
+    title: "Kontakt · JaMoKo Webdesign Hamburg",
+    description:
+      "Sprich mit JaMoKo über deine Website, Mini-Website oder digitale Sichtbarkeit.",
+    url: "https://jamoko.de/kontakt",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Kontakt zu JaMoKo",
+      },
+    ],
   },
 };
 

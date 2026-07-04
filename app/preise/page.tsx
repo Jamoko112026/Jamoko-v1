@@ -11,11 +11,25 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Preise",
+  title: "Preise für Mini-Websites",
   description:
-    "Faire Preise und klare Leistungen bei JaMoKo. Transparente Einstiegspakete, persönliche Beratung und Angebote nach Bedarf.",
+    "Faire Preise für Mini-Websites und Webdesign in Hamburg. Klare Leistungen, persönliche Beratung und Angebote nach Bedarf.",
   alternates: {
     canonical: "https://jamoko.de/preise",
+  },
+  openGraph: {
+    title: "Preise für Mini-Websites · JaMoKo",
+    description:
+      "Transparente Einstiegspakete für lokale Unternehmen, Handwerker und Dienstleister.",
+    url: "https://jamoko.de/preise",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "JaMoKo Preise für Mini-Websites",
+      },
+    ],
   },
 };
 
@@ -179,6 +193,12 @@ export default function PricingPage() {
             >
               Kostenlos kennenlernen
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
+            <Link
+              href="/mini-site"
+              className="ml-0 mt-4 inline-flex min-h-12 items-center justify-center rounded-full border border-white/15 px-6 py-3 text-sm font-semibold text-white/75 transition hover:border-white/30 hover:bg-white/5 hover:text-white sm:ml-4"
+            >
+              Mini-Website verstehen
             </Link>
           </div>
         </div>

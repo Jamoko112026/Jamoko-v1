@@ -7,15 +7,15 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://jamoko.de"),
   title: {
-    default: "JaMoKo – Ruhige Mini-Websites für lokale Betriebe",
+    default: "JaMoKo – Webdesign Hamburg für lokale Unternehmen",
     template: "%s · JaMoKo",
   },
   description:
-    "JaMoKo erstellt ruhige Mini-Websites für lokale Betriebe. Klar. Persönlich. Wirksam. Digitale Präsenz ohne Stress – für echte Menschen.",
+    "JaMoKo erstellt ruhige Mini-Websites und Webdesign für lokale Unternehmen in Hamburg. Klar, persönlich und verständlich.",
   openGraph: {
-    title: "JaMoKo – Ruhige Mini-Websites für lokale Betriebe",
+    title: "JaMoKo – Webdesign Hamburg für lokale Unternehmen",
     description:
-      "Klar. Persönlich. Wirksam. Digitale Ruhe für lokale Unternehmen.",
+      "Ruhige Mini-Websites für Handwerker, Dienstleister und lokale Unternehmen in Hamburg.",
     url: "https://jamoko.de",
     siteName: "JaMoKo",
     locale: "de_DE",

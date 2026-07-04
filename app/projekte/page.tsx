@@ -1,45 +1,67 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Projekte",
+  title: "Projekte und Referenzen",
   description:
-    "Erste JaMoKo Referenzen und vorbereitete Projektkarten für lokale Betriebe, Handwerk und Dienstleister.",
+    "Ausgewählte JaMoKo Projekte zeigen ruhiges Webdesign für lokale Unternehmen, Handwerker und Dienstleister.",
   alternates: {
     canonical: "https://jamoko.de/projekte",
+  },
+  openGraph: {
+    title: "Projekte und Referenzen · JaMoKo",
+    description:
+      "Portfolio mit klaren Websites für lokale Unternehmen, Handwerk und Dienstleistung.",
+    url: "https://jamoko.de/projekte",
+    images: [
+      {
+        url: "/cases/uli-glaser/Jamoko_Referenz_UliGlaser_Hero.png",
+        width: 1200,
+        height: 630,
+        alt: "JaMoKo Referenz Uli Glaser Design",
+      },
+    ],
   },
 };
 
 const projects = [
   {
     title: "Uli Glaser Design",
-    category: "Goldschmiede · Referenz",
-    text: "Ein Auftritt für feine Handwerkskunst, zwei Standorte und eine klare Geschichte hinter der Arbeit.",
+    industry: "Goldschmiede · Schmuckdesign",
+    description:
+      "Eine modernisierte Website für feine Handwerksarbeit, klare Standorte und einen ruhigeren Weg zur Kontaktaufnahme.",
+    status: "Live",
     image: "/cases/uli-glaser/Jamoko_Referenz_UliGlaser_Hero.png",
     alt: "Website-Ansicht der JaMoKo Referenz Uli Glaser Design",
-    points: ["Handwerk sichtbar machen", "Standorte verständlich führen", "Vertrauen ruhig aufbauen"],
     href: "/projekte/uli-glaser",
-    linkLabel: "Case Study ansehen",
   },
   {
     title: "SL Bautec",
-    category: "Bau · vorbereitete Referenz",
-    text: "Eine Projektkarte für ein Bauunternehmen, das Leistungen sachlich erklären und direkte Anfragen erleichtern möchte.",
+    industry: "Bau · B2B",
+    description:
+      "Ein vorbereiteter Auftritt für ein Bauunternehmen, bei dem Leistungen, Vertrauen und direkte Anfragen klarer geführt werden.",
+    status: "In Arbeit",
     image: "/slb-logo.png",
-    alt: "SL Bautec Logo als vorbereitete Projektkarte",
-    points: ["Leistungen klar ordnen", "Seriosität zeigen", "Kontaktwege vereinfachen"],
-    href: "/kontakt",
-    linkLabel: "Ähnliches Projekt besprechen",
+    alt: "SL Bautec Logo als Projektvorschau",
+  },
+  {
+    title: "Sabine Pracht",
+    industry: "Persönliche Dienstleistung · Konzept",
+    description:
+      "Ein ruhiges Website-Konzept für eine persönliche Marke, das Angebot, Haltung und Kontakt verständlich ordnet.",
+    status: "Konzept",
+    image: "/sabine/jamoko_sabine_hero_v1.jpg",
+    alt: "Website-Konzept für Sabine Pracht",
   },
 ];
 
-const principles = [
-  "Jede Seite beginnt mit dem, was Besucher wirklich wissen müssen.",
-  "Design unterstützt Vertrauen, statt sich in den Vordergrund zu stellen.",
-  "Kontaktwege bleiben sichtbar, einfach und ohne Umwege.",
-];
+const statusStyles: Record<string, string> = {
+  Live: "border-[#1AC7A4]/30 bg-[#1AC7A4]/10 text-[#1AC7A4]",
+  "In Arbeit": "border-[#E5C58B]/35 bg-[#E5C58B]/10 text-[#E5C58B]",
+  Konzept: "border-white/15 bg-white/10 text-white/70",
+};
 
 export default function ProjectsPage() {
   return (
@@ -48,113 +70,98 @@ export default function ProjectsPage() {
         <div className="mx-auto max-w-6xl">
           <div className="max-w-3xl">
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#E5C58B]">
-              Projekte
+              Portfolio
             </p>
             <h1 className="mt-5 text-4xl font-light leading-tight text-white sm:text-5xl md:text-6xl">
-              Digitale Auftritte, die Arbeit verständlich zeigen.
+              Unsere Projekte
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-white/58">
-              JaMoKo Projekte sind ruhig aufgebaut, klar formuliert und auf
-              lokale Betriebe zugeschnitten. Erste Referenzen und vorbereitete
-              Projektkarten zeigen die Richtung.
+              Ausgewählte Projekte zeigen, wie wir Unternehmen dabei
+              unterstützen, klarer, ruhiger und digital sichtbarer zu werden.
             </p>
           </div>
         </div>
       </section>
 
       <section className="px-6 pb-20 sm:px-8 md:pb-28">
-        <div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-2">
+        <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-2 xl:grid-cols-3">
           {projects.map((project) => (
             <article
               key={project.title}
-              className="overflow-hidden rounded-3xl border border-white/10 bg-white/[0.025]"
+              className="group flex overflow-hidden rounded-3xl border border-white/10 bg-white/[0.025] transition duration-300 hover:-translate-y-1 hover:border-[#E5C58B]/30 hover:bg-white/[0.045]"
             >
-              <div className="relative aspect-[4/3] overflow-hidden bg-[#06252f]">
-                <Image
-                  src={project.image}
-                  alt={project.alt}
-                  fill
-                  sizes="(min-width: 1024px) 50vw, 100vw"
-                  className={`h-full w-full ${
-                    project.title === "SL Bautec"
-                      ? "object-contain p-12"
-                      : "object-cover object-top"
-                  }`}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#001821]/82 via-transparent to-transparent" />
-                <span className="absolute left-5 top-5 rounded-full border border-white/15 bg-[#001821]/75 px-3 py-1.5 text-[10px] uppercase tracking-[0.18em] text-white/70 backdrop-blur-md">
-                  {project.category}
-                </span>
-              </div>
-              <div className="p-7 sm:p-8">
-                <h2 className="text-2xl font-medium text-white">
-                  {project.title}
-                </h2>
-                <p className="mt-4 leading-relaxed text-white/54">
-                  {project.text}
-                </p>
-                <ul className="mt-7 space-y-3">
-                  {project.points.map((point) => (
-                    <li key={point} className="flex gap-3 text-sm text-white/58">
-                      <CheckCircle2
-                        className="mt-0.5 h-4 w-4 shrink-0 text-[#1AC7A4]"
-                        aria-hidden="true"
-                      />
-                      <span>{point}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  href={project.href}
-                  className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-[#E5C58B] transition hover:text-[#efd49f]"
-                >
-                  {project.linkLabel}
-                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                </Link>
+              <div className="flex w-full flex-col">
+                <div className="relative aspect-[4/3] overflow-hidden bg-[#06252f]">
+                  <Image
+                    src={project.image}
+                    alt={project.alt}
+                    fill
+                    sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
+                    className={`h-full w-full transition-transform duration-700 group-hover:scale-[1.03] ${
+                      project.title === "SL Bautec"
+                        ? "object-contain p-12"
+                        : "object-cover object-top"
+                    }`}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#001821]/82 via-transparent to-transparent" />
+                  <span
+                    className={`absolute left-5 top-5 rounded-full border px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] backdrop-blur-md ${
+                      statusStyles[project.status]
+                    }`}
+                  >
+                    {project.status}
+                  </span>
+                </div>
+
+                <div className="flex flex-1 flex-col p-7 sm:p-8">
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#E5C58B]">
+                    {project.industry}
+                  </p>
+                  <h2 className="mt-4 text-2xl font-medium text-white">
+                    {project.title}
+                  </h2>
+                  <p className="mt-4 flex-1 leading-relaxed text-white/54">
+                    {project.description}
+                  </p>
+
+                  {project.href ? (
+                    <Link
+                      href={project.href}
+                      className="mt-8 inline-flex min-h-11 w-fit items-center justify-center gap-2 rounded-full bg-[#E5C58B] px-5 py-2.5 text-sm font-semibold text-[#001821] transition hover:-translate-y-0.5 hover:bg-[#efd49f]"
+                    >
+                      Projekt ansehen
+                      <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                    </Link>
+                  ) : (
+                    <span className="mt-8 inline-flex min-h-11 w-fit items-center justify-center gap-2 rounded-full border border-white/15 px-5 py-2.5 text-sm font-semibold text-white/45">
+                      Projekt ansehen
+                      <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                    </span>
+                  )}
+                </div>
               </div>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="border-y border-white/10 bg-white/[0.025] px-6 py-16 sm:px-8 md:py-20">
-        <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#E5C58B]">
-              Arbeitsweise
-            </p>
-            <h2 className="mt-4 text-3xl font-light leading-tight text-white sm:text-4xl">
-              Erst verstehen.
-              <span className="block text-white/40">Dann sichtbar machen.</span>
-            </h2>
-          </div>
-          <div className="grid gap-4">
-            {principles.map((item) => (
-              <div
-                key={item}
-                className="rounded-3xl border border-white/10 bg-white/[0.025] p-6 text-white/58"
-              >
-                {item}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="px-6 py-20 sm:px-8 md:py-28">
+      <section className="border-y border-white/10 bg-white/[0.025] px-6 py-20 sm:px-8 md:py-28">
         <div className="mx-auto max-w-6xl rounded-[2rem] border border-[#E5C58B]/30 bg-[#E5C58B] px-7 py-12 text-[#001821] sm:px-10 md:py-16">
-          <h2 className="max-w-3xl text-3xl font-light leading-tight sm:text-4xl">
-            Du möchtest, dass dein Betrieb ähnlich klar sichtbar wird?
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#001821]/55">
+            Nächster Schritt
+          </p>
+          <h2 className="mt-4 max-w-3xl text-3xl font-light leading-tight sm:text-4xl">
+            Du möchtest dein Projekt hier wiederfinden?
           </h2>
           <p className="mt-5 max-w-2xl leading-relaxed text-[#001821]/65">
-            Dann schauen wir gemeinsam, welche Inhalte, Bilder und Kontaktwege
-            für deine Website wirklich wichtig sind.
+            Dann sprechen wir darüber, was dein Betrieb online klarer zeigen
+            sollte und welcher Umfang dafür sinnvoll ist.
           </p>
           <Link
             href="/kontakt"
             className="mt-8 inline-flex items-center gap-3 rounded-full bg-[#001821] px-7 py-4 text-sm font-medium text-white transition hover:-translate-y-0.5"
           >
-            Kontakt aufnehmen
+            Projekt besprechen
             <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </Link>
         </div>

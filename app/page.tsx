@@ -16,11 +16,25 @@ import { Hero } from "@/components/landing/Hero";
 import { StructuredData, homePageJsonLd } from "./structured-data";
 
 export const metadata: Metadata = {
-  title: "JaMoKo – Webdesign für lokale Unternehmen",
+  title: "JaMoKo – Webdesign Hamburg für lokale Unternehmen",
   description:
-    "Persönlich gestaltete Websites für lokale Unternehmen. Klar strukturiert, mobil optimiert und ohne laufende Agenturkosten.",
+    "Ruhiges Webdesign aus Hamburg für lokale Unternehmen, Handwerker und Dienstleister. Klar strukturiert, mobil optimiert und persönlich betreut.",
   alternates: {
     canonical: "https://jamoko.de",
+  },
+  openGraph: {
+    title: "JaMoKo – Webdesign Hamburg für lokale Unternehmen",
+    description:
+      "Mini-Websites und klare digitale Auftritte für lokale Unternehmen, Handwerker und Dienstleister.",
+    url: "https://jamoko.de",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "JaMoKo – Webdesign Hamburg",
+      },
+    ],
   },
 };
 
@@ -195,8 +209,8 @@ function ProjectsSection() {
           </h2>
         </div>
         <p className="max-w-sm text-sm leading-relaxed text-white/45 md:text-right">
-          Jeder Auftritt folgt dem Unternehmen, nicht einer fertigen Schablone.
-          Klar in der Struktur, eigenständig in der Wirkung.
+          Webdesign für lokale Unternehmen funktioniert dann gut, wenn Struktur,
+          Sprache und Kontaktwege zum Betrieb passen.
         </p>
       </div>
 
@@ -360,10 +374,21 @@ function PricingSection() {
       </div>
 
       <div className="mt-10 text-center">
-        <p className="text-sm text-white/45">
-          Unverbindliches Kennenlernen · Keine Zahlung vorab · Faire
-          Einmalpreise
-        </p>
+        <div className="flex flex-col items-center justify-center gap-4 text-sm text-white/45 sm:flex-row">
+          <span>Unverbindliches Kennenlernen · Faire Einmalpreise</span>
+          <Link
+            href="/preise"
+            className="font-semibold text-[#E5C58B] transition hover:text-[#efd49f]"
+          >
+            Preisphilosophie ansehen
+          </Link>
+          <Link
+            href="/mini-site"
+            className="font-semibold text-[#E5C58B] transition hover:text-[#efd49f]"
+          >
+            Mini-Website verstehen
+          </Link>
+        </div>
       </div>
     </section>
   );
