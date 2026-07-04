@@ -20,6 +20,8 @@ const projects = [
     image: "/cases/uli-glaser/Jamoko_Referenz_UliGlaser_Hero.png",
     alt: "Website-Ansicht der JaMoKo Referenz Uli Glaser Design",
     points: ["Handwerk sichtbar machen", "Standorte verständlich führen", "Vertrauen ruhig aufbauen"],
+    href: "/projekte/uli-glaser",
+    linkLabel: "Case Study ansehen",
   },
   {
     title: "SL Bautec",
@@ -28,6 +30,8 @@ const projects = [
     image: "/slb-logo.png",
     alt: "SL Bautec Logo als vorbereitete Projektkarte",
     points: ["Leistungen klar ordnen", "Seriosität zeigen", "Kontaktwege vereinfachen"],
+    href: "/kontakt",
+    linkLabel: "Ähnliches Projekt besprechen",
   },
 ];
 
@@ -101,10 +105,10 @@ export default function ProjectsPage() {
                   ))}
                 </ul>
                 <Link
-                  href="/kontakt"
+                  href={project.href}
                   className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-[#E5C58B] transition hover:text-[#efd49f]"
                 >
-                  Ähnliches Projekt besprechen
+                  {project.linkLabel}
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </Link>
               </div>

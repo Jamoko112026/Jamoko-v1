@@ -50,7 +50,7 @@ const projects = [
       "Tradition, Handwerkskunst und zwei Standorte in einem klaren digitalen Auftritt.",
     image: "/cases/uli-glaser/Jamoko_Referenz_UliGlaser_Hero.png",
     alt: "Website von Uli Glaser Design",
-    href: "/cases/uli-glaser",
+    href: "/projekte/uli-glaser",
   },
   {
     title: "Altonaer Reifendienst",
