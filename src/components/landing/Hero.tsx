@@ -121,7 +121,7 @@ export function Hero() {
           </div>
 
           <Link
-            href="/cases/uli-glaser"
+            href="/projekte/uli-glaser"
             className="absolute -bottom-6 left-4 right-4 flex items-center justify-between rounded-2xl border border-white/10 bg-[#052a35]/95 px-5 py-4 text-sm text-white/70 shadow-xl backdrop-blur-xl transition hover:border-[#E5C58B]/30 hover:text-white sm:left-auto sm:right-6 sm:w-72"
           >
             <span>
