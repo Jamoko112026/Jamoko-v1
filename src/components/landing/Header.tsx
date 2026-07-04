@@ -7,10 +7,10 @@ import { ArrowRight, Menu, X } from "lucide-react";
 
 const navItems = [
   { label: "Start", href: "/" },
-  { label: "Mini-Site", href: "/minisite" },
+  { label: "Mini-Site", href: "/mini-site" },
   { label: "Projekte", href: "/projekte" },
-  { label: "Preise", href: "/pricing" },
-  { label: "Über Jamoko", href: "/about" },
+  { label: "Preise", href: "/preise" },
+  { label: "Über Jamoko", href: "/ueber-jamoko" },
 ];
 
 function isActivePath(pathname: string, href: string) {

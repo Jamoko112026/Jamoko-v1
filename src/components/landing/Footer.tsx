@@ -10,10 +10,10 @@ const contact = {
 };
 
 const footerNavItems = [
-  { label: "Mini-Site", href: "/minisite" },
+  { label: "Mini-Site", href: "/mini-site" },
   { label: "Projekte", href: "/projekte" },
-  { label: "Preise", href: "/pricing" },
-  { label: "Über JaMoKo", href: "/about" },
+  { label: "Preise", href: "/preise" },
+  { label: "Über JaMoKo", href: "/ueber-jamoko" },
   { label: "Häufige Fragen", href: "/faq" },
 ];
 
