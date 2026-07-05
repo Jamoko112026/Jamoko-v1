@@ -2,16 +2,16 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2, Eye } from "lucide-react";
 
 const trustItems = [
-  "Faire Einmalpreise",
-  "Direkter Kontakt",
-  "Keine Agenturbindung",
+  "Für Handwerk, Dienstleister und Selbstständige",
+  "Direkte Zusammenarbeit mit uns",
+  "Klare Website ohne Agentur-Floskeln",
 ];
 
 export function Hero() {
   return (
     <section
       id="hero"
-      className="relative overflow-hidden bg-[#001821] px-6 pb-24 pt-16 sm:px-8 md:pb-32 md:pt-24"
+      className="relative overflow-hidden bg-[#001821] px-6 pb-28 pt-14 sm:px-8 sm:pt-20 md:pb-36 md:pt-28"
     >
       <div
         className="pointer-events-none absolute inset-0"
@@ -22,24 +22,22 @@ export function Hero() {
         <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#E5C58B]/30 to-transparent" />
       </div>
 
-      <div className="relative mx-auto grid max-w-6xl items-center gap-16 lg:grid-cols-[1.08fr_0.92fr]">
-        <div>
-          <p className="mb-7 text-xs font-semibold uppercase tracking-[0.28em] text-[#E5C58B] sm:text-sm">
+      <div className="relative mx-auto grid max-w-6xl items-center gap-14 md:gap-16 lg:grid-cols-[1.06fr_0.94fr]">
+        <div className="lg:pb-4">
+          <p className="mb-6 text-xs font-semibold uppercase tracking-[0.28em] text-[#E5C58B] sm:text-sm">
             Webdesign für lokale Unternehmen
           </p>
-          <h1 className="max-w-3xl text-4xl font-light leading-[1.08] tracking-tight text-white sm:text-5xl md:text-6xl">
-            Eine Website, die deine Arbeit
-            <span className="block text-[#E5C58B]">
-              sofort verständlich macht.
-            </span>
+          <h1 className="max-w-3xl text-[2.55rem] font-light leading-[1.06] tracking-normal text-white sm:text-5xl md:text-6xl">
+            Eine Website, die Menschen verstehen lässt,
+            <span className="block text-[#E5C58B]">warum sie bei dir richtig sind.</span>
           </h1>
-          <p className="mt-7 max-w-2xl text-lg font-light leading-relaxed text-white/65 md:text-xl">
-            Persönlich gestaltet, klar geführt und für Mobilgeräte optimiert.
-            Damit die richtigen Menschen dich finden und leichter Kontakt
-            aufnehmen.
+          <p className="mt-7 max-w-2xl text-lg font-light leading-8 text-white/65 md:text-xl md:leading-9">
+            Wir hören zu, sortieren dein Angebot und bauen daraus einen ruhigen
+            Auftritt. Damit Besucher schneller Vertrauen fassen und leichter
+            Kontakt aufnehmen.
           </p>
 
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
             <a
               href="#kontakt"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-[#E5C58B] px-7 py-4 text-sm font-semibold text-[#001821] transition hover:-translate-y-0.5 hover:bg-[#efd49f] focus:outline-none focus:ring-2 focus:ring-[#E5C58B] focus:ring-offset-4 focus:ring-offset-[#001821]"
@@ -56,7 +54,7 @@ export function Hero() {
             </a>
           </div>
 
-          <ul className="mt-9 flex flex-wrap gap-x-6 gap-y-3 text-sm text-white/45">
+          <ul className="mt-9 flex flex-wrap gap-x-6 gap-y-3 text-sm leading-6 text-white/45">
             {trustItems.map((item) => (
               <li key={item} className="flex items-center gap-2">
                 <CheckCircle2
@@ -69,12 +67,12 @@ export function Hero() {
           </ul>
         </div>
 
-        <div className="relative mx-auto w-full max-w-lg lg:justify-self-end">
+        <div className="relative mx-auto w-full max-w-md sm:max-w-lg lg:justify-self-end">
           <div
             className="absolute -inset-8 rounded-full bg-[#E5C58B]/10 blur-3xl"
             aria-hidden="true"
           />
-          <div className="relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#012631]/80 p-3 shadow-2xl shadow-black/30 backdrop-blur-xl">
+          <div className="relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#012631]/80 p-3 shadow-[0_28px_90px_rgba(0,0,0,0.26)] backdrop-blur-xl">
             <div className="mb-3 flex items-center gap-2 px-2 py-1">
               <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
               <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
@@ -89,8 +87,8 @@ export function Hero() {
                 Klarer erster Eindruck
               </p>
               <h2 className="mt-5 text-3xl font-light leading-tight text-white sm:text-4xl">
-                Deine Qualität.
-                <span className="block text-white/40">Digital sichtbar.</span>
+                Dein Angebot.
+                <span className="block text-white/40">Schneller verstanden.</span>
               </h2>
 
               <div className="mt-8 space-y-3">

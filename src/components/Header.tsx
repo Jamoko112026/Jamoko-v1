@@ -7,7 +7,7 @@ const navigation = [
   { label: "Mini-Site", to: "/minisite" },
   { label: "Projekte", to: "/projekte" },
   { label: "Preise", to: "/pricing" },
-  { label: "Über Jamoko", to: "/about" },
+  { label: "Über JaMoKo", to: "/about" },
 ];
 
 export default function Header() {
@@ -53,7 +53,7 @@ export default function Header() {
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 md:px-12 lg:px-20">
         <Link
           to="/"
-          aria-label="Jamoko Startseite"
+          aria-label="JaMoKo Startseite"
           className="group flex items-center gap-3"
         >
           <span className="flex h-9 w-9 items-center justify-center rounded-xl border border-[#E5C58B]/25 bg-[#E5C58B]/5 text-sm font-semibold text-[#E5C58B] transition group-hover:border-[#E5C58B]/45">

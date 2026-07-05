@@ -39,10 +39,10 @@ const offers = [
     price: "ab 199 €",
     text: "Für kleine Anpassungen, erste Klarheit oder eine einzelne Seite, die sauber stehen soll.",
     features: [
-      "kurze Bestandsaufnahme",
-      "klare Empfehlung zum nächsten Schritt",
-      "kleiner, sauber abgegrenzter Umfang",
-      "persönliche Abstimmung",
+      "Du bekommst eine klare Einschätzung",
+      "Der nächste Schritt wird verständlich",
+      "Der Umfang bleibt klein und sauber abgegrenzt",
+      "Du sprichst direkt mit uns",
     ],
   },
   {
@@ -50,10 +50,10 @@ const offers = [
     price: "ab 499 €",
     text: "Für Betriebe, die ihre Website sichtbar verbessern und Inhalte verständlicher führen möchten.",
     features: [
-      "Struktur und Inhalte sortieren",
-      "wichtige Seiten oder Bereiche überarbeiten",
-      "mobile Darstellung prüfen",
-      "Kontaktwege klarer machen",
+      "Besucher finden schneller die richtigen Inhalte",
+      "Deine Website wirkt klarer und vertrauenswürdiger",
+      "Die Nutzung auf dem Handy wird einfacher",
+      "Anfragen werden besser geführt",
     ],
     highlight: true,
   },
@@ -62,10 +62,10 @@ const offers = [
     price: "auf Anfrage",
     text: "Für neue Websites, größere Weiterentwicklungen oder Projekte mit mehreren Beteiligten.",
     features: [
-      "gemeinsames Vorgespräch",
-      "Angebot nach Bedarf",
-      "realistischer Zeit- und Leistungsumfang",
-      "nachvollziehbare Prioritäten",
+      "Du bekommst einen passenden Projektumfang",
+      "Das Angebot richtet sich nach deinem Bedarf",
+      "Zeitplan und Aufwand bleiben nachvollziehbar",
+      "Prioritäten werden gemeinsam geklärt",
     ],
   },
 ];
@@ -113,7 +113,7 @@ const faqs = [
       "Wir sprechen kurz über dein Unternehmen, deine aktuelle Website und dein Ziel. Danach lässt sich besser einschätzen, welcher Umfang sinnvoll ist.",
   },
   {
-    question: "Muss ich direkt ein großes Projekt starten?",
+    question: "Muss es direkt ein großes Projekt sein?",
     answer:
       "Nein. Oft ist ein kleiner, klarer erster Schritt sinnvoller. JaMoKo soll helfen, bessere Entscheidungen zu treffen, nicht möglichst viel auf einmal zu verkaufen.",
   },

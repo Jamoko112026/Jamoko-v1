@@ -38,7 +38,7 @@ export const metadata: Metadata = {
 
 const audiences = [
   {
-    title: "Lokale Betriebe",
+    title: "Lokale Unternehmen",
     text: "Für Unternehmen, die online gefunden werden und klar erklären möchten, was sie anbieten.",
     icon: Store,
   },
@@ -48,8 +48,8 @@ const audiences = [
     icon: Wrench,
   },
   {
-    title: "Praxen & Studios",
-    text: "Für Angebote, bei denen Menschen schnell verstehen sollen, ob sie richtig sind.",
+    title: "Dienstleister",
+    text: "Für Angebote, bei denen Vertrauen entsteht, bevor ein Gespräch beginnt.",
     icon: HeartHandshake,
   },
   {
@@ -101,19 +101,19 @@ const timeline = [
 const services = [
   {
     title: "Struktur",
-    text: "Wir ordnen die wichtigsten Inhalte so, dass Besucher nicht suchen müssen.",
+    text: "Besucher finden schneller, was wichtig ist und welcher Schritt als Nächstes kommt.",
   },
   {
     title: "Texte",
-    text: "Wir formulieren klar, persönlich und verständlich. Ohne Agentursprache.",
+    text: "Dein Angebot wird verständlich, ohne Fachsprache und ohne Übertreibung.",
   },
   {
     title: "Design",
-    text: "Die Gestaltung bleibt ruhig, hochwertig und passend zum Unternehmen.",
+    text: "Der Auftritt wirkt ruhig, passend und schafft einen verlässlichen ersten Eindruck.",
   },
   {
     title: "Kontakt",
-    text: "Kontaktwege, Standort und nächste Schritte werden sichtbar und einfach gemacht.",
+    text: "Menschen wissen schneller, wie sie dich erreichen und was sie dafür brauchen.",
   },
 ];
 
@@ -209,21 +209,21 @@ export default function MiniSitePage() {
           Vertrauen, Standort und Kontakt. Nicht mehr als nötig. Aber genug, um
           eine gute Entscheidung leichter zu machen.
         </p>
-          <p>
-            Sie ist besonders dann sinnvoll, wenn ein Betrieb sichtbar werden
-            möchte, ohne sofort ein großes Projekt daraus zu machen.
-          </p>
-          <p>
-            Wenn du vorher wissen möchtest, wie JaMoKo Preise einordnet, findest
-            du eine ruhige Übersicht auf der{" "}
-            <Link
-              href="/preise"
-              className="font-semibold text-[#E5C58B] transition hover:text-[#efd49f]"
-            >
-              Preiseseite
-            </Link>
-            .
-          </p>
+        <p>
+          Sie ist besonders dann sinnvoll, wenn ein Betrieb sichtbar werden
+          möchte, ohne sofort ein großes Projekt daraus zu machen.
+        </p>
+        <p>
+          Wenn du vorher wissen möchtest, wie JaMoKo Preise einordnet, findest
+          du eine ruhige Übersicht auf der{" "}
+          <Link
+            href="/preise"
+            className="font-semibold text-[#E5C58B] transition hover:text-[#efd49f]"
+          >
+            Preiseseite
+          </Link>
+          .
+        </p>
       </TextSection>
 
       <section className="border-y border-white/10 bg-white/[0.025] px-6 py-20 sm:px-8 md:py-28">

@@ -8,7 +8,7 @@ export default function ChatIntro() {
       <p className="text-jamoko-text-dim max-w-2xl mx-auto leading-relaxed">
         Beschreibe kurz, was du erreichen möchtest oder wo du feststeckst.
         Der JaMoKo-Analyse-Chat prüft ruhig und professionell, 
-        ob und wie ich dir helfen kann – klar, ehrlich und ohne Druck.
+        ob und wie wir dir helfen können – klar, ehrlich und ohne Druck.
       </p>
     </div>
   );

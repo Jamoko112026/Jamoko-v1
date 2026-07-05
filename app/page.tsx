@@ -40,19 +40,38 @@ export const metadata: Metadata = {
 
 const trustItems = [
   {
-    title: "Schnell startklar",
-    text: "Überschaubarer Prozess statt monatelanger Abstimmung.",
+    title: "Schneller verständlich",
+    text: "Besucher erkennen früher, was du anbietest und wie sie dich erreichen.",
     icon: Clock3,
   },
   {
     title: "Direkte Zusammenarbeit",
-    text: "Ein Ansprechpartner vom ersten Gespräch bis zum Go-Live.",
+    text: "Du arbeitest mit uns persönlich und ohne anonyme Abstimmungsschleifen.",
     icon: Handshake,
   },
   {
     title: "Für Mobilgeräte gedacht",
-    text: "Klar lesbar und einfach bedienbar auf jedem Bildschirm.",
+    text: "Menschen können dein Angebot auch unterwegs ruhig lesen und anfragen.",
     icon: Smartphone,
+  },
+];
+
+const audienceItems = [
+  {
+    title: "Handwerk",
+    text: "Deine gute Arbeit wird sichtbar, ohne lauter wirken zu müssen.",
+  },
+  {
+    title: "Dienstleister",
+    text: "Besucher verstehen schneller, welches Problem du löst.",
+  },
+  {
+    title: "Selbstständige",
+    text: "Deine Haltung, dein Angebot und der nächste Schritt stehen klar zusammen.",
+  },
+  {
+    title: "Lokale Unternehmen",
+    text: "Standort, Vertrauen und Kontaktwege werden verständlich geführt.",
   },
 ];
 
@@ -100,7 +119,7 @@ const processSteps = [
   {
     number: "03",
     title: "Umsetzung & Go-Live",
-    text: "Nach deiner Freigabe optimiere ich alles für Mobilgeräte und bringe die Seite online.",
+    text: "Nach deiner Freigabe optimieren wir alles für Mobilgeräte und bringen die Seite online.",
   },
 ];
 
@@ -128,13 +147,13 @@ const pricingPackages = [
     price: "890 €",
     subtitle: "Für eine klare digitale Präsenz",
     features: [
-      "1–3 Seiten",
-      "Individuelles Jamoko Design",
-      "Für Mobilgeräte optimiert",
-      "Kontaktformular oder WhatsApp",
-      "Google Maps & Öffnungszeiten",
-      "Basis SEO & Performance",
-      "Impressum & Datenschutz",
+      "Besucher verstehen dein Angebot schneller",
+      "Dein Auftritt wirkt persönlich und ruhig",
+      "Deine Website funktioniert angenehm auf dem Handy",
+      "Kontaktaufnahme wird einfacher",
+      "Standort und Öffnungszeiten sind schnell auffindbar",
+      "Google kann die wichtigsten Inhalte sauber einordnen",
+      "Rechtliche Basis-Seiten sind erreichbar",
     ],
   },
   {
@@ -142,12 +161,12 @@ const pricingPackages = [
     price: "1.490 €",
     subtitle: "Für einen umfangreicheren Auftritt",
     features: [
-      "4–5 Seiten",
-      "Erweitertes individuelles Design",
-      "Nutzen- und Vertrauenssektionen",
-      "Bildergalerie oder Referenzen",
-      "Erweiterte SEO-Grundlage",
-      "Zusätzliche Feedbackrunde",
+      "Mehr Raum für Leistungen und Zielgruppen",
+      "Klarere Wiedererkennung für dein Unternehmen",
+      "Mehr Vertrauen vor der ersten Anfrage",
+      "Bilder oder Referenzen machen deine Arbeit greifbarer",
+      "Bessere Grundlage für lokale Sichtbarkeit",
+      "Mehr Ruhe für gemeinsame Entscheidungen",
     ],
     highlight: true,
   },
@@ -279,7 +298,7 @@ function ProcessSection() {
           <span className="block text-white/40">Wenig Aufwand für dich.</span>
         </h2>
         <p className="mt-6 leading-relaxed text-white/55">
-          Du kennst dein Geschäft. Ich übersetze seine Qualität in einen
+          Du kennst dein Geschäft. Wir übersetzen seine Qualität in einen
           verständlichen digitalen Auftritt.
         </p>
       </div>
@@ -304,6 +323,40 @@ function ProcessSection() {
             <h3 className="text-xl font-medium text-white">{step.title}</h3>
             <p className="mt-4 text-sm leading-relaxed text-white/50">
               {step.text}
+            </p>
+          </article>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function WhyJamokoSection() {
+  return (
+    <div>
+      <div className="mb-14 max-w-2xl md:mb-16">
+        <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-[#E5C58B]">
+          Warum JaMoKo?
+        </p>
+        <h2 className="text-3xl font-light leading-tight text-white sm:text-4xl md:text-5xl">
+          Weil gute Arbeit
+          <span className="block text-white/40">klar gesehen werden sollte.</span>
+        </h2>
+        <p className="mt-6 leading-relaxed text-white/55">
+          Wir bauen Websites für Menschen, die gute Arbeit leisten und online
+          verständlich wirken möchten. Nicht lauter. Klarer.
+        </p>
+      </div>
+
+      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {audienceItems.map((item) => (
+          <article
+            key={item.title}
+            className="rounded-3xl border border-white/10 bg-white/[0.025] p-7"
+          >
+            <h3 className="text-lg font-medium text-white">{item.title}</h3>
+            <p className="mt-3 text-sm leading-relaxed text-white/50">
+              {item.text}
             </p>
           </article>
         ))}
@@ -484,7 +537,7 @@ function ContactSection() {
             </h2>
             <p className="mt-6 max-w-2xl leading-relaxed text-[#001821]/65">
               In 15 Minuten klären wir dein Ziel, den passenden Umfang und ob
-              Jamoko zu deinem Projekt passt. Persönlich und ohne Verkaufsdruck.
+              JaMoKo zu deinem Projekt passt. Persönlich und ohne Verkaufsdruck.
             </p>
           </div>
           <a
@@ -528,6 +581,10 @@ export default function HomePage() {
         <Hero />
         <TrustStrip />
         <div className="mx-auto max-w-6xl px-6 sm:px-8">
+          <section className="py-24 md:py-32">
+            <WhyJamokoSection />
+          </section>
+          <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
           <section className="py-24 md:py-32">
             <ProjectsSection />
           </section>

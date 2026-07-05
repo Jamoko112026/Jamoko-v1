@@ -40,7 +40,7 @@ export default function ContactPage() {
               Direkter Kontakt
             </h1>
             <p className="mt-6 text-lg leading-8 text-calm-muted">
-              Erzähl mir kurz, was deine Website leisten soll. Ein paar Sätze
+              Erzähl uns kurz, was deine Website leisten soll. Ein paar Sätze
               zu deinem Betrieb, deinem Angebot und deinem Ziel reichen völlig
               aus.
             </p>

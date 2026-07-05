@@ -10,7 +10,7 @@ const navItems = [
   { label: "Mini-Site", href: "/mini-site" },
   { label: "Projekte", href: "/projekte" },
   { label: "Preise", href: "/preise" },
-  { label: "Über Jamoko", href: "/ueber-jamoko" },
+  { label: "Über JaMoKo", href: "/ueber-jamoko" },
 ];
 
 function isActivePath(pathname: string, href: string) {
@@ -138,7 +138,7 @@ export function Header() {
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 md:px-12 lg:px-20">
           <Link
             href="/"
-            aria-label="Jamoko Startseite"
+            aria-label="JaMoKo Startseite"
             className="group flex items-center gap-3"
           >
             <span className="flex h-9 w-9 items-center justify-center rounded-xl border border-[#E5C58B]/25 bg-[#E5C58B]/5 text-sm font-semibold text-[#E5C58B] transition group-hover:border-[#E5C58B]/45">

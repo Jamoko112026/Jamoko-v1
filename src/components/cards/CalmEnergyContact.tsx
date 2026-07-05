@@ -23,7 +23,7 @@ export default function CalmEnergyContact() {
       </h2>
 
       <p className="text-jamoko-text-dim mb-10 leading-relaxed">
-        Eine ruhige Verbindung: Schreib mir einfach eine kurze Nachricht.  
+        Eine ruhige Verbindung: Schreib uns einfach eine kurze Nachricht.  
         Klar, gelassen und ohne Druck.
       </p>
 

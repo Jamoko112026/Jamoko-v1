@@ -1,6 +1,6 @@
 # JaMoKo Roadmap
 
-Stand: 2026-07-03
+Stand: 2026-07-04
 
 ## Grundsatz
 Nicht lauter machen. Klarer machen.
@@ -9,7 +9,34 @@ Die Roadmap sammelt die nächsten Schritte für JaMoKo. Jede Aufgabe soll helfen
 das Angebot verständlicher zu machen, Vertrauen zu stärken und Kontaktaufnahme
 leichter zu machen.
 
-## Sprint 1
+## Aktueller Stand
+
+Version 2.0 ist live auf `jamoko.de`.
+
+Phase 2 ist abgeschlossen.
+
+Ergebnis:
+- vollständige Unternehmenswebsite
+- dokumentierte Markenidentität
+- stabile technische Basis
+- SEO-Grundlage
+- erste Referenzen
+- transparente Leistungsseiten
+
+## Phase 3 – Veredelung
+
+Ziel:
+Die bestehende Website ruhiger, präziser und belastbarer machen.
+
+Mögliche Schwerpunkte:
+- Inhalte weiter schärfen
+- mobile Details prüfen
+- Bildgrößen und Ladezeiten weiter optimieren
+- Case Studies verfeinern
+- Kontaktwege beobachten und vereinfachen
+- SEO-Daten nach Live-Erfahrung nachziehen
+
+## Abgeschlossen: Sprint 1
 
 Ziel:
 Die Startseite soll schneller erklären, was JaMoKo macht, für wen es ist und
@@ -18,32 +45,6 @@ warum ein Kontakt sinnvoll ist.
 Status:
 - Hero optimieren: erledigt
 - Schema.org ergänzen: erledigt
-- Meta-Daten prüfen: offen
-- Case Studies einbauen: offen
-- SEO über 90 Punkte bringen: offen
-
-## Nächster Schritt
-Meta-Daten prüfen.
-
-Dabei besonders beachten:
-- eindeutiger Meta Title
-- klare Meta Description
-- saubere Canonical-URL
-- sinnvolle Open-Graph-Daten
-- genau eine H1 pro Seite
-
-## Danach
-Case Studies einbauen.
-
-Ziel der Case Studies:
-- echte Beispiele zeigen
-- Vertrauen stärken
-- lokale Betriebe verständlich abholen
-- klare Kontaktwege anbieten
-
-## Später
-- Projektseite für echte Referenzen ausbauen
-- Kontaktseite weiter vereinfachen
-- mobile Nutzerführung prüfen
-- Ladezeiten und Bildgrößen prüfen
-- Inhalte regelmäßig auf Verständlichkeit prüfen
+- Meta-Daten prüfen: erledigt
+- Case Studies einbauen: erledigt
+- SEO-Grundlage schaffen: erledigt

@@ -7,7 +7,7 @@ export default function ContactForm() {
         </h2>
 
         <p className="text-jamoko-text/80 mb-12">
-          Schreib mir kurz dein Anliegen. Ruhig, direkt und unverbindlich.
+          Schreib uns kurz dein Anliegen. Ruhig, direkt und unverbindlich.
         </p>
 
         <form

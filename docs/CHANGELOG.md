@@ -3,6 +3,25 @@
 Alle wichtigen Änderungen an JaMoKo werden hier ruhig und nachvollziehbar
 dokumentiert.
 
+## Version 2.0 – 2026-07-04
+
+Status:
+Live auf `jamoko.de`
+
+### Phase
+Phase 2 abgeschlossen.
+
+### Ergebnis
+- vollständige Unternehmenswebsite
+- dokumentierte Markenidentität
+- stabile technische Basis
+- SEO-Grundlage
+- erste Referenzen
+- transparente Leistungsseiten
+
+### Nächste Phase
+Phase 3 – Veredelung.
+
 ## 2026-07-03
 
 ### Hinzugefügt

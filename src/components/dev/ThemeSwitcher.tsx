@@ -33,7 +33,7 @@ export default function ThemeSwitcher() {
             : "bg-white/10 text-white/70 hover:bg-white/20"
         }`}
       >
-        Jamoko
+        JaMoKo
       </button>
 
       <button
