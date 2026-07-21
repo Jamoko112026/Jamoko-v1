@@ -2,40 +2,60 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { ConceptPlaceholder } from "@/components/landing/ConceptPlaceholder";
 
 export const metadata: Metadata = {
-  title: "Projekte und Referenzen",
+  title: "Projekte, Demos und Konzepte",
   description:
-    "Ausgewählte JaMoKo Projekte zeigen ruhiges Webdesign für lokale Unternehmen, Handwerker und Dienstleister.",
+    "JaMoKo zeigt klar gekennzeichnete Konzeptprojekte und Demos für lokale Unternehmen, Handwerk und persönliche Dienstleistungen.",
   alternates: {
     canonical: "https://jamoko.de/projekte",
   },
   openGraph: {
-    title: "Projekte und Referenzen · JaMoKo",
+    title: "Projekte, Demos und Konzepte · JaMoKo",
     description:
-      "Portfolio mit klaren Websites für lokale Unternehmen, Handwerk und Dienstleistung.",
+      "Klar gekennzeichnete Konzeptprojekte und Demos für lokale Unternehmen, Handwerk und Dienstleistung.",
     url: "https://jamoko.de/projekte",
     images: [
       {
-        url: "/cases/uli-glaser/Jamoko_Referenz_UliGlaser_Hero.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "JaMoKo Referenz Uli Glaser Design",
+        alt: "JaMoKo – ruhige Mini-Websites",
       },
     ],
   },
 };
 
-const projects = [
+type Project = {
+  title: string;
+  industry: string;
+  description: string;
+  status: "Konzept" | "Demo" | "In Arbeit";
+} &
+  (
+    | {
+        concept: "goldsmith" | "consulting";
+        image?: never;
+        alt?: never;
+        href?: never;
+      }
+    | {
+        image: string;
+        alt: string;
+        href?: string;
+        concept?: never;
+      }
+  );
+
+const projects: Project[] = [
   {
-    title: "Uli Glaser Design",
-    industry: "Goldschmiede · Schmuckdesign",
+    title: "Goldschmiede",
+    industry: "Branche · Konzept",
     description:
-      "Eine modernisierte Website für feine Handwerksarbeit, klare Standorte und einen ruhigeren Weg zur Kontaktaufnahme.",
-    status: "Live",
-    image: "/cases/uli-glaser/Jamoko_Referenz_UliGlaser_Hero.png",
-    alt: "Website-Ansicht der JaMoKo Referenz Uli Glaser Design",
-    href: "/projekte/uli-glaser",
+      "Ein ruhiger digitaler Auftritt, der Handwerkskunst, persönliche Beratung und individuelle Schmuckstücke verständlich verbindet.",
+    status: "Konzept",
+    concept: "goldsmith",
   },
   {
     title: "SL Bautec",
@@ -47,18 +67,37 @@ const projects = [
     alt: "SL Bautec Logo als Projektvorschau",
   },
   {
-    title: "Sabine Pracht",
+    title: "Beratungspraxis",
     industry: "Persönliche Dienstleistung · Konzept",
     description:
-      "Ein ruhiges Website-Konzept für eine persönliche Marke, das Angebot, Haltung und Kontakt verständlich ordnet.",
+      "Ein vertrauensvoller Auftritt mit klarer Leistungsübersicht und einem einfachen Weg zum ersten Gespräch.",
     status: "Konzept",
-    image: "/sabine/jamoko_sabine_hero_v1.jpg",
-    alt: "Website-Konzept für Sabine Pracht",
+    concept: "consulting",
+  },
+  {
+    title: "Altonaer Reifendienst",
+    industry: "Lokaler Service · Demo",
+    description:
+      "Leistungen, Preise und Kontaktwege schnell erfassbar für Menschen unterwegs.",
+    status: "Demo",
+    image: "/ard/Hero_1920w_ARDlook.jpg",
+    alt: "Website-Demo für einen lokalen Reifendienst",
+    href: "/demos/reifendienst",
+  },
+  {
+    title: "Physiotherapie",
+    industry: "Praxis · Demo",
+    description:
+      "Eine ruhige Nutzerführung vom ersten Eindruck bis zur persönlichen Anfrage.",
+    status: "Demo",
+    image: "/physio/physio_hero.jpg",
+    alt: "Website-Demo für eine Physiotherapiepraxis",
+    href: "/demos/physio",
   },
 ];
 
 const statusStyles: Record<string, string> = {
-  Live: "border-[#1AC7A4]/30 bg-[#1AC7A4]/10 text-[#1AC7A4]",
+  Demo: "border-[#1AC7A4]/30 bg-[#1AC7A4]/10 text-[#1AC7A4]",
   "In Arbeit": "border-[#E5C58B]/35 bg-[#E5C58B]/10 text-[#E5C58B]",
   Konzept: "border-white/15 bg-white/10 text-white/70",
 };
@@ -79,6 +118,11 @@ export default function ProjectsPage() {
               Ausgewählte Projekte zeigen, wie wir Unternehmen dabei
               unterstützen, klarer, ruhiger und digital sichtbarer zu werden.
             </p>
+            <p className="mt-8 max-w-3xl rounded-2xl border border-[#E5C58B]/25 bg-[#E5C58B]/[0.06] p-5 leading-relaxed text-white/75 sm:p-6">
+              Konzeptprojekte zeigen, wie JaMoKo digitale Auftritte für
+              unterschiedliche Branchen entwickeln kann. Sie sind keine
+              Kundenreferenzen.
+            </p>
           </div>
         </div>
       </section>
@@ -92,17 +136,23 @@ export default function ProjectsPage() {
             >
               <div className="flex w-full flex-col">
                 <div className="relative aspect-[4/3] overflow-hidden bg-[#06252f]">
-                  <Image
-                    src={project.image}
-                    alt={project.alt}
-                    fill
-                    sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
-                    className={`h-full w-full transition-transform duration-700 group-hover:scale-[1.03] ${
-                      project.title === "SL Bautec"
-                        ? "object-contain p-12"
-                        : "object-cover object-top"
-                    }`}
-                  />
+                  {project.image ? (
+                    <Image
+                      src={project.image}
+                      alt={project.alt}
+                      fill
+                      sizes="(min-width: 768px) 50vw, 100vw"
+                      className={`h-full w-full transition-transform duration-700 group-hover:scale-[1.03] ${
+                        project.title === "SL Bautec"
+                          ? "object-contain p-12"
+                          : "object-cover object-top"
+                      }`}
+                    />
+                  ) : (
+                    <ConceptPlaceholder
+                      variant={project.concept ?? "goldsmith"}
+                    />
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-[#001821]/82 via-transparent to-transparent" />
                   <span
                     className={`absolute left-5 top-5 rounded-full border px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] backdrop-blur-md ${
@@ -120,7 +170,7 @@ export default function ProjectsPage() {
                   <h2 className="mt-4 text-2xl font-medium text-white">
                     {project.title}
                   </h2>
-                  <p className="mt-4 flex-1 leading-relaxed text-white/54">
+                  <p className="mt-4 flex-1 leading-relaxed text-white/70">
                     {project.description}
                   </p>
 
@@ -129,15 +179,10 @@ export default function ProjectsPage() {
                       href={project.href}
                       className="mt-8 inline-flex min-h-11 w-fit items-center justify-center gap-2 rounded-full bg-[#E5C58B] px-5 py-2.5 text-sm font-semibold text-[#001821] transition hover:-translate-y-0.5 hover:bg-[#efd49f]"
                     >
-                      Projekt ansehen
+                      Demo ansehen
                       <ArrowRight className="h-4 w-4" aria-hidden="true" />
                     </Link>
-                  ) : (
-                    <span className="mt-8 inline-flex min-h-11 w-fit items-center justify-center gap-2 rounded-full border border-white/15 px-5 py-2.5 text-sm font-semibold text-white/45">
-                      Projekt ansehen
-                      <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                    </span>
-                  )}
+                  ) : null}
                 </div>
               </div>
             </article>

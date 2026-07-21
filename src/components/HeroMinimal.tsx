@@ -116,14 +116,14 @@ export default function HeroMinimal() {
           </div>
 
           <Link
-            to="/cases/uli-glaser"
+            to="/projekte"
             className="absolute -bottom-6 left-4 right-4 flex items-center justify-between rounded-2xl border border-white/10 bg-[#052a35]/95 px-5 py-4 text-sm text-white/70 shadow-xl backdrop-blur-xl transition hover:border-[#E5C58B]/30 hover:text-white sm:left-auto sm:right-6 sm:w-72"
           >
             <span>
               <span className="block text-xs uppercase tracking-[0.18em] text-[#E5C58B]">
-                Neue Referenz
+                Neues Konzept
               </span>
-              <span className="mt-1 block">Uli Glaser Design</span>
+              <span className="mt-1 block">Goldschmiede</span>
             </span>
             <ArrowUpRight
               className="h-4 w-4 text-[#E5C58B]"

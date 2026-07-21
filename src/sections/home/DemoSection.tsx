@@ -1,15 +1,25 @@
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { ConceptPlaceholder } from "../../components/landing/ConceptPlaceholder";
 
-const projects = [
+type Project = {
+  title: string;
+  category: string;
+  description: string;
+  to: string;
+  image?: string;
+  alt?: string;
+  concept?: "goldsmith" | "consulting";
+};
+
+const projects: Project[] = [
   {
-    title: "Uli Glaser Design",
-    category: "Goldschmiede · Referenz",
+    title: "Goldschmiede",
+    category: "Branche · Konzept",
     description:
-      "Tradition, Handwerkskunst und zwei Standorte in einem klaren digitalen Auftritt.",
-    image: "/cases/uli-glaser/Jamoko_Referenz_UliGlaser_Hero.png",
-    alt: "Website von Uli Glaser Design",
-    to: "/cases/uli-glaser",
+      "Ein ruhiger digitaler Auftritt, der Handwerkskunst, persönliche Beratung und individuelle Schmuckstücke verständlich verbindet.",
+    concept: "goldsmith",
+    to: "/projekte",
   },
   {
     title: "Altonaer Reifendienst",
@@ -60,12 +70,16 @@ export default function DemoSection() {
             }`}
           >
             <div className="relative aspect-[4/3] overflow-hidden bg-[#06252f]">
-              <img
-                src={project.image}
-                alt={project.alt}
-                loading="lazy"
-                className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
-              />
+              {project.image ? (
+                <img
+                  src={project.image}
+                  alt={project.alt}
+                  loading="lazy"
+                  className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
+                />
+              ) : (
+                <ConceptPlaceholder variant={project.concept ?? "goldsmith"} />
+              )}
               <div className="absolute inset-0 bg-gradient-to-t from-[#001821]/80 via-transparent to-transparent" />
               <span className="absolute left-5 top-5 rounded-full border border-white/15 bg-[#001821]/75 px-3 py-1.5 text-[10px] uppercase tracking-[0.18em] text-white/70 backdrop-blur-md">
                 {project.category}

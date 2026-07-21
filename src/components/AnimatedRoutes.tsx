@@ -17,15 +17,13 @@ import Business from "../pages/Business";
 import Projects from "../pages/Projects";
 import NotFound from "../pages/NotFound";
 
-// Cases (echte Kunden)
+// Cases
 import SLBautec from "../pages/SLBautec";
 import ARD from "../pages/ARD";
-import UliGlaser from "../pages/UliGlaser";
 
 // Demos
 import PhysioDemo from "../pages/PhysioDemo";
 import SushiDemo from "../pages/SushiDemo";
-import SabinePreview from "../pages/SabinePreview";
 import UweHaberstroh from "../pages/UweHaberstroh";
 import ARDDemo from "../pages/ARDDemo"; // 🔥 NEU
 
@@ -72,17 +70,14 @@ export default function AnimatedRoutes() {
             <Route path="kontakt" element={<Kontakt />} />
             <Route path="about" element={<About />} />
 
-            {/* ================= CASES (ECHT) ================= */}
+            {/* ================= CASES ================= */}
             <Route path="cases/sl-bautec" element={<SLBautec />} />
             <Route path="cases/reifendienst" element={<ARD />} />
-            <Route path="cases/uli-glaser" element={<UliGlaser />} />
 
             {/* ================= DEMOS (VERKAUF) ================= */}
             <Route path="demos/physio" element={<PhysioDemo />} />
             <Route path="demos/sushi" element={<SushiDemo />} />
-            <Route path="demos/sabine" element={<SabinePreview />} />
             <Route path="demos/uwe" element={<UweHaberstroh />} />
-            <Route path="demos/uli-glaser" element={<UliGlaser />} />
             <Route path="demos/reifendienst" element={<ARDDemo />} /> {/* 🔥 wichtig */}
 
             {/* ================= LEGAL ================= */}

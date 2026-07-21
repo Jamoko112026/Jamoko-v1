@@ -55,7 +55,6 @@ export function Footer() {
           <div>
             <Link
               href="/"
-              aria-label="JaMoKo Startseite"
               className="inline-flex items-center gap-3"
             >
               <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#E5C58B]/25 bg-[#E5C58B]/5 text-sm font-semibold text-[#E5C58B]">

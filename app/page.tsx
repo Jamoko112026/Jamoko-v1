@@ -13,6 +13,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { Hero } from "@/components/landing/Hero";
+import { ConceptPlaceholder } from "@/components/landing/ConceptPlaceholder";
 import { StructuredData, homePageJsonLd } from "./structured-data";
 
 export const metadata: Metadata = {
@@ -75,15 +76,33 @@ const audienceItems = [
   },
 ];
 
-const projects = [
+type HomeProject = {
+  title: string;
+  category: string;
+  description: string;
+} &
+  (
+    | {
+        image: string;
+        alt: string;
+        href: string;
+        concept?: never;
+      }
+    | {
+        concept: "goldsmith" | "consulting";
+        image?: never;
+        alt?: never;
+        href?: never;
+      }
+  );
+
+const projects: HomeProject[] = [
   {
-    title: "Uli Glaser Design",
-    category: "Goldschmiede · Referenz",
+    title: "Goldschmiede",
+    category: "Branche · Konzept",
     description:
-      "Tradition, Handwerkskunst und zwei Standorte in einem klaren digitalen Auftritt.",
-    image: "/cases/uli-glaser/Jamoko_Referenz_UliGlaser_Hero.png",
-    alt: "Website von Uli Glaser Design",
-    href: "/projekte/uli-glaser",
+      "Ein ruhiger digitaler Auftritt, der Handwerkskunst, persönliche Beratung und individuelle Schmuckstücke verständlich verbindet.",
+    concept: "goldsmith",
   },
   {
     title: "Altonaer Reifendienst",
@@ -214,6 +233,64 @@ function TrustStrip() {
   );
 }
 
+function HomeProjectCard({
+  project,
+  featured,
+}: {
+  project: HomeProject;
+  featured: boolean;
+}) {
+  const cardClassName = `jmk-card-light group overflow-hidden rounded-3xl border transition duration-300 ${
+    project.href ? "hover:-translate-y-1" : ""
+  } ${featured ? "md:col-span-2 lg:col-span-1" : ""}`;
+
+  const content = (
+    <>
+      <div className="relative aspect-[4/3] overflow-hidden bg-[#06252f]">
+        {project.image ? (
+          <Image
+            src={project.image}
+            alt={project.alt}
+            fill
+            sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+            className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
+          />
+        ) : (
+          <ConceptPlaceholder variant={project.concept ?? "goldsmith"} />
+        )}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#001821]/80 via-transparent to-transparent" />
+        <span className="absolute left-5 top-5 rounded-full border border-white/15 bg-[#001821]/75 px-3 py-1.5 text-[10px] uppercase tracking-[0.18em] text-white/70 backdrop-blur-md">
+          {project.category}
+        </span>
+      </div>
+      <div className="p-6">
+        <div className="flex items-start justify-between gap-4">
+          <h3 className="jmk-light-heading text-xl font-medium">
+            {project.title}
+          </h3>
+          {project.href ? (
+            <ArrowRight
+              className="jmk-light-gold h-5 w-5 shrink-0 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+              aria-hidden="true"
+            />
+          ) : null}
+        </div>
+        <p className="jmk-light-copy mt-3 text-sm leading-relaxed">
+          {project.description}
+        </p>
+      </div>
+    </>
+  );
+
+  return project.href ? (
+    <Link href={project.href} className={cardClassName}>
+      {content}
+    </Link>
+  ) : (
+    <article className={cardClassName}>{content}</article>
+  );
+}
+
 function ProjectsSection() {
   return (
     <div id="beispiele">
@@ -237,41 +314,11 @@ function ProjectsSection() {
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => (
-          <Link
+          <HomeProjectCard
             key={project.title}
-            href={project.href}
-            className={`jmk-card-light group overflow-hidden rounded-3xl border transition duration-300 hover:-translate-y-1 ${
-              index === 0 ? "md:col-span-2 lg:col-span-1" : ""
-            }`}
-          >
-            <div className="relative aspect-[4/3] overflow-hidden bg-[#06252f]">
-              <Image
-                src={project.image}
-                alt={project.alt}
-                fill
-                sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#001821]/80 via-transparent to-transparent" />
-              <span className="absolute left-5 top-5 rounded-full border border-white/15 bg-[#001821]/75 px-3 py-1.5 text-[10px] uppercase tracking-[0.18em] text-white/70 backdrop-blur-md">
-                {project.category}
-              </span>
-            </div>
-            <div className="p-6">
-              <div className="flex items-start justify-between gap-4">
-                <h3 className="jmk-light-heading text-xl font-medium">
-                  {project.title}
-                </h3>
-                <ArrowRight
-                  className="jmk-light-gold h-5 w-5 shrink-0 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                  aria-hidden="true"
-                />
-              </div>
-              <p className="jmk-light-copy mt-3 text-sm leading-relaxed">
-                {project.description}
-              </p>
-            </div>
-          </Link>
+            project={project}
+            featured={index === 0}
+          />
         ))}
       </div>
 
