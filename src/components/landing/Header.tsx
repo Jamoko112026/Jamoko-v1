@@ -148,7 +148,7 @@ export function Header() {
               <span className="block text-sm font-medium tracking-[0.08em] text-white">
                 JaMoKo
               </span>
-              <span className="block text-[9px] uppercase tracking-[0.2em] text-white/35">
+              <span className="block text-[9px] uppercase tracking-[0.2em] text-white/70">
                 Webdesign Hamburg
               </span>
             </span>
@@ -166,7 +166,7 @@ export function Header() {
                   key={item.href}
                   href={item.href}
                   className={`relative py-2 transition-colors ${
-                    active ? "text-white" : "text-white/55 hover:text-white"
+                    active ? "text-white" : "text-white/70 hover:text-white"
                   }`}
                 >
                   {item.label}
@@ -235,7 +235,7 @@ export function Header() {
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </Link>
 
-              <p className="mt-5 text-center text-xs text-white/35">
+              <p className="mt-5 text-center text-xs text-white/70">
                 Unverbindlich · Persönlich · Antwort meist innerhalb von 24
                 Stunden
               </p>

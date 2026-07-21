@@ -18,6 +18,12 @@
   --jamoko-teal: #1ac7a4;
   --jamoko-text: #edf2f7;
   --jamoko-text-dim: #d6e0e7;
+  --jamoko-paper: #f8f7f3;
+  --jamoko-mist: #eef6f3;
+  --jamoko-ink: #102a33;
+  --jamoko-ink-muted: #38545e;
+  --jamoko-gold-accessible: #765a22;
+  --jamoko-teal-accessible: #067563;
   --jamoko-gold-glow: rgba(229, 197, 139, 0.3);
   --jamoko-teal-glow: rgba(26, 199, 164, 0.3);
   --jmk-radius-card: 1.5rem;
@@ -67,7 +73,7 @@ a {
 }
 
 :focus-visible {
-  outline: 3px solid rgba(229, 197, 139, 0.55);
+  outline: 3px solid var(--jamoko-gold);
   outline-offset: 3px;
 }
 
@@ -127,6 +133,91 @@ details > summary::-webkit-details-marker {
   box-shadow: 0 26px 92px rgba(229, 197, 139, 0.12);
 }
 
+/* Ruhige, vollbreite Leseflaechen der Startseite. Die Lichtakzente bleiben
+   hinter dem Inhalt und veraendern deshalb weder Text- noch Karten-Kontrast. */
+.jmk-section-light {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color: var(--jamoko-ink);
+}
+
+.jmk-section-light::before,
+.jmk-section-light::after {
+  position: absolute;
+  z-index: -1;
+  width: min(34rem, 72vw);
+  aspect-ratio: 1;
+  border-radius: 9999px;
+  background: rgba(229, 197, 139, 0.13);
+  filter: blur(96px);
+  content: "";
+  pointer-events: none;
+}
+
+.jmk-section-light::before {
+  left: min(-15rem, -20vw);
+  top: 8%;
+}
+
+.jmk-section-light::after {
+  right: min(-15rem, -20vw);
+  bottom: 8%;
+}
+
+.jmk-section-paper {
+  background-color: var(--jamoko-paper);
+}
+
+.jmk-section-mist {
+  background-color: var(--jamoko-mist);
+}
+
+.jmk-section-content {
+  position: relative;
+  z-index: 1;
+}
+
+.jmk-light-heading {
+  color: var(--jamoko-ink);
+}
+
+.jmk-light-heading-muted,
+.jmk-light-copy {
+  color: var(--jamoko-ink-muted);
+}
+
+.jmk-light-eyebrow,
+.jmk-light-gold,
+.jmk-light-link {
+  color: var(--jamoko-gold-accessible);
+}
+
+.jmk-light-link:hover {
+  color: #5f4719;
+}
+
+.jmk-card-light {
+  --jmk-card-shadow: 0 14px 42px rgba(118, 90, 34, 0.08);
+  --jmk-card-shadow-hover: 0 18px 52px rgba(118, 90, 34, 0.12);
+  border-color: rgba(118, 90, 34, 0.3);
+  background:
+    linear-gradient(145deg, rgba(229, 197, 139, 0.13), transparent 58%),
+    rgba(255, 254, 250, 0.94);
+}
+
+.jmk-card-light:hover {
+  border-color: rgba(118, 90, 34, 0.42);
+  background:
+    linear-gradient(145deg, rgba(229, 197, 139, 0.16), transparent 58%),
+    #fffefa;
+}
+
+.jmk-section-light :focus-visible {
+  outline-color: var(--jamoko-teal-accessible);
+  box-shadow: 0 0 0 3px rgba(248, 247, 243, 0.95);
+}
+
 .jmk-reveal {
   opacity: 0;
   transform: translate3d(0, 18px, 0);
@@ -162,5 +253,33 @@ details > summary::-webkit-details-marker {
   .jmk-reveal {
     opacity: 1 !important;
     transform: none !important;
+  }
+}
+
+@media (forced-colors: active) {
+  :focus-visible {
+    outline: 3px solid CanvasText;
+  }
+
+  .jmk-section-light {
+    background: Canvas;
+    color: CanvasText;
+  }
+
+  .jmk-section-light::before,
+  .jmk-section-light::after {
+    display: none;
+  }
+
+  .jmk-enhanced
+    :where(.jmk-card-light)[class*="rounded-3xl"][class*="border"] {
+    border-color: CanvasText;
+    background: Canvas;
+    box-shadow: none;
+  }
+
+  .jmk-section-light :focus-visible {
+    outline-color: CanvasText;
+    box-shadow: none;
   }
 }

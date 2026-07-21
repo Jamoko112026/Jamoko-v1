@@ -65,7 +65,7 @@ export function Footer() {
                 <span className="block text-sm font-semibold tracking-[0.08em]">
                   JaMoKo
                 </span>
-                <span className="block text-[9px] uppercase tracking-[0.2em] text-white/35">
+                <span className="block text-[9px] uppercase tracking-[0.2em] text-white/70">
                   Webdesign Hamburg
                 </span>
               </span>
@@ -74,7 +74,7 @@ export function Footer() {
             <h2 className="mt-8 max-w-lg text-2xl font-semibold leading-tight tracking-[-0.025em] sm:text-3xl">
               Ruhige Websites für Betriebe, die gute Arbeit leisten.
             </h2>
-            <p className="mt-5 max-w-lg leading-relaxed text-white/48">
+            <p className="mt-5 max-w-lg leading-relaxed text-white/70">
               Persönlich entwickelt, klar strukturiert und technisch
               zuverlässig. Damit deine Qualität auch digital verständlich wird.
             </p>
@@ -96,7 +96,7 @@ export function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="inline-flex py-1 text-sm text-white/52 transition hover:text-white"
+                    className="inline-flex py-1 text-sm text-white/70 transition hover:text-white"
                   >
                     {item.label}
                   </Link>
@@ -112,19 +112,19 @@ export function Footer() {
             <address className="mt-6 space-y-4 not-italic">
               <a
                 href={`mailto:${contact.email}`}
-                className="flex items-start gap-3 text-sm text-white/55 transition hover:text-white"
+                className="flex items-start gap-3 text-sm text-white/70 transition hover:text-white"
               >
                 <Mail className="mt-0.5 h-4 w-4 shrink-0 text-[#E5C58B]" />
                 {contact.email}
               </a>
               <a
                 href="tel:+4917682032127"
-                className="flex items-start gap-3 text-sm text-white/55 transition hover:text-white"
+                className="flex items-start gap-3 text-sm text-white/70 transition hover:text-white"
               >
                 <Phone className="mt-0.5 h-4 w-4 shrink-0 text-[#E5C58B]" />
                 {contact.phone}
               </a>
-              <div className="flex items-start gap-3 text-sm text-white/55">
+              <div className="flex items-start gap-3 text-sm text-white/70">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[#E5C58B]" />
                 <span>
                   {contact.zip} {contact.city}
@@ -140,7 +140,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-white/48 transition hover:border-[#E5C58B]/35 hover:text-[#E5C58B]"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-white/70 transition hover:border-[#E5C58B]/35 hover:text-[#E5C58B]"
                 >
                   <Icon className="h-4 w-4" aria-hidden="true" />
                 </a>
@@ -149,7 +149,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-5 pt-7 text-xs text-white/32 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-col gap-5 pt-7 text-xs text-white/70 sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {year} {contact.name}
           </p>

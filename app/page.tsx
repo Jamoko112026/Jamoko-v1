@@ -203,7 +203,7 @@ function TrustStrip() {
             />
             <div>
               <h2 className="text-sm font-medium text-white/90">{title}</h2>
-              <p className="mt-1 text-sm leading-relaxed text-white/45">
+              <p className="mt-1 text-sm leading-relaxed text-white/70">
                 {text}
               </p>
             </div>
@@ -219,15 +219,17 @@ function ProjectsSection() {
     <div id="beispiele">
       <div className="mb-14 flex flex-col justify-between gap-6 md:mb-16 md:flex-row md:items-end">
         <div className="max-w-2xl">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-[#E5C58B]">
+          <p className="jmk-light-eyebrow mb-4 text-xs font-semibold uppercase tracking-[0.28em]">
             Ausgewählte Projekte
           </p>
-          <h2 className="text-3xl font-light leading-tight text-white sm:text-4xl md:text-5xl">
+          <h2 className="jmk-light-heading text-3xl font-light leading-tight sm:text-4xl md:text-5xl">
             So wird Qualität
-            <span className="block text-white/40">digital sichtbar.</span>
+            <span className="jmk-light-heading-muted block">
+              digital sichtbar.
+            </span>
           </h2>
         </div>
-        <p className="max-w-sm text-sm leading-relaxed text-white/45 md:text-right">
+        <p className="jmk-light-copy max-w-sm text-sm leading-relaxed md:text-right">
           Webdesign für lokale Unternehmen funktioniert dann gut, wenn Struktur,
           Sprache und Kontaktwege zum Betrieb passen.
         </p>
@@ -238,7 +240,7 @@ function ProjectsSection() {
           <Link
             key={project.title}
             href={project.href}
-            className={`group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.025] transition duration-300 hover:-translate-y-1 hover:border-[#E5C58B]/35 hover:bg-white/[0.045] ${
+            className={`jmk-card-light group overflow-hidden rounded-3xl border transition duration-300 hover:-translate-y-1 ${
               index === 0 ? "md:col-span-2 lg:col-span-1" : ""
             }`}
           >
@@ -257,15 +259,15 @@ function ProjectsSection() {
             </div>
             <div className="p-6">
               <div className="flex items-start justify-between gap-4">
-                <h3 className="text-xl font-medium text-white">
+                <h3 className="jmk-light-heading text-xl font-medium">
                   {project.title}
                 </h3>
                 <ArrowRight
-                  className="h-5 w-5 shrink-0 text-[#E5C58B] transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                  className="jmk-light-gold h-5 w-5 shrink-0 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
                   aria-hidden="true"
                 />
               </div>
-              <p className="mt-3 text-sm leading-relaxed text-white/50">
+              <p className="jmk-light-copy mt-3 text-sm leading-relaxed">
                 {project.description}
               </p>
             </div>
@@ -276,7 +278,7 @@ function ProjectsSection() {
       <div className="mt-10 text-center">
         <Link
           href="/projekte"
-          className="inline-flex items-center gap-2 text-sm font-semibold text-[#E5C58B] transition hover:text-[#efd49f]"
+          className="jmk-light-link inline-flex items-center gap-2 text-sm font-semibold transition"
         >
           Alle Projekte und Konzepte ansehen
           <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -290,14 +292,16 @@ function ProcessSection() {
   return (
     <div>
       <div className="mx-auto mb-14 max-w-2xl text-center md:mb-16">
-        <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-[#E5C58B]">
+        <p className="jmk-light-eyebrow mb-4 text-xs font-semibold uppercase tracking-[0.28em]">
           Zusammenarbeit
         </p>
-        <h2 className="text-3xl font-light text-white sm:text-4xl md:text-5xl">
+        <h2 className="jmk-light-heading text-3xl font-light sm:text-4xl md:text-5xl">
           Klarer Prozess.
-          <span className="block text-white/40">Wenig Aufwand für dich.</span>
+          <span className="jmk-light-heading-muted block">
+            Wenig Aufwand für dich.
+          </span>
         </h2>
-        <p className="mt-6 leading-relaxed text-white/55">
+        <p className="jmk-light-copy mt-6 leading-relaxed">
           Du kennst dein Geschäft. Wir übersetzen seine Qualität in einen
           verständlichen digitalen Auftritt.
         </p>
@@ -307,21 +311,23 @@ function ProcessSection() {
         {processSteps.map((step, index) => (
           <article
             key={step.number}
-            className="relative rounded-3xl border border-white/10 bg-white/[0.025] p-7 sm:p-8"
+            className="jmk-card-light relative rounded-3xl border p-7 sm:p-8"
           >
             <div className="mb-14 flex items-center justify-between">
-              <span className="text-sm tracking-[0.2em] text-[#E5C58B]">
+              <span className="jmk-light-gold text-sm tracking-[0.2em]">
                 {step.number}
               </span>
               {index < processSteps.length - 1 ? (
                 <ArrowRight
-                  className="hidden h-4 w-4 text-white/20 lg:block"
+                  className="jmk-light-gold hidden h-4 w-4 lg:block"
                   aria-hidden="true"
                 />
               ) : null}
             </div>
-            <h3 className="text-xl font-medium text-white">{step.title}</h3>
-            <p className="mt-4 text-sm leading-relaxed text-white/50">
+            <h3 className="jmk-light-heading text-xl font-medium">
+              {step.title}
+            </h3>
+            <p className="jmk-light-copy mt-4 text-sm leading-relaxed">
               {step.text}
             </p>
           </article>
@@ -335,14 +341,16 @@ function WhyJamokoSection() {
   return (
     <div>
       <div className="mb-14 max-w-2xl md:mb-16">
-        <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-[#E5C58B]">
+        <p className="jmk-light-eyebrow mb-4 text-xs font-semibold uppercase tracking-[0.28em]">
           Warum JaMoKo?
         </p>
-        <h2 className="text-3xl font-light leading-tight text-white sm:text-4xl md:text-5xl">
+        <h2 className="jmk-light-heading text-3xl font-light leading-tight sm:text-4xl md:text-5xl">
           Weil gute Arbeit
-          <span className="block text-white/40">klar gesehen werden sollte.</span>
+          <span className="jmk-light-heading-muted block">
+            klar gesehen werden sollte.
+          </span>
         </h2>
-        <p className="mt-6 leading-relaxed text-white/55">
+        <p className="jmk-light-copy mt-6 leading-relaxed">
           Wir bauen Websites für Menschen, die gute Arbeit leisten und online
           verständlich wirken möchten. Nicht lauter. Klarer.
         </p>
@@ -352,10 +360,12 @@ function WhyJamokoSection() {
         {audienceItems.map((item) => (
           <article
             key={item.title}
-            className="rounded-3xl border border-white/10 bg-white/[0.025] p-7"
+            className="jmk-card-light rounded-3xl border p-7"
           >
-            <h3 className="text-lg font-medium text-white">{item.title}</h3>
-            <p className="mt-3 text-sm leading-relaxed text-white/50">
+            <h3 className="jmk-light-heading text-lg font-medium">
+              {item.title}
+            </h3>
+            <p className="jmk-light-copy mt-3 text-sm leading-relaxed">
               {item.text}
             </p>
           </article>
@@ -374,7 +384,7 @@ function OutcomesSection() {
         </p>
         <h2 className="text-3xl font-light leading-tight text-white sm:text-4xl md:text-5xl">
           Nicht lauter werden.
-          <span className="block text-white/40">Sondern klarer.</span>
+          <span className="block text-white/70">Sondern klarer.</span>
         </h2>
       </div>
 
@@ -388,7 +398,7 @@ function OutcomesSection() {
               <Icon className="h-5 w-5" aria-hidden="true" />
             </span>
             <h3 className="mt-8 text-lg font-medium text-white">{title}</h3>
-            <p className="mt-3 text-sm leading-relaxed text-white/50">
+            <p className="mt-3 text-sm leading-relaxed text-white/70">
               {text}
             </p>
           </article>
@@ -410,11 +420,11 @@ function PricingSection() {
         </p>
         <h2 className="text-3xl font-light text-white sm:text-4xl md:text-5xl">
           Klare Preise.
-          <span className="block text-white/40">
+          <span className="block text-white/70">
             Ohne laufende Agenturkosten.
           </span>
         </h2>
-        <p className="mx-auto mt-6 max-w-2xl leading-relaxed text-white/55">
+        <p className="mx-auto mt-6 max-w-2xl leading-relaxed text-white/75">
           Eine faire Einmalzahlung für Konzeption, Gestaltung und technische
           Umsetzung. Der genaue Umfang wird vor dem Start gemeinsam festgelegt.
         </p>
@@ -427,7 +437,7 @@ function PricingSection() {
       </div>
 
       <div className="mt-10 text-center">
-        <div className="flex flex-col items-center justify-center gap-4 text-sm text-white/45 sm:flex-row">
+        <div className="flex flex-col items-center justify-center gap-4 text-sm text-white/70 sm:flex-row">
           <span>Unverbindliches Kennenlernen · Faire Einmalpreise</span>
           <Link
             href="/preise"
@@ -474,15 +484,15 @@ function PricingCard({
         </span>
       ) : null}
       <h3 className="text-xl font-medium text-white">{title}</h3>
-      <p className="mt-2 text-sm text-white/45">{subtitle}</p>
+      <p className="mt-2 text-sm text-white/70">{subtitle}</p>
       <div className="mt-7 text-4xl font-light text-[#E5C58B]">
         {price}
-        <span className="ml-2 text-sm font-normal text-white/40">
+        <span className="ml-2 text-sm font-normal text-white/70">
           einmalig
         </span>
       </div>
       <div className="my-7 h-px bg-white/10" />
-      <ul className="mb-9 space-y-3 text-sm text-white/60">
+      <ul className="mb-9 space-y-3 text-sm text-white/75">
         {features.map((feature) => (
           <li key={feature} className="flex gap-3">
             <CheckCircle2
@@ -580,19 +590,22 @@ export default function HomePage() {
       <AmbientPage>
         <Hero />
         <TrustStrip />
-        <div className="mx-auto max-w-6xl px-6 sm:px-8">
-          <section className="py-24 md:py-32">
+        <section className="jmk-section-light jmk-section-paper">
+          <div className="jmk-section-content mx-auto max-w-6xl px-6 py-24 sm:px-8 md:py-32">
             <WhyJamokoSection />
-          </section>
-          <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-          <section className="py-24 md:py-32">
+          </div>
+        </section>
+        <section className="jmk-section-light jmk-section-mist">
+          <div className="jmk-section-content mx-auto max-w-6xl px-6 py-24 sm:px-8 md:py-32">
             <ProjectsSection />
-          </section>
-          <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-          <section className="py-24 md:py-32">
+          </div>
+        </section>
+        <section className="jmk-section-light jmk-section-paper">
+          <div className="jmk-section-content mx-auto max-w-6xl px-6 py-24 sm:px-8 md:py-32">
             <ProcessSection />
-          </section>
-          <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+          </div>
+        </section>
+        <div className="mx-auto max-w-6xl px-6 sm:px-8">
           <section className="py-24 md:py-32">
             <OutcomesSection />
           </section>

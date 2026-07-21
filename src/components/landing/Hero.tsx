@@ -31,7 +31,7 @@ export function Hero() {
             Eine Website, die Menschen verstehen lässt,
             <span className="block text-[#E5C58B]">warum sie bei dir richtig sind.</span>
           </h1>
-          <p className="mt-7 max-w-2xl text-lg font-light leading-8 text-white/65 md:text-xl md:leading-9">
+          <p className="mt-7 max-w-2xl text-lg font-light leading-8 text-white/70 md:text-xl md:leading-9">
             Wir hören zu, sortieren dein Angebot und bauen daraus einen ruhigen
             Auftritt. Damit Besucher schneller Vertrauen fassen und leichter
             Kontakt aufnehmen.
@@ -54,7 +54,7 @@ export function Hero() {
             </a>
           </div>
 
-          <ul className="mt-9 flex flex-wrap gap-x-6 gap-y-3 text-sm leading-6 text-white/45">
+          <ul className="mt-9 flex flex-wrap gap-x-6 gap-y-3 text-sm leading-6 text-white/70">
             {trustItems.map((item) => (
               <li key={item} className="flex items-center gap-2">
                 <CheckCircle2
@@ -77,7 +77,7 @@ export function Hero() {
               <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
               <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
               <span className="h-2.5 w-2.5 rounded-full bg-[#1AC7A4]/50" />
-              <span className="ml-auto text-[10px] tracking-[0.18em] text-white/30">
+              <span className="ml-auto text-[10px] tracking-[0.18em] text-white/70">
                 JAMOKO.DE
               </span>
             </div>
@@ -102,7 +102,7 @@ export function Hero() {
                   <span className="block text-2xl font-light text-[#E5C58B]">
                     01
                   </span>
-                  <span className="mt-1 block text-xs text-white/45">
+                  <span className="mt-1 block text-xs text-white/70">
                     Leistung verstehen
                   </span>
                 </div>
@@ -110,7 +110,7 @@ export function Hero() {
                   <span className="block text-2xl font-light text-[#1AC7A4]">
                     02
                   </span>
-                  <span className="mt-1 block text-xs text-white/45">
+                  <span className="mt-1 block text-xs text-white/70">
                     Kontakt aufnehmen
                   </span>
                 </div>
