@@ -6,14 +6,14 @@ import { StructuredData, contactPageJsonLd } from "../structured-data";
 export const metadata: Metadata = {
   title: "Kontakt für Webdesign Hamburg",
   description:
-    "Nimm direkt Kontakt mit JaMoKo in Hamburg auf. Ruhiges Webdesign und Mini-Websites für lokale Unternehmen, Handwerker und Dienstleister.",
+    "Lerne JaMoKo unverbindlich kennen. In etwa 15 Minuten klären wir, was dein Betrieb online braucht und ob eine Zusammenarbeit passt.",
   alternates: {
     canonical: "https://jamoko.de/kontakt",
   },
   openGraph: {
     title: "Kontakt · JaMoKo Webdesign Hamburg",
     description:
-      "Sprich mit JaMoKo über deine Website, Mini-Website oder digitale Sichtbarkeit.",
+      "Lerne JaMoKo unverbindlich kennen. In etwa 15 Minuten klären wir, was dein Betrieb online braucht und ob eine Zusammenarbeit passt.",
     url: "https://jamoko.de/kontakt",
     images: [
       {

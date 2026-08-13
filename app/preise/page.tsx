@@ -11,63 +11,38 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Preise für Mini-Websites",
+  title: "JaMoKo Preise – Website ab 1.490 €",
   description:
-    "Faire Preise für Mini-Websites und Webdesign in Hamburg. Klare Leistungen, persönliche Beratung und Angebote nach Bedarf.",
+    "Klare Website-Angebote für lokale Betriebe, Handwerker und Selbstständige. Bis zu 5 Inhaltsseiten, persönliche Umsetzung und transparenter Projektumfang ab 1.490 €.",
   alternates: {
     canonical: "https://jamoko.de/preise",
   },
   openGraph: {
-    title: "Preise für Mini-Websites · JaMoKo",
+    title: "JaMoKo Preise – Website ab 1.490 €",
     description:
-      "Transparente Einstiegspakete für lokale Unternehmen, Handwerker und Dienstleister.",
+      "Klare Website-Angebote für lokale Betriebe, Handwerker und Selbstständige. Bis zu 5 Inhaltsseiten, persönliche Umsetzung und transparenter Projektumfang ab 1.490 €.",
     url: "https://jamoko.de/preise",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "JaMoKo Preise für Mini-Websites",
+        alt: "JaMoKo Website für lokale Betriebe",
       },
     ],
   },
 };
 
-const offers = [
-  {
-    title: "Starter",
-    price: "ab 199 €",
-    text: "Für kleine Anpassungen, erste Klarheit oder eine einzelne Seite, die sauber stehen soll.",
-    features: [
-      "Du bekommst eine klare Einschätzung",
-      "Der nächste Schritt wird verständlich",
-      "Der Umfang bleibt klein und sauber abgegrenzt",
-      "Du sprichst direkt mit uns",
-    ],
-  },
-  {
-    title: "Wachstum",
-    price: "ab 499 €",
-    text: "Für Betriebe, die ihre Website sichtbar verbessern und Inhalte verständlicher führen möchten.",
-    features: [
-      "Besucher finden schneller die richtigen Inhalte",
-      "Deine Website wirkt klarer und vertrauenswürdiger",
-      "Die Nutzung auf dem Handy wird einfacher",
-      "Anfragen werden besser geführt",
-    ],
-    highlight: true,
-  },
-  {
-    title: "Individuell",
-    price: "auf Anfrage",
-    text: "Für neue Websites, größere Weiterentwicklungen oder Projekte mit mehreren Beteiligten.",
-    features: [
-      "Du bekommst einen passenden Projektumfang",
-      "Das Angebot richtet sich nach deinem Bedarf",
-      "Zeitplan und Aufwand bleiben nachvollziehbar",
-      "Prioritäten werden gemeinsam geklärt",
-    ],
-  },
+const includedFeatures = [
+  "Bis zu 5 Inhaltsseiten",
+  "Individuelles Design passend zu deinem Betrieb",
+  "Hilfe bei Struktur und Texten",
+  "Optimiert für Smartphone, Tablet und Desktop",
+  "Technische SEO-Grundlagen",
+  "Kontakt, Öffnungszeiten und wichtige Unternehmensinfos",
+  "Impressum und Datenschutz technisch eingebunden",
+  "1 gebündelte Korrekturrunde",
+  "Veröffentlichung und Übergabe",
 ];
 
 const trustCards = [
@@ -90,37 +65,6 @@ const trustCards = [
     title: "Nachhaltig",
     text: "Wir bauen nichts ein, was später nur Aufwand macht.",
     icon: ShieldCheck,
-  },
-];
-
-const notForSale = [
-  "unnötig große Pakete",
-  "Druck durch künstliche Knappheit",
-  "Funktionen, die niemand braucht",
-  "Fachbegriffe statt Erklärung",
-  "Design-Effekte ohne Nutzen",
-];
-
-const faqs = [
-  {
-    question: "Warum gibt es keine feste Preisliste für alles?",
-    answer:
-      "Weil Websites sehr unterschiedlich starten. Manche brauchen nur klare Struktur. Andere brauchen neue Inhalte, Technik oder Abstimmung mit mehreren Personen. Ein fester Preis ohne Blick auf den Bedarf wäre nicht ehrlich.",
-  },
-  {
-    question: "Was passiert im kostenlosen Kennenlernen?",
-    answer:
-      "Wir sprechen kurz über dein Unternehmen, deine aktuelle Website und dein Ziel. Danach lässt sich besser einschätzen, welcher Umfang sinnvoll ist.",
-  },
-  {
-    question: "Muss es direkt ein großes Projekt sein?",
-    answer:
-      "Nein. Oft ist ein kleiner, klarer erster Schritt sinnvoller. JaMoKo soll helfen, bessere Entscheidungen zu treffen, nicht möglichst viel auf einmal zu verkaufen.",
-  },
-  {
-    question: "Sind die Preise Netto- oder Bruttopreise?",
-    answer:
-      "Die genaue Preisangabe klären wir im Angebot. Wichtig ist: Vor dem Start ist transparent, welche Leistung enthalten ist und welcher Betrag dafür anfällt.",
   },
 ];
 
@@ -176,16 +120,15 @@ export default function PricingPage() {
         <div className="mx-auto max-w-6xl">
           <div className="max-w-3xl">
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#E5C58B]">
-              Preise
+              Klare Leistung
             </p>
             <h1 className="mt-5 text-4xl font-light leading-tight text-white sm:text-5xl md:text-6xl">
-              Faire Preise.
-              <span className="block text-white/40">Klare Leistungen.</span>
+              Du weißt vorher, was du bekommst.
+              <span className="block text-white/40">Und was es kostet.</span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-white/58">
-              Gute digitale Arbeit beginnt mit Verständnis. Deshalb sprechen
-              wir zuerst über Bedarf, Umfang und Prioritäten, bevor ein Angebot
-              entsteht.
+              Eine kompakte Unternehmenswebsite mit klar definiertem Umfang.
+              Wenn dein Projekt mehr braucht, besprechen wir das vor dem Start.
             </p>
             <Link
               href="/kontakt"
@@ -194,92 +137,60 @@ export default function PricingPage() {
               Kostenlos kennenlernen
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
-            <Link
-              href="/mini-site"
-              className="ml-0 mt-4 inline-flex min-h-12 items-center justify-center rounded-full border border-white/15 px-6 py-3 text-sm font-semibold text-white/75 transition hover:border-white/30 hover:bg-white/5 hover:text-white sm:ml-4"
-            >
-              Mini-Website verstehen
-            </Link>
           </div>
         </div>
       </section>
 
-      <TextSection
-        eyebrow="Transparenz"
-        title="Warum wir transparent sind"
-      >
+      <TextSection eyebrow="Transparenz" title="Ein klarer Rahmen vor dem Start">
         <p>
-          Eine Website ist für viele lokale Unternehmen keine alltägliche
-          Entscheidung. Deshalb soll der Preis nachvollziehbar sein.
+          Vor Projektstart halten wir fest, welche Leistungen enthalten sind
+          und welche Inhalte wir gemeinsam umsetzen. Es gibt keine versteckten
+          Pakete.
         </p>
         <p>
-          Du sollst verstehen, was gemacht wird, warum es sinnvoll ist und
-          welcher Aufwand dahintersteht. Nicht erst am Ende. Sondern bevor wir
-          beginnen.
-        </p>
-        <p>
-          Transparenz heißt für uns auch: Wenn etwas gerade nicht nötig ist,
-          sagen wir das.
+          Eine gebündelte Korrekturrunde ist enthalten. Zusätzliche
+          Anforderungen besprechen wir vorab separat; neue Wünsche nach der
+          Abnahme gelten als Erweiterung.
         </p>
       </TextSection>
 
       <section className="border-y border-white/10 bg-white/[0.025] px-6 py-20 sm:px-8 md:py-28">
         <div className="mx-auto max-w-6xl">
           <SectionHeading
-            eyebrow="Angebote"
-            title="Drei ruhige Einstiege. Kein Druck."
-            intro="Die Pakete geben Orientierung. Der genaue Umfang entsteht im Gespräch und richtet sich nach dem, was dein Projekt wirklich braucht."
+            eyebrow="Angebot"
+            title="JaMoKo Website"
+            intro="Für lokale Betriebe, Handwerker und Selbstständige"
           />
 
-          <div className="mt-12 grid gap-6 lg:grid-cols-3">
-            {offers.map((offer) => (
-              <article
-                key={offer.title}
-                className={`relative flex flex-col rounded-3xl border p-7 sm:p-8 ${
-                  offer.highlight
-                    ? "border-[#E5C58B]/60 bg-[#E5C58B]/[0.07] shadow-[0_20px_70px_rgba(229,197,139,0.08)]"
-                    : "border-white/10 bg-white/[0.025]"
-                }`}
+          <article className="mt-12 grid gap-10 rounded-3xl border border-[#E5C58B]/60 bg-[#E5C58B]/[0.07] p-7 shadow-[0_20px_70px_rgba(229,197,139,0.08)] sm:p-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-14">
+            <div>
+              <p className="text-4xl font-light text-[#E5C58B] sm:text-5xl">
+                ab 1.490 €
+              </p>
+              <div className="mt-8 space-y-4 border-t border-white/10 pt-8 text-sm leading-7 text-white/60">
+                <p>In der Regel 2–3 Wochen nach vollständigem Onboarding</p>
+                <p>50 % zum Start · 50 % zum Abschluss</p>
+              </div>
+              <Link
+                href="/kontakt"
+                className="mt-8 inline-flex min-h-11 w-fit items-center justify-center gap-2 rounded-full bg-[#E5C58B] px-5 py-2.5 text-sm font-semibold text-[#001821] transition hover:-translate-y-0.5 hover:bg-[#efd49f]"
               >
-                {offer.highlight ? (
-                  <span className="absolute -top-3 left-7 rounded-full bg-[#E5C58B] px-3 py-1 text-xs font-medium text-[#001821]">
-                    Häufig passend
-                  </span>
-                ) : null}
-                <h2 className="text-2xl font-medium text-white">
-                  {offer.title}
-                </h2>
-                <p className="mt-4 text-4xl font-light text-[#E5C58B]">
-                  {offer.price}
-                </p>
-                <p className="mt-5 leading-relaxed text-white/54">
-                  {offer.text}
-                </p>
-                <div className="my-7 h-px bg-white/10" />
-                <ul className="space-y-3">
-                  {offer.features.map((feature) => (
-                    <li
-                      key={feature}
-                      className="flex gap-3 text-sm text-white/60"
-                    >
-                      <CheckCircle2
-                        className="mt-0.5 h-4 w-4 shrink-0 text-[#1AC7A4]"
-                        aria-hidden="true"
-                      />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  href="/kontakt"
-                  className="mt-8 inline-flex min-h-11 w-fit items-center justify-center gap-2 rounded-full border border-white/15 px-5 py-2.5 text-sm font-semibold text-white/75 transition hover:border-white/30 hover:bg-white/5 hover:text-white"
-                >
-                  Projekt besprechen
-                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                </Link>
-              </article>
-            ))}
-          </div>
+                Kostenlos kennenlernen
+                <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </Link>
+            </div>
+            <ul className="space-y-4">
+              {includedFeatures.map((feature) => (
+                <li key={feature} className="flex gap-3 text-sm text-white/62">
+                  <CheckCircle2
+                    className="mt-0.5 h-4 w-4 shrink-0 text-[#1AC7A4]"
+                    aria-hidden="true"
+                  />
+                  <span>{feature}</span>
+                </li>
+              ))}
+            </ul>
+          </article>
         </div>
       </section>
 
@@ -314,68 +225,34 @@ export default function PricingPage() {
       <section className="border-y border-white/10 bg-white/[0.025] px-6 py-20 sm:px-8 md:py-28">
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <SectionHeading
-            eyebrow="Bewusst nicht"
-            title="Was wir bewusst nicht verkaufen"
-            intro="Nicht alles, was möglich ist, hilft einer Website. Deshalb lassen wir Dinge weg, wenn sie keine Klarheit schaffen."
+            eyebrow="Zusätzlicher Bedarf"
+            title="Wenn dein Projekt mehr braucht"
+            intro="Manche Vorhaben gehen über den klar definierten Standardumfang hinaus."
           />
-          <div className="rounded-3xl border border-white/10 bg-white/[0.025] p-7 sm:p-8">
-            <ul className="space-y-4">
-              {notForSale.map((item) => (
-                <li key={item} className="flex gap-3 text-sm text-white/62">
-                  <CheckCircle2
-                    className="mt-0.5 h-4 w-4 shrink-0 text-[#1AC7A4]"
-                    aria-hidden="true"
-                  />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
+          <div className="text-base leading-8 text-white/58">
+            <p>
+              Shops, komplexe Buchungssysteme, individuelle Web-Apps,
+              umfangreiche Migrationen oder laufende Betreuung besprechen wir
+              separat vor Projektstart.
+            </p>
           </div>
         </div>
       </section>
 
-      <TextSection eyebrow="Preisversprechen" title="Der Preis folgt dem Bedarf.">
+      <TextSection eyebrow="Preisrahmen" title="Was vereinbart ist, bleibt klar.">
         <p>
-          Wir empfehlen nur, was dein Projekt wirklich weiterbringt. Wenn ein
-          kleiner Schritt reicht, bleibt es ein kleiner Schritt.
+          Der Umfang steht vor Projektstart fest. So weißt du, welche Leistungen
+          zum Angebot gehören und welche Kosten entstehen.
         </p>
         <p>
-          Vor dem Start ist klar, welche Leistung enthalten ist, welche
-          Entscheidung wir gemeinsam treffen und welche Kosten entstehen.
+          Zusätzliche Anforderungen werden vorab separat besprochen. Eine
+          gebündelte Korrekturrunde ist enthalten.
         </p>
         <p>
-          Das ist für uns fairer als große Pakete, die mehr versprechen, als ein
-          Betrieb im Moment braucht.
+          Neue Wünsche nach der Abnahme behandeln wir als Erweiterung und
+          stimmen den zusätzlichen Aufwand mit dir ab.
         </p>
       </TextSection>
-
-      <section className="border-y border-white/10 bg-white/[0.025] px-6 py-20 sm:px-8 md:py-28">
-        <div className="mx-auto max-w-6xl">
-          <SectionHeading
-            eyebrow="FAQ"
-            title="Häufige Fragen zu Preisen und Umfang"
-          />
-
-          <div className="mt-12 grid gap-4">
-            {faqs.map((item) => (
-              <details
-                key={item.question}
-                className="group rounded-3xl border border-white/10 bg-white/[0.025] p-6 open:border-[#E5C58B]/35 open:bg-white/[0.045]"
-              >
-                <summary className="flex cursor-pointer items-start justify-between gap-6 text-left text-lg font-medium text-white">
-                  <span>{item.question}</span>
-                  <span className="mt-1 text-[#E5C58B] transition group-open:rotate-45">
-                    +
-                  </span>
-                </summary>
-                <p className="mt-5 max-w-3xl text-sm leading-7 text-white/55">
-                  {item.answer}
-                </p>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section className="px-6 py-20 sm:px-8 md:py-28">
         <div className="mx-auto max-w-6xl rounded-[2rem] border border-[#E5C58B]/30 bg-[#E5C58B] px-7 py-12 text-[#001821] sm:px-10 md:py-16">
@@ -386,8 +263,8 @@ export default function PricingPage() {
             Kostenlos kennenlernen
           </h2>
           <p className="mt-5 max-w-2xl leading-relaxed text-[#001821]/65">
-            In einem kurzen Gespräch klären wir, wo du stehst, was deine
-            Website leisten soll und welcher Umfang sinnvoll ist.
+            In etwa 15 Minuten klären wir kostenlos, was dein Betrieb braucht
+            und ob die JaMoKo Website der richtige nächste Schritt ist.
           </p>
           <Link
             href="/kontakt"

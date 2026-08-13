@@ -7,7 +7,7 @@ import { ArrowRight, Menu, X } from "lucide-react";
 
 const navItems = [
   { label: "Start", href: "/" },
-  { label: "Mini-Site", href: "/mini-site" },
+  { label: "Website", href: "/mini-site" },
   { label: "Projekte", href: "/projekte" },
   { label: "Preise", href: "/preise" },
   { label: "Über JaMoKo", href: "/ueber-jamoko" },
@@ -89,7 +89,7 @@ function MobileStickyCTA() {
             active:scale-[0.98]
           "
         >
-          Unverbindlich anfragen
+          Kostenlos kennenlernen
         </Link>
       </div>
     </div>
@@ -184,7 +184,7 @@ export function Header() {
               href="/kontakt"
               className="inline-flex items-center gap-2 rounded-full bg-[#E5C58B] px-5 py-2.5 text-sm font-semibold text-[#001821] transition hover:-translate-y-0.5 hover:bg-[#efd49f]"
             >
-              Projekt besprechen
+              Kostenlos kennenlernen
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
           </div>
@@ -230,7 +230,7 @@ export function Header() {
                 href="/kontakt"
                 className="mt-7 flex w-full items-center justify-center gap-2 rounded-full bg-[#E5C58B] px-6 py-4 text-sm font-semibold text-[#001821]"
               >
-                Projekt besprechen
+                Kostenlos kennenlernen
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </Link>
 

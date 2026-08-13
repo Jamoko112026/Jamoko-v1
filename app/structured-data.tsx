@@ -3,10 +3,10 @@ import { faqItems } from "./faq/faq-data";
 const siteUrl = "https://jamoko.de";
 const organizationId = `${siteUrl}/#organization`;
 const websiteId = `${siteUrl}/#website`;
-const serviceId = `${siteUrl}/#mini-website-service`;
+const serviceId = `${siteUrl}/#jamoko-website-service`;
 
 const siteDescription =
-  "JaMoKo erstellt ruhige, schnelle Mini-Websites und Webdesign für lokale Unternehmen in Hamburg.";
+  "JaMoKo erstellt individuelle Websites für lokale Betriebe, Handwerker und Selbstständige. Klar strukturiert, mobil optimiert und persönlich umgesetzt.";
 
 const areaServed = [
   {
@@ -22,6 +22,10 @@ const areaServed = [
 const audience = [
   {
     "@type": "Audience",
+    name: "Lokale Betriebe",
+  },
+  {
+    "@type": "Audience",
     name: "Handwerker",
   },
   {
@@ -30,7 +34,7 @@ const audience = [
   },
   {
     "@type": "Audience",
-    name: "Lokale Unternehmen",
+    name: "Selbstständige",
   },
 ];
 
@@ -67,12 +71,11 @@ export const siteJsonLd = {
         availableLanguage: "de-DE",
       },
       knowsAbout: [
-        "Mini-Websites",
+        "JaMoKo Website",
         "Webdesign Hamburg",
         "Webdesign für lokale Betriebe",
         "Webdesign für lokale Unternehmen",
-        "Mini-Website Hamburg",
-        "Websites für Handwerker und Dienstleister",
+        "Websites für Handwerker, Dienstleister und Selbstständige",
         "Mobile Optimierung",
         "Verständliche Website-Texte",
       ],
@@ -100,7 +103,7 @@ export const homePageJsonLd = {
       url: siteUrl,
       name: "JaMoKo – Ruhige Websites für lokale Unternehmen",
       description:
-        "Ruhiges Webdesign aus Hamburg für lokale Unternehmen, Handwerker und Dienstleister.",
+        "Ruhiges Webdesign aus Hamburg für lokale Betriebe, Handwerker, Dienstleister und Selbstständige.",
       inLanguage: "de-DE",
       isPartOf: {
         "@id": websiteId,
@@ -119,7 +122,7 @@ export const homePageJsonLd = {
     {
       "@type": "Service",
       "@id": serviceId,
-      name: "Mini-Websites für lokale Betriebe",
+      name: "JaMoKo Website",
       serviceType: "Website-Erstellung",
       provider: {
         "@id": organizationId,
@@ -127,13 +130,14 @@ export const homePageJsonLd = {
       areaServed,
       audience,
       description:
-        "JaMoKo erstellt klare Mini-Websites für Handwerker, Dienstleister und lokale Unternehmen in Hamburg.",
+        "Individuelle Websites für lokale Betriebe, Handwerker und Selbstständige. Klar strukturiert, mobil optimiert und persönlich umgesetzt.",
       offers: {
-        "@type": "Offer",
-        name: "Kostenloses Erstgespräch",
-        url: `${siteUrl}/kontakt`,
-        price: "0",
+        "@type": "AggregateOffer",
+        name: "JaMoKo Website ab 1.490 €",
+        url: `${siteUrl}/preise`,
+        lowPrice: "1490",
         priceCurrency: "EUR",
+        offerCount: "1",
       },
     },
   ],
@@ -146,7 +150,7 @@ export const contactPageJsonLd = {
   url: `${siteUrl}/kontakt`,
   name: "Kontakt",
   description:
-    "Nimm direkt Kontakt mit JaMoKo auf. Ruhige Mini-Websites für lokale Unternehmen aus Hamburg.",
+    "Nimm direkt Kontakt mit JaMoKo auf. Individuelle Websites für lokale Betriebe, Handwerker und Selbstständige.",
   inLanguage: "de-DE",
   isPartOf: {
     "@id": websiteId,
@@ -168,9 +172,9 @@ export const faqPageJsonLd = {
   "@type": "FAQPage",
   "@id": `${siteUrl}/faq#faq`,
   url: `${siteUrl}/faq`,
-  name: "Häufige Fragen zu JaMoKo Mini-Websites",
+  name: "Häufige Fragen zur JaMoKo Website",
   description:
-    "Antworten auf häufige Fragen zu Mini-Websites, Preisen, Ablauf und Zusammenarbeit mit JaMoKo.",
+    "Antworten auf häufige Fragen zur JaMoKo Website, zu Preisen, Umfang, Ablauf und Zusammenarbeit.",
   inLanguage: "de-DE",
   isPartOf: {
     "@id": websiteId,

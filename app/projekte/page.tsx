@@ -21,7 +21,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "JaMoKo – ruhige Mini-Websites",
+        alt: "Website-Beispiele, Demos und Konzepte von JaMoKo",
       },
     ],
   },

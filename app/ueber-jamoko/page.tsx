@@ -276,7 +276,7 @@ export default function AboutJamokoPage() {
             className="mt-8 inline-flex items-center gap-3 rounded-full bg-[#001821] px-7 py-4 text-sm font-medium text-white transition hover:-translate-y-0.5"
           >
             <MessageCircle className="h-4 w-4" aria-hidden="true" />
-            Projekt besprechen
+            Kostenlos kennenlernen
             <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </Link>
         </div>

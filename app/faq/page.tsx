@@ -5,16 +5,16 @@ import { StructuredData, faqPageJsonLd } from "../structured-data";
 import { faqItems } from "./faq-data";
 
 export const metadata: Metadata = {
-  title: "FAQ zu Mini-Websites",
+  title: "FAQ – Fragen zur JaMoKo Website",
   description:
-    "Häufige Fragen zu Mini-Websites, Preisen, Ablauf, Erweiterungen und Zusammenarbeit mit JaMoKo in Hamburg.",
+    "Antworten zu Preis, Umfang, Ablauf, Projektlaufzeit, Korrekturrunde und Zusammenarbeit mit JaMoKo.",
   alternates: {
     canonical: "https://jamoko.de/faq",
   },
   openGraph: {
-    title: "FAQ zu Mini-Websites · JaMoKo",
+    title: "FAQ – Fragen zur JaMoKo Website",
     description:
-      "Antworten zu Kosten, Dauer, Erweiterung und Zusammenarbeit bei JaMoKo Mini-Websites.",
+      "Antworten zu Preis, Umfang, Ablauf, Projektlaufzeit, Korrekturrunde und Zusammenarbeit mit JaMoKo.",
     url: "https://jamoko.de/faq",
     images: [
       {
@@ -42,7 +42,7 @@ export default function FaqPage() {
                 Häufige Fragen
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-white/58">
-                Kurze Antworten auf Fragen zu Mini-Websites, Preisen und der
+                Kurze Antworten auf Fragen zu Websites, Preisen und der
                 Zusammenarbeit mit JaMoKo in Hamburg.
               </p>
             </div>
@@ -82,7 +82,7 @@ export default function FaqPage() {
               className="mt-8 inline-flex items-center gap-3 rounded-full bg-[#001821] px-7 py-4 text-sm font-medium text-white transition hover:-translate-y-0.5"
             >
               <MessageCircle className="h-4 w-4" aria-hidden="true" />
-              Kontakt aufnehmen
+              Kostenlos kennenlernen
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
           </div>

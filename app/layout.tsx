@@ -12,11 +12,11 @@ export const metadata: Metadata = {
     template: "%s · JaMoKo",
   },
   description:
-    "JaMoKo erstellt ruhige Mini-Websites und Webdesign für lokale Unternehmen in Hamburg. Klar, persönlich und verständlich.",
+    "Klare Websites aus Hamburg für lokale Betriebe, Handwerker, Dienstleister und Selbstständige. Persönlich entwickelt, mobil optimiert und verständlich umgesetzt.",
   openGraph: {
     title: "JaMoKo – Webdesign Hamburg für lokale Unternehmen",
     description:
-      "Ruhige Mini-Websites für Handwerker, Dienstleister und lokale Unternehmen in Hamburg.",
+      "Klare Websites aus Hamburg für lokale Betriebe, Handwerker, Dienstleister und Selbstständige. Persönlich entwickelt, mobil optimiert und verständlich umgesetzt.",
     url: "https://jamoko.de",
     siteName: "JaMoKo",
     locale: "de_DE",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "JaMoKo – ruhige Mini-Websites",
+        alt: "JaMoKo – Webdesign Hamburg für lokale Unternehmen",
       },
     ],
   },

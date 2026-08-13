@@ -5,7 +5,7 @@ import { ArrowRight, Mail, Phone } from "lucide-react";
 export const metadata: Metadata = {
   title: "Impressum",
   description:
-    "Impressum von JaMoKo – Webdesign Hamburg und Mini-Websites für lokale Unternehmen.",
+    "Impressum von JaMoKo – Webdesign Hamburg für lokale Betriebe, Handwerker, Dienstleister und Selbstständige.",
   alternates: {
     canonical: "https://jamoko.de/impressum",
   },

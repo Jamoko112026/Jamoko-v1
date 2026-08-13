@@ -5,32 +5,29 @@ import {
   ArrowRight,
   CheckCircle2,
   HeartHandshake,
-  MapPin,
   MessageCircle,
-  SearchCheck,
-  Smartphone,
   Store,
   Wrench,
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Mini-Website Hamburg",
+  title: "JaMoKo Website – Webdesign für lokale Unternehmen",
   description:
-    "Die JaMoKo Mini-Website ist ein klarer Start für lokale Unternehmen in Hamburg. Ruhig, mobil verständlich und später erweiterbar.",
+    "Klare Websites für lokale Betriebe, Handwerker und Selbstständige. Individuell gestaltet, mobil optimiert und persönlich umgesetzt.",
   alternates: {
     canonical: "https://jamoko.de/mini-site",
   },
   openGraph: {
-    title: "Mini-Website Hamburg · JaMoKo",
+    title: "JaMoKo Website – Webdesign für lokale Unternehmen",
     description:
-      "Klein starten, klar wachsen: Mini-Websites für lokale Unternehmen, Handwerker und Dienstleister.",
+      "Klare Websites für lokale Betriebe, Handwerker und Selbstständige. Individuell gestaltet, mobil optimiert und persönlich umgesetzt.",
     url: "https://jamoko.de/mini-site",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "JaMoKo Mini-Website Hamburg",
+        alt: "JaMoKo Website für lokale Unternehmen",
       },
     ],
   },
@@ -39,89 +36,70 @@ export const metadata: Metadata = {
 const audiences = [
   {
     title: "Lokale Unternehmen",
-    text: "Für Unternehmen, die online gefunden werden und klar erklären möchten, was sie anbieten.",
+    text: "Für Betriebe, die ihr Angebot verständlich zeigen und direkt erreichbar sein möchten.",
     icon: Store,
   },
   {
     title: "Handwerk",
-    text: "Für gute Arbeit, die Vertrauen braucht und nicht durch laute Gestaltung erklärt werden muss.",
+    text: "Für gute Arbeit, die online genauso klar und vertrauenswürdig wirken soll.",
     icon: Wrench,
   },
   {
-    title: "Dienstleister",
-    text: "Für Angebote, bei denen Vertrauen entsteht, bevor ein Gespräch beginnt.",
+    title: "Selbstständige",
+    text: "Für persönliche Arbeit, bei der Angebot, Haltung und Kontakt zusammenpassen müssen.",
     icon: HeartHandshake,
   },
-  {
-    title: "Selbstständige",
-    text: "Für persönliche Arbeit, bei der Haltung, Angebot und Kontakt nah zusammengehören.",
-    icon: MessageCircle,
-  },
-  {
-    title: "Läden & Gastronomie",
-    text: "Für Orte, bei denen Öffnungszeiten, Standort und erster Eindruck schnell stimmen müssen.",
-    icon: MapPin,
-  },
 ];
 
-const visitorBenefits = [
-  "Besucher verstehen schneller, was du anbietest.",
-  "Sie finden Kontakt, Standort und nächste Schritte ohne Umwege.",
-  "Die Seite bleibt auf dem Handy lesbar und ruhig bedienbar.",
-  "Wichtige Fragen werden beantwortet, bevor jemand anruft oder schreibt.",
+const includedItems = [
+  "Persönliches Kennenlernen",
+  "Strukturiertes Onboarding",
+  "Seiten- und Inhaltsstruktur",
+  "Individuelles Design passend zu deinem Betrieb",
+  "Unterstützung bei Struktur und Texten",
+  "Umsetzung bis zu 5 Inhaltsseiten",
+  "Responsive Darstellung für Smartphone, Tablet und Desktop",
+  "Kontaktmöglichkeiten und wichtige Unternehmensinformationen",
+  "Technische SEO-Grundlagen",
+  "Seitentitel und Meta-Descriptions",
+  "Technische Einbindung von Impressum und Datenschutz",
+  "Veröffentlichung",
+  "Übergabe",
+  "Abschließende Qualitätsprüfung",
 ];
 
-const timeline = [
+const processSteps = [
   {
-    title: "Verstehen",
-    text: "Wir klären, was dein Unternehmen ausmacht und was Besucher wissen müssen.",
+    title: "Zuhören",
+    text: "Du erzählst uns, wie dein Betrieb wirklich funktioniert.",
   },
   {
     title: "Sortieren",
-    text: "Angebot, Inhalte und Kontaktwege werden in eine einfache Reihenfolge gebracht.",
-  },
-  {
-    title: "Schreiben",
-    text: "Texte werden ruhig formuliert, ohne Fachsprache und ohne Übertreibung.",
-  },
-  {
-    title: "Gestalten",
-    text: "Die Seite bekommt eine klare Form, die zu deinem Unternehmen passt.",
+    text: "Wir finden heraus, was deine Kunden verstehen müssen.",
   },
   {
     title: "Umsetzen",
-    text: "Die Mini-Website wird mobil sauber aufgebaut und technisch geprüft.",
-  },
-  {
-    title: "Starten",
-    text: "Nach der Freigabe geht die Seite online und kann später weiter wachsen.",
+    text: "Wir bauen daraus eine klare Website, die zu deinem Betrieb passt.",
   },
 ];
 
-const services = [
+const offerDetails = [
   {
-    title: "Struktur",
-    text: "Besucher finden schneller, was wichtig ist und welcher Schritt als Nächstes kommt.",
+    title: "Bis zu 5 Inhaltsseiten",
+    text: "Genug Raum für Angebot, Vertrauen, Kontakt und wichtige Informationen.",
   },
   {
-    title: "Texte",
-    text: "Dein Angebot wird verständlich, ohne Fachsprache und ohne Übertreibung.",
+    title: "2–3 Wochen",
+    text: "In der Regel nach vollständigem Onboarding.",
   },
   {
-    title: "Design",
-    text: "Der Auftritt wirkt ruhig, passend und schafft einen verlässlichen ersten Eindruck.",
+    title: "1 Korrekturrunde",
+    text: "Eine gebündelte Korrekturrunde ist im Angebot enthalten.",
   },
   {
-    title: "Kontakt",
-    text: "Menschen wissen schneller, wie sie dich erreichen und was sie dafür brauchen.",
+    title: "Klare Zahlung",
+    text: "50 % zum Start · 50 % zum Abschluss",
   },
-];
-
-const growthOptions = [
-  "weitere Seiten für Leistungen oder Standorte",
-  "Referenzen, Projekte oder Bildergalerien",
-  "bessere lokale Sichtbarkeit",
-  "zusätzliche Kontakt- oder Anfragewege",
 ];
 
 function SectionHeading({
@@ -169,23 +147,25 @@ function TextSection({
   );
 }
 
-export default function MiniSitePage() {
+export default function JamokoWebsitePage() {
   return (
     <div className="relative overflow-hidden">
       <section className="px-6 py-16 sm:px-8 md:py-24">
         <div className="mx-auto max-w-6xl">
           <div className="max-w-3xl">
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#E5C58B]">
-              Mini-Website
+              JaMoKo Website
             </p>
             <h1 className="mt-5 text-4xl font-light leading-tight text-white sm:text-5xl md:text-6xl">
-              Klein starten.
-              <span className="block text-white/40">Klar wachsen.</span>
+              Deine Arbeit ist gut.
+              <span className="block text-white/40">
+                Deine Website sollte das zeigen.
+              </span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-white/58">
-              Eine JaMoKo Mini-Website ist ein ruhiger digitaler Startpunkt. Sie
-              erklärt, wer du bist, was du anbietest und wie Menschen dich
-              erreichen. Für lokale Unternehmen in Hamburg und darüber hinaus.
+              Du kennst dein Geschäft. Wir bringen auf den Punkt, was dich
+              ausmacht – und bauen daraus eine klare Website, auf der Menschen
+              schnell verstehen, warum sie bei dir richtig sind.
             </p>
             <Link
               href="/kontakt"
@@ -198,31 +178,13 @@ export default function MiniSitePage() {
         </div>
       </section>
 
-      <TextSection eyebrow="Einordnung" title="Warum Mini-Website">
+      <TextSection
+        eyebrow="Einfach statt kompliziert"
+        title="Du brauchst keine komplizierte Website."
+      >
         <p>
-          Nicht jedes Unternehmen braucht zum Start eine große Website. Oft
-          braucht es zuerst einen klaren Ort, an dem Besucher verstehen, worum
-          es geht.
-        </p>
-        <p>
-          Eine Mini-Website sammelt die wichtigsten Informationen: Angebot,
-          Vertrauen, Standort und Kontakt. Nicht mehr als nötig. Aber genug, um
-          eine gute Entscheidung leichter zu machen.
-        </p>
-        <p>
-          Sie ist besonders dann sinnvoll, wenn ein Betrieb sichtbar werden
-          möchte, ohne sofort ein großes Projekt daraus zu machen.
-        </p>
-        <p>
-          Wenn du vorher wissen möchtest, wie JaMoKo Preise einordnet, findest
-          du eine ruhige Übersicht auf der{" "}
-          <Link
-            href="/preise"
-            className="font-semibold text-[#E5C58B] transition hover:text-[#efd49f]"
-          >
-            Preiseseite
-          </Link>
-          .
+          Menschen wollen schnell wissen, was du machst, ob du zu ihnen passt
+          und wie sie dich erreichen. Genau darauf konzentrieren wir uns.
         </p>
       </TextSection>
 
@@ -230,11 +192,11 @@ export default function MiniSitePage() {
         <div className="mx-auto max-w-6xl">
           <SectionHeading
             eyebrow="Für wen"
-            title="Fünf typische Startpunkte"
-            intro="Die Mini-Website passt zu Unternehmen, die verständlich sichtbar werden möchten und einen ruhigen Einstieg suchen."
+            title="Für lokale Betriebe, Handwerker und Selbstständige"
+            intro="Für Unternehmen, die ihre Arbeit klar zeigen und den nächsten Schritt einfach machen möchten."
           />
 
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {audiences.map(({ title, text, icon: Icon }) => (
               <article
                 key={title}
@@ -258,13 +220,13 @@ export default function MiniSitePage() {
       <section className="px-6 py-20 sm:px-8 md:py-28">
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <SectionHeading
-            eyebrow="Besucher"
-            title="Nutzen für Besucher"
-            intro="Eine gute Mini-Website denkt nicht zuerst an Seitenumfang. Sie denkt an Menschen, die gerade eine schnelle, klare Antwort suchen."
+            eyebrow="Leistungsumfang"
+            title="Was enthalten ist"
+            intro="Der Standardumfang ist klar definiert und auf einen ruhigen, verständlichen Auftritt ausgerichtet."
           />
           <div className="rounded-3xl border border-white/10 bg-white/[0.025] p-7 sm:p-8">
             <ul className="space-y-4">
-              {visitorBenefits.map((item) => (
+              {includedItems.map((item) => (
                 <li key={item} className="flex gap-3 text-sm text-white/62">
                   <CheckCircle2
                     className="mt-0.5 h-4 w-4 shrink-0 text-[#1AC7A4]"
@@ -281,25 +243,21 @@ export default function MiniSitePage() {
       <section className="border-y border-white/10 bg-white/[0.025] px-6 py-20 sm:px-8 md:py-28">
         <div className="mx-auto max-w-6xl">
           <SectionHeading
-            eyebrow="Ablauf"
-            title="Eine ruhige Timeline"
-            intro="Die Mini-Website entsteht in kleinen, nachvollziehbaren Schritten. So bleibt der Aufwand überschaubar und jede Entscheidung verständlich."
+            eyebrow="Arbeitsweise"
+            title="Zuhören. Sortieren. Umsetzen."
+            intro="Drei klare Schritte führen von deinem Wissen über den Betrieb zu einer Website, die deine Kunden verstehen."
           />
 
           <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {timeline.map((step, index) => (
+            {processSteps.map((step, index) => (
               <article
                 key={step.title}
                 className="rounded-3xl border border-white/10 bg-white/[0.025] p-7"
               >
-                <div className="mb-10 flex items-center justify-between">
+                <div className="mb-10">
                   <span className="text-sm tracking-[0.2em] text-[#E5C58B]">
                     0{index + 1}
                   </span>
-                  <SearchCheck
-                    className="h-4 w-4 text-white/20"
-                    aria-hidden="true"
-                  />
                 </div>
                 <h2 className="text-xl font-medium text-white">
                   {step.title}
@@ -316,26 +274,25 @@ export default function MiniSitePage() {
       <section className="px-6 py-20 sm:px-8 md:py-28">
         <div className="mx-auto max-w-6xl">
           <SectionHeading
-            eyebrow="Leistungen"
-            title="Was eine Mini-Website enthält"
-            intro="Der genaue Umfang richtet sich nach deinem Unternehmen. Diese vier Bereiche bilden meist die Grundlage."
+            eyebrow="Angebot"
+            title="JaMoKo Website"
+            intro="Ein klarer Rahmen für lokale Betriebe, Handwerker und Selbstständige."
           />
+          <p className="mt-8 text-4xl font-light text-[#E5C58B] sm:text-5xl">
+            ab 1.490 €
+          </p>
 
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {services.map((service) => (
+            {offerDetails.map((detail) => (
               <article
-                key={service.title}
+                key={detail.title}
                 className="rounded-3xl border border-white/10 bg-white/[0.025] p-7"
               >
-                <Smartphone
-                  className="h-5 w-5 text-[#E5C58B]"
-                  aria-hidden="true"
-                />
-                <h2 className="mt-8 text-xl font-medium text-white">
-                  {service.title}
+                <h2 className="text-xl font-medium text-white">
+                  {detail.title}
                 </h2>
                 <p className="mt-3 text-sm leading-relaxed text-white/52">
-                  {service.text}
+                  {detail.text}
                 </p>
               </article>
             ))}
@@ -346,29 +303,16 @@ export default function MiniSitePage() {
       <section className="border-y border-white/10 bg-white/[0.025] px-6 py-20 sm:px-8 md:py-28">
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <SectionHeading
-            eyebrow="Weiterentwicklung"
-            title="Kann die Website später wachsen?"
-            intro="Ja. Eine Mini-Website ist kein Ende. Sie ist ein sauberer Anfang."
+            eyebrow="Zusätzlicher Bedarf"
+            title="Wenn dein Projekt mehr braucht"
+            intro="Manche Vorhaben gehen über den klar definierten Standardumfang hinaus."
           />
           <div className="space-y-6 text-base leading-8 text-white/58">
             <p>
-              Wenn dein Unternehmen wächst, kann die Website mitwachsen. Neue
-              Leistungen, Referenzen, Standorte oder Kontaktwege lassen sich
-              später ergänzen.
+              Shops, komplexe Buchungssysteme, individuelle Web-Apps,
+              umfangreiche Migrationen oder laufende Betreuung besprechen wir
+              separat vor Projektstart.
             </p>
-            <div className="rounded-3xl border border-white/10 bg-white/[0.025] p-7 sm:p-8">
-              <ul className="space-y-4">
-                {growthOptions.map((item) => (
-                  <li key={item} className="flex gap-3 text-sm text-white/62">
-                    <CheckCircle2
-                      className="mt-0.5 h-4 w-4 shrink-0 text-[#1AC7A4]"
-                      aria-hidden="true"
-                    />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
           </div>
         </div>
       </section>
@@ -377,10 +321,10 @@ export default function MiniSitePage() {
         <div className="mx-auto max-w-6xl">
           <blockquote className="rounded-[2rem] border border-[#E5C58B]/30 bg-[#E5C58B]/[0.07] px-7 py-12 sm:px-10 md:px-14 md:py-16">
             <p className="max-w-4xl text-3xl font-light leading-tight text-white sm:text-4xl md:text-5xl">
-              Eine Mini-Website ist keine kleine Lösung.
+              Deine Arbeit verdient einen Auftritt,
             </p>
             <p className="mt-8 max-w-3xl text-3xl font-light leading-tight text-[#E5C58B] sm:text-4xl md:text-5xl">
-              Sie ist eine klare Lösung.
+              der sie klar und ehrlich zeigt.
             </p>
           </blockquote>
         </div>
@@ -395,9 +339,8 @@ export default function MiniSitePage() {
             Kostenlos kennenlernen
           </h2>
           <p className="mt-5 max-w-2xl leading-relaxed text-[#001821]/65">
-            In einem kurzen Gespräch klären wir, ob eine Mini-Website der
-            richtige nächste Schritt ist und welche Inhalte wirklich wichtig
-            sind.
+            In einem kurzen Gespräch klären wir, was dein Betrieb braucht und
+            ob die JaMoKo Website der richtige nächste Schritt ist.
           </p>
           <Link
             href="/kontakt"

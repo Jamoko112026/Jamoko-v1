@@ -2,8 +2,8 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2, Eye } from "lucide-react";
 
 const trustItems = [
-  "Für Handwerk, Dienstleister und Selbstständige",
-  "Direkte Zusammenarbeit mit uns",
+  "Für Handwerk, Dienstleister und lokale Unternehmen",
+  "Direkte persönliche Zusammenarbeit",
   "Klare Website ohne Agentur-Floskeln",
 ];
 
@@ -28,13 +28,15 @@ export function Hero() {
             Webdesign für lokale Unternehmen
           </p>
           <h1 className="max-w-3xl text-[2.55rem] font-light leading-[1.06] tracking-normal text-white sm:text-5xl md:text-6xl">
-            Eine Website, die Menschen verstehen lässt,
-            <span className="block text-[#E5C58B]">warum sie bei dir richtig sind.</span>
+            Deine Arbeit ist gut.
+            <span className="block text-[#E5C58B]">
+              Deine Website sollte das zeigen.
+            </span>
           </h1>
           <p className="mt-7 max-w-2xl text-lg font-light leading-8 text-white/70 md:text-xl md:leading-9">
-            Wir hören zu, sortieren dein Angebot und bauen daraus einen ruhigen
-            Auftritt. Damit Besucher schneller Vertrauen fassen und leichter
-            Kontakt aufnehmen.
+            Du kennst dein Geschäft. Wir bringen auf den Punkt, was dich ausmacht
+            – und bauen daraus eine klare Website, auf der Menschen schnell
+            verstehen, warum sie bei dir richtig sind.
           </p>
 
           <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">

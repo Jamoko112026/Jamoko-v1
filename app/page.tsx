@@ -19,14 +19,14 @@ import { StructuredData, homePageJsonLd } from "./structured-data";
 export const metadata: Metadata = {
   title: "JaMoKo – Webdesign Hamburg für lokale Unternehmen",
   description:
-    "Ruhiges Webdesign aus Hamburg für lokale Unternehmen, Handwerker und Dienstleister. Klar strukturiert, mobil optimiert und persönlich betreut.",
+    "Klare Websites für lokale Betriebe, Handwerker, Dienstleister und Selbstständige. Persönlich entwickelt, mobil optimiert und verständlich umgesetzt.",
   alternates: {
     canonical: "https://jamoko.de",
   },
   openGraph: {
     title: "JaMoKo – Webdesign Hamburg für lokale Unternehmen",
     description:
-      "Mini-Websites und klare digitale Auftritte für lokale Unternehmen, Handwerker und Dienstleister.",
+      "Klare Websites für lokale Betriebe, Handwerker, Dienstleister und Selbstständige. Persönlich entwickelt, mobil optimiert und verständlich umgesetzt.",
     url: "https://jamoko.de",
     images: [
       {
@@ -41,38 +41,34 @@ export const metadata: Metadata = {
 
 const trustItems = [
   {
-    title: "Schneller verständlich",
-    text: "Besucher erkennen früher, was du anbietest und wie sie dich erreichen.",
+    title: "Schnell verstanden",
+    text: "Deine Kunden erkennen, was du anbietest und wie sie dich erreichen.",
     icon: Clock3,
   },
   {
-    title: "Direkte Zusammenarbeit",
-    text: "Du arbeitest mit uns persönlich und ohne anonyme Abstimmungsschleifen.",
+    title: "Persönlich entwickelt",
+    text: "Wir hören zu und entwickeln die Website gemeinsam mit dir.",
     icon: Handshake,
   },
   {
-    title: "Für Mobilgeräte gedacht",
-    text: "Menschen können dein Angebot auch unterwegs ruhig lesen und anfragen.",
+    title: "Auf jedem Gerät",
+    text: "Deine Website funktioniert klar und angenehm auf Smartphone, Tablet und Desktop.",
     icon: Smartphone,
   },
 ];
 
-const audienceItems = [
+const whySteps = [
   {
-    title: "Handwerk",
-    text: "Deine gute Arbeit wird sichtbar, ohne lauter wirken zu müssen.",
+    title: "Zuhören",
+    text: "Du erzählst uns, wie dein Betrieb wirklich funktioniert.",
   },
   {
-    title: "Dienstleister",
-    text: "Besucher verstehen schneller, welches Problem du löst.",
+    title: "Sortieren",
+    text: "Wir finden heraus, was deine Kunden verstehen müssen.",
   },
   {
-    title: "Selbstständige",
-    text: "Deine Haltung, dein Angebot und der nächste Schritt stehen klar zusammen.",
-  },
-  {
-    title: "Lokale Unternehmen",
-    text: "Standort, Vertrauen und Kontaktwege werden verständlich geführt.",
+    title: "Umsetzen",
+    text: "Wir bauen daraus eine klare Website, die zu deinem Betrieb passt.",
   },
 ];
 
@@ -99,7 +95,7 @@ type HomeProject = {
 const projects: HomeProject[] = [
   {
     title: "Goldschmiede",
-    category: "Branche · Konzept",
+    category: "Handwerk · Konzept",
     description:
       "Ein ruhiger digitaler Auftritt, der Handwerkskunst, persönliche Beratung und individuelle Schmuckstücke verständlich verbindet.",
     concept: "goldsmith",
@@ -124,24 +120,6 @@ const projects: HomeProject[] = [
   },
 ];
 
-const processSteps = [
-  {
-    number: "01",
-    title: "Kennenlernen",
-    text: "Wir klären Angebot, Zielgruppe und was deine Website für dich leisten soll.",
-  },
-  {
-    number: "02",
-    title: "Konzept & Vorschau",
-    text: "Du siehst früh, wie Struktur, Inhalte und Gestaltung zusammenspielen.",
-  },
-  {
-    number: "03",
-    title: "Umsetzung & Go-Live",
-    text: "Nach deiner Freigabe optimieren wir alles für Mobilgeräte und bringen die Seite online.",
-  },
-];
-
 const outcomes = [
   {
     title: "Vertrauen auf den ersten Blick",
@@ -154,42 +132,30 @@ const outcomes = [
     icon: Sparkles,
   },
   {
-    title: "Mehr passende Anfragen",
-    text: "Menschen verstehen dein Angebot besser und melden sich gezielter bei dir.",
+    title: "Kontakt leichter machen",
+    text: "Menschen verstehen dein Angebot und finden schnell den richtigen Weg, dich anzusprechen.",
     icon: MessageCircle,
   },
 ];
 
-const pricingPackages = [
-  {
-    title: "Mini-Site Basic",
-    price: "890 €",
-    subtitle: "Für eine klare digitale Präsenz",
-    features: [
-      "Besucher verstehen dein Angebot schneller",
-      "Dein Auftritt wirkt persönlich und ruhig",
-      "Deine Website funktioniert angenehm auf dem Handy",
-      "Kontaktaufnahme wird einfacher",
-      "Standort und Öffnungszeiten sind schnell auffindbar",
-      "Google kann die wichtigsten Inhalte sauber einordnen",
-      "Rechtliche Basis-Seiten sind erreichbar",
-    ],
-  },
-  {
-    title: "Mini-Site Plus",
-    price: "1.490 €",
-    subtitle: "Für einen umfangreicheren Auftritt",
-    features: [
-      "Mehr Raum für Leistungen und Zielgruppen",
-      "Klarere Wiedererkennung für dein Unternehmen",
-      "Mehr Vertrauen vor der ersten Anfrage",
-      "Bilder oder Referenzen machen deine Arbeit greifbarer",
-      "Bessere Grundlage für lokale Sichtbarkeit",
-      "Mehr Ruhe für gemeinsame Entscheidungen",
-    ],
-    highlight: true,
-  },
-];
+const pricingOffer = {
+  title: "JaMoKo Website",
+  price: "ab 1.490 €",
+  subtitle: "Für lokale Betriebe, Handwerker und Selbstständige",
+  features: [
+    "Bis zu 5 Inhaltsseiten",
+    "Individuelles Design passend zu deinem Betrieb",
+    "Hilfe bei Struktur und Texten",
+    "Optimiert für Smartphone, Tablet und Desktop",
+    "Technische SEO-Grundlagen",
+    "Kontakt, Öffnungszeiten und wichtige Unternehmensinfos",
+    "Impressum und Datenschutz technisch eingebunden",
+    "1 gebündelte Korrekturrunde",
+    "Veröffentlichung und Übergabe",
+  ],
+  timeline: "In der Regel 2–3 Wochen nach vollständigem Onboarding",
+  payment: "50 % zum Start · 50 % zum Abschluss",
+};
 
 const calendlyUrl =
   "https://calendly.com/moin-jamoko/jamoko-mini-site-kennenlernen-15-min";
@@ -297,18 +263,18 @@ function ProjectsSection() {
       <div className="mb-14 flex flex-col justify-between gap-6 md:mb-16 md:flex-row md:items-end">
         <div className="max-w-2xl">
           <p className="jmk-light-eyebrow mb-4 text-xs font-semibold uppercase tracking-[0.28em]">
-            Ausgewählte Projekte
+            So denken wir Websites
           </p>
           <h2 className="jmk-light-heading text-3xl font-light leading-tight sm:text-4xl md:text-5xl">
-            So wird Qualität
+            Jeder Betrieb ist anders.
             <span className="jmk-light-heading-muted block">
-              digital sichtbar.
+              Seine Website sollte es auch sein.
             </span>
           </h2>
         </div>
         <p className="jmk-light-copy max-w-sm text-sm leading-relaxed md:text-right">
-          Webdesign für lokale Unternehmen funktioniert dann gut, wenn Struktur,
-          Sprache und Kontaktwege zum Betrieb passen.
+          Unsere Beispiele zeigen, wie unterschiedlich ein digitaler Auftritt
+          aussehen kann, wenn er vom Betrieb ausgeht – und nicht vom Template.
         </p>
       </div>
 
@@ -327,58 +293,9 @@ function ProjectsSection() {
           href="/projekte"
           className="jmk-light-link inline-flex items-center gap-2 text-sm font-semibold transition"
         >
-          Alle Projekte und Konzepte ansehen
+          Alle Beispiele ansehen
           <ArrowRight className="h-4 w-4" aria-hidden="true" />
         </Link>
-      </div>
-    </div>
-  );
-}
-
-function ProcessSection() {
-  return (
-    <div>
-      <div className="mx-auto mb-14 max-w-2xl text-center md:mb-16">
-        <p className="jmk-light-eyebrow mb-4 text-xs font-semibold uppercase tracking-[0.28em]">
-          Zusammenarbeit
-        </p>
-        <h2 className="jmk-light-heading text-3xl font-light sm:text-4xl md:text-5xl">
-          Klarer Prozess.
-          <span className="jmk-light-heading-muted block">
-            Wenig Aufwand für dich.
-          </span>
-        </h2>
-        <p className="jmk-light-copy mt-6 leading-relaxed">
-          Du kennst dein Geschäft. Wir übersetzen seine Qualität in einen
-          verständlichen digitalen Auftritt.
-        </p>
-      </div>
-
-      <div className="grid gap-4 lg:grid-cols-3">
-        {processSteps.map((step, index) => (
-          <article
-            key={step.number}
-            className="jmk-card-light relative rounded-3xl border p-7 sm:p-8"
-          >
-            <div className="mb-14 flex items-center justify-between">
-              <span className="jmk-light-gold text-sm tracking-[0.2em]">
-                {step.number}
-              </span>
-              {index < processSteps.length - 1 ? (
-                <ArrowRight
-                  className="jmk-light-gold hidden h-4 w-4 lg:block"
-                  aria-hidden="true"
-                />
-              ) : null}
-            </div>
-            <h3 className="jmk-light-heading text-xl font-medium">
-              {step.title}
-            </h3>
-            <p className="jmk-light-copy mt-4 text-sm leading-relaxed">
-              {step.text}
-            </p>
-          </article>
-        ))}
       </div>
     </div>
   );
@@ -389,22 +306,22 @@ function WhyJamokoSection() {
     <div>
       <div className="mb-14 max-w-2xl md:mb-16">
         <p className="jmk-light-eyebrow mb-4 text-xs font-semibold uppercase tracking-[0.28em]">
-          Warum JaMoKo?
+          Einfach statt kompliziert
         </p>
         <h2 className="jmk-light-heading text-3xl font-light leading-tight sm:text-4xl md:text-5xl">
-          Weil gute Arbeit
+          Du brauchst keine komplizierte Website.
           <span className="jmk-light-heading-muted block">
-            klar gesehen werden sollte.
+            Deine Kunden brauchen Klarheit.
           </span>
         </h2>
         <p className="jmk-light-copy mt-6 leading-relaxed">
-          Wir bauen Websites für Menschen, die gute Arbeit leisten und online
-          verständlich wirken möchten. Nicht lauter. Klarer.
+          Menschen wollen schnell wissen, was du machst, ob du zu ihnen passt und
+          wie sie dich erreichen. Genau darauf konzentrieren wir uns.
         </p>
       </div>
 
-      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-        {audienceItems.map((item) => (
+      <div className="grid gap-5 md:grid-cols-3">
+        {whySteps.map((item) => (
           <article
             key={item.title}
             className="jmk-card-light rounded-3xl border p-7"
@@ -463,42 +380,20 @@ function PricingSection() {
     >
       <div className="mx-auto mb-14 max-w-3xl text-center md:mb-16">
         <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-[#E5C58B]">
-          Transparente Pakete
+          Klare Leistung
         </p>
         <h2 className="text-3xl font-light text-white sm:text-4xl md:text-5xl">
-          Klare Preise.
-          <span className="block text-white/70">
-            Ohne laufende Agenturkosten.
-          </span>
+          Du weißt vorher, was du bekommst.
+          <span className="block text-white/70">Und was es kostet.</span>
         </h2>
         <p className="mx-auto mt-6 max-w-2xl leading-relaxed text-white/75">
-          Eine faire Einmalzahlung für Konzeption, Gestaltung und technische
-          Umsetzung. Der genaue Umfang wird vor dem Start gemeinsam festgelegt.
+          Eine kompakte Unternehmenswebsite mit klar definiertem Umfang. Wenn
+          dein Projekt mehr braucht, besprechen wir das vor dem Start.
         </p>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-2">
-        {pricingPackages.map((item) => (
-          <PricingCard key={item.title} {...item} />
-        ))}
-      </div>
-
-      <div className="mt-10 text-center">
-        <div className="flex flex-col items-center justify-center gap-4 text-sm text-white/70 sm:flex-row">
-          <span>Unverbindliches Kennenlernen · Faire Einmalpreise</span>
-          <Link
-            href="/preise"
-            className="font-semibold text-[#E5C58B] transition hover:text-[#efd49f]"
-          >
-            Preisphilosophie ansehen
-          </Link>
-          <Link
-            href="/mini-site"
-            className="font-semibold text-[#E5C58B] transition hover:text-[#efd49f]"
-          >
-            Mini-Website verstehen
-          </Link>
-        </div>
+      <div className="mx-auto max-w-3xl">
+        <PricingCard {...pricingOffer} />
       </div>
     </section>
   );
@@ -509,37 +404,23 @@ function PricingCard({
   price,
   subtitle,
   features,
-  highlight = false,
+  timeline,
+  payment,
 }: {
   title: string;
   price: string;
   subtitle: string;
   features: string[];
-  highlight?: boolean;
+  timeline: string;
+  payment: string;
 }) {
   return (
-    <div
-      className={`relative flex flex-col rounded-3xl border p-7 transition duration-300 hover:-translate-y-1 sm:p-9 ${
-        highlight
-          ? "border-[#E5C58B]/60 bg-[#E5C58B]/[0.07] shadow-[0_20px_70px_rgba(229,197,139,0.08)]"
-          : "border-white/10 bg-white/[0.025]"
-      }`}
-    >
-      {highlight ? (
-        <span className="absolute -top-3 left-7 rounded-full bg-[#E5C58B] px-3 py-1 text-xs font-medium text-[#001821]">
-          Empfehlung
-        </span>
-      ) : null}
+    <div className="relative flex flex-col rounded-3xl border border-[#E5C58B]/60 bg-[#E5C58B]/[0.07] p-7 shadow-[0_20px_70px_rgba(229,197,139,0.08)] transition duration-300 hover:-translate-y-1 sm:p-9">
       <h3 className="text-xl font-medium text-white">{title}</h3>
       <p className="mt-2 text-sm text-white/70">{subtitle}</p>
-      <div className="mt-7 text-4xl font-light text-[#E5C58B]">
-        {price}
-        <span className="ml-2 text-sm font-normal text-white/70">
-          einmalig
-        </span>
-      </div>
+      <div className="mt-7 text-4xl font-light text-[#E5C58B]">{price}</div>
       <div className="my-7 h-px bg-white/10" />
-      <ul className="mb-9 space-y-3 text-sm text-white/75">
+      <ul className="space-y-3 text-sm text-white/75">
         {features.map((feature) => (
           <li key={feature} className="flex gap-3">
             <CheckCircle2
@@ -550,17 +431,18 @@ function PricingCard({
           </li>
         ))}
       </ul>
+      <div className="my-7 h-px bg-white/10" />
+      <div className="mb-9 space-y-2 text-sm text-white/70">
+        <p>{timeline}</p>
+        <p>{payment}</p>
+      </div>
       <a
         href={calendlyUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className={`mt-auto inline-flex w-full items-center justify-center rounded-full px-6 py-3.5 text-sm font-medium transition ${
-          highlight
-            ? "bg-[#E5C58B] text-[#001821] hover:bg-[#efd49f]"
-            : "border border-white/15 text-white/75 hover:border-white/30 hover:bg-white/5 hover:text-white"
-        }`}
+        className="mt-auto inline-flex w-full items-center justify-center rounded-full bg-[#E5C58B] px-6 py-3.5 text-sm font-medium text-[#001821] transition hover:bg-[#efd49f]"
       >
-        Kennenlerngespräch buchen
+        Kostenlos kennenlernen
       </a>
     </div>
   );
@@ -587,14 +469,15 @@ function ContactSection() {
         <div className="relative grid gap-10 text-left lg:grid-cols-[1fr_auto] lg:items-end">
           <div className="max-w-3xl">
             <p className="mb-5 text-xs font-semibold uppercase tracking-[0.28em] text-[#001821]/55">
-              Unverbindlich starten
+              Einfach anfangen
             </p>
             <h2 className="text-3xl font-light leading-tight sm:text-4xl md:text-5xl">
-              Lass uns herausfinden, was deine Website wirklich braucht.
+              Moin sagen reicht.
             </h2>
             <p className="mt-6 max-w-2xl leading-relaxed text-[#001821]/65">
-              In 15 Minuten klären wir dein Ziel, den passenden Umfang und ob
-              JaMoKo zu deinem Projekt passt. Persönlich und ohne Verkaufsdruck.
+              Du musst noch nicht wissen, welche Seiten, Funktionen oder Technik
+              du brauchst. Erzähl uns einfach kurz von deinem Betrieb und davon,
+              was du verändern möchtest.
             </p>
           </div>
           <a
@@ -602,7 +485,7 @@ function ContactSection() {
             className="inline-flex w-fit items-center gap-3 rounded-full bg-[#001821] px-7 py-4 text-sm font-medium text-white transition hover:-translate-y-0.5"
           >
             <Mail className="h-4 w-4" aria-hidden="true" />
-            Gespräch anfragen
+            Kostenlos kennenlernen
             <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </a>
         </div>
@@ -622,7 +505,7 @@ function ContactSection() {
             0176 8203 2127
           </a>
           <span className="sm:ml-auto">
-            Antwort meist innerhalb von 24 Stunden
+            Das erste Kennenlernen dauert etwa 15 Minuten und ist kostenlos.
           </span>
         </div>
       </div>
@@ -645,11 +528,6 @@ export default function HomePage() {
         <section className="jmk-section-light jmk-section-mist">
           <div className="jmk-section-content mx-auto max-w-6xl px-6 py-24 sm:px-8 md:py-32">
             <ProjectsSection />
-          </div>
-        </section>
-        <section className="jmk-section-light jmk-section-paper">
-          <div className="jmk-section-content mx-auto max-w-6xl px-6 py-24 sm:px-8 md:py-32">
-            <ProcessSection />
           </div>
         </section>
         <div className="mx-auto max-w-6xl px-6 sm:px-8">

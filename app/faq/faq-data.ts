@@ -1,23 +1,42 @@
 export const faqItems = [
   {
-    question: "Was kostet eine Mini-Website?",
+    question: "Was kostet eine JaMoKo Website?",
     answer:
-      "Der Einstieg beginnt bei JaMoKo ab 199 Euro. Der genaue Preis hängt davon ab, wie viele Inhalte vorhanden sind, welche Seiten gebraucht werden und wie viel Abstimmung sinnvoll ist.",
+      "Das Standardangebot startet ab 1.490 €. Der genaue Umfang wird vor Projektbeginn gemeinsam festgelegt.",
   },
   {
     question: "Wie lange dauert die Umsetzung?",
     answer:
-      "Kleine Mini-Websites können oft zügig entstehen. Der genaue Zeitrahmen hängt davon ab, wie klar Angebot, Inhalte und Bilder bereits vorliegen.",
+      "In der Regel 2–3 Wochen nach vollständigem Onboarding. Die tatsächliche Dauer hängt unter anderem davon ab, wann Inhalte und Feedback vorliegen.",
   },
   {
-    question: "Für wen eignet sich eine Mini-Website?",
+    question: "Wie viele Seiten sind enthalten?",
     answer:
-      "Eine Mini-Website eignet sich für lokale Unternehmen, Handwerker, Dienstleister, Praxen, Studios und Selbstständige, die klar und verständlich online sichtbar werden möchten.",
+      "Im Standardangebot sind bis zu 5 Inhaltsseiten enthalten. Impressum und Datenschutz zählen dabei nicht als reguläre Inhaltsseiten.",
+  },
+  {
+    question: "Wie viele Korrekturrunden sind enthalten?",
+    answer:
+      "Eine gebündelte Korrekturrunde ist enthalten. Zusätzliche oder nachträgliche Erweiterungen werden separat vereinbart.",
+  },
+  {
+    question: "Wie läuft die Zahlung?",
+    answer: "50 % zum Start und 50 % nach Abnahme zum Abschluss.",
+  },
+  {
+    question: "Muss ich fertige Texte mitbringen?",
+    answer:
+      "Nein. Du lieferst die fachlichen Inhalte und Unternehmensinformationen. JaMoKo hilft dabei, diese zu strukturieren und verständlich zu formulieren.",
+  },
+  {
+    question: "Für wen eignet sich die JaMoKo Website?",
+    answer:
+      "Die JaMoKo Website eignet sich für lokale Betriebe, Handwerker, Dienstleister und Selbstständige, die ihr Angebot klar und verständlich zeigen möchten.",
   },
   {
     question: "Kann die Website später erweitert werden?",
     answer:
-      "Ja. Eine Mini-Website kann später um weitere Leistungen, Referenzen, Standorte, FAQ, Bilder oder Kontaktwege ergänzt werden.",
+      "Ja. Zusätzliche Leistungen, Referenzen, Standorte, FAQ, Bilder oder Kontaktwege können als Erweiterung separat vereinbart werden.",
   },
   {
     question: "Gibt es laufende Kosten?",
@@ -27,6 +46,6 @@ export const faqItems = [
   {
     question: "Wie läuft die Zusammenarbeit ab?",
     answer:
-      "Wir beginnen mit einem Gespräch, sortieren Ziel, Inhalte und Umfang und setzen die Website Schritt für Schritt um. Vor dem Livegang wird alles gemeinsam geprüft.",
+      "Wir beginnen mit einem etwa 15-minütigen kostenlosen Kennenlernen, sortieren Ziel, Inhalte und Umfang und setzen die Website anschließend Schritt für Schritt um. Vor der Veröffentlichung wird alles gemeinsam geprüft.",
   },
 ];
