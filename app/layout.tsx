@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image-v2.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "JaMoKo – Websites für Handwerksbetriebe",
