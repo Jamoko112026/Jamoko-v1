@@ -47,7 +47,7 @@ export const siteJsonLd = {
       name: "JaMoKo",
       url: siteUrl,
       logo: `${siteUrl}/favicon-512.png`,
-      image: `${siteUrl}/og-image.png`,
+      image: `${siteUrl}/og-image-v2.png`,
       email: "moin@jamoko.de",
       telephone: "+49 176 82032127",
       description: siteDescription,
@@ -116,7 +116,7 @@ export const homePageJsonLd = {
       },
       primaryImageOfPage: {
         "@type": "ImageObject",
-        url: `${siteUrl}/og-image.png`,
+        url: `${siteUrl}/og-image-v2.png`,
       },
     },
     {

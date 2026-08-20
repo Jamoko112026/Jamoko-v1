@@ -11,7 +11,7 @@ interface SEOProps {
 export default function SEO({
   title = "JaMoKo – Ruhige Mini-Websites für lokale Betriebe",
   description = "Ruhige Mini-Websites für lokale Betriebe. Klar. Persönlich. Wirksam. Digitale Präsenz ohne Stress.",
-  image = "/og-image.png",
+  image = "/og-image-v2.png",
   url = "https://jamoko.de",
   noIndex = false,
 }: SEOProps) {
