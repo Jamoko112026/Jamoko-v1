@@ -8,15 +8,15 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://jamoko.de"),
   title: {
-    default: "JaMoKo – Webdesign Hamburg für lokale Unternehmen",
+    default: "JaMoKo – Websites für Handwerksbetriebe",
     template: "%s · JaMoKo",
   },
   description:
-    "Klare Websites aus Hamburg für lokale Betriebe, Handwerker, Dienstleister und Selbstständige. Persönlich entwickelt, mobil optimiert und verständlich umgesetzt.",
+    "Klare Websites für Handwerksbetriebe und lokale Unternehmen – persönlich begleitet von der Struktur bis zur Veröffentlichung.",
   openGraph: {
-    title: "JaMoKo – Webdesign Hamburg für lokale Unternehmen",
+    title: "JaMoKo – Websites für Handwerksbetriebe",
     description:
-      "Klare Websites aus Hamburg für lokale Betriebe, Handwerker, Dienstleister und Selbstständige. Persönlich entwickelt, mobil optimiert und verständlich umgesetzt.",
+      "Klare Websites für Handwerksbetriebe und lokale Unternehmen – persönlich begleitet von der Struktur bis zur Veröffentlichung.",
     url: "https://jamoko.de",
     siteName: "JaMoKo",
     locale: "de_DE",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "JaMoKo – Webdesign Hamburg für lokale Unternehmen",
+        alt: "JaMoKo – Websites für Handwerksbetriebe",
       },
     ],
   },

@@ -17,23 +17,23 @@ import { ConceptPlaceholder } from "@/components/landing/ConceptPlaceholder";
 import { StructuredData, homePageJsonLd } from "./structured-data";
 
 export const metadata: Metadata = {
-  title: "JaMoKo – Webdesign Hamburg für lokale Unternehmen",
+  title: "JaMoKo – Websites für Handwerksbetriebe",
   description:
-    "Klare Websites für lokale Betriebe, Handwerker, Dienstleister und Selbstständige. Persönlich entwickelt, mobil optimiert und verständlich umgesetzt.",
+    "Klare Websites für Handwerksbetriebe und lokale Unternehmen – persönlich begleitet von der Struktur bis zur Veröffentlichung.",
   alternates: {
     canonical: "https://jamoko.de",
   },
   openGraph: {
-    title: "JaMoKo – Webdesign Hamburg für lokale Unternehmen",
+    title: "JaMoKo – Websites für Handwerksbetriebe",
     description:
-      "Klare Websites für lokale Betriebe, Handwerker, Dienstleister und Selbstständige. Persönlich entwickelt, mobil optimiert und verständlich umgesetzt.",
+      "Klare Websites für Handwerksbetriebe und lokale Unternehmen – persönlich begleitet von der Struktur bis zur Veröffentlichung.",
     url: "https://jamoko.de",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "JaMoKo – Webdesign Hamburg",
+        alt: "JaMoKo – Websites für Handwerksbetriebe",
       },
     ],
   },
