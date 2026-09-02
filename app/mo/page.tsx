@@ -119,6 +119,19 @@ export default function MoPage() {
               Webdesign und der praktischen Arbeit an digitalen Projekten.
             </p>
             <p>
+              Ich habe JaMoKo aufgebaut, weil ich immer wieder sehe: Menschen
+              leisten gute Arbeit, aber online wird sie nicht so verständlich
+              sichtbar, wie sie es verdient. Gleichzeitig wird digitale Arbeit
+              schnell unnötig kompliziert und belastend.
+            </p>
+            <p>
+              Ich möchte beides zusammenbringen: gute Arbeit sichtbar machen
+              und digitale Aufgaben so ordnen, dass sie für die Menschen
+              dahinter überschaubar werden. Dabei kann ich persönlich und
+              unabhängig arbeiten – nah an den Unternehmen und ohne unnötige
+              Umwege.
+            </p>
+            <p>
               Mich interessiert nicht, wie eine Website möglichst groß oder
               technisch klingt. Mich interessiert, ob ein Mensch sich darauf
               zurechtfindet, Vertrauen fasst und eine gute Entscheidung treffen
