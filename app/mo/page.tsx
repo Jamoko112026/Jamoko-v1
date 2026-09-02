@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -67,11 +68,15 @@ export default function MoPage() {
           </div>
 
           <aside className="relative rounded-[2rem] border border-[#E5C58B]/25 bg-white/[0.035] p-7 sm:p-9">
-            <div
-              aria-hidden="true"
-              className="flex h-28 w-28 items-center justify-center rounded-[2rem] border border-[#E5C58B]/25 bg-[#E5C58B]/10 text-3xl font-semibold tracking-[0.08em] text-[#E5C58B]"
-            >
-              MO
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[1.75rem] border border-[#E5C58B]/20 bg-[#001821]">
+              <Image
+                src="/mo-portrait-v1.webp"
+                alt="Jan-Moritz Koch, persönlicher Ansprechpartner bei JaMoKo"
+                fill
+                priority
+                sizes="(min-width: 1024px) 32vw, (min-width: 640px) 70vw, 100vw"
+                className="object-cover object-center"
+              />
             </div>
             <p className="mt-8 text-xl font-semibold text-white">
               Jan-Moritz Koch
