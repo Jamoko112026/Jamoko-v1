@@ -25,6 +25,8 @@ function MobileStickyCTA() {
   const [visible, setVisible] = useState(false);
   const lastScrollY = useRef(0);
   const heroVisible = useRef(true);
+  const currentPathname = usePathname();
+  const isDigitalStart = currentPathname === "/start";
 
   useEffect(() => {
     const hero = document.getElementById("hero");
@@ -80,7 +82,7 @@ function MobileStickyCTA() {
     >
       <div className="mx-auto flex max-w-md items-center justify-center px-4 py-3">
         <Link
-          href="/kontakt"
+          href={isDigitalStart ? "/start#situation" : "/kontakt"}
           className="
             w-full rounded-xl bg-[#E5C58B] py-3 text-center
             font-medium tracking-wide text-[#001821]
@@ -89,7 +91,7 @@ function MobileStickyCTA() {
             active:scale-[0.98]
           "
         >
-          Kostenlos kennenlernen
+          {isDigitalStart ? "Situation schildern" : "Kostenlos kennenlernen"}
         </Link>
       </div>
     </div>
@@ -101,6 +103,7 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const currentPathname = usePathname();
   const pathname = currentPathname ?? "/";
+  const isDigitalStart = pathname === "/start";
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -148,7 +151,7 @@ export function Header() {
                 JaMoKo
               </span>
               <span className="block text-[9px] uppercase tracking-[0.2em] text-white/70">
-                Webdesign Hamburg
+                {isDigitalStart ? "Digitale Orientierung" : "Webdesign Hamburg"}
               </span>
             </span>
           </Link>
@@ -181,10 +184,10 @@ export function Header() {
 
           <div className="hidden md:block">
             <Link
-              href="/kontakt"
+              href={isDigitalStart ? "#situation" : "/kontakt"}
               className="inline-flex items-center gap-2 rounded-full bg-[#E5C58B] px-5 py-2.5 text-sm font-semibold text-[#001821] transition hover:-translate-y-0.5 hover:bg-[#efd49f]"
             >
-              Kostenlos kennenlernen
+              {isDigitalStart ? "Situation schildern" : "Kostenlos kennenlernen"}
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
           </div>
@@ -227,16 +230,17 @@ export function Header() {
               </div>
 
               <Link
-                href="/kontakt"
+                href={isDigitalStart ? "#situation" : "/kontakt"}
                 className="mt-7 flex w-full items-center justify-center gap-2 rounded-full bg-[#E5C58B] px-6 py-4 text-sm font-semibold text-[#001821]"
               >
-                Kostenlos kennenlernen
+                {isDigitalStart ? "Situation schildern" : "Kostenlos kennenlernen"}
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </Link>
 
               <p className="mt-5 text-center text-xs text-white/70">
-                Unverbindlich · Persönlich · Antwort meist innerhalb von 24
-                Stunden
+                {isDigitalStart
+                  ? "Unverbindlich · persönlich · ohne Vorbereitung"
+                  : "Unverbindlich · Persönlich · Antwort meist innerhalb von 24 Stunden"}
               </p>
             </nav>
           </div>
