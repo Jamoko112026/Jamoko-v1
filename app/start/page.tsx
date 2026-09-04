@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     url: "https://jamoko.de/start",
     images: [
       {
-        url: "/og-image-v2.png",
+        url: "/start-og.jpg",
         width: 1200,
         height: 630,
         alt: "JaMoKo – digitale Orientierung und persönliche Umsetzung",
