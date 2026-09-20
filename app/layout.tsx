@@ -8,15 +8,15 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://jamoko.de"),
   title: {
-    default: "JaMoKo – Websites für Handwerksbetriebe",
+    default: "JaMoKo – Websites & Digitalbegleitung",
     template: "%s · JaMoKo",
   },
   description:
-    "Klare Websites für Handwerksbetriebe und lokale Unternehmen – persönlich begleitet von der Struktur bis zur Veröffentlichung.",
+    "Websites, digitale Sichtbarkeit und Digitalbegleitung für lokale Unternehmen. Wir hören zu, ordnen und finden Lösungen, die zu deinem Alltag passen.",
   openGraph: {
-    title: "JaMoKo – Websites für Handwerksbetriebe",
+    title: "JaMoKo – Websites & Digitalbegleitung",
     description:
-      "Klare Websites für Handwerksbetriebe und lokale Unternehmen – persönlich begleitet von der Struktur bis zur Veröffentlichung.",
+      "Websites, digitale Sichtbarkeit und Digitalbegleitung für lokale Unternehmen. Wir hören zu, ordnen und finden Lösungen, die zu deinem Alltag passen.",
     url: "https://jamoko.de",
     siteName: "JaMoKo",
     locale: "de_DE",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "JaMoKo – Websites für Handwerksbetriebe",
+        alt: "JaMoKo – Websites & Digitalbegleitung",
       },
     ],
   },

@@ -1,75 +1,39 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  ArrowRight,
-  CheckCircle2,
-  Clock3,
-  Handshake,
-  Mail,
-  MessageCircle,
-  SearchCheck,
-  Smartphone,
-  Sparkles,
-} from "lucide-react";
+import { ArrowRight, CheckCircle2, Mail } from "lucide-react";
 import { Hero } from "@/components/landing/Hero";
 import { ConceptPlaceholder } from "@/components/landing/ConceptPlaceholder";
 import { StructuredData, homePageJsonLd } from "./structured-data";
 
 export const metadata: Metadata = {
-  title: "JaMoKo – Websites für Handwerksbetriebe",
+  title: { absolute: "JaMoKo – Websites & Digitalbegleitung" },
   description:
-    "Klare Websites für Handwerksbetriebe und lokale Unternehmen – persönlich begleitet von der Struktur bis zur Veröffentlichung.",
+    "Websites, digitale Sichtbarkeit und Digitalbegleitung für lokale Unternehmen. Wir hören zu, ordnen und finden Lösungen, die zu deinem Alltag passen.",
   alternates: {
     canonical: "https://jamoko.de",
   },
   openGraph: {
-    title: "JaMoKo – Websites für Handwerksbetriebe",
+    title: "JaMoKo – Websites & Digitalbegleitung",
     description:
-      "Klare Websites für Handwerksbetriebe und lokale Unternehmen – persönlich begleitet von der Struktur bis zur Veröffentlichung.",
+      "Websites, digitale Sichtbarkeit und Digitalbegleitung für lokale Unternehmen. Wir hören zu, ordnen und finden Lösungen, die zu deinem Alltag passen.",
     url: "https://jamoko.de",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "JaMoKo – Websites für Handwerksbetriebe",
+        alt: "JaMoKo – Websites & Digitalbegleitung",
       },
     ],
   },
 };
 
-const trustItems = [
-  {
-    title: "Schnell verstanden",
-    text: "Deine Kunden erkennen, was du anbietest und wie sie dich erreichen.",
-    icon: Clock3,
-  },
-  {
-    title: "Persönlich entwickelt",
-    text: "Wir hören zu und entwickeln die Website gemeinsam mit dir.",
-    icon: Handshake,
-  },
-  {
-    title: "Auf jedem Gerät",
-    text: "Deine Website funktioniert klar und angenehm auf Smartphone, Tablet und Desktop.",
-    icon: Smartphone,
-  },
-];
-
 const whySteps = [
-  {
-    title: "Zuhören",
-    text: "Du erzählst uns, wie dein Betrieb wirklich funktioniert.",
-  },
-  {
-    title: "Sortieren",
-    text: "Wir finden heraus, was deine Kunden verstehen müssen.",
-  },
-  {
-    title: "Umsetzen",
-    text: "Wir bauen daraus eine klare Website, die zu deinem Betrieb passt.",
-  },
+  { title: "Schildern", text: "Was beschäftigt dich?" },
+  { title: "Sortieren", text: "Was ist wirklich wichtig?" },
+  { title: "Entscheiden", text: "Was passt zu deinem Alltag?" },
+  { title: "Umsetzen", text: "Wir machen es konkret." },
 ];
 
 type HomeProject = {
@@ -120,24 +84,6 @@ const projects: HomeProject[] = [
   },
 ];
 
-const outcomes = [
-  {
-    title: "Vertrauen auf den ersten Blick",
-    text: "Besucher erkennen sofort, wer du bist, was du anbietest und warum sie bei dir richtig sind.",
-    icon: SearchCheck,
-  },
-  {
-    title: "Weniger Zeit für Erklärungen",
-    text: "Deine Website beantwortet die wichtigsten Fragen bereits vor dem ersten Kontakt.",
-    icon: Sparkles,
-  },
-  {
-    title: "Kontakt leichter machen",
-    text: "Menschen verstehen dein Angebot und finden schnell den richtigen Weg, dich anzusprechen.",
-    icon: MessageCircle,
-  },
-];
-
 const pricingOffer = {
   title: "JaMoKo Website",
   price: "ab 1.490 €",
@@ -168,34 +114,6 @@ function AmbientPage({ children }: { children: React.ReactNode }) {
       <div className="pointer-events-none absolute inset-0 opacity-[0.035] bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nNDAnIGhlaWdodD0nNDAnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTSAwIDIwIEMgMTUgMTUgMjUgMjUgNDAgMjAnIHN0cm9rZT0nI0U1QzU4Qicgc3Ryb2tlLXdpZHRoPScwLjcnIGZpbGw9J25vbmUnIG9wYWNpdHk9JzAuNScvPjwvc3ZnPg==')]" />
       <div className="relative z-10">{children}</div>
     </div>
-  );
-}
-
-function TrustStrip() {
-  return (
-    <section className="border-b border-white/10 bg-white/[0.025]">
-      <div className="mx-auto grid max-w-6xl px-6 sm:px-8 md:grid-cols-3">
-        {trustItems.map(({ title, text, icon: Icon }, index) => (
-          <div
-            key={title}
-            className={`flex gap-4 border-white/10 py-7 md:px-7 ${
-              index > 0 ? "md:border-l" : "md:pl-0"
-            } ${index === trustItems.length - 1 ? "md:pr-0" : ""}`}
-          >
-            <Icon
-              className="mt-0.5 h-5 w-5 shrink-0 text-[#E5C58B]"
-              aria-hidden="true"
-            />
-            <div>
-              <h2 className="text-sm font-medium text-white/90">{title}</h2>
-              <p className="mt-1 text-sm leading-relaxed text-white/70">
-                {text}
-              </p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
   );
 }
 
@@ -301,37 +219,80 @@ function ProjectsSection() {
   );
 }
 
-function WhyJamokoSection() {
+function ProblemSection() {
+  return (
+    <div className="max-w-3xl">
+      <h2 className="jmk-light-heading text-3xl font-light leading-tight sm:text-4xl md:text-5xl">
+        Manchmal weißt du nur: So wie jetzt soll es nicht bleiben.
+      </h2>
+      <p className="jmk-light-copy mt-6 leading-relaxed">
+        Die Website passt nicht mehr. Dateien liegen verteilt, Kalender laufen
+        nebeneinander und vorhandene Werkzeuge helfen nicht richtig. Neue
+        digitale Möglichkeiten sind schwer einzuordnen.
+      </p>
+      <p className="jmk-light-copy mt-4 leading-relaxed">
+        Du musst daraus noch keinen fertigen Auftrag formulieren.
+      </p>
+      <p className="jmk-light-heading mt-6 font-medium">
+        Genau da können wir anfangen.
+      </p>
+    </div>
+  );
+}
+
+function ServicesSection() {
   return (
     <div>
-      <div className="mb-14 max-w-2xl md:mb-16">
-        <p className="jmk-light-eyebrow mb-4 text-xs font-semibold uppercase tracking-[0.28em]">
-          Einfach statt kompliziert
-        </p>
-        <h2 className="jmk-light-heading text-3xl font-light leading-tight sm:text-4xl md:text-5xl">
-          Du brauchst keine komplizierte Website.
-          <span className="jmk-light-heading-muted block">
-            Deine Kunden brauchen Klarheit.
-          </span>
-        </h2>
-        <p className="jmk-light-copy mt-6 leading-relaxed">
-          Menschen wollen schnell wissen, was du machst, ob du zu ihnen passt und
-          wie sie dich erreichen. Genau darauf konzentrieren wir uns.
-        </p>
+      <h2 className="jmk-light-heading mb-14 text-3xl font-light leading-tight sm:text-4xl md:mb-16 md:text-5xl">
+        Was brauchst du gerade?
+      </h2>
+      <div className="grid gap-6 md:grid-cols-2">
+        <article className="jmk-card-light flex flex-col rounded-3xl border p-7 sm:p-8">
+          <h3 className="jmk-light-heading text-2xl font-medium">
+            Websites &amp; digitale Sichtbarkeit
+          </h3>
+          <p className="jmk-light-heading mt-5 text-lg">
+            Deine Arbeit ist gut. Deine Website sollte das zeigen.
+          </p>
+          <p className="jmk-light-copy mb-8 mt-4 leading-relaxed">
+            Ruhige, klare Websites für lokale Unternehmen, die verständlich
+            zeigen, wer sie sind, was sie anbieten und wie man sie erreicht.
+          </p>
+          <Link href="/mini-site" className="jmk-light-link mt-auto inline-flex items-center gap-2 text-sm font-semibold">
+            JaMoKo Website ansehen
+            <ArrowRight className="h-4 w-4" aria-hidden="true" />
+          </Link>
+        </article>
+        <article id="digitalbegleitung" className="jmk-card-light flex scroll-mt-24 flex-col rounded-3xl border p-7 sm:p-8">
+          <h3 className="jmk-light-heading text-2xl font-medium">Digitalbegleitung</h3>
+          <p className="jmk-light-heading mt-5 text-lg">Digital darf einfacher werden.</p>
+          <p className="jmk-light-copy mb-8 mt-4 leading-relaxed">
+            Accounts, Dateien, Kalender und digitale Werkzeuge so ordnen, dass sie
+            zu deiner Arbeit passen. Gemeinsam finden wir heraus, was dich im
+            Alltag aufhält, vereinfachen Strukturen und setzen sinnvolle Lösungen
+            verständlich um.
+          </p>
+          <a href="#digital-check" className="jmk-light-link mt-auto inline-flex items-center gap-2 text-sm font-semibold">
+            Zum Digital-Check
+            <ArrowRight className="h-4 w-4" aria-hidden="true" />
+          </a>
+        </article>
       </div>
+    </div>
+  );
+}
 
-      <div className="grid gap-5 md:grid-cols-3">
+function MethodSection() {
+  return (
+    <div>
+      <h2 className="mb-14 text-3xl font-light leading-tight text-white sm:text-4xl md:mb-16 md:text-5xl">
+        Erst verstehen. Dann umsetzen.
+      </h2>
+      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {whySteps.map((item) => (
-          <article
-            key={item.title}
-            className="jmk-card-light rounded-3xl border p-7"
-          >
-            <h3 className="jmk-light-heading text-lg font-medium">
-              {item.title}
-            </h3>
-            <p className="jmk-light-copy mt-3 text-sm leading-relaxed">
-              {item.text}
-            </p>
+          <article key={item.title} className="rounded-3xl border border-white/10 bg-white/[0.025] p-7">
+            <h3 className="text-lg font-medium text-white">{item.title}</h3>
+            <p className="mt-3 text-sm leading-relaxed text-white/70">{item.text}</p>
           </article>
         ))}
       </div>
@@ -339,35 +300,45 @@ function WhyJamokoSection() {
   );
 }
 
-function OutcomesSection() {
+function DigitalCheckSection() {
   return (
-    <div>
-      <div className="mb-14 max-w-2xl md:mb-16">
-        <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-[#E5C58B]">
-          Was eine gute Website verändert
-        </p>
-        <h2 className="text-3xl font-light leading-tight text-white sm:text-4xl md:text-5xl">
-          Nicht lauter werden.
-          <span className="block text-white/70">Sondern klarer.</span>
-        </h2>
+    <section id="digital-check" className="scroll-mt-24 border-y border-white/10 bg-white/[0.025] px-6 py-24 sm:px-8 md:py-32 lg:py-20">
+      <div className="mx-auto max-w-6xl">
+        <div className="max-w-3xl">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-[#E5C58B]">JaMoKo Digital-Check</p>
+          <h2 className="text-3xl font-light leading-tight text-white sm:text-4xl md:text-5xl">
+            Du weißt noch nicht, wo du anfangen sollst?
+          </h2>
+          <p className="mt-6 leading-relaxed text-white/75">
+            Beim JaMoKo Digital-Check schauen wir gemeinsam auf deinen digitalen
+            Arbeitsalltag. Wir sortieren die wichtigsten Baustellen und halten
+            fest, was jetzt, danach und später sinnvoll ist.
+          </p>
+          <p className="mt-4 leading-relaxed text-white/75">
+            Wenn du danach selbst weitermachen möchtest, ist das völlig in Ordnung.
+          </p>
+          <Link href="/kontakt" className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#E5C58B] px-7 py-4 text-sm font-semibold text-[#001821] transition hover:-translate-y-0.5 hover:bg-[#efd49f]">
+            Digital-Check anfragen
+            <ArrowRight className="h-4 w-4" aria-hidden="true" />
+          </Link>
+        </div>
       </div>
+    </section>
+  );
+}
 
-      <div className="grid gap-5 md:grid-cols-3">
-        {outcomes.map(({ title, text, icon: Icon }) => (
-          <article
-            key={title}
-            className="rounded-3xl border border-white/10 bg-white/[0.025] p-7 transition duration-300 hover:-translate-y-1 hover:border-[#1AC7A4]/25 hover:bg-white/[0.045] sm:p-8"
-          >
-            <span className="flex h-11 w-11 items-center justify-center rounded-2xl border border-[#1AC7A4]/20 bg-[#1AC7A4]/5 text-[#1AC7A4]">
-              <Icon className="h-5 w-5" aria-hidden="true" />
-            </span>
-            <h3 className="mt-8 text-lg font-medium text-white">{title}</h3>
-            <p className="mt-3 text-sm leading-relaxed text-white/70">
-              {text}
-            </p>
-          </article>
-        ))}
-      </div>
+function HaltungSection() {
+  return (
+    <div className="max-w-3xl">
+      <h2 className="jmk-light-heading text-3xl font-light leading-tight sm:text-4xl md:text-5xl">
+        Erst Mensch. Dann Lösung.
+      </h2>
+      <p className="jmk-light-copy mt-6 leading-relaxed">
+        JaMoKo verbindet Menschen, Prozesse und digitale Lösungen – persönlich
+        und verständlich. Nicht jedes Unternehmen braucht mehr Tools. Manchmal
+        braucht es eine neue Website. Manchmal mehr Ordnung. Und manchmal reicht
+        es, Dinge wieder einfacher zu machen.
+      </p>
     </div>
   );
 }
@@ -475,9 +446,9 @@ function ContactSection() {
               Moin sagen reicht.
             </h2>
             <p className="mt-6 max-w-2xl leading-relaxed text-[#001821]/65">
-              Du musst noch nicht wissen, welche Seiten, Funktionen oder Technik
-              du brauchst. Erzähl uns einfach kurz von deinem Betrieb und davon,
-              was du verändern möchtest.
+              Ob Website, Dateien, Kalender oder digitale Werkzeuge: Erzähl uns
+              einfach kurz von deinem Betrieb und davon, was du verändern
+              möchtest. Du musst die Lösung noch nicht kennen.
             </p>
           </div>
           <a
@@ -519,24 +490,32 @@ export default function HomePage() {
       <StructuredData data={homePageJsonLd} />
       <AmbientPage>
         <Hero />
-        <TrustStrip />
         <section className="jmk-section-light jmk-section-paper">
-          <div className="jmk-section-content mx-auto max-w-6xl px-6 py-24 sm:px-8 md:py-32">
-            <WhyJamokoSection />
+          <div className="jmk-section-content mx-auto max-w-6xl px-6 py-24 sm:px-8 md:py-32 lg:py-20">
+            <ProblemSection />
           </div>
         </section>
+        <section className="jmk-section-light jmk-section-mist">
+          <div className="jmk-section-content mx-auto max-w-6xl px-6 py-24 sm:px-8 md:py-32">
+            <ServicesSection />
+          </div>
+        </section>
+        <section className="mx-auto max-w-6xl px-6 py-24 sm:px-8 md:py-32 lg:py-20">
+          <MethodSection />
+        </section>
+        <DigitalCheckSection />
         <section className="jmk-section-light jmk-section-mist">
           <div className="jmk-section-content mx-auto max-w-6xl px-6 py-24 sm:px-8 md:py-32">
             <ProjectsSection />
           </div>
         </section>
-        <div className="mx-auto max-w-6xl px-6 sm:px-8">
-          <section className="py-24 md:py-32">
-            <OutcomesSection />
-          </section>
-        </div>
         <section className="border-y border-white/10 bg-white/[0.025]">
           <PricingSection />
+        </section>
+        <section className="jmk-section-light jmk-section-paper">
+          <div className="jmk-section-content mx-auto max-w-6xl px-6 py-24 sm:px-8 md:py-32 lg:py-20">
+            <HaltungSection />
+          </div>
         </section>
         <ContactSection />
       </AmbientPage>

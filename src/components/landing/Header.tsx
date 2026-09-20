@@ -8,6 +8,7 @@ import { ArrowRight, Menu, X } from "lucide-react";
 const navItems = [
   { label: "Start", href: "/" },
   { label: "Website", href: "/mini-site" },
+  { label: "Digitalbegleitung", href: "/#digitalbegleitung" },
   { label: "Projekte", href: "/projekte" },
   { label: "Preise", href: "/preise" },
   { label: "Über JaMoKo", href: "/ueber-jamoko" },
@@ -150,15 +151,17 @@ export function Header() {
               <span className="block text-sm font-medium tracking-[0.08em] text-white">
                 JaMoKo
               </span>
-              <span className="block text-[9px] uppercase tracking-[0.2em] text-white/70">
-                {isDigitalStart ? "Digitale Orientierung" : "Webdesign Hamburg"}
-              </span>
+              {isDigitalStart ? (
+                <span className="block text-[9px] uppercase tracking-[0.2em] text-white/70">
+                  Digitale Orientierung
+                </span>
+              ) : null}
             </span>
           </Link>
 
           <nav
             aria-label="Hauptnavigation"
-            className="hidden items-center gap-7 text-sm md:flex"
+            className="hidden items-center gap-7 text-sm xl:flex"
           >
             {navItems.map((item) => {
               const active = isActivePath(pathname, item.href);
@@ -182,7 +185,7 @@ export function Header() {
             })}
           </nav>
 
-          <div className="hidden md:block">
+          <div className="hidden xl:block">
             <Link
               href={isDigitalStart ? "#situation" : "/kontakt"}
               className="inline-flex items-center gap-2 rounded-full bg-[#E5C58B] px-5 py-2.5 text-sm font-semibold text-[#001821] transition hover:-translate-y-0.5 hover:bg-[#efd49f]"
@@ -195,7 +198,7 @@ export function Header() {
           <button
             type="button"
             onClick={() => setOpen((current) => !current)}
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-white transition hover:border-white/25 hover:bg-white/5 md:hidden"
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-white transition hover:border-white/25 hover:bg-white/5 xl:hidden"
             aria-label={open ? "Navigation schließen" : "Navigation öffnen"}
             aria-expanded={open}
             aria-controls="mobile-navigation"
@@ -207,7 +210,7 @@ export function Header() {
         {open ? (
           <div
             id="mobile-navigation"
-            className="border-t border-white/10 bg-[#001821]/98 px-6 pb-8 pt-5 backdrop-blur-xl md:hidden"
+            className="border-t border-white/10 bg-[#001821]/98 px-6 pb-8 pt-5 backdrop-blur-xl xl:hidden max-h-[calc(100dvh-5rem)] overflow-y-auto"
           >
             <nav aria-label="Mobile Navigation" className="mx-auto max-w-lg">
               <div className="flex flex-col">
@@ -218,6 +221,7 @@ export function Header() {
                     <Link
                       key={item.href}
                       href={item.href}
+                      onClick={() => setOpen(false)}
                       className={`flex items-center justify-between border-b border-white/10 py-4 text-lg ${
                         active ? "text-[#E5C58B]" : "text-white/70"
                       }`}

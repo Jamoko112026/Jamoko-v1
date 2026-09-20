@@ -4,9 +4,10 @@ const siteUrl = "https://jamoko.de";
 const organizationId = `${siteUrl}/#organization`;
 const websiteId = `${siteUrl}/#website`;
 const serviceId = `${siteUrl}/#jamoko-website-service`;
+const digitalServiceId = `${siteUrl}/#digitalbegleitung-service`;
 
 const siteDescription =
-  "JaMoKo erstellt individuelle Websites für lokale Betriebe, Handwerker und Selbstständige. Klar strukturiert, mobil optimiert und persönlich umgesetzt.";
+  "JaMoKo begleitet lokale Unternehmen mit Websites, digitaler Sichtbarkeit und Digitalbegleitung. Persönlich und verständlich – mit Lösungen, die zum Arbeitsalltag passen.";
 
 const areaServed = [
   {
@@ -72,6 +73,9 @@ export const siteJsonLd = {
       },
       knowsAbout: [
         "JaMoKo Website",
+        "Digitale Sichtbarkeit",
+        "Digitalbegleitung",
+        "Accounts, Dateien, Kalender und digitale Werkzeuge ordnen",
         "Webdesign Hamburg",
         "Webdesign für lokale Betriebe",
         "Webdesign für lokale Unternehmen",
@@ -101,9 +105,9 @@ export const homePageJsonLd = {
       "@type": "WebPage",
       "@id": `${siteUrl}/#webpage`,
       url: siteUrl,
-      name: "JaMoKo – Ruhige Websites für lokale Unternehmen",
+      name: "JaMoKo – Websites & Digitalbegleitung",
       description:
-        "Ruhiges Webdesign aus Hamburg für lokale Betriebe, Handwerker, Dienstleister und Selbstständige.",
+        "Websites, digitale Sichtbarkeit und Digitalbegleitung für lokale Unternehmen. Gemeinsam verstehen, sortieren, entscheiden und umsetzen.",
       inLanguage: "de-DE",
       isPartOf: {
         "@id": websiteId,
@@ -111,9 +115,10 @@ export const homePageJsonLd = {
       about: {
         "@id": organizationId,
       },
-      mainEntity: {
-        "@id": serviceId,
-      },
+      mainEntity: [
+        { "@id": serviceId },
+        { "@id": digitalServiceId },
+      ],
       primaryImageOfPage: {
         "@type": "ImageObject",
         url: `${siteUrl}/og-image-v2.png`,
@@ -140,6 +145,20 @@ export const homePageJsonLd = {
         offerCount: "1",
       },
     },
+    {
+      "@type": "Service",
+      "@id": digitalServiceId,
+      name: "Digitalbegleitung",
+      serviceType: "Digitalbegleitung",
+      url: `${siteUrl}/#digital-check`,
+      provider: {
+        "@id": organizationId,
+      },
+      areaServed,
+      audience,
+      description:
+        "Accounts, Dateien, Kalender und digitale Werkzeuge passend zum Arbeitsalltag ordnen. Gemeinsam Strukturen vereinfachen und sinnvolle Lösungen verständlich umsetzen.",
+    },
   ],
 };
 
@@ -150,7 +169,7 @@ export const contactPageJsonLd = {
   url: `${siteUrl}/kontakt`,
   name: "Kontakt",
   description:
-    "Nimm direkt Kontakt mit JaMoKo auf. Individuelle Websites für lokale Betriebe, Handwerker und Selbstständige.",
+    "Nimm direkt Kontakt mit JaMoKo auf – für Websites, digitale Sichtbarkeit, Digitalbegleitung oder den Digital-Check.",
   inLanguage: "de-DE",
   isPartOf: {
     "@id": websiteId,

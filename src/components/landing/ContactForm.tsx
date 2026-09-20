@@ -19,7 +19,7 @@ export function ContactForm() {
     const email = getField(formData, "email");
     const message = getField(formData, "message");
 
-    const subject = `Website-Anfrage von ${name || "JaMoKo.de"}`;
+    const subject = `Anfrage an JaMoKo von ${name || "JaMoKo.de"}`;
     const body = [
       `Name: ${name}`,
       `E-Mail: ${email}`,

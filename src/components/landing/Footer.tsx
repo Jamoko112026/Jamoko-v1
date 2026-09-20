@@ -11,6 +11,7 @@ const contact = {
 
 const footerNavItems = [
   { label: "Website", href: "/mini-site" },
+  { label: "Digitalbegleitung", href: "/#digitalbegleitung" },
   { label: "Projekte", href: "/projekte" },
   { label: "Preise", href: "/preise" },
   { label: "Über JaMoKo", href: "/ueber-jamoko" },
@@ -64,18 +65,14 @@ export function Footer() {
                 <span className="block text-sm font-semibold tracking-[0.08em]">
                   JaMoKo
                 </span>
-                <span className="block text-[9px] uppercase tracking-[0.2em] text-white/70">
-                  Webdesign Hamburg
-                </span>
               </span>
             </Link>
 
             <h2 className="mt-8 max-w-lg text-2xl font-semibold leading-tight tracking-[-0.025em] sm:text-3xl">
-              Ruhige Websites für Betriebe, die gute Arbeit leisten.
+              Digitale Lösungen, die zu deinem Alltag passen.
             </h2>
             <p className="mt-5 max-w-lg leading-relaxed text-white/70">
-              Persönlich entwickelt, klar strukturiert und technisch
-              zuverlässig. Damit deine Qualität auch digital verständlich wird.
+              Persönlich, verständlich und ohne mehr Technik als nötig.
             </p>
             <Link
               href="/kontakt"

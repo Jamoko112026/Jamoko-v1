@@ -4,7 +4,7 @@ import { ArrowRight, CheckCircle2, Eye } from "lucide-react";
 const trustItems = [
   "Für Handwerk, Dienstleister und lokale Unternehmen",
   "Direkte persönliche Zusammenarbeit",
-  "Klare Website ohne Agentur-Floskeln",
+  "Verständliche digitale Lösungen",
 ];
 
 export function Hero() {
@@ -25,18 +25,17 @@ export function Hero() {
       <div className="relative mx-auto grid max-w-6xl items-center gap-14 md:gap-16 lg:grid-cols-[1.06fr_0.94fr]">
         <div className="lg:pb-4">
           <p className="mb-6 text-xs font-semibold uppercase tracking-[0.28em] text-[#E5C58B] sm:text-sm">
-            Webdesign für lokale Unternehmen
+            Websites &amp; Digitalbegleitung
           </p>
           <h1 className="max-w-3xl text-[2.55rem] font-light leading-[1.06] tracking-normal text-white sm:text-5xl md:text-6xl">
-            Deine Arbeit ist gut.
+            Du musst die Lösung{" "}
             <span className="block text-[#E5C58B]">
-              Deine Website sollte das zeigen.
+              noch nicht kennen.
             </span>
           </h1>
           <p className="mt-7 max-w-2xl text-lg font-light leading-8 text-white/70 md:text-xl md:leading-9">
-            Du kennst dein Geschäft. Wir bringen auf den Punkt, was dich ausmacht
-            – und bauen daraus eine klare Website, auf der Menschen schnell
-            verstehen, warum sie bei dir richtig sind.
+            Erzähl uns, wo es hakt. Wir hören zu, bringen Ordnung hinein und
+            finden gemeinsam eine digitale Lösung, die zu deinem Alltag passt.
           </p>
 
           <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">

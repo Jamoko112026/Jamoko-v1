@@ -4,16 +4,16 @@ import { ContactForm } from "@/components/landing/ContactForm";
 import { StructuredData, contactPageJsonLd } from "../structured-data";
 
 export const metadata: Metadata = {
-  title: "Kontakt für Webdesign Hamburg",
+  title: "Kontakt für Websites & Digitalbegleitung",
   description:
-    "Lerne JaMoKo unverbindlich kennen. In etwa 15 Minuten klären wir, was dein Betrieb online braucht und ob eine Zusammenarbeit passt.",
+    "Erzähl JaMoKo, wo es hakt – bei deiner Website oder im digitalen Arbeitsalltag. Gemeinsam klären wir, ob eine Zusammenarbeit passt.",
   alternates: {
     canonical: "https://jamoko.de/kontakt",
   },
   openGraph: {
-    title: "Kontakt · JaMoKo Webdesign Hamburg",
+    title: "Kontakt · JaMoKo",
     description:
-      "Lerne JaMoKo unverbindlich kennen. In etwa 15 Minuten klären wir, was dein Betrieb online braucht und ob eine Zusammenarbeit passt.",
+      "Erzähl JaMoKo, wo es hakt – bei deiner Website oder im digitalen Arbeitsalltag. Gemeinsam klären wir, ob eine Zusammenarbeit passt.",
     url: "https://jamoko.de/kontakt",
     images: [
       {
@@ -40,9 +40,9 @@ export default function ContactPage() {
               Direkter Kontakt
             </h1>
             <p className="mt-6 text-lg leading-8 text-calm-muted">
-              Erzähl uns kurz, was deine Website leisten soll. Ein paar Sätze
-              zu deinem Betrieb, deinem Angebot und deinem Ziel reichen völlig
-              aus.
+              Ob neue Website, Digitalbegleitung oder Digital-Check: Erzähl uns
+              kurz, wo es hakt und was du verändern möchtest. Ein paar Sätze zu
+              deinem Betrieb und deinem Alltag reichen völlig aus.
             </p>
           </div>
 
