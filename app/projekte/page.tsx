@@ -7,14 +7,14 @@ import { ConceptPlaceholder } from "@/components/landing/ConceptPlaceholder";
 export const metadata: Metadata = {
   title: "Projekte, Demos und Konzepte",
   description:
-    "JaMoKo zeigt klar gekennzeichnete Konzeptprojekte und Demos für lokale Unternehmen, Handwerk und persönliche Dienstleistungen.",
+    "Kundenprojekte, Konzepte und Demos von JaMoKo: individuelle Websites für lokale Unternehmen, Handwerk und persönliche Dienstleistungen.",
   alternates: {
     canonical: "https://jamoko.de/projekte",
   },
   openGraph: {
     title: "Projekte, Demos und Konzepte · JaMoKo",
     description:
-      "Klar gekennzeichnete Konzeptprojekte und Demos für lokale Unternehmen, Handwerk und Dienstleistung.",
+      "Kundenprojekte, Konzepte und Demos für lokale Unternehmen, Handwerk und Dienstleistung.",
     url: "https://jamoko.de/projekte",
     images: [
       {
@@ -31,7 +31,7 @@ type Project = {
   title: string;
   industry: string;
   description: string;
-  status: "Konzept" | "Demo" | "In Arbeit";
+  status: "Konzept" | "Demo" | "In Arbeit" | "Kundenprojekt";
 } &
   (
     | {
@@ -76,13 +76,13 @@ const projects: Project[] = [
   },
   {
     title: "Altonaer Reifendienst",
-    industry: "Lokaler Service · Demo",
+    industry: "Lokaler Service · Kundenprojekt",
     description:
-      "Leistungen, Preise und Kontaktwege schnell erfassbar für Menschen unterwegs.",
-    status: "Demo",
-    image: "/ard/Hero_1920w_ARDlook.jpg",
-    alt: "Website-Demo für einen lokalen Reifendienst",
-    href: "/demos/reifendienst",
+      "Ein eigenständiger Webauftritt mit echten Werkstattfotos und klaren Kontaktwegen – geprägt von der Graffiti-Garage in Altona.",
+    status: "Kundenprojekt",
+    image: "/ard/case-study/graffiti-garage-aussenansicht-1448.webp",
+    alt: "Graffiti-Fassade des Altonaer Reifendienstes in Hamburg-Altona",
+    href: "/projekte/altonaer-reifendienst",
   },
   {
     title: "Physiotherapie",
@@ -96,7 +96,8 @@ const projects: Project[] = [
   },
 ];
 
-const statusStyles: Record<string, string> = {
+const statusStyles: Record<Project["status"], string> = {
+  Kundenprojekt: "border-[#1AC7A4]/30 bg-[#001821]/90 text-[#1AC7A4]",
   Demo: "border-[#1AC7A4]/30 bg-[#1AC7A4]/10 text-[#1AC7A4]",
   "In Arbeit": "border-[#E5C58B]/35 bg-[#E5C58B]/10 text-[#E5C58B]",
   Konzept: "border-white/15 bg-white/10 text-white/70",
@@ -179,7 +180,7 @@ export default function ProjectsPage() {
                       href={project.href}
                       className="mt-8 inline-flex min-h-11 w-fit items-center justify-center gap-2 rounded-full bg-[#E5C58B] px-5 py-2.5 text-sm font-semibold text-[#001821] transition hover:-translate-y-0.5 hover:bg-[#efd49f]"
                     >
-                      Demo ansehen
+                      {project.status === "Kundenprojekt" ? "Projekt ansehen" : "Demo ansehen"}
                       <ArrowRight className="h-4 w-4" aria-hidden="true" />
                     </Link>
                   ) : null}

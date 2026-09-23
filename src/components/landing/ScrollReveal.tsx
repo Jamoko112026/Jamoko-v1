@@ -13,7 +13,7 @@ export function ScrollReveal() {
 
     const elements = Array.from(
       document.querySelectorAll<HTMLElement>(revealSelector),
-    ).filter((element) => !element.closest("#hero"));
+    ).filter((element) => !element.closest("#hero, [data-no-reveal]"));
 
     elements.forEach((element, index) => {
       element.classList.add("jmk-reveal");

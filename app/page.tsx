@@ -39,6 +39,7 @@ const whySteps = [
 type HomeProject = {
   title: string;
   category: string;
+  linkLabel?: string;
   description: string;
 } &
   (
@@ -66,12 +67,13 @@ const projects: HomeProject[] = [
   },
   {
     title: "Altonaer Reifendienst",
-    category: "Lokaler Service · Demo",
+    category: "Lokaler Service · Kundenprojekt",
     description:
-      "Leistungen, Preise und Kontaktwege schnell erfassbar für Menschen unterwegs.",
-    image: "/ard/Hero_1920w_ARDlook.jpg",
-    alt: "Website-Demo für einen lokalen Reifendienst",
-    href: "/demos/reifendienst",
+      "Ein eigenständiger Webauftritt mit echten Werkstattfotos und klaren Kontaktwegen – geprägt von der Graffiti-Garage in Altona.",
+    image: "/ard/case-study/graffiti-garage-aussenansicht-1448.webp",
+    alt: "Graffiti-Fassade des Altonaer Reifendienstes in Hamburg-Altona",
+    href: "/projekte/altonaer-reifendienst",
+    linkLabel: "Projekt ansehen",
   },
   {
     title: "Physiotherapie",
@@ -162,6 +164,11 @@ function HomeProjectCard({
         <p className="jmk-light-copy mt-3 text-sm leading-relaxed">
           {project.description}
         </p>
+        {project.linkLabel ? (
+          <span className="jmk-light-link mt-5 inline-flex text-sm font-semibold">
+            {project.linkLabel}
+          </span>
+        ) : null}
       </div>
     </>
   );
