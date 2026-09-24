@@ -19,3 +19,6 @@ pnpm-debug.log*
 .vscode
 src_backup_scrollfix_20260118_1055/
 physio-preview/
+
+# Local backups
+.local-backups/
