@@ -39,11 +39,11 @@ export function DigitalKompass() {
 
   return <div className="mt-10 rounded-2xl border border-white/15 bg-calm-panel p-5 sm:p-9">
     {!topic ? <>
-      <h2 ref={heading} tabIndex={-1} className="text-2xl font-semibold text-calm-ink">Wo wünschst du dir mehr Klarheit?</h2>
-      <p className="mt-3 text-calm-muted">Wähle ein Thema aus deinem Alltag. Fünf Fragen helfen dir, einen sinnvollen nächsten Schritt zu finden.</p>
+      <h2 ref={heading} tabIndex={-1} className="text-2xl font-semibold text-calm-ink">Was kennst du aus deinem Alltag?</h2>
+      <p className="mt-3 text-calm-muted">Wähle, was dich gerade beschäftigt. Auch wenn schon vieles gut läuft, kannst du hier nachschauen.</p>
       <div className="mt-7 grid gap-4 sm:grid-cols-2">
         {topics.map(t => <button key={t.id} onClick={() => { setTopicId(t.id); setNotice(''); }} className="rounded-xl border border-white/20 p-5 text-left hover:border-calm-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-calm-gold">
-          <span className="block text-lg font-semibold text-calm-gold">{t.title}</span>
+          <span className="block text-lg font-semibold text-calm-gold">{t.invitation}</span>
           <span className="mt-2 block leading-6 text-calm-muted">{t.intro}</span>
         </button>)}
       </div>
@@ -51,17 +51,17 @@ export function DigitalKompass() {
       <p className="text-sm font-semibold text-calm-gold">Dein Ergebnis · {topic.title}</p>
       <h2 ref={heading} tabIndex={-1} className="mt-4 text-2xl font-semibold text-calm-ink sm:text-3xl">{result.title}</h2>
       <p className="mt-4 leading-7 text-calm-muted">{result.reason}</p>
-      <p className="mt-3 text-sm leading-6 text-calm-muted">Diese Orientierung beruht ausschließlich auf deinen Antworten. Wir haben keine Systeme oder Website technisch geprüft.</p>
+      <p className="mt-3 text-sm leading-6 text-calm-muted">Das Ergebnis beruht auf deinen Antworten. Deine Programme oder deine Website haben wir dabei nicht technisch geprüft.</p>
       <h3 className="mt-8 text-lg font-semibold text-calm-gold">{result.kind === 'action' ? 'Dein erster Schritt – und was danach helfen kann' : 'So kannst du weitermachen'}</h3>
       <ol className="mt-4 list-decimal space-y-4 pl-6 leading-7 text-calm-ink">{result.steps.map(s => <li key={s}>{s}</li>)}</ol>
-      {result.metric && <aside className="mt-7 rounded-xl border border-calm-green/30 p-5"><h3 className="font-semibold text-calm-gold">Eine Kennzahl, die dir helfen kann</h3><p className="mt-2 leading-7 text-calm-muted">{result.metric}</p></aside>}
+      {result.metric && <aside className="mt-7 rounded-xl border border-calm-green/30 p-5"><h3 className="font-semibold text-calm-gold">Woran du merken kannst, ob es besser läuft</h3><p className="mt-2 leading-7 text-calm-muted">{result.metric}</p></aside>}
       <details className="mt-7 text-calm-muted"><summary className="cursor-pointer py-3 font-semibold text-calm-ink">Deine Antworten ansehen</summary><dl className="space-y-4">{topic.questions.map((q,i) => <div key={q.title}><dt>{q.title}</dt><dd className="mt-1 text-calm-gold">{choices.find(c => c.value === answers[i])?.label}</dd></div>)}</dl></details>
       <div className="mt-6 flex flex-wrap gap-3"><button className={button} onClick={download}>Ergebnis herunterladen</button><button className={secondary} onClick={() => { setStep(0); setNotice(''); }}>Antworten ändern</button></div>
       <section className="mt-10 border-t border-white/15 pt-8" aria-labelledby="kompass-help">
-        <h3 id="kompass-help" className="text-xl font-semibold text-calm-ink">Möchtest du Unterstützung von Mo?</h3>
-        <p className="mt-3 leading-7 text-calm-muted">Wir können dein Ergebnis gemeinsam einordnen oder einen klar abgegrenzten Schritt umsetzen. Du bekommst vor einer Beauftragung ein Angebot mit Umfang und Preis. Diese Anfrage ist unverbindlich.</p>
+        <h3 id="kompass-help" className="text-xl font-semibold text-calm-ink">Soll ich dir dabei helfen?</h3>
+        <p className="mt-3 leading-7 text-calm-muted">Ich bin Mo. Wir schauen gemeinsam, was du schon nutzt und was dir fehlt. Vor einer Zusammenarbeit klären wir, was ich für dich übernehme und was es kostet. Mit deiner Anfrage gehst du keine Verpflichtung ein.</p>
         <label className="mt-5 flex cursor-pointer items-start gap-3 text-calm-ink"><input type="checkbox" checked={includeSummary} onChange={e => setIncludeSummary(e.target.checked)} className="mt-1 h-5 w-5 shrink-0 accent-[#E5C58B]" /><span>Meine Antworten und das Ergebnis in die E-Mail übernehmen (freiwillig).</span></label>
-        <a className={`${button} mt-5`} href={`mailto:moin@jamoko.de?subject=${encodeURIComponent(`Digital-Kompass: ${topic.title}`)}&body=${encodeURIComponent(mailBody)}`} onClick={() => setNotice('Dein E-Mail-Programm wird geöffnet. Prüfe den Entwurf und sende ihn dort selbst ab. Hier wurde keine Nachricht versendet.')}>Anfrage im E-Mail-Programm vorbereiten</a>
+        <a className={`${button} mt-5`} href={`mailto:moin@jamoko.de?subject=${encodeURIComponent(`Digital-Kompass: ${topic.title}`)}&body=${encodeURIComponent(mailBody)}`} onClick={() => setNotice('Dein E-Mail-Programm wird geöffnet. Prüfe den Entwurf und sende ihn dort selbst ab. Hier wurde keine Nachricht versendet.')}>Mo eine Anfrage schreiben</a>
         <p className="mt-3 text-sm leading-6 text-calm-muted">Du prüfst und versendest die Nachricht selbst. Es wird kein Newsletter abonniert. Falls sich kein E-Mail-Programm öffnet: Schreib an <a className="text-calm-gold underline" href="mailto:moin@jamoko.de">moin@jamoko.de</a> und füge bei Bedarf dein heruntergeladenes Ergebnis hinzu.</p>
         <Link href="/datenschutz" className="mt-3 inline-block text-sm text-calm-gold underline">Hinweise zum Datenschutz</Link>
       </section>
