@@ -53,8 +53,9 @@ export function DigitalKompass() {
       <h2 ref={heading} tabIndex={-1} className="mt-4 text-2xl font-semibold text-calm-ink sm:text-3xl">{result.title}</h2>
       <p className="mt-4 leading-7 text-calm-muted">{result.reason}</p>
       <p className="mt-3 text-sm leading-6 text-calm-muted">Das Ergebnis beruht auf deinen Antworten. Deine Programme oder deine Website haben wir dabei nicht technisch geprüft.</p>
-      <h3 className="mt-8 text-lg font-semibold text-calm-gold">{result.kind === 'action' ? 'Dein erster Schritt – und was danach helfen kann' : 'So kannst du weitermachen'}</h3>
-      <ol className="mt-4 list-decimal space-y-4 pl-6 leading-7 text-calm-ink">{result.steps.map(s => <li key={s}>{s}</li>)}</ol>
+      <h3 className="mt-8 text-lg font-semibold text-calm-gold">{result.kind === 'action' ? 'Dein erster Schritt' : 'So kannst du weitermachen'}</h3>
+      <p className="mt-4 leading-7 text-calm-ink">{result.steps[0]}</p>
+      {result.steps.length > 1 && <details className="mt-6 text-calm-muted"><summary className="cursor-pointer py-3 font-semibold text-calm-gold">Das kannst du später angehen</summary><ul className="mt-3 list-disc space-y-4 pl-6 leading-7">{result.steps.slice(1).map(s => <li key={s}>{s}</li>)}</ul></details>}
       {result.metric && <aside className="mt-7 rounded-xl border border-calm-green/30 p-5"><h3 className="font-semibold text-calm-gold">Woran du merken kannst, ob es besser läuft</h3><p className="mt-2 leading-7 text-calm-muted">{result.metric}</p></aside>}
       <details className="mt-7 text-calm-muted"><summary className="cursor-pointer py-3 font-semibold text-calm-ink">Deine Antworten ansehen</summary><dl className="space-y-4">{topic.questions.map((q,i) => <div key={q.title}><dt>{q.title}</dt><dd className="mt-1 text-calm-gold">{choices.find(c => c.value === answers[i])?.label}</dd></div>)}</dl></details>
       <div className="mt-6 flex flex-wrap gap-3"><button className={button} onClick={download}>Ergebnis herunterladen</button><button className={secondary} onClick={() => { setStep(0); setNotice(''); }}>Antworten ändern</button></div>
