@@ -10,6 +10,7 @@ const contact = {
 };
 
 const footerNavItems = [
+  { label: "Digital-Kompass", href: "/digital-kompass" },
   { label: "Website", href: "/mini-site" },
   { label: "Digitalbegleitung", href: "/#digitalbegleitung" },
   { label: "Projekte", href: "/projekte" },
