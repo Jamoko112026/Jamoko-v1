@@ -1,0 +1,57 @@
+/* Static light and depth; movement only on deliberate pointer interaction. */
+.panel {
+  position: relative;
+  isolation: isolate;
+  border: 1px solid rgba(125, 220, 204, 0.23);
+  background: linear-gradient(145deg, #073440 0%, #022632 48%, #02222d 100%);
+  box-shadow:
+    0 28px 65px -26px rgba(0, 0, 0, 0.75),
+    0 0 85px -24px rgba(26, 199, 164, 0.24),
+    inset 0 1px 0 rgba(217, 255, 247, 0.12);
+}
+
+.panel::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 35% 0%, rgba(26, 199, 164, 0.09), transparent 65%);
+}
+
+.topic {
+  position: relative;
+  border: 1px solid rgba(152, 218, 211, 0.25);
+  background: linear-gradient(145deg, #0b3c47, #062d39 65%, #052935);
+  box-shadow:
+    0 12px 22px -12px rgba(0, 0, 0, 0.85),
+    inset 0 1px 0 rgba(217, 255, 247, 0.12);
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.topic:focus-visible {
+  border-color: #e5c58b;
+  box-shadow: 0 14px 28px -12px rgba(0, 0, 0, 0.85), 0 0 24px rgba(229, 197, 139, 0.14);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .topic:hover {
+    transform: translateY(-4px);
+    border-color: rgba(229, 197, 139, 0.7);
+    box-shadow:
+      0 20px 30px -14px rgba(0, 0, 0, 0.9),
+      0 0 26px rgba(229, 197, 139, 0.12),
+      inset 0 1px 0 rgba(255, 236, 202, 0.2);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .topic { transition: none; }
+  .topic:hover { transform: none; }
+}
+
+@media (forced-colors: active) {
+  .panel, .topic { border-color: CanvasText; background: Canvas; box-shadow: none; }
+  .panel::before { display: none; }
+}
