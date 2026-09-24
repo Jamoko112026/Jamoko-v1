@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
+import styles from './DigitalKompass.module.css';
 import { choices, evaluate, summary, topics, type Answer } from './model';
 
 const button = 'inline-flex min-h-12 items-center justify-center rounded-lg bg-calm-gold px-5 py-3 font-semibold text-calm-navy hover:bg-calm-green focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-calm-gold';
@@ -37,12 +38,12 @@ export function DigitalKompass() {
   }
   const mailBody = `Hallo Mo,\n\nich möchte Unterstützung zum Thema ${topic?.title ?? ''}. Bitte lass uns den passenden Umfang und Preis klären.\n\nMein Anliegen:\n\n${includeSummary ? `\n${resultText}` : ''}`;
 
-  return <div className="mt-10 rounded-2xl border border-white/15 bg-calm-panel p-5 sm:p-9">
+  return <div className={`${styles.panel} mt-10 rounded-2xl p-5 sm:p-9`}>
     {!topic ? <>
       <h2 ref={heading} tabIndex={-1} className="text-2xl font-semibold text-calm-ink">Was kennst du aus deinem Alltag?</h2>
       <p className="mt-3 text-calm-muted">Wähle, was dich gerade beschäftigt. Auch wenn schon vieles gut läuft, kannst du hier nachschauen.</p>
       <div className="mt-7 grid gap-4 sm:grid-cols-2">
-        {topics.map(t => <button key={t.id} onClick={() => { setTopicId(t.id); setNotice(''); }} className="rounded-xl border border-white/20 p-5 text-left hover:border-calm-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-calm-gold">
+        {topics.map(t => <button key={t.id} onClick={() => { setTopicId(t.id); setNotice(''); }} className={`${styles.topic} rounded-xl p-5 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-calm-gold`}>
           <span className="block text-lg font-semibold text-calm-gold">{t.invitation}</span>
           <span className="mt-2 block leading-6 text-calm-muted">{t.intro}</span>
         </button>)}
