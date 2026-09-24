@@ -73,12 +73,20 @@ export function DigitalKompass() {
       <progress className="mt-4 h-2 w-full accent-[#E5C58B]" value={step + 1} max={topic.questions.length} aria-label="Fortschritt" />
       <h2 ref={heading} tabIndex={-1} id="kompass-question" className="mt-6 text-2xl font-semibold leading-snug text-calm-ink">{topic.questions[step].title}</h2>
       <p id="kompass-tip" className="mt-3 leading-7 text-calm-muted">{topic.questions[step].tip}</p>
-      <form onSubmit={e => { e.preventDefault(); if (answers[step]) setStep(step + 1); }}>
-        <fieldset aria-labelledby="kompass-question" aria-describedby="kompass-tip" className="mt-6 space-y-3">
-          {choices.map(c => <label key={c.value} className={`flex min-h-14 cursor-pointer items-center gap-3 rounded-lg border p-4 ${answers[step] === c.value ? 'border-calm-gold bg-calm-gold/10' : 'border-white/20 hover:border-white/50'}`}><input type="radio" name={`answer-${step}`} value={c.value} checked={answers[step] === c.value} onChange={() => { const updated = [...answers]; updated[step] = c.value; setAnswers(updated); }} required className="h-5 w-5 shrink-0 accent-[#E5C58B]" /><span className="text-calm-ink">{c.label}</span></label>)}
-        </fieldset>
-        <div className="mt-7 flex flex-wrap justify-between gap-3"><button type="button" className={secondary} onClick={() => { if (step === 0) reset(); else setStep(step - 1); }}>{step === 0 ? 'Themenauswahl' : 'Zurück'}</button><button type="submit" disabled={!answers[step]} className={`${button} disabled:cursor-not-allowed disabled:opacity-40`}>{step === topic.questions.length - 1 ? 'Ergebnis ansehen' : 'Weiter'}</button></div>
-      </form>
+      <p id="kompass-navigation" className="mt-3 text-sm text-calm-muted">Wähle eine Antwort – danach geht es direkt {step === topic.questions.length - 1 ? 'zum Ergebnis' : 'zur nächsten Frage'}. Mit „Zurück“ kannst du Antworten ändern.</p>
+      <div role="group" aria-labelledby="kompass-question" aria-describedby="kompass-tip kompass-navigation" className="mt-6 space-y-3">
+        {choices.map(c => <button key={`${step}-${c.value}`} type="button" aria-pressed={answers[step] === c.value} onClick={event => {
+          if (event.detail > 1) return;
+          const updated = [...answers];
+          updated[step] = c.value;
+          setAnswers(updated);
+          setStep(step + 1);
+        }} className={`flex min-h-14 w-full items-center gap-3 rounded-lg border p-4 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-calm-gold ${answers[step] === c.value ? 'border-calm-gold bg-calm-gold/10' : 'border-white/20 hover:border-calm-gold hover:bg-calm-gold/5'}`}>
+          <span aria-hidden="true" className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-full border ${answers[step] === c.value ? 'border-calm-gold bg-calm-gold text-calm-navy' : 'border-white/40'}`}>{answers[step] === c.value ? '✓' : ''}</span>
+          <span className="text-calm-ink">{c.label}</span>
+        </button>)}
+      </div>
+      <div className="mt-7"><button type="button" className={secondary} onClick={() => { if (step === 0) reset(); else setStep(step - 1); }}>{step === 0 ? 'Themenauswahl' : 'Zurück'}</button></div>
     </>}
     <p role="status" className="mt-4 text-sm leading-6 text-calm-gold">{notice}</p>
     <p className="mt-7 border-t border-white/10 pt-5 text-sm leading-6 text-calm-muted">Deine Antworten bleiben während des Checks im Arbeitsspeicher dieser Seite. Beim Neuladen gehen sie verloren. Erst wenn du eine E-Mail selbst versendest, teilst du deren Inhalt mit JaMoKo.</p>
