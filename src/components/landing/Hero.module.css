@@ -26,3 +26,12 @@
 @media(max-width:1023px){.hero{grid-template-columns:1fr;gap:2.5rem}.copy{max-width:700px}.visual{min-height:430px}.situations{margin-bottom:6rem}.cards{grid-template-columns:1fr}.card{padding:1.5rem}.help{margin-top:3rem}}
 @media(max-width:480px){.section{padding-inline:1.25rem}.copy h1{font-size:2.9rem}.eyebrow{font-size:.65rem;letter-spacing:.13em}.actions{flex-direction:column}.local{align-items:flex-start}.visual{min-height:410px}.situations{width:calc(100% - 2rem);margin:1rem auto 7rem;padding:1.1rem}.situations h2{font-size:1.45rem}}
 @media(prefers-reduced-motion:reduce){.section a{transition:none}.section a:hover{transform:none}}
+
+/* Preserve both eras of the artwork at every viewport width. */
+.visual{min-height:0;border-radius:0;box-shadow:none}
+.figure{margin:0}
+.imageFrame{position:relative;aspect-ratio:3/2;border-radius:1.7rem;box-shadow:0 0 55px rgba(26,199,164,.13);overflow:hidden}
+.photo{object-fit:contain}
+.figure figcaption{font-size:.75rem;line-height:1.5;color:#d6e0e7;margin:.7rem .3rem 1.1rem}
+.situations{width:100%;max-width:none;margin:0;padding:1.3rem}
+@media(max-width:480px){.situations{width:100%;margin:0;padding:1.1rem}.imageFrame{border-radius:1.2rem}}

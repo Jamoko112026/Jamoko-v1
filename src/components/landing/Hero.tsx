@@ -29,7 +29,12 @@ export function Hero() {
           <p className={styles.local}><MapPin size={19} aria-hidden="true" /> Persönlich aus Hamburg · Klar und verständlich</p>
         </div>
         <div className={styles.visual}>
-          <Image src="/hero/jamoko-workspace-hamburg.webp" alt="" fill priority sizes="(min-width: 1024px) 50vw, 100vw" className={styles.photo} />
+          <figure className={styles.figure}>
+            <div className={styles.imageFrame}>
+              <Image src="/hero/jamoko-hamburg-im-wandel.webp" alt="Künstlerischer Übergang von einem historischen Hamburger Fleet in Sepia zu einer modernen Uferbebauung." fill priority sizes="(min-width: 1024px) 50vw, 100vw" className={styles.photo} />
+            </div>
+            <figcaption>Hamburg im Wandel · KI-gestaltete Bildinterpretation</figcaption>
+          </figure>
           <div className={styles.situations}>
             <h2>Was beschäftigt dich gerade?</h2>
             <div className={styles.situationList}>
