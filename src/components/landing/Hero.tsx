@@ -20,11 +20,11 @@ export function Hero() {
       <div className={styles.hero}>
         <div className={styles.copy}>
           <p className={styles.eyebrow}>Websites &amp; persönliche Digitalbegleitung</p>
-          <h1>Digital soll dir <span>Arbeit abnehmen.</span></h1>
-          <p className={styles.intro}>Ich bin Mo. Ich helfe dir, Klarheit zu schaffen, passende Lösungen zu finden und sie umzusetzen.</p>
+          <h1>Websites, die zeigen, was du kannst. <span>Digitale Hilfe, die deinen Alltag leichter macht.</span></h1>
+          <p className={styles.intro}>Ich bin Mo aus Hamburg. Ich erstelle Websites für kleine Betriebe und helfe dir, Dateien, Programme und Abläufe übersichtlicher zu organisieren.</p>
           <div className={styles.actions}>
-            <a className={styles.primary} href="#kontakt">Lass uns sprechen <ArrowRight size={18} aria-hidden="true" /></a>
-            <Link className={styles.secondary} href="/digital-kompass">Digital-Kompass starten</Link>
+            <Link className={styles.primary} href="/mini-site">Ich brauche eine Website <ArrowRight size={18} aria-hidden="true" /></Link>
+            <a className={styles.secondary} href="#digitalbegleitung">Ich brauche digitale Unterstützung</a>
           </div>
           <p className={styles.local}><MapPin size={19} aria-hidden="true" /> Persönlich aus Hamburg · Klar und verständlich</p>
         </div>
