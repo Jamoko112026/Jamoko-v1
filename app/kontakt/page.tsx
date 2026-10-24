@@ -28,9 +28,9 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <>
+    <div className="v3-page">
       <StructuredData data={contactPageJsonLd} />
-      <section className="px-4 py-14 sm:px-6 md:py-20 lg:px-8">
+      <section className="v3-page-header px-4 py-14 sm:px-6 md:py-20 lg:px-8">
         <div className="mx-auto max-w-6xl">
           <div className="max-w-3xl">
             <p className="text-sm font-medium uppercase tracking-[0.14em] text-calm-gold">
@@ -48,7 +48,7 @@ export default function ContactPage() {
 
           <div className="mt-12 grid gap-8 lg:grid-cols-[0.82fr_1.18fr]">
             <aside className="space-y-5">
-              <div className="rounded-lg border border-white/10 bg-calm-panel p-6">
+              <div className="v3-contact-detail border-t border-white/10 py-6">
                 <Mail className="h-5 w-5 text-calm-gold" aria-hidden="true" />
                 <h2 className="mt-4 text-lg font-semibold text-calm-ink">
                   Kontaktinformationen
@@ -63,7 +63,7 @@ export default function ContactPage() {
                   Antwort persönlich und ohne Verkaufsdruck.
                 </p>
               </div>
-              <div className="rounded-lg border border-white/10 bg-calm-panel p-6">
+              <div className="v3-contact-detail border-t border-white/10 py-6">
                 <MapPin className="h-5 w-5 text-calm-blue" aria-hidden="true" />
                 <h2 className="mt-4 text-lg font-semibold text-calm-ink">
                   Standort
@@ -76,6 +76,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ArrowRight, Menu, X } from "lucide-react";
+import { Brand } from "./Brand";
+import styles from "./Chrome.module.css";
 
 const navItems = [
   { label: "Start", href: "/" },
@@ -15,243 +17,125 @@ const navItems = [
 ];
 
 function isActivePath(pathname: string, href: string) {
-  if (href === "/") {
-    return pathname === "/";
-  }
-
+  if (href === "/") return pathname === "/";
   return pathname === href || pathname.startsWith(`${href}/`);
 }
 
-function MobileStickyCTA() {
+function MobileStickyCTA({ menuOpen }: { menuOpen: boolean }) {
   const [visible, setVisible] = useState(false);
   const lastScrollY = useRef(0);
   const heroVisible = useRef(true);
-  const currentPathname = usePathname();
-  const isDigitalStart = currentPathname === "/start";
+  const pathname = usePathname();
+  const isDigitalStart = pathname === "/start";
 
   useEffect(() => {
-    const hero = document.getElementById("hero");
-    if (!hero) {
-      return undefined;
-    }
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        heroVisible.current = entry.isIntersecting;
-        if (entry.isIntersecting) {
-          setVisible(false);
-        }
-      },
-      { threshold: 0.4 },
-    );
-
-    observer.observe(hero);
-    return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
+    setVisible(false);
+    heroVisible.current = true;
     lastScrollY.current = window.scrollY;
-
+    const hero = document.getElementById("hero");
+    if (!hero || menuOpen) return;
+    const mobile = window.matchMedia("(max-width: 767px)");
+    const protectedAreas = new Map<Element, boolean>();
+    const areaObserver = new IntersectionObserver(entries => {
+      for (const entry of entries) protectedAreas.set(entry.target, entry.isIntersecting);
+      if (Array.from(protectedAreas.values()).some(Boolean)) setVisible(false);
+    }, { rootMargin: "0px 0px 80px 0px" });
+    document.querySelectorAll("main form, footer").forEach(area => areaObserver.observe(area));
+    const observer = new IntersectionObserver(([entry]) => {
+      heroVisible.current = entry.isIntersecting;
+      if (entry.isIntersecting) setVisible(false);
+    }, { threshold: 0.4 });
+    observer.observe(hero);
+    const hide = () => { setVisible(false); lastScrollY.current = window.scrollY; };
+    const isEditing = () => document.activeElement?.matches("input, textarea, select, [contenteditable=true]");
+    const handleFocus = () => { if (isEditing()) setVisible(false); };
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      if (!heroVisible.current) {
-        if (currentScrollY < lastScrollY.current) {
-          setVisible(true);
-        } else if (currentScrollY > lastScrollY.current + 5) {
-          setVisible(false);
-        }
-      }
-
-      lastScrollY.current = currentScrollY;
+      const y = window.scrollY;
+      setVisible(mobile.matches && !heroVisible.current && !isEditing()
+        && !Array.from(protectedAreas.values()).some(Boolean) && y < lastScrollY.current);
+      lastScrollY.current = y;
     };
-
+    mobile.addEventListener("change", hide);
+    document.addEventListener("focusin", handleFocus);
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    return () => {
+      observer.disconnect();
+      areaObserver.disconnect();
+      mobile.removeEventListener("change", hide);
+      document.removeEventListener("focusin", handleFocus);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [pathname, menuOpen]);
 
-  return (
-    <div
-      className={`
-        fixed bottom-0 left-0 right-0 z-50
-        border-t border-white/10 bg-[#001821]/95 backdrop-blur-md
-        pb-[env(safe-area-inset-bottom)]
-        transition-transform duration-300 ease-out
-        md:hidden
-        ${visible ? "translate-y-0" : "translate-y-full"}
-      `}
-    >
-      <div className="mx-auto flex max-w-md items-center justify-center px-4 py-3">
-        <Link
-          href={isDigitalStart ? "/start#situation" : "/kontakt"}
-          className="
-            w-full rounded-xl bg-[#E5C58B] py-3 text-center
-            font-medium tracking-wide text-[#001821]
-            shadow-[0_0_18px_rgba(229,197,139,0.35)]
-            transition-all duration-300 ease-out
-            active:scale-[0.98]
-          "
-        >
-          {isDigitalStart ? "Situation schildern" : "Kostenlos kennenlernen"}
-        </Link>
-      </div>
-    </div>
-  );
+  return <div className={`${styles.sticky} ${visible ? styles.stickyVisible : ""}`} aria-hidden={!visible}>
+    <Link href={isDigitalStart ? "/start#situation" : "/kontakt"} tabIndex={visible ? 0 : -1}>
+      {isDigitalStart ? "Situation schildern" : "Kostenlos kennenlernen"}<ArrowRight size={18} aria-hidden="true" />
+    </Link>
+  </div>;
 }
 
 export function Header() {
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const currentPathname = usePathname();
-  const pathname = currentPathname ?? "/";
+  const [compact, setCompact] = useState(false);
+  const pathname = usePathname() ?? "/";
   const isDigitalStart = pathname === "/start";
+  const headerRef = useRef<HTMLElement>(null);
+  const toggleRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
-
-    handleScroll();
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    const onScroll = () => setCompact(window.scrollY > 32);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => { setOpen(false); }, [pathname]);
   useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
-
-  useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
-
-    return () => {
-      document.body.style.overflow = "";
+    if (!open) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const firstLink = headerRef.current?.querySelector<HTMLAnchorElement>("#mobile-navigation a");
+    firstLink?.focus();
+    const handleKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") { setOpen(false); toggleRef.current?.focus(); }
+      if (event.key !== "Tab") return;
+      const items = Array.from(headerRef.current?.querySelectorAll<HTMLElement>("a, button, summary") ?? []).filter(el => el.getClientRects().length > 0);
+      const first = items[0], last = items[items.length - 1];
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
+      if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
     };
+    const media = window.matchMedia("(min-width: 1280px)");
+    const closeOnDesktop = () => { if (media.matches) setOpen(false); };
+    media.addEventListener("change", closeOnDesktop);
+    document.addEventListener("keydown", handleKey);
+    return () => { document.body.style.overflow = previousOverflow; document.removeEventListener("keydown", handleKey); media.removeEventListener("change", closeOnDesktop); };
   }, [open]);
 
-  if (pathname.startsWith("/slb")) {
-    return null;
-  }
+  if (pathname.startsWith("/slb")) return null;
+  const cta = isDigitalStart ? "Situation schildern" : "Kostenlos kennenlernen";
+  const href = isDigitalStart ? "#situation" : "/kontakt";
 
-  return (
-    <>
-      <header
-        className={`fixed inset-x-0 top-0 z-50 border-b transition-all duration-300 ${
-          scrolled || open
-            ? "border-white/10 bg-[#001821]/90 shadow-[0_12px_40px_rgba(0,0,0,0.25)] backdrop-blur-xl"
-            : "border-transparent bg-[#001821]/35 backdrop-blur-sm"
-        }`}
-      >
-        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 md:px-12 lg:px-20">
-          <Link
-            href="/"
-            className="group flex items-center gap-3"
-          >
-            <span className="flex h-9 w-9 items-center justify-center rounded-xl border border-[#E5C58B]/25 bg-[#E5C58B]/5 text-sm font-semibold text-[#E5C58B] transition group-hover:border-[#E5C58B]/45">
-              J
-            </span>
-            <span>
-              <span className="block text-sm font-medium tracking-[0.08em] text-white">
-                JaMoKo
-              </span>
-              {isDigitalStart ? (
-                <span className="block text-[9px] uppercase tracking-[0.2em] text-white/70">
-                  Digitale Orientierung
-                </span>
-              ) : null}
-            </span>
-          </Link>
-
-          <nav
-            aria-label="Hauptnavigation"
-            className="hidden items-center gap-7 text-sm xl:flex"
-          >
-            {navItems.map((item) => {
-              const active = isActivePath(pathname, item.href);
-
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={`relative py-2 transition-colors ${
-                    active ? "text-white" : "text-white/70 hover:text-white"
-                  }`}
-                >
-                  {item.label}
-                  <span
-                    className={`absolute inset-x-0 -bottom-0.5 mx-auto h-px bg-[#E5C58B] transition-transform ${
-                      active ? "scale-x-100" : "scale-x-0"
-                    }`}
-                  />
-                </Link>
-              );
-            })}
+  return <>
+    <header ref={headerRef} className={styles.header} data-compact={compact}>
+      <div className={styles.headerInner}>
+        <Brand subtitle={isDigitalStart ? "Digitale Orientierung" : undefined} />
+        <nav aria-label="Hauptnavigation" className={styles.desktopNav}>
+          {navItems.map(item => <Link key={item.href} href={item.href} aria-current={isActivePath(pathname,item.href) ? "page" : undefined}>{item.label}</Link>)}
+        </nav>
+        <Link href={href} className={styles.headerCTA}>{cta}<ArrowRight size={16} aria-hidden="true" /></Link>
+        <details className={styles.mobileMenu} open={open} onToggle={event => setOpen(event.currentTarget.open)}>
+          <summary ref={toggleRef} className={styles.menuButton} aria-label={open ? "Navigation schließen" : "Navigation öffnen"} aria-controls="mobile-navigation">
+            <Menu size={23} aria-hidden="true" className={styles.menuOpenIcon} />
+            <X size={23} aria-hidden="true" className={styles.menuCloseIcon} />
+          </summary>
+          <nav id="mobile-navigation" aria-label="Mobile Navigation" className={styles.mobileNav}>
+            {navItems.map((item,index) => <Link key={item.href} href={item.href} onClick={() => setOpen(false)} aria-current={isActivePath(pathname,item.href) ? "page" : undefined}><span className={styles.navNumber} aria-hidden="true">0{index+1}</span>{item.label}<ArrowRight size={19} aria-hidden="true" /></Link>)}
+            <Link href={href} onClick={() => setOpen(false)} className={styles.mobileCTA}>{cta}<ArrowRight size={18} aria-hidden="true" /></Link>
+            <p>{isDigitalStart ? "Unverbindlich · persönlich · ohne Vorbereitung" : "Unverbindlich · Persönlich · Antwort meist innerhalb von 24 Stunden"}</p>
           </nav>
-
-          <div className="hidden xl:block">
-            <Link
-              href={isDigitalStart ? "#situation" : "/kontakt"}
-              className="inline-flex items-center gap-2 rounded-full bg-[#E5C58B] px-5 py-2.5 text-sm font-semibold text-[#001821] transition hover:-translate-y-0.5 hover:bg-[#efd49f]"
-            >
-              {isDigitalStart ? "Situation schildern" : "Kostenlos kennenlernen"}
-              <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </Link>
-          </div>
-
-          <button
-            type="button"
-            onClick={() => setOpen((current) => !current)}
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-white transition hover:border-white/25 hover:bg-white/5 xl:hidden"
-            aria-label={open ? "Navigation schließen" : "Navigation öffnen"}
-            aria-expanded={open}
-            aria-controls="mobile-navigation"
-          >
-            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </button>
-        </div>
-
-        {open ? (
-          <div
-            id="mobile-navigation"
-            className="border-t border-white/10 bg-[#001821]/98 px-6 pb-8 pt-5 backdrop-blur-xl xl:hidden max-h-[calc(100dvh-5rem)] overflow-y-auto"
-          >
-            <nav aria-label="Mobile Navigation" className="mx-auto max-w-lg">
-              <div className="flex flex-col">
-                {navItems.map((item) => {
-                  const active = isActivePath(pathname, item.href);
-
-                  return (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      onClick={() => setOpen(false)}
-                      className={`flex items-center justify-between border-b border-white/10 py-4 text-lg ${
-                        active ? "text-[#E5C58B]" : "text-white/70"
-                      }`}
-                    >
-                      {item.label}
-                      <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                    </Link>
-                  );
-                })}
-              </div>
-
-              <Link
-                href={isDigitalStart ? "#situation" : "/kontakt"}
-                className="mt-7 flex w-full items-center justify-center gap-2 rounded-full bg-[#E5C58B] px-6 py-4 text-sm font-semibold text-[#001821]"
-              >
-                {isDigitalStart ? "Situation schildern" : "Kostenlos kennenlernen"}
-                <ArrowRight className="h-4 w-4" aria-hidden="true" />
-              </Link>
-
-              <p className="mt-5 text-center text-xs text-white/70">
-                {isDigitalStart
-                  ? "Unverbindlich · persönlich · ohne Vorbereitung"
-                  : "Unverbindlich · Persönlich · Antwort meist innerhalb von 24 Stunden"}
-              </p>
-            </nav>
-          </div>
-        ) : null}
-      </header>
-
-      <MobileStickyCTA />
-    </>
-  );
+        </details>
+      </div>
+    </header>
+    <MobileStickyCTA key={pathname} menuOpen={open} />
+  </>;
 }

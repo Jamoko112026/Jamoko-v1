@@ -120,7 +120,7 @@ function SectionHeading({
         {title}
       </h2>
       {intro ? (
-        <p className="mt-5 text-base leading-8 text-white/58">{intro}</p>
+        <p className="mt-5 text-base leading-8 text-jamoko-text-dim">{intro}</p>
       ) : null}
     </div>
   );
@@ -136,10 +136,10 @@ function TextSection({
   children: ReactNode;
 }) {
   return (
-    <section className="px-6 py-20 sm:px-8 md:py-28">
+    <section className="v3-paper px-6 py-20 sm:px-8 md:py-28">
       <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.86fr_1.14fr] lg:items-start">
         <SectionHeading eyebrow={eyebrow} title={title} />
-        <div className="space-y-5 text-base leading-8 text-white/58">
+        <div className="space-y-5 text-base leading-8 text-jamoko-text-dim">
           {children}
         </div>
       </div>
@@ -149,8 +149,8 @@ function TextSection({
 
 export default function JamokoWebsitePage() {
   return (
-    <div className="relative overflow-hidden">
-      <section className="px-6 py-16 sm:px-8 md:py-24">
+    <div className="v3-page relative overflow-hidden">
+      <section className="v3-page-header px-6 py-16 sm:px-8 md:py-24">
         <div className="mx-auto max-w-6xl">
           <div className="max-w-3xl">
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#E5C58B]">
@@ -158,11 +158,11 @@ export default function JamokoWebsitePage() {
             </p>
             <h1 className="mt-5 text-4xl font-light leading-tight text-white sm:text-5xl md:text-6xl">
               Deine Arbeit ist gut.
-              <span className="block text-white/40">
+              <span className="block text-jamoko-text-dim">
                 Deine Website sollte das zeigen.
               </span>
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-white/58">
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-jamoko-text-dim">
               Du kennst dein Geschäft. Wir bringen auf den Punkt, was dich
               ausmacht – und bauen daraus eine klare Website, auf der Menschen
               schnell verstehen, warum sie bei dir richtig sind.
@@ -196,19 +196,19 @@ export default function JamokoWebsitePage() {
             intro="Für Unternehmen, die ihre Arbeit klar zeigen und den nächsten Schritt einfach machen möchten."
           />
 
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="v3-facts mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {audiences.map(({ title, text, icon: Icon }) => (
               <article
                 key={title}
-                className="rounded-3xl border border-white/10 bg-white/[0.025] p-7"
+                className="v3-fact rounded-3xl border border-white/10 bg-white/[0.025] p-7"
               >
-                <span className="flex h-11 w-11 items-center justify-center rounded-2xl border border-[#1AC7A4]/20 bg-[#1AC7A4]/5 text-[#1AC7A4]">
+                <span className="v3-icon flex h-11 w-11 items-center justify-center rounded-2xl border border-[#1AC7A4]/20 bg-[#1AC7A4]/5 text-[#1AC7A4]">
                   <Icon className="h-5 w-5" aria-hidden="true" />
                 </span>
                 <h2 className="mt-8 text-lg font-medium text-white">
                   {title}
                 </h2>
-                <p className="mt-3 text-sm leading-relaxed text-white/52">
+                <p className="mt-3 text-sm leading-relaxed text-jamoko-text-dim">
                   {text}
                 </p>
               </article>
@@ -224,10 +224,10 @@ export default function JamokoWebsitePage() {
             title="Was enthalten ist"
             intro="Der Standardumfang ist klar definiert und auf einen ruhigen, verständlichen Auftritt ausgerichtet."
           />
-          <div className="rounded-3xl border border-white/10 bg-white/[0.025] p-7 sm:p-8">
+          <div className="v3-list rounded-3xl border border-white/10 bg-white/[0.025] p-7 sm:p-8">
             <ul className="space-y-4">
               {includedItems.map((item) => (
-                <li key={item} className="flex gap-3 text-sm text-white/62">
+                <li key={item} className="flex gap-3 text-sm text-jamoko-text-dim">
                   <CheckCircle2
                     className="mt-0.5 h-4 w-4 shrink-0 text-[#1AC7A4]"
                     aria-hidden="true"
@@ -248,11 +248,11 @@ export default function JamokoWebsitePage() {
             intro="Drei klare Schritte führen von deinem Wissen über den Betrieb zu einer Website, die deine Kunden verstehen."
           />
 
-          <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <div className="v3-facts mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {processSteps.map((step, index) => (
               <article
                 key={step.title}
-                className="rounded-3xl border border-white/10 bg-white/[0.025] p-7"
+                className="v3-fact rounded-3xl border border-white/10 bg-white/[0.025] p-7"
               >
                 <div className="mb-10">
                   <span className="text-sm tracking-[0.2em] text-[#E5C58B]">
@@ -262,7 +262,7 @@ export default function JamokoWebsitePage() {
                 <h2 className="text-xl font-medium text-white">
                   {step.title}
                 </h2>
-                <p className="mt-4 text-sm leading-relaxed text-white/50">
+                <p className="mt-4 text-sm leading-relaxed text-jamoko-text-dim">
                   {step.text}
                 </p>
               </article>
@@ -282,16 +282,16 @@ export default function JamokoWebsitePage() {
             ab 1.490 €
           </p>
 
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="v3-facts mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {offerDetails.map((detail) => (
               <article
                 key={detail.title}
-                className="rounded-3xl border border-white/10 bg-white/[0.025] p-7"
+                className="v3-fact rounded-3xl border border-white/10 bg-white/[0.025] p-7"
               >
                 <h2 className="text-xl font-medium text-white">
                   {detail.title}
                 </h2>
-                <p className="mt-3 text-sm leading-relaxed text-white/52">
+                <p className="mt-3 text-sm leading-relaxed text-jamoko-text-dim">
                   {detail.text}
                 </p>
               </article>
@@ -307,7 +307,7 @@ export default function JamokoWebsitePage() {
             title="Wenn dein Projekt mehr braucht"
             intro="Manche Vorhaben gehen über den klar definierten Standardumfang hinaus."
           />
-          <div className="space-y-6 text-base leading-8 text-white/58">
+          <div className="space-y-6 text-base leading-8 text-jamoko-text-dim">
             <p>
               Shops, komplexe Buchungssysteme, individuelle Web-Apps,
               umfangreiche Migrationen oder laufende Betreuung besprechen wir
@@ -331,7 +331,7 @@ export default function JamokoWebsitePage() {
       </section>
 
       <section className="px-6 pb-20 sm:px-8 md:pb-28">
-        <div className="mx-auto max-w-6xl rounded-[2rem] border border-[#E5C58B]/30 bg-[#E5C58B] px-7 py-12 text-[#001821] sm:px-10 md:py-16">
+        <div className="v3-callout mx-auto max-w-6xl rounded-[2rem] border border-[#E5C58B]/30 bg-[#E5C58B] px-7 py-12 text-[#001821] sm:px-10 md:py-16">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#001821]/55">
             Kennenlernen
           </p>

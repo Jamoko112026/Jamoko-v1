@@ -78,7 +78,7 @@ function TextSection({
   return (
     <section
       className={`px-6 py-20 sm:px-8 md:py-28 ${
-        muted ? "border-y border-white/10 bg-white/[0.025]" : ""
+        muted ? "v3-teal" : "v3-paper"
       }`}
     >
       <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
@@ -90,7 +90,7 @@ function TextSection({
             {title}
           </h2>
         </div>
-        <div className="space-y-6 text-lg leading-9 text-white/58">
+        <div className="space-y-6 text-lg leading-9 text-jamoko-text-dim">
           {children}
         </div>
       </div>
@@ -100,8 +100,8 @@ function TextSection({
 
 export default function AboutJamokoPage() {
   return (
-    <div className="relative overflow-hidden">
-      <section className="px-6 py-20 sm:px-8 md:py-32">
+    <div className="v3-page relative overflow-hidden">
+      <section className="v3-page-header px-6 py-20 sm:px-8 md:py-32">
         <div className="mx-auto max-w-6xl">
           <div className="max-w-4xl">
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#E5C58B]">
@@ -110,7 +110,7 @@ export default function AboutJamokoPage() {
             <h1 className="mt-6 text-4xl font-light leading-tight text-white sm:text-5xl md:text-6xl">
               Warum es JaMoKo gibt.
             </h1>
-            <div className="mt-8 max-w-3xl space-y-4 text-lg leading-8 text-white/60 md:text-xl md:leading-9">
+            <div className="mt-8 max-w-3xl space-y-4 text-lg leading-8 text-jamoko-text-dim md:text-xl md:leading-9">
               <p>Nicht jede gute Arbeit wird gesehen.</p>
               <p>
                 JaMoKo hilft Unternehmen dabei, online so wahrgenommen zu
@@ -171,7 +171,7 @@ export default function AboutJamokoPage() {
             <p className="max-w-4xl text-3xl font-light leading-tight text-white sm:text-4xl md:text-5xl">
               Eine gute Website beginnt nicht mit einer Idee.
             </p>
-            <p className="mt-8 max-w-3xl text-xl leading-9 text-white/62">
+            <p className="mt-8 max-w-3xl text-xl leading-9 text-jamoko-text-dim">
               Sie beginnt mit echtem Interesse an den Menschen, für die sie
               entsteht.
             </p>
@@ -190,19 +190,19 @@ export default function AboutJamokoPage() {
             </h2>
           </div>
 
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="v3-facts mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {workingValues.map(({ title, text, icon: Icon }) => (
               <article
                 key={title}
-                className="rounded-3xl border border-white/10 bg-white/[0.025] p-7"
+                className="v3-fact rounded-3xl border border-white/10 bg-white/[0.025] p-7"
               >
-                <span className="flex h-11 w-11 items-center justify-center rounded-2xl border border-[#1AC7A4]/20 bg-[#1AC7A4]/5 text-[#1AC7A4]">
+                <span className="v3-icon flex h-11 w-11 items-center justify-center rounded-2xl border border-[#1AC7A4]/20 bg-[#1AC7A4]/5 text-[#1AC7A4]">
                   <Icon className="h-5 w-5" aria-hidden="true" />
                 </span>
                 <h3 className="mt-8 text-xl font-medium text-white">
                   {title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-white/52">
+                <p className="mt-3 text-sm leading-relaxed text-jamoko-text-dim">
                   {text}
                 </p>
               </article>
@@ -256,7 +256,7 @@ export default function AboutJamokoPage() {
       </section>
 
       <section className="px-6 pb-20 sm:px-8 md:pb-28">
-        <div className="mx-auto max-w-6xl rounded-[2rem] border border-[#E5C58B]/30 bg-[#E5C58B] px-7 py-12 text-[#001821] sm:px-10 md:py-16">
+        <div className="v3-callout mx-auto max-w-6xl rounded-[2rem] border border-[#E5C58B]/30 bg-[#E5C58B] px-7 py-12 text-[#001821] sm:px-10 md:py-16">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#001821]/55">
             Kennenlernen
           </p>

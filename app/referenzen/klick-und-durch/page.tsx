@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function KlickUndDurchReferencePage() {
   return (
-    <div className="relative overflow-hidden">
+    <div className="v3-page relative overflow-hidden">
       <section className="px-6 py-20 sm:px-8 md:py-28">
         <div className="mx-auto max-w-4xl">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#E5C58B]">
@@ -26,13 +26,13 @@ export default function KlickUndDurchReferencePage() {
             Klick & Durch
           </h1>
 
-          <p className="mt-7 max-w-2xl text-lg leading-8 text-white/60">
+          <p className="mt-7 max-w-2xl text-lg leading-8 text-jamoko-text-dim">
             Eine kleine Referenz dafür, wie JaMoKo versucht, einen digitalen
             Auftritt so aufzubauen, dass Menschen schnell verstehen, was ein
             Angebot besonders macht und wer dahintersteht.
           </p>
 
-          <p className="mt-5 max-w-2xl leading-7 text-white/45">
+          <p className="mt-5 max-w-2xl leading-7 text-jamoko-text-dim">
             Nicht als Vorlage für andere Betriebe – sondern als Einblick in
             unsere Arbeitsweise.
           </p>
@@ -50,7 +50,7 @@ export default function KlickUndDurchReferencePage() {
           <div className="mt-16 border-t border-white/10 pt-8">
             <Link
               href="/kontakt"
-              className="inline-flex items-center gap-2 text-sm text-white/60 transition hover:text-white"
+              className="inline-flex items-center gap-2 text-sm text-jamoko-text-dim transition hover:text-white"
             >
               Eigenes Projekt besprechen
               <ArrowRight className="h-4 w-4" aria-hidden="true" />

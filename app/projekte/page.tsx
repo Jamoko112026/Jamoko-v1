@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { ConceptPlaceholder } from "@/components/landing/ConceptPlaceholder";
+import styles from "./Projects.module.css";
 
 export const metadata: Metadata = {
   title: "Projekte, Demos und Konzepte",
@@ -98,15 +99,15 @@ const projects: Project[] = [
 
 const statusStyles: Record<Project["status"], string> = {
   Kundenprojekt: "border-[#1AC7A4]/30 bg-[#001821]/90 text-[#1AC7A4]",
-  Demo: "border-[#1AC7A4]/30 bg-[#1AC7A4]/10 text-[#1AC7A4]",
+  Demo: "border-[#1AC7A4]/50 bg-[#001821]/95 text-[#1AC7A4]",
   "In Arbeit": "border-[#E5C58B]/35 bg-[#E5C58B]/10 text-[#E5C58B]",
   Konzept: "border-white/15 bg-white/10 text-white/70",
 };
 
 export default function ProjectsPage() {
   return (
-    <div className="relative overflow-hidden">
-      <section className="px-6 py-16 sm:px-8 md:py-24">
+    <div className="v3-page relative overflow-hidden">
+      <section className="v3-page-header px-6 py-16 sm:px-8 md:py-24">
         <div className="mx-auto max-w-6xl">
           <div className="max-w-3xl">
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#E5C58B]">
@@ -115,7 +116,7 @@ export default function ProjectsPage() {
             <h1 className="mt-5 text-4xl font-light leading-tight text-white sm:text-5xl md:text-6xl">
               Unsere Projekte
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-white/58">
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-jamoko-text-dim">
               Ausgewählte Projekte zeigen, wie wir Unternehmen dabei
               unterstützen, klarer, ruhiger und digital sichtbarer zu werden.
             </p>
@@ -129,20 +130,20 @@ export default function ProjectsPage() {
       </section>
 
       <section className="px-6 pb-20 sm:px-8 md:pb-28">
-        <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {projects.map((project) => (
+        <div className={styles.archive}>
+          {[...projects].sort((a,b) => ({Kundenprojekt:0,Demo:1,Konzept:2,"In Arbeit":2}[a.status] - {Kundenprojekt:0,Demo:1,Konzept:2,"In Arbeit":2}[b.status])).map((project) => (
             <article
               key={project.title}
-              className="group flex overflow-hidden rounded-3xl border border-white/10 bg-white/[0.025] transition duration-300 hover:-translate-y-1 hover:border-[#E5C58B]/30 hover:bg-white/[0.045]"
+              className={styles.project}
             >
               <div className="flex w-full flex-col">
-                <div className="relative aspect-[4/3] overflow-hidden bg-[#06252f]">
+                <div className={styles.image}>
                   {project.image ? (
                     <Image
                       src={project.image}
                       alt={project.alt}
                       fill
-                      sizes="(min-width: 768px) 50vw, 100vw"
+                      sizes="(min-width: 1024px) 60vw, 100vw"
                       className={`h-full w-full transition-transform duration-700 group-hover:scale-[1.03] ${
                         project.title === "SL Bautec"
                           ? "object-contain p-12"
@@ -164,7 +165,7 @@ export default function ProjectsPage() {
                   </span>
                 </div>
 
-                <div className="flex flex-1 flex-col p-7 sm:p-8">
+                <div className={styles.caption}>
                   <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#E5C58B]">
                     {project.industry}
                   </p>
@@ -192,7 +193,7 @@ export default function ProjectsPage() {
       </section>
 
       <section className="border-y border-white/10 bg-white/[0.025] px-6 py-20 sm:px-8 md:py-28">
-        <div className="mx-auto max-w-6xl rounded-[2rem] border border-[#E5C58B]/30 bg-[#E5C58B] px-7 py-12 text-[#001821] sm:px-10 md:py-16">
+        <div className="v3-callout mx-auto max-w-6xl rounded-[2rem] border border-[#E5C58B]/30 bg-[#E5C58B] px-7 py-12 text-[#001821] sm:px-10 md:py-16">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#001821]/55">
             Nächster Schritt
           </p>

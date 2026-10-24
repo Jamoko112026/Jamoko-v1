@@ -22,7 +22,7 @@ const points = [
 
 export default function ReifendienstDemoPage() {
   return (
-    <div className="relative overflow-hidden">
+    <div className="v3-page relative overflow-hidden">
       <section className="px-6 py-16 sm:px-8 md:py-24">
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
@@ -32,7 +32,7 @@ export default function ReifendienstDemoPage() {
             <h1 className="mt-5 text-4xl font-light leading-tight text-white sm:text-5xl md:text-6xl">
               Website-Demo für einen lokalen Reifendienst.
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-white/58">
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-jamoko-text-dim">
               Diese Demo zeigt, wie ein lokaler Servicebetrieb Leistungen,
               Preise und Kontaktwege klarer darstellen kann.
             </p>
@@ -63,7 +63,7 @@ export default function ReifendienstDemoPage() {
           {points.map((point) => (
             <article
               key={point}
-              className="rounded-3xl border border-white/10 bg-white/[0.025] p-7"
+              className="v3-fact rounded-3xl border border-white/10 bg-white/[0.025] p-7"
             >
               <CheckCircle2
                 className="h-5 w-5 text-[#1AC7A4]"

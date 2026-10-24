@@ -1,60 +1,62 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Monitor, Compass, Settings, FolderOpen, Sprout, MapPin } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import styles from "./Hero.module.css";
-
-const situations = [
-  { icon: Monitor, label: "Meine Website bringt wenig Anfragen", href: "/mini-site" },
-  { icon: Compass, label: "Ich verliere digital den Überblick", href: "#digitalbegleitung" },
-  { icon: Settings, label: "Ich mache zu viel von Hand", href: "/digital-kompass" },
-];
-const services = [
-  { icon: Monitor, title: "Eine Website, die zu dir passt", text: "Verständlich. Persönlich. Leicht zu nutzen.", href: "/mini-site" },
-  { icon: FolderOpen, title: "Mehr Ordnung im Alltag", text: "Dateien, Werkzeuge und Abläufe sinnvoll sortieren.", href: "#digitalbegleitung" },
-  { icon: Sprout, title: "Ein klarer nächster Schritt", text: "Gemeinsam herausfinden, was du wirklich brauchst.", href: "/digital-kompass" },
-];
 
 export function Hero() {
   return (
-    <section id="hero" className={styles.section}>
-      <div className={styles.hero}>
-        <div className={styles.copy}>
-          <p className={styles.eyebrow}>Websites &amp; persönliche Digitalbegleitung</p>
-          <h1>Websites, die zeigen, was du kannst. <span>Digitale Hilfe, die deinen Alltag leichter macht.</span></h1>
-          <p className={styles.intro}>Ich bin Mo aus Hamburg. Ich erstelle Websites für kleine Betriebe und helfe dir, Dateien, Programme und Abläufe übersichtlicher zu organisieren.</p>
-          <div className={styles.actions}>
-            <Link className={styles.primary} href="/mini-site">Ich brauche eine Website <ArrowRight size={18} aria-hidden="true" /></Link>
-            <a className={styles.secondary} href="#digitalbegleitung">Ich brauche digitale Unterstützung</a>
-          </div>
-          <p className={styles.local}><MapPin size={19} aria-hidden="true" /> Persönlich aus Hamburg · Klar und verständlich</p>
-        </div>
-        <div className={styles.visual}>
-          <figure className={styles.figure}>
-            <div className={styles.imageFrame}>
-              <Image src="/hero/jamoko-hamburg-im-wandel.webp" alt="Künstlerischer Übergang von einem historischen Hamburger Fleet in Sepia zu einer modernen Uferbebauung." fill priority sizes="(min-width: 1024px) 50vw, 100vw" className={styles.photo} />
-            </div>
-            <figcaption>Hamburg im Wandel · KI-gestaltete Bildinterpretation</figcaption>
-          </figure>
-          <div className={styles.situations}>
-            <h2>Was beschäftigt dich gerade?</h2>
-            <div className={styles.situationList}>
-              {situations.map(({ icon: Icon, label, href }) => (
-                <Link key={label} href={href}><Icon size={23} aria-hidden="true" /><span>{label}</span><ArrowRight size={17} aria-hidden="true" /></Link>
-              ))}
-            </div>
-          </div>
-        </div>
+    <section id="hero" aria-labelledby="hero-title" className={styles.section}>
+      <div className={styles.media}>
+        <Image
+          src="/hero/jamoko-hamburg-hero-v3.png"
+          alt="Blick über den Hamburger Hafen mit Elbphilharmonie, Schiffen und Containerkränen unter einem weiten Wolkenhimmel."
+          fill
+          priority
+          sizes="100vw"
+          className={styles.photo}
+        />
       </div>
-      <div className={styles.help}>
-        <h2>Wo würde etwas mehr Klarheit helfen?</h2>
-        <div className={styles.cards}>
-          {services.map(({ icon: Icon, title, text, href }) => (
-            <Link className={styles.card} key={title} href={href}>
-              <Icon size={36} aria-hidden="true" />
-              <div><h3>{title}</h3><p>{text}</p></div>
-              <ArrowRight className={styles.cardArrow} size={20} aria-hidden="true" />
+      <div className={styles.inner}>
+        <div className={styles.masthead}>
+          <p className={styles.eyebrow}>JaMoKo · Aus Hamburg</p>
+          <p className={styles.principle}>Erst Mensch, dann Marke, dann Mechanik.</p>
+        </div>
+
+        <h1 id="hero-title" className={styles.title}>
+          Menschen verstehen.
+          <span>Digitales verbinden.</span>
+        </h1>
+
+        <div className={styles.composition}>
+          <div className={styles.copy}>
+            <p className={styles.intro}>
+              JaMoKo verbindet Menschen, Prozesse und digitale Möglichkeiten.
+            </p>
+            <nav className={styles.paths} aria-label="Leistungswege">
+              <Link className={styles.path} href="/mini-site">
+                <span className={styles.pathNumber} aria-hidden="true">01</span>
+                <span className={styles.pathCopy}>
+                  <span className={styles.pathTitle}>Websites &amp; digitale Sichtbarkeit</span>
+                  <span className={styles.pathDescription}>Deine Arbeit verständlich zeigen.</span>
+                </span>
+                <ArrowRight className={styles.pathArrow} size={26} aria-hidden="true" />
+              </Link>
+              <a className={styles.path} href="#digitalbegleitung">
+                <span className={styles.pathNumber} aria-hidden="true">02</span>
+                <span className={styles.pathCopy}>
+                  <span className={styles.pathTitle}>Digitalbegleitung</span>
+                  <span className={styles.pathDescription}>Mehr Ordnung in deinen digitalen Alltag bringen.</span>
+                </span>
+                <ArrowRight className={styles.pathArrow} size={26} aria-hidden="true" />
+              </a>
+            </nav>
+            <Link className={styles.compass} href="/digital-kompass">
+              Noch offen, wo du anfangen sollst?
+              <span>
+                Zum Digital-Kompass <ArrowRight size={18} aria-hidden="true" />
+              </span>
             </Link>
-          ))}
+          </div>
         </div>
       </div>
     </section>

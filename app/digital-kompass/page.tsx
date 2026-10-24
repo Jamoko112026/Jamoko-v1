@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: { title: 'Digital-Kompass · JaMoKo', description: 'Fünf Fragen zu deinem digitalen Arbeitsalltag. Verständliche nächste Schritte ohne Anmeldung.', url: 'https://jamoko.de/digital-kompass' },
 };
 export default function DigitalKompassPage() {
-  return <section className="px-4 py-14 sm:px-6 md:py-20">
+  return <section className="v3-page v3-tool-page px-4 py-14 sm:px-6 md:py-20">
     <div className="mx-auto max-w-3xl">
       <p className="text-sm font-semibold uppercase tracking-widest text-calm-gold">JaMoKo Digital-Kompass</p>
       <h1 className="mt-5 text-4xl font-semibold tracking-tight text-calm-ink sm:text-5xl">Zu viel im Kopf. Zu viele Zettel. Wo fangen wir an?</h1>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import { ProductPreview } from "@/components/landing/ProductPreview";
 import Link from "next/link";
 import { ArrowRight, BookOpen, Check, MessageCircle, Pause, Sparkles } from "lucide-react";
 
@@ -25,13 +25,13 @@ const features = [
 
 export default function InterviewbegleiterPage() {
   return (
-    <>
-      <section className="mx-auto max-w-6xl px-6 pb-16 pt-14 sm:px-8 md:pb-24 md:pt-20">
+    <div className="v3-page v3-special">
+      <section className="v3-page-header mx-auto max-w-6xl px-6 pb-16 pt-14 sm:px-8 md:pb-24 md:pt-20">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#E5C58B]">JaMoKo Interviewbegleiter · Begleitete Testphase</p>
         <div className="mt-8 grid items-center gap-12 lg:grid-cols-[1.05fr_1fr]">
           <div>
             <h1 className="max-w-3xl text-4xl font-semibold leading-[1.13] tracking-tight text-white sm:text-5xl">Deine Fragen im Blick.<br /><span className="text-[#E5C58B]">Dein Gegenüber im Mittelpunkt.</span></h1>
-            <p className="mt-7 max-w-xl text-lg leading-relaxed text-white/75">Dein Leitfaden wird zu übersichtlichen Gesprächskarten. Mit Platz für Nachfragen, Notizen und einen klaren Wiedereinstieg nach einer Pause.</p>
+            <p className="mt-7 max-w-xl text-lg leading-relaxed text-white/75">Behalte im Gespräch den Überblick: Deine Fragen stehen auf einzelnen Karten. Notizen hältst du direkt dazu fest. Nach einer Pause findest du zur letzten Karte zurück und kannst mit deinem Gegenüber weitersprechen.</p>
             <p className="mt-4 text-sm leading-relaxed text-white/65">Für Coaches, Beratende und Menschen, die Interviews oder moderierte Gespräche führen.</p>
             <div className="mt-8 flex flex-wrap items-center gap-5">
               <a href={contactHref} className="inline-flex min-h-12 items-center gap-2 rounded-full bg-[#E5C58B] px-6 py-3 font-semibold text-[#001821] hover:bg-[#efd49f]">Mit mir ausprobieren <ArrowRight size={18} aria-hidden="true" /></a>
@@ -40,8 +40,8 @@ export default function InterviewbegleiterPage() {
             <p className="mt-5 text-sm text-white/65">Ich richte deinen Leitfaden mit dir ein. Gemeinsam schauen wir, ob er zu deinem Alltag passt. — Mo</p>
           </div>
           <figure className="min-w-0">
-            <Image src="/interviewbegleiter/karten.webp" width={1363} height={936} priority sizes="(max-width: 1023px) 100vw, 550px" alt="Beispielkarte Möglichkeiten mit der Frage Was würdest du dir wünschen und aufklappbaren Nachfragen" className="w-full rounded-2xl border border-[#E5C58B]/30 shadow-2xl" />
-            <figcaption className="mt-3 text-xs leading-relaxed text-white/60">Einblick in die App. Alle gezeigten Gesprächsinhalte sind fiktive Beispiele.</figcaption>
+            <ProductPreview label="Interviewbegleiter – Gesprächskarten" src="/interviewbegleiter/karten.webp" width={1363} height={936} imageClassName="w-full rounded-2xl border border-[#E5C58B]/30 shadow-2xl" priority sizes="(max-width: 1023px) 100vw, 550px" alt="Beispielkarte Möglichkeiten mit der Frage Was würdest du dir wünschen und aufklappbaren Nachfragen" />
+            <figcaption className="mt-3 text-xs leading-relaxed text-jamoko-text-dim">Einblick in die App. Alle gezeigten Gesprächsinhalte sind fiktive Beispiele.</figcaption>
           </figure>
         </div>
       </section>
@@ -60,8 +60,8 @@ export default function InterviewbegleiterPage() {
       <section className="mx-auto max-w-6xl px-6 py-16 sm:px-8 md:py-24">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <figure className="min-w-0">
-            <Image src="/interviewbegleiter/ki-studio.webp" width={1348} height={926} sizes="(max-width: 1023px) 100vw, 550px" alt="KI-Studio mit Auswahlfeldern für Namen, Notizen und Transkript sowie einer Prüfung vor dem Weitergeben" className="w-full rounded-2xl border border-white/15" />
-            <figcaption className="mt-3 text-xs text-white/60">Optionales KI-Studio. Du wählst die Inhalte für deinen Auftrag aus.</figcaption>
+            <ProductPreview label="Interviewbegleiter – KI-Studio" src="/interviewbegleiter/ki-studio.webp" width={1348} height={926} imageClassName="w-full rounded-2xl border border-white/15" sizes="(max-width: 1023px) 100vw, 550px" alt="KI-Studio mit Auswahlfeldern für Namen, Notizen und Transkript sowie einer Prüfung vor dem Weitergeben" />
+            <figcaption className="mt-3 text-xs text-jamoko-text-dim">Optionales KI-Studio. Du wählst die Inhalte für deinen Auftrag aus.</figcaption>
           </figure>
           <div>
             <Sparkles className="text-[#E5C58B]" size={28} aria-hidden="true" />
@@ -102,6 +102,6 @@ export default function InterviewbegleiterPage() {
         </div>
         <Link href="/kontakt" className="mt-8 inline-flex min-h-12 items-center gap-2 text-[#E5C58B] underline underline-offset-4">Eine andere Frage? Schreib mir. <ArrowRight size={17} aria-hidden="true" /></Link>
       </section>
-    </>
+    </div>
   );
 }

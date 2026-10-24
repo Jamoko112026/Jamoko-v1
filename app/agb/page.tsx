@@ -46,8 +46,8 @@ const sections = [
 
 export default function AgbPage() {
   return (
-    <div className="relative overflow-hidden">
-      <section className="px-6 py-16 sm:px-8 md:py-24">
+    <div className="v3-page relative overflow-hidden">
+      <section className="v3-page-header px-6 py-16 sm:px-8 md:py-24">
         <div className="mx-auto max-w-6xl">
           <div className="max-w-3xl">
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#E5C58B]">
@@ -56,7 +56,7 @@ export default function AgbPage() {
             <h1 className="mt-5 text-4xl font-light leading-tight text-white sm:text-5xl md:text-6xl">
               AGB
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-white/58">
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-jamoko-text-dim">
               Diese Seite gibt einen einfachen Überblick. Maßgeblich sind die
               konkreten Vereinbarungen im jeweiligen Angebot.
             </p>
@@ -64,24 +64,24 @@ export default function AgbPage() {
         </div>
       </section>
 
-      <section className="px-6 pb-20 sm:px-8 md:pb-28">
+      <section className="v3-paper px-6 pb-20 sm:px-8 md:pb-28">
         <div className="mx-auto grid max-w-6xl gap-5 md:grid-cols-2">
           {sections.map((section) => (
             <article
               key={section.title}
-              className="rounded-3xl border border-white/10 bg-white/[0.025] p-7"
+              className="v3-fact rounded-3xl border border-white/10 bg-white/[0.025] p-7"
             >
               <h2 className="text-xl font-medium text-white">
                 {section.title}
               </h2>
-              <p className="mt-4 text-sm leading-7 text-white/58">
+              <p className="mt-4 text-sm leading-7 text-jamoko-text-dim">
                 {section.text}
               </p>
             </article>
           ))}
         </div>
 
-        <div className="mx-auto mt-10 max-w-6xl rounded-[2rem] border border-[#E5C58B]/30 bg-[#E5C58B] px-7 py-12 text-[#001821] sm:px-10 md:py-14">
+        <div className="v3-callout mx-auto mt-10 max-w-6xl rounded-[2rem] border border-[#E5C58B]/30 bg-[#E5C58B] px-7 py-12 text-[#001821] sm:px-10 md:py-14">
           <h2 className="max-w-3xl text-3xl font-light leading-tight">
             Fragen zur Zusammenarbeit?
           </h2>

@@ -26,8 +26,8 @@
   --jamoko-teal-accessible: #067563;
   --jamoko-gold-glow: rgba(229, 197, 139, 0.3);
   --jamoko-teal-glow: rgba(26, 199, 164, 0.3);
-  --jmk-radius-card: 1.5rem;
-  --jmk-radius-cta: 2rem;
+  --jmk-radius-card: 0.3rem;
+  --jmk-radius-cta: 0.3rem;
   --jmk-transition: 280ms cubic-bezier(0.22, 1, 0.36, 1);
   --jmk-card-shadow: 0 18px 64px rgba(0, 0, 0, 0.14);
   --jmk-card-shadow-hover: 0 24px 78px rgba(0, 0, 0, 0.2);
@@ -85,54 +85,6 @@ details > summary::-webkit-details-marker {
   display: none;
 }
 
-.jmk-enhanced :where(a, button)[class*="rounded-full"] {
-  min-height: 2.75rem;
-  transition-duration: 280ms;
-  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
-  transition-property: color, background-color, border-color, box-shadow,
-    opacity, transform;
-}
-
-.jmk-enhanced :where(a, button)[class*="rounded-full"]:hover {
-  transform: translateY(-2px);
-}
-
-.jmk-enhanced :where(a, button)[class*="rounded-full"]:active {
-  transform: translateY(0);
-}
-
-.jmk-enhanced :where(a, button)[class*="rounded-full"]:focus-visible {
-  outline: none;
-  box-shadow:
-    0 0 0 3px rgba(229, 197, 139, 0.45),
-    0 0 0 6px rgba(0, 24, 33, 0.88);
-}
-
-.jmk-enhanced
-  :where(article, details, a, div)[class*="rounded-3xl"][class*="border"] {
-  border-radius: var(--jmk-radius-card);
-  box-shadow: var(--jmk-card-shadow);
-  transition-duration: 280ms;
-  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
-  transition-property: border-color, background-color, box-shadow, transform,
-    opacity;
-}
-
-.jmk-enhanced
-  :where(article, details, a)[class*="rounded-3xl"][class*="border"]:hover {
-  box-shadow: var(--jmk-card-shadow-hover);
-}
-
-.jmk-enhanced :where(a, article, div)[class*="hover:-translate-y"] {
-  transition-duration: 280ms;
-  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.jmk-enhanced :where(div)[class*="rounded-[2rem]"][class*="bg-[#E5C58B]"] {
-  border-radius: var(--jmk-radius-cta);
-  box-shadow: 0 26px 92px rgba(229, 197, 139, 0.12);
-}
-
 /* Ruhige, vollbreite Leseflaechen der Startseite. Die Lichtakzente bleiben
    hinter dem Inhalt und veraendern deshalb weder Text- noch Karten-Kontrast. */
 .jmk-section-light {
@@ -140,29 +92,6 @@ details > summary::-webkit-details-marker {
   isolation: isolate;
   overflow: hidden;
   color: var(--jamoko-ink);
-}
-
-.jmk-section-light::before,
-.jmk-section-light::after {
-  position: absolute;
-  z-index: -1;
-  width: min(34rem, 72vw);
-  aspect-ratio: 1;
-  border-radius: 9999px;
-  background: rgba(229, 197, 139, 0.13);
-  filter: blur(96px);
-  content: "";
-  pointer-events: none;
-}
-
-.jmk-section-light::before {
-  left: min(-15rem, -20vw);
-  top: 8%;
-}
-
-.jmk-section-light::after {
-  right: min(-15rem, -20vw);
-  bottom: 8%;
 }
 
 .jmk-section-paper {
@@ -198,46 +127,15 @@ details > summary::-webkit-details-marker {
 }
 
 .jmk-card-light {
-  --jmk-card-shadow: 0 14px 42px rgba(118, 90, 34, 0.08);
-  --jmk-card-shadow-hover: 0 18px 52px rgba(118, 90, 34, 0.12);
-  border-color: rgba(118, 90, 34, 0.3);
-  background:
-    linear-gradient(145deg, rgba(229, 197, 139, 0.13), transparent 58%),
-    rgba(255, 254, 250, 0.94);
-}
-
-.jmk-card-light:hover {
-  border-color: rgba(118, 90, 34, 0.42);
-  background:
-    linear-gradient(145deg, rgba(229, 197, 139, 0.16), transparent 58%),
-    #fffefa;
+  border-color: #d5cbb7;
+  border-radius: 0.3rem;
+  background: #fffefa;
+  box-shadow: none;
 }
 
 .jmk-section-light :focus-visible {
   outline-color: var(--jamoko-teal-accessible);
   box-shadow: 0 0 0 3px rgba(248, 247, 243, 0.95);
-}
-
-.jmk-reveal {
-  opacity: 0;
-  transform: translate3d(0, 18px, 0);
-  transition:
-    opacity 640ms cubic-bezier(0.22, 1, 0.36, 1),
-    transform 640ms cubic-bezier(0.22, 1, 0.36, 1);
-  transition-delay: var(--jmk-reveal-delay, 0ms);
-  will-change: opacity, transform;
-}
-
-.jmk-reveal.is-visible {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
-  will-change: auto;
-}
-
-@media (max-width: 640px) {
-  .jmk-enhanced :where(a, button)[class*="rounded-full"] {
-    min-height: 3rem;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
