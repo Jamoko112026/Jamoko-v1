@@ -1,0 +1,343 @@
+/* Shared Brand v3 roles. Page-specific compositions use CSS modules. */
+
+.brand-shell {
+  background: var(--jamoko-navy);
+}
+
+.brand-shell h1,.brand-shell h2,.brand-shell h3 {
+  text-wrap: balance;
+}
+
+.brand-shell img {
+  max-width: 100%;
+}
+
+.brand-shell main {
+  overflow-wrap: break-word;
+}
+
+/* Leave room for the fixed header on anchor navigation and focus changes. */
+.brand-shell main [id],
+.brand-shell main :focus,
+.brand-shell main#inhalt {
+  scroll-margin-top: 104px;
+}
+
+.brand-shell a,.brand-shell button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.brand-shell button,.brand-shell input,.brand-shell textarea {
+  font: inherit;
+}
+
+.brand-shell :focus-visible {
+  outline: 3px solid var(--jamoko-gold);
+  outline-offset: 5px;
+}
+
+.v3-page {
+  background: var(--jamoko-navy);
+  color: var(--jamoko-paper);
+}
+
+.v3-page>section {
+  padding: clamp(3.5rem,6vw,6rem) clamp(1.25rem,4vw,5rem);
+}
+
+.v3-page>section>div.mx-auto {
+  max-width: 1280px;
+}
+
+.v3-page h1 {
+  font-size: clamp(2.25rem,4.6vw,4.5rem);
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: -.045em;
+}
+
+.v3-page h2 {
+  font-weight: 600;
+  letter-spacing: -.035em;
+  line-height: 1.2;
+}
+
+.v3-page h3 {
+  font-weight: 600;
+  letter-spacing: -.02em;
+}
+
+.v3-page .v3-page-header {
+  padding-top: clamp(3rem,5vw,5rem);
+  padding-bottom: clamp(3rem,5vw,5rem);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.v3-page-header h1 {
+  max-width: 58rem;
+}
+
+.v3-page-header h1 span {
+  color: var(--jamoko-gold);
+}
+
+.v3-page-header p {
+  max-width: 44rem;
+}
+
+.v3-page .v3-paper {
+  background: var(--jamoko-paper);
+  color: var(--jamoko-ink);
+  border-color: #d5cbb7;
+}
+
+.v3-paper h2,.v3-paper h3,.v3-paper blockquote {
+  color: var(--jamoko-ink);
+}
+
+.v3-paper p,.v3-paper li,.v3-paper .space-y-6,.v3-paper .space-y-5 {
+  color: var(--jamoko-ink-muted);
+}
+
+.v3-paper p.uppercase,.v3-paper .text-xs.uppercase {
+  color: var(--jamoko-gold-accessible);
+}
+
+.v3-paper :focus-visible {
+  outline-color: var(--jamoko-teal-accessible);
+}
+
+.v3-page .v3-teal {
+  background: #073b40;
+  border-color: var(--color-line);
+}
+
+.v3-page .v3-fact {
+  border: 0;
+  border-top: 1px solid var(--color-line);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  padding: 1.5rem 0;
+}
+
+.v3-page .v3-fact h2,.v3-page .v3-fact h3 {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+}
+
+.v3-page .v3-fact p {
+  line-height: 1.8;
+}
+
+.v3-page .v3-paper .v3-fact {
+  border-color: #d5cbb7;
+}
+
+.v3-page .v3-icon {
+  border: 0;
+  background: transparent;
+  justify-content: flex-start;
+  height: auto;
+}
+
+.v3-page .v3-list {
+  border: 0;
+  border-top: 1px solid var(--color-line);
+  border-radius: 0;
+  background: transparent;
+  padding: 1.5rem 0;
+}
+
+.v3-page .v3-offer {
+  border: 0;
+  border-top: 1px solid var(--jamoko-gold);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  padding: 2rem 0;
+}
+
+.v3-page .v3-callout {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  padding: clamp(2rem,5vw,4rem);
+}
+
+.v3-page .v3-callout p {
+  color: #253a3d;
+}
+
+.v3-page .v3-callout h2 {
+  color: var(--jamoko-navy);
+}
+
+.v3-page a.rounded-full {
+  border-radius: .3rem;
+  min-height: 46px;
+}
+
+.v3-page a.rounded-full:hover {
+  transform: none;
+}
+
+.v3-page a.rounded-full:focus-visible {
+  outline: 3px solid var(--jamoko-teal);
+  outline-offset: 5px;
+}
+
+.v3-page blockquote {
+  border-radius: 0;
+  border: 0;
+  border-left: 2px solid var(--jamoko-gold);
+  background: transparent;
+  padding-block: 1rem;
+}
+
+.v3-page details {
+  border: 0;
+  border-top: 1px solid var(--color-line);
+  border-radius: 0;
+  background: transparent;
+  padding: 1.25rem 0;
+}
+
+.v3-page summary {
+  min-height: 44px;
+}
+
+.v3-page form {
+  border-radius: .3rem;
+  box-shadow: none;
+}
+
+.v3-page input,.v3-page textarea {
+  border-radius: .2rem;
+  font-size: 16px;
+}
+
+.v3-page .v3-contact-detail {
+  background: transparent;
+  border-radius: 0;
+}
+
+.v3-contact-detail:first-child {
+  border-top-color: var(--jamoko-gold);
+}
+
+.v3-page .v3-contact-detail h2 {
+  font-size: 1.125rem;
+}
+
+.v3-page .v3-contact-detail p {
+  color: var(--jamoko-text-dim);
+}
+
+.v3-page .v3-facts {
+  gap: clamp(1.5rem,4vw,4rem);
+}
+
+.v3-page .v3-facts .mb-10 {
+  margin-bottom: 1.5rem;
+}
+
+.v3-case img {
+  border: 0;
+  border-radius: .3rem;
+}
+
+.v3-case figure {
+  min-width: 0;
+}
+
+.v3-case figure figcaption {
+  max-width: 56rem;
+}
+
+.v3-special .jmk-section-light {
+  border: 0;
+}
+
+.v3-special .jmk-section-light h2 {
+  color: var(--jamoko-ink);
+}
+
+.v3-special .jmk-card-light {
+  background: transparent;
+  border: 0;
+  border-top: 1px solid #d5cbb7;
+  border-radius: 0;
+}
+
+.v3-special .jmk-card-light h3 {
+  color: var(--jamoko-ink);
+}
+
+.v3-special img {
+  border-radius: .3rem;
+}
+
+.v3-tool-page>div {
+  max-width: 56rem;
+  margin-inline: auto;
+}
+
+.v3-tool-page {
+  padding: clamp(3rem,5vw,5rem) clamp(1.25rem,4vw,5rem);
+}
+
+@media(max-width:767px) {
+  .v3-page h1 {
+    font-size: clamp(2rem,7.8vw,3rem);
+  }
+  .v3-page h2 {
+    overflow-wrap: break-word;
+  }
+  .v3-page .v3-callout {
+    padding: 1.75rem;
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .brand-shell *,.brand-shell *::before,.brand-shell *::after {
+    scroll-behavior: auto!important;
+    animation: none!important;
+    transition: none!important;
+  }
+}
+
+@media(forced-colors:active) {
+  .v3-page,.v3-page .v3-paper,.v3-page .v3-teal,.v3-page .v3-callout {
+    background: Canvas;
+    color: CanvasText;
+  }
+  .v3-paper p,.v3-paper h2,.v3-paper h3,.v3-paper li {
+    color: CanvasText;
+  }
+}
+
+.v3-case>section:first-child figure>img {
+  height: clamp(20rem,45vw,38rem);
+  object-fit: cover;
+  object-position: 50% 58%;
+}
+
+
+.brand-shell .v3-paper :focus-visible,
+.brand-shell .jmk-section-light :focus-visible {
+  outline-color: var(--jamoko-teal-accessible);
+}
+
+.v3-page .v3-callout a:focus-visible {
+  outline-color: var(--jamoko-navy);
+}
+
+.v3-page .grid > * {
+  min-width: 0;
+}
+
+.v3-page a.rounded-full {
+  max-width: 100%;
+  text-align: center;
+}

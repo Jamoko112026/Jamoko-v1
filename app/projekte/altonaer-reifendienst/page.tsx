@@ -86,7 +86,7 @@ const technicalResults = [
 export default function AltonaerReifendienstPage() {
   return (
     // Keep the entire case study visible without viewport-triggered animations.
-    <article data-no-reveal className="relative overflow-hidden">
+    <article data-no-reveal className="v3-page v3-case relative overflow-hidden">
       <section className="px-6 py-16 sm:px-8 md:py-24">
         <div className="mx-auto max-w-6xl">
           <Link href="/projekte" className="inline-flex min-h-11 items-center gap-2 text-sm text-white/70 transition hover:text-white">
@@ -121,14 +121,14 @@ export default function AltonaerReifendienstPage() {
               sizes="(min-width: 1216px) 1152px, (min-width: 640px) calc(100vw - 64px), calc(100vw - 48px)"
               className="h-auto w-full rounded-3xl border border-white/10"
             />
-            <figcaption className="mt-4 text-sm leading-6 text-white/60">
+            <figcaption className="mt-4 text-sm leading-6 text-jamoko-text-dim">
               Die Graffiti-Garage am Wohlers Park – der sichtbare Bezugspunkt für den Webauftritt.
             </figcaption>
           </figure>
         </div>
       </section>
 
-      <section className="border-y border-white/10 bg-white/[0.025] px-6 py-16 sm:px-8 md:py-24">
+      <section className="v3-paper border-y border-white/10 bg-white/[0.025] px-6 py-16 sm:px-8 md:py-24">
         <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-2">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#E5C58B]">Ausgangslage</p>
@@ -184,7 +184,7 @@ export default function AltonaerReifendienstPage() {
                   sizes="(min-width: 1216px) 368px, (min-width: 768px) 31vw, (min-width: 640px) calc(100vw - 64px), calc(100vw - 48px)"
                   className="h-auto w-full rounded-3xl border border-white/10"
                 />
-                <figcaption className="mt-4 text-sm leading-6 text-white/60">{photo.caption}</figcaption>
+                <figcaption className="mt-4 text-sm leading-6 text-jamoko-text-dim">{photo.caption}</figcaption>
               </figure>
             ))}
           </div>
@@ -197,7 +197,7 @@ export default function AltonaerReifendienstPage() {
           <h2 className="mt-4 max-w-3xl text-3xl font-light leading-tight text-white sm:text-4xl">Von der ersten Frage bis zur Anfahrt.</h2>
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
             {implementation.map((item) => (
-              <div key={item.title} className="rounded-3xl border border-white/10 bg-white/[0.025] p-7">
+              <div key={item.title} className="v3-fact rounded-3xl border border-white/10 bg-white/[0.025] p-7">
                 <h3 className="text-xl font-medium text-white">{item.title}</h3>
                 <p className="mt-4 leading-7 text-white/75">{item.text}</p>
               </div>
@@ -216,7 +216,7 @@ export default function AltonaerReifendienstPage() {
               Die größten WebP-Varianten der acht verwendeten Fotos umfassen
               zusammen rund 1,6 MB statt 11,5 MB für die Originaldateien.
             </p>
-            <p className="mt-3 max-w-3xl text-sm leading-6 text-white/60">
+            <p className="mt-3 max-w-3xl text-sm leading-6 text-jamoko-text-dim">
               Vergleich der Bilddateien der Kundenwebsite, nicht der gesamten
               Seitengröße oder Ladezeit. Auf kleineren Bildschirmen können
               kleinere Varianten ausgeliefert werden.
@@ -238,7 +238,7 @@ export default function AltonaerReifendienstPage() {
       </section>
 
       <section className="px-6 pb-20 sm:px-8 md:pb-28">
-        <div className="mx-auto max-w-6xl rounded-[2rem] border border-[#E5C58B]/30 bg-[#E5C58B] px-7 py-12 text-[#001821] sm:px-10 md:py-16">
+        <div className="v3-callout mx-auto max-w-6xl rounded-[2rem] border border-[#E5C58B]/30 bg-[#E5C58B] px-7 py-12 text-[#001821] sm:px-10 md:py-16">
           <h2 className="max-w-3xl text-3xl font-light leading-tight sm:text-4xl">Eine Website, die zu deinem Betrieb passt.</h2>
           <p className="mt-5 max-w-2xl leading-8 text-[#001821]/75">
             Schau dir das Kundenprojekt an. Wenn du deinen eigenen Betrieb

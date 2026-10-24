@@ -42,7 +42,7 @@ const principles = [
 
 export default function MoPage() {
   return (
-    <div className="relative overflow-hidden">
+    <div className="v3-page v3-special relative overflow-hidden">
       <section id="hero" className="px-6 py-20 sm:px-8 md:py-28">
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.18fr_0.82fr] lg:items-center">
           <div>
@@ -81,10 +81,10 @@ export default function MoPage() {
             <p className="mt-8 text-xl font-semibold text-white">
               Jan-Moritz Koch
             </p>
-            <p className="mt-2 leading-relaxed text-white/62">
+            <p className="mt-2 leading-relaxed text-jamoko-text-dim">
               Kaufmann im E-Commerce · Webdesign · digitale Projekte
             </p>
-            <div className="mt-7 flex items-center gap-3 border-t border-white/10 pt-6 text-sm text-white/62">
+            <div className="mt-7 flex items-center gap-3 border-t border-white/10 pt-6 text-sm text-jamoko-text-dim">
               <MapPin className="h-4 w-4 text-[#1AC7A4]" aria-hidden="true" />
               Hamburg
             </div>

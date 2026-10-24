@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Interviewbegleiter: die einfache Anleitung | JaMoKo",
+  title: "Interviewbegleiter: die einfache Anleitung",
   description: "In fünf Schritten zum ersten Gespräch: Leitfaden anlegen, Karten nutzen, nach einer Pause weiterfinden und Ergebnisse festhalten.",
   alternates: { canonical: "https://jamoko.de/interviewbegleiter/anleitung" },
 };
@@ -18,8 +18,8 @@ const steps = [
 
 export default function InterviewbegleiterAnleitungPage() {
   return (
-    <>
-      <section className="mx-auto max-w-3xl px-6 pb-14 pt-12 sm:px-8 md:pt-20">
+    <div className="v3-page v3-special">
+      <section className="v3-page-header mx-auto max-w-3xl px-6 pb-14 pt-12 sm:px-8 md:pt-20">
         <Link href="/interviewbegleiter" className="inline-flex min-h-12 items-center gap-2 text-sm text-[#E5C58B]"><ArrowLeft size={16} aria-hidden="true" /> Zum Interviewbegleiter</Link>
         <p className="mt-8 text-xs font-semibold uppercase tracking-[0.2em] text-[#E5C58B]">Die einfache Anleitung</p>
         <h1 className="mt-4 text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl">Dein erstes Gespräch.<br />Schritt für Schritt.</h1>
@@ -43,6 +43,6 @@ export default function InterviewbegleiterAnleitungPage() {
         </div>
         <div className="mt-12 rounded-3xl border border-[#E5C58B]/30 bg-[#E5C58B]/5 p-7"><h2 className="text-2xl font-semibold text-white">Du hängst an einer Stelle?</h2><p className="mt-4 leading-relaxed text-white/75">Schreib mir, bei welchem Schritt du bist und was du auf dem Bildschirm siehst. Lass Namen und vertrauliche Gesprächsinhalte dabei weg.</p><Link href="/kontakt" className="mt-5 inline-flex min-h-12 items-center gap-2 font-semibold text-[#E5C58B]">Mo fragen <ArrowRight size={17} aria-hidden="true" /></Link></div>
       </section>
-    </>
+    </div>
   );
 }

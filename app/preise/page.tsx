@@ -86,7 +86,7 @@ function SectionHeading({
         {title}
       </h2>
       {intro ? (
-        <p className="mt-5 text-base leading-8 text-white/58">{intro}</p>
+        <p className="mt-5 text-base leading-8 text-jamoko-text-dim">{intro}</p>
       ) : null}
     </div>
   );
@@ -102,10 +102,10 @@ function TextSection({
   children: ReactNode;
 }) {
   return (
-    <section className="px-6 py-20 sm:px-8 md:py-28">
+    <section className="v3-paper px-6 py-20 sm:px-8 md:py-28">
       <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.86fr_1.14fr] lg:items-start">
         <SectionHeading eyebrow={eyebrow} title={title} />
-        <div className="space-y-5 text-base leading-8 text-white/58">
+        <div className="space-y-5 text-base leading-8 text-jamoko-text-dim">
           {children}
         </div>
       </div>
@@ -115,8 +115,8 @@ function TextSection({
 
 export default function PricingPage() {
   return (
-    <div className="relative overflow-hidden">
-      <section className="px-6 py-16 sm:px-8 md:py-24">
+    <div className="v3-page relative overflow-hidden">
+      <section className="v3-page-header px-6 py-16 sm:px-8 md:py-24">
         <div className="mx-auto max-w-6xl">
           <div className="max-w-3xl">
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#E5C58B]">
@@ -124,9 +124,9 @@ export default function PricingPage() {
             </p>
             <h1 className="mt-5 text-4xl font-light leading-tight text-white sm:text-5xl md:text-6xl">
               Du weißt vorher, was du bekommst.
-              <span className="block text-white/40">Und was es kostet.</span>
+              <span className="block text-jamoko-text-dim">Und was es kostet.</span>
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-white/58">
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-jamoko-text-dim">
               Eine kompakte Unternehmenswebsite mit klar definiertem Umfang.
               Wenn dein Projekt mehr braucht, besprechen wir das vor dem Start.
             </p>
@@ -162,12 +162,12 @@ export default function PricingPage() {
             intro="Für lokale Betriebe, Handwerker und Selbstständige"
           />
 
-          <article className="mt-12 grid gap-10 rounded-3xl border border-[#E5C58B]/60 bg-[#E5C58B]/[0.07] p-7 shadow-[0_20px_70px_rgba(229,197,139,0.08)] sm:p-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-14">
+          <article className="v3-offer mt-12 grid gap-10 rounded-3xl border border-[#E5C58B]/60 bg-[#E5C58B]/[0.07] p-7 shadow-[0_20px_70px_rgba(229,197,139,0.08)] sm:p-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-14">
             <div>
               <p className="text-4xl font-light text-[#E5C58B] sm:text-5xl">
                 ab 1.490 €
               </p>
-              <div className="mt-8 space-y-4 border-t border-white/10 pt-8 text-sm leading-7 text-white/60">
+              <div className="mt-8 space-y-4 border-t border-white/10 pt-8 text-sm leading-7 text-jamoko-text-dim">
                 <p>In der Regel 2–3 Wochen nach vollständigem Onboarding</p>
                 <p>50 % zum Start · 50 % zum Abschluss</p>
               </div>
@@ -181,7 +181,7 @@ export default function PricingPage() {
             </div>
             <ul className="space-y-4">
               {includedFeatures.map((feature) => (
-                <li key={feature} className="flex gap-3 text-sm text-white/62">
+                <li key={feature} className="flex gap-3 text-sm text-jamoko-text-dim">
                   <CheckCircle2
                     className="mt-0.5 h-4 w-4 shrink-0 text-[#1AC7A4]"
                     aria-hidden="true"
@@ -201,19 +201,19 @@ export default function PricingPage() {
             title="Was du bei JaMoKo erwarten kannst"
           />
 
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="v3-facts mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {trustCards.map(({ title, text, icon: Icon }) => (
               <article
                 key={title}
-                className="rounded-3xl border border-white/10 bg-white/[0.025] p-7"
+                className="v3-fact rounded-3xl border border-white/10 bg-white/[0.025] p-7"
               >
-                <span className="flex h-11 w-11 items-center justify-center rounded-2xl border border-[#1AC7A4]/20 bg-[#1AC7A4]/5 text-[#1AC7A4]">
+                <span className="v3-icon flex h-11 w-11 items-center justify-center rounded-2xl border border-[#1AC7A4]/20 bg-[#1AC7A4]/5 text-[#1AC7A4]">
                   <Icon className="h-5 w-5" aria-hidden="true" />
                 </span>
                 <h2 className="mt-8 text-xl font-medium text-white">
                   {title}
                 </h2>
-                <p className="mt-3 text-sm leading-relaxed text-white/52">
+                <p className="mt-3 text-sm leading-relaxed text-jamoko-text-dim">
                   {text}
                 </p>
               </article>
@@ -229,7 +229,7 @@ export default function PricingPage() {
             title="Wenn dein Projekt mehr braucht"
             intro="Manche Vorhaben gehen über den klar definierten Standardumfang hinaus."
           />
-          <div className="text-base leading-8 text-white/58">
+          <div className="text-base leading-8 text-jamoko-text-dim">
             <p>
               Shops, komplexe Buchungssysteme, individuelle Web-Apps,
               umfangreiche Migrationen oder laufende Betreuung besprechen wir
@@ -255,7 +255,7 @@ export default function PricingPage() {
       </TextSection>
 
       <section className="px-6 py-20 sm:px-8 md:py-28">
-        <div className="mx-auto max-w-6xl rounded-[2rem] border border-[#E5C58B]/30 bg-[#E5C58B] px-7 py-12 text-[#001821] sm:px-10 md:py-16">
+        <div className="v3-callout mx-auto max-w-6xl rounded-[2rem] border border-[#E5C58B]/30 bg-[#E5C58B] px-7 py-12 text-[#001821] sm:px-10 md:py-16">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#001821]/55">
             Nächster Schritt
           </p>

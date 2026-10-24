@@ -1,5 +1,7 @@
 import Link from "next/link";
-import { ArrowRight, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { Brand } from "./Brand";
+import styles from "./Chrome.module.css";
+import { ArrowRight, Instagram, Linkedin, Mail, Phone } from "lucide-react";
 
 const contact = {
   name: "JaMoKo – Community First",
@@ -40,131 +42,33 @@ const socialItems = [
 ];
 
 export function Footer() {
-  const year = new Date().getFullYear();
-
   return (
-    <footer className="relative overflow-hidden border-t border-white/10 bg-[#00141c] text-white">
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#E5C58B]/45 to-transparent"
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -bottom-56 left-1/2 h-96 w-[44rem] -translate-x-1/2 rounded-full bg-[#E5C58B]/[0.055] blur-[120px]"
-      />
-
-      <div className="relative mx-auto max-w-7xl px-6 py-16 sm:px-8 sm:py-20 lg:px-20">
-        <div className="grid gap-14 border-b border-white/10 pb-14 sm:pb-16 lg:grid-cols-[1.25fr_0.75fr_0.8fr] lg:gap-20">
+    <footer className={styles.footer}>
+      <div className={styles.footerInner}>
+        <div className={styles.footerGrid}>
           <div>
-            <Link
-              href="/"
-              className="inline-flex items-center gap-3"
-            >
-              <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#E5C58B]/25 bg-[#E5C58B]/5 text-sm font-semibold text-[#E5C58B]">
-                J
-              </span>
-              <span>
-                <span className="block text-sm font-semibold tracking-[0.08em]">
-                  JaMoKo
-                </span>
-              </span>
-            </Link>
-
-            <h2 className="mt-8 max-w-lg text-2xl font-semibold leading-tight tracking-[-0.025em] sm:text-3xl">
-              Digitale Lösungen, die zu deinem Alltag passen.
-            </h2>
-            <p className="mt-5 max-w-lg leading-relaxed text-white/70">
-              Persönlich, verständlich und ohne mehr Technik als nötig.
-            </p>
-            <Link
-              href="/kontakt"
-              className="mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#E5C58B] px-6 py-3 text-sm font-semibold text-[#001821] transition hover:-translate-y-0.5 hover:bg-[#efd49f]"
-            >
-              Kostenlos kennenlernen
-              <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </Link>
+            <div className={styles.footerBrand}><Brand /></div>
+            <h2>Digitale Lösungen, die zu deinem Alltag passen.</h2>
+            <p className={styles.footerCopy}>Persönlich, verständlich und ohne mehr Technik als nötig.</p>
+            <Link href="/kontakt" className={styles.footerLink}>Kostenlos kennenlernen <ArrowRight size={18} aria-hidden="true" /></Link>
           </div>
-
           <nav aria-label="Footer Navigation">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#E5C58B]">
-              Entdecken
-            </p>
-            <ul className="mt-6 space-y-3">
-              {footerNavItems.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="inline-flex py-1 text-sm text-white/70 transition hover:text-white"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <p className={styles.footerLabel}>Entdecken</p>
+            <ul>{footerNavItems.map(item => <li key={item.href}><Link href={item.href}>{item.label}</Link></li>)}</ul>
           </nav>
-
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#E5C58B]">
-              Direkt erreichbar
-            </p>
-            <address className="mt-6 space-y-4 not-italic">
-              <a
-                href={`mailto:${contact.email}`}
-                className="flex items-start gap-3 text-sm text-white/70 transition hover:text-white"
-              >
-                <Mail className="mt-0.5 h-4 w-4 shrink-0 text-[#E5C58B]" />
-                {contact.email}
-              </a>
-              <a
-                href="tel:+4917682032127"
-                className="flex items-start gap-3 text-sm text-white/70 transition hover:text-white"
-              >
-                <Phone className="mt-0.5 h-4 w-4 shrink-0 text-[#E5C58B]" />
-                {contact.phone}
-              </a>
-              <div className="flex items-start gap-3 text-sm text-white/70">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[#E5C58B]" />
-                <span>
-                  {contact.zip} {contact.city}
-                </span>
-              </div>
+            <p className={styles.footerLabel}>Direkt erreichbar</p>
+            <address>
+              <a href={`mailto:${contact.email}`}><Mail size={18} aria-hidden="true" />{contact.email}</a>
+              <a href="tel:+4917682032127"><Phone size={18} aria-hidden="true" />{contact.phone}</a>
+              <p>{contact.zip} {contact.city}</p>
             </address>
-
-            <div className="mt-7 flex gap-3">
-              {socialItems.map(({ label, href, icon: Icon }) => (
-                <a
-                  key={href}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={label}
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-white/70 transition hover:border-[#E5C58B]/35 hover:text-[#E5C58B]"
-                >
-                  <Icon className="h-4 w-4" aria-hidden="true" />
-                </a>
-              ))}
-            </div>
+            <div className={styles.social}>{socialItems.map(({label,href,icon:Icon}) => <a key={href} href={href} target="_blank" rel="noopener noreferrer" aria-label={label}><Icon size={19} aria-hidden="true" /></a>)}</div>
           </div>
         </div>
-
-        <div className="flex flex-col gap-5 pt-7 text-xs text-white/70 sm:flex-row sm:items-center sm:justify-between">
-          <p>
-            © {year} {contact.name}
-          </p>
-          <nav aria-label="Rechtliche Hinweise">
-            <ul className="flex flex-wrap gap-x-5 gap-y-2">
-              {legalItems.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="transition hover:text-white/70"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
+        <div className={styles.footerBottom}>
+          <p>© {new Date().getFullYear()} {contact.name}</p>
+          <nav aria-label="Rechtliche Hinweise"><ul>{legalItems.map(item => <li key={item.href}><Link href={item.href}>{item.label}</Link></li>)}</ul></nav>
         </div>
       </div>
     </footer>

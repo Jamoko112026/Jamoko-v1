@@ -116,7 +116,7 @@ const questions = [
 
 export default function DigitalStartPage() {
   return (
-    <div className="relative overflow-hidden">
+    <div className="v3-page v3-special relative overflow-hidden">
       <section id="hero" className="relative px-6 pb-20 pt-16 sm:px-8 md:pb-28 md:pt-24">
         <div
           aria-hidden="true"
@@ -153,7 +153,7 @@ export default function DigitalStartPage() {
                 So funktioniert es
               </a>
             </div>
-            <p className="mt-5 text-sm text-white/55">
+            <p className="mt-5 text-sm text-jamoko-text-dim">
               Unverbindlich · persönlich · ohne Vorbereitung
             </p>
           </div>
@@ -181,7 +181,7 @@ export default function DigitalStartPage() {
                 ),
               )}
             </ul>
-            <p className="mt-7 border-t border-white/10 pt-6 text-sm leading-6 text-white/55">
+            <p className="mt-7 border-t border-white/10 pt-6 text-sm leading-6 text-jamoko-text-dim">
               Jeder dieser Sätze reicht für ein erstes Gespräch.
             </p>
           </aside>

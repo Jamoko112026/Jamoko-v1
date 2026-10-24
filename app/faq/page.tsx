@@ -29,10 +29,10 @@ export const metadata: Metadata = {
 
 export default function FaqPage() {
   return (
-    <>
+    <div className="v3-page">
       <StructuredData data={faqPageJsonLd} />
       <div className="relative overflow-hidden">
-        <section className="px-6 py-16 sm:px-8 md:py-24">
+        <section className="v3-page-header px-6 py-16 sm:px-8 md:py-24">
           <div className="mx-auto max-w-6xl">
             <div className="max-w-3xl">
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#E5C58B]">
@@ -41,7 +41,7 @@ export default function FaqPage() {
               <h1 className="mt-5 text-4xl font-light leading-tight text-white sm:text-5xl md:text-6xl">
                 Häufige Fragen
               </h1>
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-white/58">
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-jamoko-text-dim">
                 Kurze Antworten auf Fragen zu Websites, Preisen und der
                 Zusammenarbeit mit JaMoKo in Hamburg.
               </p>
@@ -62,7 +62,7 @@ export default function FaqPage() {
                     +
                   </span>
                 </summary>
-                <p className="mt-5 max-w-3xl text-sm leading-7 text-white/55">
+                <p className="mt-5 max-w-3xl text-sm leading-7 text-jamoko-text-dim">
                   {item.answer}
                 </p>
               </details>
@@ -88,6 +88,6 @@ export default function FaqPage() {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 }
