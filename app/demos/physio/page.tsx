@@ -5,6 +5,7 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Demo Physiotherapie",
+  alternates: { canonical: "https://jamoko.de/demos/physio" },
   description:
     "Demo-Landingpage für eine Physiotherapiepraxis im ruhigen JaMoKo-Stil.",
   robots: {

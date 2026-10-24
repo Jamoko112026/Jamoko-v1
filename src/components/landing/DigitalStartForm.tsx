@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Mail, Send } from "lucide-react";
 
 const inputClass =
-  "mt-2 w-full rounded-xl border border-[#102A33]/15 bg-white px-4 py-3.5 text-base text-[#102A33] placeholder:text-[#38545E]/55 focus:border-[#067563] focus:outline-none focus:ring-2 focus:ring-[#1AC7A4]/20";
+  "mt-2 w-full rounded-xl border border-[#69838C] bg-white px-4 py-3.5 text-base text-[#102A33] placeholder:text-[#38545E] focus:border-[#067563] focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-[#067563]";
 
 function getField(formData: FormData, name: string) {
   return String(formData.get(name) ?? "").trim();

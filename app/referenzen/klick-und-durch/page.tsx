@@ -4,6 +4,7 @@ import { ArrowRight, ExternalLink } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Klick & Durch – JaMoKo Referenz",
+  alternates: { canonical: "https://jamoko.de/referenzen/klick-und-durch" },
   description:
     "Klick & Durch zeigt beispielhaft, wie JaMoKo einen digitalen Auftritt klar, persönlich und verständlich aufbaut.",
   robots: {
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function KlickUndDurchReferencePage() {
   return (
-    <main className="relative overflow-hidden">
+    <div className="relative overflow-hidden">
       <section className="px-6 py-20 sm:px-8 md:py-28">
         <div className="mx-auto max-w-4xl">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#E5C58B]">
@@ -57,6 +58,6 @@ export default function KlickUndDurchReferencePage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

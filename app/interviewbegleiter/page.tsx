@@ -6,7 +6,7 @@ import { ArrowRight, BookOpen, Check, MessageCircle, Pause, Sparkles } from "luc
 const contactHref = `mailto:moin@jamoko.de?subject=${encodeURIComponent("Interviewbegleiter gemeinsam ausprobieren")}&body=${encodeURIComponent("Moin Mo,\n\nich möchte den Interviewbegleiter mit dir ausprobieren.\nIch führe diese Art von Gesprächen: \nEinen eigenen Leitfaden habe ich: \n\nViele Grüße")}`;
 
 export const metadata: Metadata = {
-  title: "Interviewbegleiter für Coaching & Beratung | JaMoKo",
+  title: "Interviewbegleiter für Coaching & Beratung",
   description: "Deine Fragen auf übersichtlichen Gesprächskarten. Für Coaching, Beratung und Interviews – mit Notizen, Pausenanker und persönlichem Einstieg mit Mo.",
   alternates: { canonical: "https://jamoko.de/interviewbegleiter" },
   openGraph: {

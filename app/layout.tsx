@@ -7,6 +7,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://jamoko.de"),
+  manifest: "/site.webmanifest",
   title: {
     default: "JaMoKo – Websites & Digitalbegleitung",
     template: "%s · JaMoKo",

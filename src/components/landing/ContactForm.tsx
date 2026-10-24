@@ -4,7 +4,7 @@ import type { FormEvent } from "react";
 import { Send } from "lucide-react";
 
 const inputClass =
-  "mt-2 w-full rounded-md border border-white/10 bg-calm-navy/60 px-4 py-3 text-calm-ink placeholder:text-calm-muted/55 focus:border-calm-gold focus:outline-none focus:ring-2 focus:ring-calm-gold/20";
+  "mt-2 w-full rounded-md border border-[#69838C] bg-calm-navy/60 px-4 py-3 text-calm-ink placeholder:text-calm-muted/55 focus:border-calm-gold focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-calm-gold";
 
 function getField(formData: FormData, name: string) {
   return String(formData.get(name) ?? "").trim();

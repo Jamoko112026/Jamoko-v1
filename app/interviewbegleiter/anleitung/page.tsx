@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Interviewbegleiter: die einfache Anleitung | JaMoKo",
+  title: "Interviewbegleiter: die einfache Anleitung",
   description: "In fünf Schritten zum ersten Gespräch: Leitfaden anlegen, Karten nutzen, nach einer Pause weiterfinden und Ergebnisse festhalten.",
   alternates: { canonical: "https://jamoko.de/interviewbegleiter/anleitung" },
 };

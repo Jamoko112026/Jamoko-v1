@@ -5,6 +5,7 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Demo Reifendienst",
+  alternates: { canonical: "https://jamoko.de/demos/reifendienst" },
   description:
     "Demo-Landingpage für einen lokalen Reifendienst im ruhigen JaMoKo-Stil.",
   robots: {
