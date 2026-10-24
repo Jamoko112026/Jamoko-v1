@@ -507,6 +507,17 @@ export default function HomePage() {
             <ServicesSection />
           </div>
         </section>
+        <section className="jmk-section-light jmk-section-paper">
+          <div className="jmk-section-content mx-auto grid max-w-6xl items-center gap-8 px-6 py-16 sm:px-8 md:grid-cols-[1.2fr_1fr]">
+            <div>
+              <p className="jmk-light-eyebrow text-xs font-semibold uppercase tracking-[0.2em]">Neu · Begleitete Testphase</p>
+              <h2 className="jmk-light-heading mt-4 text-3xl font-semibold tracking-tight">Deine Fragen im Blick.</h2>
+              <p className="jmk-light-copy mt-4 max-w-xl leading-relaxed">Der JaMoKo Interviewbegleiter ordnet deinen Leitfaden in Gesprächskarten. Für Coaching, Beratung und Interviews – mit Nachfragen, Notizen und Pausenanker.</p>
+              <Link href="/interviewbegleiter" className="mt-6 inline-flex min-h-12 items-center gap-2 rounded-full bg-[#001821] px-6 py-3 font-semibold text-white hover:bg-[#12343d]">Interviewbegleiter kennenlernen <ArrowRight size={18} aria-hidden="true" /></Link>
+            </div>
+            <Image src="/interviewbegleiter/karten.webp" width={1363} height={936} sizes="(max-width: 767px) 100vw, 450px" alt="Fiktives Gesprächsbeispiel im JaMoKo Interviewbegleiter" className="w-full rounded-2xl border border-[#765a22]/20" />
+          </div>
+        </section>
         <section className="mx-auto max-w-6xl px-6 py-24 sm:px-8 md:py-32 lg:py-20">
           <MethodSection />
         </section>

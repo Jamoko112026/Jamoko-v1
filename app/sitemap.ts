@@ -5,6 +5,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
   return [
+    { url: `${baseUrl}/interviewbegleiter`, lastModified, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/interviewbegleiter/anleitung`, lastModified, changeFrequency: "monthly", priority: 0.6 },
     { url: `${baseUrl}/digital-kompass`, lastModified, changeFrequency: "monthly", priority: 0.8 },
     {
       url: `${baseUrl}/`,
