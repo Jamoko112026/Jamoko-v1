@@ -2,8 +2,8 @@
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  background: var(--jamoko-navy);
-  color: var(--jamoko-paper);
+  background: var(--color-bg);
+  color: var(--jamoko-text);
   padding: clamp(1.75rem, 3vw, 2.75rem) clamp(1.25rem, 4vw, 5rem)
     clamp(2rem, 3vw, 3rem);
 }
@@ -22,8 +22,8 @@
   inset: 0;
   content: "";
   background:
-    linear-gradient(90deg, var(--jamoko-navy) 0%, rgba(0, 24, 33, 0.8) 8%, rgba(0, 24, 33, 0.2) 40%, rgba(0, 24, 33, 0.05) 100%),
-    linear-gradient(180deg, rgba(0, 24, 33, 0.6) 0%, rgba(0, 24, 33, 0.05) 45%, rgba(0, 24, 33, 0.7) 85%, var(--jamoko-navy) 100%);
+    linear-gradient(90deg, var(--color-bg) 0%, rgba(var(--theme-gradient-rgb), 0.8) 8%, rgba(var(--theme-gradient-rgb), 0.2) 40%, rgba(var(--theme-gradient-rgb), 0.05) 100%),
+    linear-gradient(180deg, rgba(var(--theme-gradient-rgb), 0.6) 0%, rgba(var(--theme-gradient-rgb), 0.05) 45%, rgba(var(--theme-gradient-rgb), 0.7) 85%, var(--color-bg) 100%);
 }
 
 .inner {
@@ -99,14 +99,14 @@
   padding: 1.125rem;
   border: 1px solid var(--jamoko-gold);
   border-radius: 0.75rem;
-  background: rgba(0, 24, 33, 0.8);
-  color: var(--jamoko-paper);
+  background: rgba(var(--theme-gradient-rgb), 0.8);
+  color: var(--jamoko-text);
   transition: background-color 180ms ease, border-color 180ms ease;
 }
 
 .path:first-child {
   border-color: var(--jamoko-teal);
-  background: var(--jamoko-teal);
+  background: #1ac7a4;
   color: var(--jamoko-navy);
 }
 
@@ -150,7 +150,7 @@
 }
 
 .path:hover {
-  background: #12343d;
+  background: var(--theme-panel);
 }
 
 .path:first-child:hover {
@@ -194,7 +194,7 @@
 }
 
 .compass:hover span {
-  color: var(--jamoko-paper);
+  color: var(--jamoko-text);
 }
 
 .photo {
@@ -231,8 +231,8 @@
 
   .media::after {
     background:
-      linear-gradient(90deg, var(--jamoko-navy) 0%, rgba(0, 24, 33, 0.8) 8%, rgba(0, 24, 33, 0.3) 40%, rgba(0, 24, 33, 0.1) 100%),
-      linear-gradient(180deg, rgba(0, 24, 33, 0.4) 0%, rgba(0, 24, 33, 0.15) 45%, var(--jamoko-navy) 100%);
+      linear-gradient(90deg, var(--color-bg) 0%, rgba(var(--theme-gradient-rgb), 0.8) 8%, rgba(var(--theme-gradient-rgb), 0.3) 40%, rgba(var(--theme-gradient-rgb), 0.1) 100%),
+      linear-gradient(180deg, rgba(var(--theme-gradient-rgb), 0.4) 0%, rgba(var(--theme-gradient-rgb), 0.15) 45%, var(--color-bg) 100%);
   }
 
   .photo {
@@ -292,3 +292,7 @@
     outline-color: Highlight;
   }
 }
+
+/* Keep the copy on a solid reading surface in both themes. */
+.copy { background: var(--color-bg); border-radius: .3rem; padding: 1rem; margin: -1rem; }
+.title { width: fit-content; background: var(--color-bg); }

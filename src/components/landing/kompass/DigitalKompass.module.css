@@ -1,29 +1,29 @@
 /* Static light and depth; movement only on deliberate pointer interaction. */
 .panel {
   position: relative;
-  border: 1px solid #32616a;
+  border: 1px solid var(--color-line);
   border-radius: 0.3rem;
-  background: #042d37;
+  background: var(--theme-panel);
 }
 
 .topic {
-  border: 1px solid #32616a;
+  border: 1px solid var(--color-line);
   border-radius: 0.25rem;
-  background: #062d39;
+  background: var(--theme-panel);
   box-shadow: none;
   transition: background-color 180ms ease, border-color 180ms ease;
 }
 
 .topic:focus-visible {
-  border-color: #e5c58b;
-  outline: 3px solid #e5c58b;
+  border-color: var(--jamoko-gold);
+  outline: 3px solid var(--jamoko-gold);
   outline-offset: 4px;
 }
 
 @media (hover: hover) and (pointer: fine) {
   .topic:hover {
-    background: #0c3e48;
-    border-color: #e5c58b;
+    background: var(--theme-band);
+    border-color: var(--jamoko-gold);
   }
 }
 

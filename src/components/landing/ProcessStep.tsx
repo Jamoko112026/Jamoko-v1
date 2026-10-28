@@ -9,7 +9,7 @@ type ProcessStepProps = {
 export function ProcessStep({ number, title, children }: ProcessStepProps) {
   return (
     <article className="grid gap-4 border-t border-white/10 py-6 sm:grid-cols-[4rem_1fr]">
-      <div className="flex h-10 w-10 items-center justify-center rounded-md bg-calm-gold text-sm font-semibold text-calm-navy">
+      <div className="flex h-10 w-10 items-center justify-center rounded-md bg-calm-gold text-sm font-semibold text-[#001821]">
         {number}
       </div>
       <div>

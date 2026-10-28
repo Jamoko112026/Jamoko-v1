@@ -58,10 +58,10 @@ export default function DatenschutzPage() {
       <section className="v3-page-header px-6 py-16 sm:px-8 md:py-24">
         <div className="mx-auto max-w-6xl">
           <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#E5C58B]">
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--jamoko-gold)]">
               Rechtliches
             </p>
-            <h1 className="mt-5 text-4xl font-light leading-tight text-white sm:text-5xl md:text-6xl">
+            <h1 className="mt-5 text-4xl font-light leading-tight text-jamoko-text sm:text-5xl md:text-6xl">
               Datenschutz
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-jamoko-text-dim">
@@ -79,7 +79,7 @@ export default function DatenschutzPage() {
               key={section.title}
               className="v3-fact rounded-3xl border border-white/10 bg-white/[0.025] p-7"
             >
-              <h2 className="text-xl font-medium text-white">
+              <h2 className="text-xl font-medium text-jamoko-text">
                 {section.title}
               </h2>
               <p className="mt-4 text-sm leading-7 text-jamoko-text-dim">
@@ -90,7 +90,7 @@ export default function DatenschutzPage() {
         </div>
 
         <div className="mx-auto mt-10 max-w-6xl rounded-3xl border border-white/10 bg-white/[0.025] p-7">
-          <h2 className="text-xl font-medium text-white">Hinweis</h2>
+          <h2 className="text-xl font-medium text-jamoko-text">Hinweis</h2>
           <p className="mt-4 max-w-3xl text-sm leading-7 text-jamoko-text-dim">
             Diese Seite ersetzt keine Rechtsberatung. Wenn neue Dienste,
             Formulare oder Analysewerkzeuge eingebunden werden, müssen die
@@ -98,7 +98,7 @@ export default function DatenschutzPage() {
           </p>
           <Link
             href="/kontakt"
-            className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-[#E5C58B] transition hover:text-[#efd49f]"
+            className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-[var(--jamoko-gold)] transition hover:text-[#efd49f]"
           >
             Frage zum Datenschutz stellen
             <ArrowRight className="h-4 w-4" aria-hidden="true" />

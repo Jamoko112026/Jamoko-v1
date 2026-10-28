@@ -15,30 +15,27 @@ export default {
 
       colors: {
         calm: {
-          navy: "#001821",
-          cream: "#001821",
-          paper: "#EDF2F7",
-          ink: "#EDF2F7",
-          muted: "#D6E0E7",
-          line: "#214654",
-          sage: "#013542",
-          panel: "#012633",
-          panelSoft: "#013542",
-          green: "#1AC7A4",
-          blue: "#E5C58B",
-          gold: "#E5C58B",
+          navy: "rgb(var(--theme-bg-rgb) / <alpha-value>)",
+          cream: "rgb(var(--theme-bg-rgb) / <alpha-value>)",
+          paper: "rgb(var(--theme-text-rgb) / <alpha-value>)",
+          ink: "rgb(var(--theme-text-rgb) / <alpha-value>)",
+          muted: "rgb(var(--theme-muted-rgb) / <alpha-value>)",
+          line: "var(--color-line)",
+          sage: "var(--theme-panel)",
+          panel: "var(--theme-panel)",
+          panelSoft: "var(--theme-band)",
+          green: "#1ac7a4",
+          blue: "#e5c58b",
+          gold: "#e5c58b",
         },
-
-        /* JAMOKO BRAND */
-
         jamoko: {
           navy: "#001821",
-          gold: "#E5C58B",
-          teal: "#1AC7A4",
-          text: "#EDF2F7",
-          "text-dim": "#D6E0E7",
-          "bg-dark": "#012633",
-          "bg-light": "#013542",
+          gold: "#e5c58b",
+          teal: "#1ac7a4",
+          text: "rgb(var(--theme-text-rgb) / <alpha-value>)",
+          "text-dim": "rgb(var(--theme-muted-rgb) / <alpha-value>)",
+          "bg-dark": "var(--theme-panel)",
+          "bg-light": "var(--theme-band)",
         },
 
         /* SL BAUTEC BRAND */

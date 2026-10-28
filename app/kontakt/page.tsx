@@ -33,7 +33,7 @@ export default function ContactPage() {
       <section className="v3-page-header px-4 py-14 sm:px-6 md:py-20 lg:px-8">
         <div className="mx-auto max-w-6xl">
           <div className="max-w-3xl">
-            <p className="text-sm font-medium uppercase tracking-[0.14em] text-calm-gold">
+            <p className="text-sm font-medium uppercase tracking-[0.14em] text-[var(--jamoko-gold)]">
               Kontakt
             </p>
             <h1 className="mt-5 text-4xl font-semibold tracking-tight text-calm-ink sm:text-5xl">
@@ -49,13 +49,13 @@ export default function ContactPage() {
           <div className="mt-12 grid gap-8 lg:grid-cols-[0.82fr_1.18fr]">
             <aside className="space-y-5">
               <div className="v3-contact-detail border-t border-white/10 py-6">
-                <Mail className="h-5 w-5 text-calm-gold" aria-hidden="true" />
+                <Mail className="h-5 w-5 text-[var(--jamoko-gold)]" aria-hidden="true" />
                 <h2 className="mt-4 text-lg font-semibold text-calm-ink">
                   Kontaktinformationen
                 </h2>
                 <a
                   href="mailto:moin@jamoko.de"
-                  className="mt-4 block text-calm-gold underline-offset-4 hover:underline"
+                  className="mt-4 block text-[var(--jamoko-gold)] underline-offset-4 hover:underline"
                 >
                   moin@jamoko.de
                 </a>

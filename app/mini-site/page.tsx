@@ -113,10 +113,10 @@ function SectionHeading({
 }) {
   return (
     <div className="max-w-3xl">
-      <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#E5C58B]">
+      <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--jamoko-gold)]">
         {eyebrow}
       </p>
-      <h2 className="mt-4 text-3xl font-light leading-tight text-white sm:text-4xl">
+      <h2 className="mt-4 text-3xl font-light leading-tight text-jamoko-text sm:text-4xl">
         {title}
       </h2>
       {intro ? (
@@ -153,10 +153,10 @@ export default function JamokoWebsitePage() {
       <section className="v3-page-header px-6 py-16 sm:px-8 md:py-24">
         <div className="mx-auto max-w-6xl">
           <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#E5C58B]">
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--jamoko-gold)]">
               JaMoKo Website
             </p>
-            <h1 className="mt-5 text-4xl font-light leading-tight text-white sm:text-5xl md:text-6xl">
+            <h1 className="mt-5 text-4xl font-light leading-tight text-jamoko-text sm:text-5xl md:text-6xl">
               Deine Arbeit ist gut.
               <span className="block text-jamoko-text-dim">
                 Deine Website sollte das zeigen.
@@ -202,10 +202,10 @@ export default function JamokoWebsitePage() {
                 key={title}
                 className="v3-fact rounded-3xl border border-white/10 bg-white/[0.025] p-7"
               >
-                <span className="v3-icon flex h-11 w-11 items-center justify-center rounded-2xl border border-[#1AC7A4]/20 bg-[#1AC7A4]/5 text-[#1AC7A4]">
+                <span className="v3-icon flex h-11 w-11 items-center justify-center rounded-2xl border border-[#1AC7A4]/20 bg-[#1AC7A4]/5 text-[var(--jamoko-teal)]">
                   <Icon className="h-5 w-5" aria-hidden="true" />
                 </span>
-                <h2 className="mt-8 text-lg font-medium text-white">
+                <h2 className="mt-8 text-lg font-medium text-jamoko-text">
                   {title}
                 </h2>
                 <p className="mt-3 text-sm leading-relaxed text-jamoko-text-dim">
@@ -229,7 +229,7 @@ export default function JamokoWebsitePage() {
               {includedItems.map((item) => (
                 <li key={item} className="flex gap-3 text-sm text-jamoko-text-dim">
                   <CheckCircle2
-                    className="mt-0.5 h-4 w-4 shrink-0 text-[#1AC7A4]"
+                    className="mt-0.5 h-4 w-4 shrink-0 text-[var(--jamoko-teal)]"
                     aria-hidden="true"
                   />
                   <span>{item}</span>
@@ -255,11 +255,11 @@ export default function JamokoWebsitePage() {
                 className="v3-fact rounded-3xl border border-white/10 bg-white/[0.025] p-7"
               >
                 <div className="mb-10">
-                  <span className="text-sm tracking-[0.2em] text-[#E5C58B]">
+                  <span className="text-sm tracking-[0.2em] text-[var(--jamoko-gold)]">
                     0{index + 1}
                   </span>
                 </div>
-                <h2 className="text-xl font-medium text-white">
+                <h2 className="text-xl font-medium text-jamoko-text">
                   {step.title}
                 </h2>
                 <p className="mt-4 text-sm leading-relaxed text-jamoko-text-dim">
@@ -278,7 +278,7 @@ export default function JamokoWebsitePage() {
             title="JaMoKo Website"
             intro="Ein klarer Rahmen für lokale Betriebe, Handwerker und Selbstständige."
           />
-          <p className="mt-8 text-4xl font-light text-[#E5C58B] sm:text-5xl">
+          <p className="mt-8 text-4xl font-light text-[var(--jamoko-gold)] sm:text-5xl">
             ab 1.490 €
           </p>
 
@@ -288,7 +288,7 @@ export default function JamokoWebsitePage() {
                 key={detail.title}
                 className="v3-fact rounded-3xl border border-white/10 bg-white/[0.025] p-7"
               >
-                <h2 className="text-xl font-medium text-white">
+                <h2 className="text-xl font-medium text-jamoko-text">
                   {detail.title}
                 </h2>
                 <p className="mt-3 text-sm leading-relaxed text-jamoko-text-dim">
@@ -320,10 +320,10 @@ export default function JamokoWebsitePage() {
       <section className="px-6 py-16 sm:px-8 md:py-24">
         <div className="mx-auto max-w-6xl">
           <blockquote className="rounded-[2rem] border border-[#E5C58B]/30 bg-[#E5C58B]/[0.07] px-7 py-12 sm:px-10 md:px-14 md:py-16">
-            <p className="max-w-4xl text-3xl font-light leading-tight text-white sm:text-4xl md:text-5xl">
+            <p className="max-w-4xl text-3xl font-light leading-tight text-jamoko-text sm:text-4xl md:text-5xl">
               Deine Arbeit verdient einen Auftritt,
             </p>
-            <p className="mt-8 max-w-3xl text-3xl font-light leading-tight text-[#E5C58B] sm:text-4xl md:text-5xl">
+            <p className="mt-8 max-w-3xl text-3xl font-light leading-tight text-[var(--jamoko-gold)] sm:text-4xl md:text-5xl">
               der sie klar und ehrlich zeigt.
             </p>
           </blockquote>
@@ -344,7 +344,7 @@ export default function JamokoWebsitePage() {
           </p>
           <Link
             href="/kontakt"
-            className="mt-8 inline-flex items-center gap-3 rounded-full bg-[#001821] px-7 py-4 text-sm font-medium text-white transition hover:-translate-y-0.5"
+            className="mt-8 inline-flex items-center gap-3 rounded-full bg-calm-navy px-7 py-4 text-sm font-medium text-jamoko-text transition hover:-translate-y-0.5"
           >
             <MessageCircle className="h-4 w-4" aria-hidden="true" />
             Kostenlos kennenlernen

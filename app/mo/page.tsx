@@ -46,16 +46,16 @@ export default function MoPage() {
       <section id="hero" className="px-6 py-20 sm:px-8 md:py-28">
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.18fr_0.82fr] lg:items-center">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#E5C58B]">
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--jamoko-gold)]">
               Persönlich vorgestellt
             </p>
-            <h1 className="mt-6 max-w-4xl text-4xl font-semibold leading-[1.08] tracking-[-0.035em] text-white sm:text-5xl md:text-6xl">
+            <h1 className="mt-6 max-w-4xl text-4xl font-semibold leading-[1.08] tracking-[-0.035em] text-jamoko-text sm:text-5xl md:text-6xl">
               Moin, ich bin Jan-Moritz Koch.
-              <span className="mt-3 block font-light text-[#E5C58B]">
+              <span className="mt-3 block font-light text-[var(--jamoko-gold)]">
                 Die meisten nennen mich Mo.
               </span>
             </h1>
-            <div className="mt-8 max-w-3xl space-y-5 text-lg leading-8 text-white/70 md:text-xl md:leading-9">
+            <div className="mt-8 max-w-3xl space-y-5 text-lg leading-8 text-jamoko-text/70 md:text-xl md:leading-9">
               <p>
                 Ich entwickle in Hamburg ruhige, verständliche Websites für
                 kleine Unternehmen und Selbstständige.
@@ -68,7 +68,7 @@ export default function MoPage() {
           </div>
 
           <aside className="relative rounded-[2rem] border border-[#E5C58B]/25 bg-white/[0.035] p-7 sm:p-9">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-[1.75rem] border border-[#E5C58B]/20 bg-[#001821]">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[1.75rem] border border-[#E5C58B]/20 bg-calm-navy">
               <Image
                 src="/mo-portrait-v1.webp"
                 alt="Jan-Moritz Koch, persönlicher Ansprechpartner bei JaMoKo"
@@ -78,14 +78,14 @@ export default function MoPage() {
                 className="object-cover object-center"
               />
             </div>
-            <p className="mt-8 text-xl font-semibold text-white">
+            <p className="mt-8 text-xl font-semibold text-jamoko-text">
               Jan-Moritz Koch
             </p>
             <p className="mt-2 leading-relaxed text-jamoko-text-dim">
               Kaufmann im E-Commerce · Webdesign · digitale Projekte
             </p>
             <div className="mt-7 flex items-center gap-3 border-t border-white/10 pt-6 text-sm text-jamoko-text-dim">
-              <MapPin className="h-4 w-4 text-[#1AC7A4]" aria-hidden="true" />
+              <MapPin className="h-4 w-4 text-[var(--jamoko-teal)]" aria-hidden="true" />
               Hamburg
             </div>
           </aside>
@@ -95,10 +95,10 @@ export default function MoPage() {
       <section className="border-y border-white/10 bg-white/[0.025] px-6 py-16 sm:px-8 md:py-20">
         <div className="mx-auto max-w-6xl">
           <div className="max-w-4xl rounded-[2rem] border border-[#1AC7A4]/20 bg-[#1AC7A4]/[0.055] px-7 py-9 sm:px-10">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#1AC7A4]">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[var(--jamoko-teal)]">
               Falls Sie über meinen Brief hier sind
             </p>
-            <p className="mt-5 text-xl leading-9 text-white/78 sm:text-2xl">
+            <p className="mt-5 text-xl leading-9 text-jamoko-text/78 sm:text-2xl">
               Die Beobachtung in Ihrem Brief stammt von mir. Ich habe mir Ihre
               Website selbst angesehen – nicht automatisiert und nicht als
               Teil einer Massenaktion.
@@ -153,13 +153,13 @@ export default function MoPage() {
       <section className="px-6 py-20 sm:px-8 md:py-28">
         <div className="mx-auto max-w-6xl">
           <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#E5C58B]">
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--jamoko-gold)]">
               Zusammenarbeit
             </p>
-            <h2 className="mt-4 text-3xl font-semibold leading-tight text-white sm:text-4xl">
+            <h2 className="mt-4 text-3xl font-semibold leading-tight text-jamoko-text sm:text-4xl">
               Direkt mit mir. Ohne Agenturapparat.
             </h2>
-            <p className="mt-6 text-lg leading-8 text-white/65">
+            <p className="mt-6 text-lg leading-8 text-jamoko-text/65">
               Wer mit JaMoKo arbeitet, spricht vom ersten Gespräch bis zur
               fertigen Website mit mir. Das hält Wege kurz und Entscheidungen
               nachvollziehbar.
@@ -170,9 +170,9 @@ export default function MoPage() {
             {principles.map((principle) => (
               <li
                 key={principle}
-                className="flex items-start gap-4 rounded-3xl border border-white/10 bg-white/[0.025] p-6 text-lg text-white/75"
+                className="flex items-start gap-4 rounded-3xl border border-white/10 bg-white/[0.025] p-6 text-lg text-jamoko-text/75"
               >
-                <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#1AC7A4]/10 text-[#1AC7A4]">
+                <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#1AC7A4]/10 text-[var(--jamoko-teal)]">
                   <Check className="h-4 w-4" aria-hidden="true" />
                 </span>
                 {principle}
@@ -182,7 +182,7 @@ export default function MoPage() {
 
           <Link
             href="/projekte"
-            className="mt-9 inline-flex items-center gap-2 text-sm font-semibold text-[#E5C58B] transition hover:text-white"
+            className="mt-9 inline-flex items-center gap-2 text-sm font-semibold text-[var(--jamoko-gold)] transition hover:text-jamoko-text"
           >
             Ausgewählte Projekte ansehen
             <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -205,7 +205,7 @@ export default function MoPage() {
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Link
               href="/kontakt"
-              className="inline-flex items-center justify-center gap-3 rounded-full bg-[#001821] px-7 py-4 text-sm font-semibold text-white transition hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center gap-3 rounded-full bg-calm-navy px-7 py-4 text-sm font-semibold text-jamoko-text transition hover:-translate-y-0.5"
             >
               <MessageCircle className="h-4 w-4" aria-hidden="true" />
               Kontakt aufnehmen

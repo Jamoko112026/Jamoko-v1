@@ -50,10 +50,10 @@ export default function AgbPage() {
       <section className="v3-page-header px-6 py-16 sm:px-8 md:py-24">
         <div className="mx-auto max-w-6xl">
           <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#E5C58B]">
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--jamoko-gold)]">
               Rechtliches
             </p>
-            <h1 className="mt-5 text-4xl font-light leading-tight text-white sm:text-5xl md:text-6xl">
+            <h1 className="mt-5 text-4xl font-light leading-tight text-jamoko-text sm:text-5xl md:text-6xl">
               AGB
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-jamoko-text-dim">
@@ -71,7 +71,7 @@ export default function AgbPage() {
               key={section.title}
               className="v3-fact rounded-3xl border border-white/10 bg-white/[0.025] p-7"
             >
-              <h2 className="text-xl font-medium text-white">
+              <h2 className="text-xl font-medium text-jamoko-text">
                 {section.title}
               </h2>
               <p className="mt-4 text-sm leading-7 text-jamoko-text-dim">
@@ -90,7 +90,7 @@ export default function AgbPage() {
           </p>
           <Link
             href="/kontakt"
-            className="mt-8 inline-flex items-center gap-3 rounded-full bg-[#001821] px-7 py-4 text-sm font-medium text-white transition hover:-translate-y-0.5"
+            className="mt-8 inline-flex items-center gap-3 rounded-full bg-calm-navy px-7 py-4 text-sm font-medium text-jamoko-text transition hover:-translate-y-0.5"
           >
             Kostenlos kennenlernen
             <ArrowRight className="h-4 w-4" aria-hidden="true" />

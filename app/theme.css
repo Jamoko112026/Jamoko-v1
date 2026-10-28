@@ -1,0 +1,116 @@
+/* Semantic colours; CSS also follows the device when JavaScript is unavailable. */
+:root {
+  color-scheme: light;
+  --theme-gradient-rgb: 248, 247, 243;
+  --theme-text-rgb: 16 42 51;
+  --theme-muted-rgb: 56 84 94;
+  --theme-panel: #ffffff;
+  --theme-band: #e5f1ed;
+  --color-bg: #f8f7f3;
+  --color-ink: #102a33;
+  --color-muted: #38545e;
+  --color-line: #829797;
+  --jamoko-text: #102a33;
+  --jamoko-text-dim: #38545e;
+  --jamoko-paper: #eef2ee;
+  --jamoko-mist: #e5f1ed;
+  --jamoko-ink: #102a33;
+  --jamoko-ink-muted: #38545e;
+  --jamoko-gold: #765a22;
+  --jamoko-teal: #067563;
+  --jamoko-gold-accessible: #765a22;
+  --jamoko-teal-accessible: #067563;
+  --theme-bg-rgb: 248 247 243;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+  color-scheme: dark;
+  --theme-gradient-rgb: 0, 24, 33;
+  --theme-text-rgb: 237 242 247;
+  --theme-muted-rgb: 214 224 231;
+  --theme-panel: #012633;
+  --theme-band: #073b40;
+  --color-bg: #001821;
+  --color-ink: #edf2f7;
+  --color-muted: #d6e0e7;
+  --color-line: #69838c;
+  --jamoko-text: #edf2f7;
+  --jamoko-text-dim: #d6e0e7;
+  --jamoko-paper: #0b2b35;
+  --jamoko-mist: #12343d;
+  --jamoko-ink: #edf2f7;
+  --jamoko-ink-muted: #d6e0e7;
+  --jamoko-gold: #e5c58b;
+  --jamoko-teal: #1ac7a4;
+  --jamoko-gold-accessible: #e5c58b;
+  --jamoko-teal-accessible: #1ac7a4;
+  --theme-bg-rgb: 0 24 33;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --theme-gradient-rgb: 0, 24, 33;
+  --theme-text-rgb: 237 242 247;
+  --theme-muted-rgb: 214 224 231;
+  --theme-panel: #012633;
+  --theme-band: #073b40;
+  --color-bg: #001821;
+  --color-ink: #edf2f7;
+  --color-muted: #d6e0e7;
+  --color-line: #69838c;
+  --jamoko-text: #edf2f7;
+  --jamoko-text-dim: #d6e0e7;
+  --jamoko-paper: #0b2b35;
+  --jamoko-mist: #12343d;
+  --jamoko-ink: #edf2f7;
+  --jamoko-ink-muted: #d6e0e7;
+  --jamoko-gold: #e5c58b;
+  --jamoko-teal: #1ac7a4;
+  --jamoko-gold-accessible: #e5c58b;
+  --jamoko-teal-accessible: #1ac7a4;
+  --theme-bg-rgb: 0 24 33;
+}
+
+/* Readable accents and controls across the existing Tailwind pages. */
+.brand-shell { color: var(--jamoko-text); }
+.brand-shell .text-jamoko-gold { color: var(--jamoko-gold); }
+.brand-shell .text-jamoko-teal { color: var(--jamoko-teal); }
+.brand-shell .text-calm-green { color: var(--jamoko-teal); }
+.brand-shell :is(input,textarea,select) {
+  color: var(--jamoko-text);
+  background-color: var(--theme-panel);
+  border-color: var(--color-line);
+}
+.brand-shell :is(input,textarea)::placeholder { color: var(--jamoko-text-dim); opacity: 1; }
+.jmk-card-light { background: var(--theme-panel); border-color: var(--color-line); }
+.jmk-light-link:hover { color: var(--jamoko-teal-accessible); }
+::selection { background: #e5c58b; color: #001821; }
+.theme-control { position: relative; flex-shrink: 0; }
+.theme-control summary {
+  display: flex; align-items: center; justify-content: center;
+  min-width: 44px; min-height: 44px; cursor: pointer;
+  border: 1px solid var(--color-line); border-radius: .3rem;
+  color: var(--jamoko-text); background: var(--color-bg);
+}
+.theme-control summary:hover { background: var(--theme-panel); }
+.theme-control fieldset {
+  position: absolute; right: 0; top: calc(100% + .5rem); z-index: 60;
+  width: 13rem; padding: 1rem; border: 1px solid var(--color-line);
+  border-radius: .3rem; background: var(--color-bg); color: var(--jamoko-text);
+  box-shadow: 0 8px 24px #00182126;
+}
+.theme-control legend { padding: 0 .25rem; font-weight: 600; }
+.theme-control label { display: flex; align-items: center; gap: .75rem; min-height: 44px; cursor: pointer; }
+.theme-control input { accent-color: var(--jamoko-teal); width: 18px; height: 18px; }
+@media (max-width: 1279px) { .theme-control { margin-left: auto; } }
+@media (forced-colors: active) {
+  .theme-control summary,.theme-control fieldset { background: Canvas; color: CanvasText; border-color: CanvasText; }
+}
+/* Fixed gold callouts retain dark ink, regardless of surrounding theme. */
+.brand-shell .v3-callout { color: #001821; }
+.brand-shell .v3-callout a.bg-calm-navy { background: #001821; color: #edf2f7; }
+.brand-shell .v3-paper :is(p,li,span,h2,h3):not([class*="bg-"]) { color: var(--jamoko-ink); }
+.brand-shell .jmk-section-light :is(p,li,h2,h3):not([class*="bg-"]) { color: var(--jamoko-ink); }
+@media (forced-colors: active) {
+  .brand-shell .v3-callout,.brand-shell .v3-callout a.bg-calm-navy { color: CanvasText; background: Canvas; }
+}
