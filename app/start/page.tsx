@@ -124,16 +124,16 @@ export default function DigitalStartPage() {
         />
         <div className="relative mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.18fr_0.82fr] lg:items-center">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#E5C58B]">
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--jamoko-gold)]">
               Dein digitaler Einstieg bei JaMoKo
             </p>
-            <h1 className="mt-6 max-w-4xl text-4xl font-semibold leading-[1.08] tracking-[-0.04em] text-white sm:text-5xl md:text-6xl">
+            <h1 className="mt-6 max-w-4xl text-4xl font-semibold leading-[1.08] tracking-[-0.04em] text-jamoko-text sm:text-5xl md:text-6xl">
               Du musst noch nicht wissen,
-              <span className="mt-2 block font-light text-[#E5C58B]">
+              <span className="mt-2 block font-light text-[var(--jamoko-gold)]">
                 welche Lösung du brauchst.
               </span>
             </h1>
-            <p className="mt-8 max-w-2xl text-lg leading-8 text-white/72 md:text-xl md:leading-9">
+            <p className="mt-8 max-w-2xl text-lg leading-8 text-jamoko-text/72 md:text-xl md:leading-9">
               Wenn Website, Sichtbarkeit oder digitale Abläufe unübersichtlich
               geworden sind, sortieren wir zuerst deine Situation – und finden
               anschließend den nächsten sinnvollen Schritt.
@@ -148,7 +148,7 @@ export default function DigitalStartPage() {
               </a>
               <a
                 href="#vorgehen"
-                className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/15 px-7 py-3.5 text-sm font-semibold text-white/80 transition hover:border-white/35 hover:text-white"
+                className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/15 px-7 py-3.5 text-sm font-semibold text-jamoko-text/80 transition hover:border-white/35 hover:text-jamoko-text"
               >
                 So funktioniert es
               </a>
@@ -159,13 +159,13 @@ export default function DigitalStartPage() {
           </div>
 
           <aside className="relative rounded-[2rem] border border-[#E5C58B]/25 bg-white/[0.035] p-7 sm:p-9">
-            <div className="absolute -right-3 -top-3 flex h-12 w-12 items-center justify-center rounded-2xl border border-[#1AC7A4]/25 bg-[#001821] text-[#1AC7A4]">
+            <div className="absolute -right-3 -top-3 flex h-12 w-12 items-center justify-center rounded-2xl border border-[#1AC7A4]/25 bg-calm-navy text-[var(--jamoko-teal)]">
               <Compass className="h-6 w-6" aria-hidden="true" />
             </div>
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#1AC7A4]">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[var(--jamoko-teal)]">
               Ein guter Anfang
             </p>
-            <h2 className="mt-5 text-2xl font-semibold leading-tight text-white sm:text-3xl">
+            <h2 className="mt-5 text-2xl font-semibold leading-tight text-jamoko-text sm:text-3xl">
               Womit sollen wir anfangen?
             </h2>
             <ul className="mt-7 space-y-4">
@@ -173,7 +173,7 @@ export default function DigitalStartPage() {
                 (item) => (
                   <li
                     key={item}
-                    className="flex items-start gap-3 border-b border-white/10 pb-4 text-base leading-7 text-white/72 last:border-0 last:pb-0"
+                    className="flex items-start gap-3 border-b border-white/10 pb-4 text-base leading-7 text-jamoko-text/72 last:border-0 last:pb-0"
                   >
                     <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#E5C58B]" />
                     {item}
@@ -214,7 +214,7 @@ export default function DigitalStartPage() {
                 }`}
               >
                 <div className="flex items-start gap-4">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[#067563]/10 text-[#067563]">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[#067563]/10 text-[var(--jamoko-teal-accessible)]">
                     <Eye className="h-5 w-5" aria-hidden="true" />
                   </span>
                   <div>
@@ -230,7 +230,7 @@ export default function DigitalStartPage() {
             ))}
           </div>
 
-          <blockquote className="mt-10 rounded-[2rem] border border-[#765A22]/25 bg-[#E5C58B]/20 px-7 py-8 text-xl font-semibold leading-8 text-[#102A33] sm:px-10 sm:text-2xl sm:leading-9">
+          <blockquote className="mt-10 rounded-[2rem] border border-[#765A22]/25 bg-[#E5C58B]/20 px-7 py-8 text-xl font-semibold leading-8 text-[var(--jamoko-ink)] sm:px-10 sm:text-2xl sm:leading-9">
             Nicht jede digitale Baustelle braucht sofort eine neue Website.
           </blockquote>
         </div>
@@ -239,19 +239,19 @@ export default function DigitalStartPage() {
       <section className="px-6 py-20 sm:px-8 md:py-28">
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
           <div className="rounded-[2rem] border border-[#1AC7A4]/25 bg-[#1AC7A4]/[0.055] p-7 sm:p-9">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#1AC7A4]">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[var(--jamoko-teal)]">
               Ein Beispiel aus der Praxis
             </p>
-            <p className="mt-6 text-2xl font-semibold leading-9 text-white">
+            <p className="mt-6 text-2xl font-semibold leading-9 text-jamoko-text">
               Eine technische Frage – und das eigentliche Thema dahinter.
             </p>
           </div>
 
           <div>
-            <h2 className="text-3xl font-semibold leading-tight text-white sm:text-4xl">
+            <h2 className="text-3xl font-semibold leading-tight text-jamoko-text sm:text-4xl">
               Am Anfang standen drei Möglichkeiten.
             </h2>
-            <div className="mt-7 space-y-5 text-lg leading-8 text-white/68">
+            <div className="mt-7 space-y-5 text-lg leading-8 text-jamoko-text/68">
               <p>
                 Eine selbstständige Immobilienmaklerin wollte wissen, ob sie
                 ihre vorhandene Wix-Website überarbeiten, die Lösung ihres
@@ -296,10 +296,10 @@ export default function DigitalStartPage() {
                 className="jmk-card-light rounded-3xl border p-7 sm:p-8"
               >
                 <div className="flex items-center justify-between gap-4">
-                  <span className="text-xs font-semibold tracking-[0.25em] text-[#765A22]">
+                  <span className="text-xs font-semibold tracking-[0.25em] text-[var(--jamoko-gold-accessible)]">
                     {number}
                   </span>
-                  <Icon className="h-5 w-5 text-[#067563]" aria-hidden="true" />
+                  <Icon className="h-5 w-5 text-[var(--jamoko-teal-accessible)]" aria-hidden="true" />
                 </div>
                 <h3 className="jmk-light-heading mt-8 text-2xl font-semibold">
                   {title}
@@ -314,13 +314,13 @@ export default function DigitalStartPage() {
       <section className="px-6 py-20 sm:px-8 md:py-28">
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.82fr_1.18fr]">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#E5C58B]">
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--jamoko-gold)]">
               Was daraus entstehen kann
             </p>
-            <h2 className="mt-4 text-3xl font-semibold leading-tight text-white sm:text-4xl">
+            <h2 className="mt-4 text-3xl font-semibold leading-tight text-jamoko-text sm:text-4xl">
               Die passende Lösung steht nicht vorher fest.
             </h2>
-            <p className="mt-6 text-lg leading-8 text-white/65">
+            <p className="mt-6 text-lg leading-8 text-jamoko-text/65">
               Manchmal muss nichts komplett neu gebaut werden. Manchmal braucht
               es einen bewussten Neuanfang. Entscheidend ist, dass die Lösung zu
               dir, deiner Arbeit und deinem Alltag passt.
@@ -331,9 +331,9 @@ export default function DigitalStartPage() {
             {outcomes.map((outcome) => (
               <li
                 key={outcome}
-                className="flex items-start gap-4 rounded-3xl border border-white/10 bg-white/[0.025] p-6 leading-7 text-white/72"
+                className="flex items-start gap-4 rounded-3xl border border-white/10 bg-white/[0.025] p-6 leading-7 text-jamoko-text/72"
               >
-                <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#1AC7A4]/10 text-[#1AC7A4]">
+                <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#1AC7A4]/10 text-[var(--jamoko-teal)]">
                   <Check className="h-4 w-4" aria-hidden="true" />
                 </span>
                 {outcome}
@@ -346,7 +346,7 @@ export default function DigitalStartPage() {
       <section className="jmk-section-light jmk-section-paper px-6 py-20 sm:px-8 md:py-28">
         <div className="jmk-section-content mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:items-center">
           <div className="relative mx-auto w-full max-w-sm">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-[#765A22]/20 bg-[#001821] shadow-[0_24px_70px_rgba(16,42,51,0.16)]">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-[#765A22]/20 bg-calm-navy shadow-[0_24px_70px_rgba(16,42,51,0.16)]">
               <Image
                 src="/mo-portrait-v1.webp"
                 alt="Jan-Moritz Koch, persönlicher Ansprechpartner bei JaMoKo"
@@ -381,7 +381,7 @@ export default function DigitalStartPage() {
             </div>
             <Link
               href="/ueber-jamoko"
-              className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-[#067563] transition hover:text-[#102A33]"
+              className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-[var(--jamoko-teal-accessible)] transition hover:text-[var(--jamoko-ink)]"
             >
               Mehr über JaMoKo
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -407,7 +407,7 @@ export default function DigitalStartPage() {
               Sätze reichen vollkommen aus. Ich schaue persönlich darauf und
               melde mich bei dir zurück.
             </p>
-            <p className="mt-7 rounded-3xl border border-[#067563]/20 bg-[#067563]/[0.06] p-6 text-base leading-7 text-[#102A33]">
+            <p className="mt-7 rounded-3xl border border-[#067563]/20 bg-[#067563]/[0.06] p-6 text-base leading-7 text-[var(--jamoko-ink)]">
               Daraus entsteht noch kein Auftrag. Wir klären zuerst, ob ein
               kurzes gemeinsames Gespräch sinnvoll ist.
             </p>
@@ -419,10 +419,10 @@ export default function DigitalStartPage() {
 
       <section className="px-6 py-20 sm:px-8 md:py-28">
         <div className="mx-auto max-w-4xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#E5C58B]">
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--jamoko-gold)]">
             Häufige Fragen
           </p>
-          <h2 className="mt-4 text-3xl font-semibold leading-tight text-white sm:text-4xl">
+          <h2 className="mt-4 text-3xl font-semibold leading-tight text-jamoko-text sm:text-4xl">
             Gut zu wissen, bevor du schreibst.
           </h2>
 
@@ -432,13 +432,13 @@ export default function DigitalStartPage() {
                 key={question.title}
                 className="group rounded-3xl border border-white/10 bg-white/[0.025] px-6 py-5 open:border-[#E5C58B]/25 open:bg-white/[0.04] sm:px-7"
               >
-                <summary className="flex cursor-pointer items-center justify-between gap-6 text-lg font-semibold text-white">
+                <summary className="flex cursor-pointer items-center justify-between gap-6 text-lg font-semibold text-jamoko-text">
                   {question.title}
-                  <span className="text-2xl font-light text-[#E5C58B] transition group-open:rotate-45">
+                  <span className="text-2xl font-light text-[var(--jamoko-gold)] transition group-open:rotate-45">
                     +
                   </span>
                 </summary>
-                <p className="mt-4 max-w-3xl pr-8 leading-7 text-white/65">
+                <p className="mt-4 max-w-3xl pr-8 leading-7 text-jamoko-text/65">
                   {question.text}
                 </p>
               </details>
@@ -457,7 +457,7 @@ export default function DigitalStartPage() {
           </p>
           <a
             href="#situation"
-            className="mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#001821] px-7 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-0.5"
+            className="mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-calm-navy px-7 py-3.5 text-sm font-semibold text-jamoko-text transition hover:-translate-y-0.5"
           >
             Meine Situation schildern
             <ArrowRight className="h-4 w-4" aria-hidden="true" />

@@ -54,10 +54,10 @@ export default function ImpressumPage() {
       <section className="v3-page-header px-6 py-16 sm:px-8 md:py-24">
         <div className="mx-auto max-w-6xl">
           <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#E5C58B]">
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--jamoko-gold)]">
               Rechtliches
             </p>
-            <h1 className="mt-5 text-4xl font-light leading-tight text-white sm:text-5xl md:text-6xl">
+            <h1 className="mt-5 text-4xl font-light leading-tight text-jamoko-text sm:text-5xl md:text-6xl">
               Impressum
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-jamoko-text-dim">
@@ -74,7 +74,7 @@ export default function ImpressumPage() {
               key={section.title}
               className="v3-fact rounded-3xl border border-white/10 bg-white/[0.025] p-7"
             >
-              <h2 className="text-xl font-medium text-white">
+              <h2 className="text-xl font-medium text-jamoko-text">
                 {section.title}
               </h2>
               <div className="mt-4 space-y-2 text-sm leading-7 text-jamoko-text-dim">
@@ -86,26 +86,26 @@ export default function ImpressumPage() {
           ))}
 
           <article className="v3-fact rounded-3xl border border-white/10 bg-white/[0.025] p-7">
-            <Mail className="h-5 w-5 text-[#E5C58B]" aria-hidden="true" />
-            <h2 className="mt-5 text-xl font-medium text-white">Kontakt</h2>
+            <Mail className="h-5 w-5 text-[var(--jamoko-gold)]" aria-hidden="true" />
+            <h2 className="mt-5 text-xl font-medium text-jamoko-text">Kontakt</h2>
             <div className="mt-4 space-y-3 text-sm leading-7 text-jamoko-text-dim">
               <a
                 href="mailto:moin@jamoko.de"
-                className="flex items-center gap-3 text-[#E5C58B] transition hover:text-[#efd49f]"
+                className="flex items-center gap-3 text-[var(--jamoko-gold)] transition hover:text-[#efd49f]"
               >
                 <Mail className="h-4 w-4" aria-hidden="true" />
                 moin@jamoko.de
               </a>
               <a
                 href="tel:+4917682032127"
-                className="flex items-center gap-3 text-jamoko-text-dim transition hover:text-white"
+                className="flex items-center gap-3 text-jamoko-text-dim transition hover:text-jamoko-text"
               >
                 <Phone className="h-4 w-4" aria-hidden="true" />
                 +49 176 82032127
               </a>
               <a
                 href="https://jamoko.de"
-                className="inline-flex text-jamoko-text-dim transition hover:text-white"
+                className="inline-flex text-jamoko-text-dim transition hover:text-jamoko-text"
               >
                 https://jamoko.de
               </a>
@@ -113,7 +113,7 @@ export default function ImpressumPage() {
           </article>
 
           <article className="v3-fact rounded-3xl border border-white/10 bg-white/[0.025] p-7">
-            <h2 className="text-xl font-medium text-white">
+            <h2 className="text-xl font-medium text-jamoko-text">
               Haftung und Urheberrecht
             </h2>
             <div className="mt-4 space-y-4 text-sm leading-7 text-jamoko-text-dim">
@@ -136,7 +136,7 @@ export default function ImpressumPage() {
         <div className="mx-auto mt-10 max-w-6xl">
           <Link
             href="/kontakt"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-[#E5C58B] transition hover:text-[#efd49f]"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--jamoko-gold)] transition hover:text-[#efd49f]"
           >
             Rückfragen zum Impressum
             <ArrowRight className="h-4 w-4" aria-hidden="true" />

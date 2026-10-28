@@ -18,11 +18,11 @@ export default function KlickUndDurchReferencePage() {
     <div className="v3-page relative overflow-hidden">
       <section className="px-6 py-20 sm:px-8 md:py-28">
         <div className="mx-auto max-w-4xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#E5C58B]">
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--jamoko-gold)]">
             JaMoKo Referenz
           </p>
 
-          <h1 className="mt-5 text-4xl font-light leading-tight text-white sm:text-5xl md:text-6xl">
+          <h1 className="mt-5 text-4xl font-light leading-tight text-jamoko-text sm:text-5xl md:text-6xl">
             Klick & Durch
           </h1>
 
@@ -50,7 +50,7 @@ export default function KlickUndDurchReferencePage() {
           <div className="mt-16 border-t border-white/10 pt-8">
             <Link
               href="/kontakt"
-              className="inline-flex items-center gap-2 text-sm text-jamoko-text-dim transition hover:text-white"
+              className="inline-flex items-center gap-2 text-sm text-jamoko-text-dim transition hover:text-jamoko-text"
             >
               Eigenes Projekt besprechen
               <ArrowRight className="h-4 w-4" aria-hidden="true" />

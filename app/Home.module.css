@@ -1,6 +1,6 @@
 .home {
-  background: var(--jamoko-navy);
-  color: var(--jamoko-paper);
+  background: var(--color-bg);
+  color: var(--jamoko-text);
 }
 
 .band {
@@ -61,7 +61,7 @@
   border-radius: .3rem;
   font-size: .875rem;
   font-weight: 600;
-  background: var(--jamoko-gold);
+  background: #e5c58b;
   color: var(--jamoko-navy);
 }
 .goldButton:hover { background: #efd49f; }
@@ -104,15 +104,15 @@
 .projectCaption h3 { margin-top: .5rem; }
 .projectCaption .textLink { display: flex; width: fit-content; }
 .projectFeatured:hover h3,.projectDemo:hover h3 { text-decoration: underline; text-underline-offset: .2em; }
-.projectNotes { display: grid; grid-template-columns: minmax(0,1.6fr) minmax(0,1fr); align-items: center; gap: clamp(2rem,5vw,5rem); margin-top: 2.25rem; padding-top: 2rem; border-top: 1px solid #d5cbb7; }
+.projectNotes { display: grid; grid-template-columns: minmax(0,1.6fr) minmax(0,1fr); align-items: center; gap: clamp(2rem,5vw,5rem); margin-top: 2.25rem; padding-top: 2rem; border-top: 1px solid var(--color-line); }
 .projectDemo { display: grid; grid-template-columns: minmax(0,240px) minmax(0,1fr); align-items: center; gap: 1.5rem; }
 .demoImage { position: relative; aspect-ratio: 1.6; overflow: hidden; }
 .demoImage img { object-fit: cover; object-position: 60% 35%; }
 .projectNotes h3 { margin-top: .5rem; font-size: clamp(1.25rem,1.8vw,1.625rem); }
-.concept { padding-left: 1.5rem; border-left: 2px solid #d5cbb7; }
+.concept { padding-left: 1.5rem; border-left: 2px solid var(--color-line); }
 .concept p:not([class]) { margin-top: .75rem; font-size: .875rem; }
 
-.toolsBand { background: #073b40; }
+.toolsBand { background: var(--theme-band); }
 .tools { display: grid; grid-template-columns: minmax(0,.8fr) minmax(0,1.2fr); align-items: start; gap: clamp(2.5rem,7vw,7rem); margin-top: 2rem; }
 .tools h3 { margin: .625rem 0 1rem; }
 .compass,.interview { border-top: 1px solid var(--jamoko-teal); padding-top: 1.5rem; }
@@ -127,7 +127,7 @@
 .contactActions { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 2rem; margin-top: .5rem; }
 .email { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 2rem; padding: 1.25rem 0; border-block: 1px solid var(--color-line); color: var(--jamoko-gold); font-family: var(--font-headline); font-size: clamp(1.75rem,5.5vw,5.5rem); font-weight: 600; letter-spacing: -.045em; }
 .email svg { width: clamp(1.5rem,5vw,4rem); height: auto; flex-shrink: 0; }
-.email:hover { color: var(--jamoko-paper); }
+.email:hover { color: var(--jamoko-text); }
 .contactMeta { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; margin-top: 1.25rem; font-size: .8125rem; color: var(--jamoko-text-dim); }
 .contactMeta p { margin-left: auto; }
 .contactMeta a { display: inline-flex; align-items: center; min-height: 32px; }

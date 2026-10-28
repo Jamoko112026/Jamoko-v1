@@ -89,22 +89,22 @@ export default function AltonaerReifendienstPage() {
     <article data-no-reveal className="v3-page v3-case relative overflow-hidden">
       <section className="px-6 py-16 sm:px-8 md:py-24">
         <div className="mx-auto max-w-6xl">
-          <Link href="/projekte" className="inline-flex min-h-11 items-center gap-2 text-sm text-white/70 transition hover:text-white">
+          <Link href="/projekte" className="inline-flex min-h-11 items-center gap-2 text-sm text-jamoko-text/70 transition hover:text-jamoko-text">
             <ArrowLeft className="h-4 w-4" aria-hidden="true" />
             Alle Projekte
           </Link>
-          <p className="mt-8 text-xs font-semibold uppercase tracking-[0.2em] text-[#E5C58B]">
+          <p className="mt-8 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--jamoko-gold)]">
             Kundenprojekt · Hamburg-Altona
           </p>
-          <h1 className="mt-5 max-w-4xl text-4xl font-light leading-tight text-white sm:text-5xl md:text-6xl">
+          <h1 className="mt-5 max-w-4xl text-4xl font-light leading-tight text-jamoko-text sm:text-5xl md:text-6xl">
             Altonaer Reifen&shy;dienst GmbH
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-white/75">
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-jamoko-text/75">
             Eine Werkstatt mit eigenem Charakter. Eine Website, die ihn zeigt –
             mit der Graffiti-Garage als Ausgangspunkt, echten Fotos und klaren
             Wegen zu Leistungen und Kontakt.
           </p>
-          <p className="mt-5 text-sm leading-7 text-white/70">
+          <p className="mt-5 text-sm leading-7 text-jamoko-text/70">
             Unternehmenswebsite · Konzept, Gestaltung und Entwicklung durch JaMoKo
           </p>
           <a href={liveUrl} className="mt-8 inline-flex min-h-12 items-center gap-2 rounded-full bg-[#E5C58B] px-6 py-3 text-sm font-semibold text-[#001821] transition hover:bg-[#efd49f]">
@@ -131,18 +131,18 @@ export default function AltonaerReifendienstPage() {
       <section className="v3-paper border-y border-white/10 bg-white/[0.025] px-6 py-16 sm:px-8 md:py-24">
         <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-2">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#E5C58B]">Ausgangslage</p>
-            <h2 className="mt-4 text-3xl font-light leading-tight text-white sm:text-4xl">Ein eigener Auftritt für den Betrieb.</h2>
-            <p className="mt-6 leading-8 text-white/75">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--jamoko-gold)]">Ausgangslage</p>
+            <h2 className="mt-4 text-3xl font-light leading-tight text-jamoko-text sm:text-4xl">Ein eigener Auftritt für den Betrieb.</h2>
+            <p className="mt-6 leading-8 text-jamoko-text/75">
               Die Altonaer Reifendienst GmbH brauchte einen eigenständigen,
               glaubwürdigen Webauftritt, der Werkstatt, Leistungen und Kontaktwege
               klar vermittelt. Der Charakter des Betriebs sollte auch online erkennbar sein.
             </p>
           </div>
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#E5C58B]">Ziel</p>
-            <h2 className="mt-4 text-3xl font-light leading-tight text-white sm:text-4xl">Schnell verstehen, was wichtig ist.</h2>
-            <p className="mt-6 leading-8 text-white/75">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--jamoko-gold)]">Ziel</p>
+            <h2 className="mt-4 text-3xl font-light leading-tight text-jamoko-text sm:text-4xl">Schnell verstehen, was wichtig ist.</h2>
+            <p className="mt-6 leading-8 text-jamoko-text/75">
               Das Ziel: die Grundlage für lokale Auffindbarkeit schaffen,
               Leistungen schnell erfassbar machen und die Nutzung unterwegs
               erleichtern. Dazu eine Gestaltung, die zur Werkstatt und zu ihrem
@@ -155,9 +155,9 @@ export default function AltonaerReifendienstPage() {
       <section className="px-6 py-16 sm:px-8 md:py-24">
         <div className="mx-auto max-w-6xl">
           <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#E5C58B]">Gestalterischer Bezug</p>
-            <h2 className="mt-4 text-3xl font-light leading-tight text-white sm:text-4xl">Die Graffiti-Garage gibt den Ton an.</h2>
-            <p className="mt-6 leading-8 text-white/75">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--jamoko-gold)]">Gestalterischer Bezug</p>
+            <h2 className="mt-4 text-3xl font-light leading-tight text-jamoko-text sm:text-4xl">Die Graffiti-Garage gibt den Ton an.</h2>
+            <p className="mt-6 leading-8 text-jamoko-text/75">
               Die auffällige Fassade ist der Ausgangspunkt für Farben, Bildwelt
               und Charakter der Kundenwebsite. Warme Orange-Akzente, dunkle
               Flächen und eine markante Schrift greifen ihre direkte, lebendige
@@ -166,8 +166,8 @@ export default function AltonaerReifendienstPage() {
             </p>
           </div>
           <div className="mt-14 max-w-3xl">
-            <h2 className="text-3xl font-light leading-tight text-white sm:text-4xl">Echte Werkstattfotos statt Stockbilder.</h2>
-            <p className="mt-6 leading-8 text-white/75">
+            <h2 className="text-3xl font-light leading-tight text-jamoko-text sm:text-4xl">Echte Werkstattfotos statt Stockbilder.</h2>
+            <p className="mt-6 leading-8 text-jamoko-text/75">
               Die Bilder zeigen die Räume, die Arbeit und die Details vor Ort.
               Sie geben einen konkreten Eindruck davon, was Besucherinnen und
               Besucher in der Werkstatt erwartet.
@@ -193,13 +193,13 @@ export default function AltonaerReifendienstPage() {
 
       <section className="border-y border-white/10 bg-white/[0.025] px-6 py-16 sm:px-8 md:py-24">
         <div className="mx-auto max-w-6xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#E5C58B]">Umsetzung</p>
-          <h2 className="mt-4 max-w-3xl text-3xl font-light leading-tight text-white sm:text-4xl">Von der ersten Frage bis zur Anfahrt.</h2>
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--jamoko-gold)]">Umsetzung</p>
+          <h2 className="mt-4 max-w-3xl text-3xl font-light leading-tight text-jamoko-text sm:text-4xl">Von der ersten Frage bis zur Anfahrt.</h2>
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
             {implementation.map((item) => (
               <div key={item.title} className="v3-fact rounded-3xl border border-white/10 bg-white/[0.025] p-7">
-                <h3 className="text-xl font-medium text-white">{item.title}</h3>
-                <p className="mt-4 leading-7 text-white/75">{item.text}</p>
+                <h3 className="text-xl font-medium text-jamoko-text">{item.title}</h3>
+                <p className="mt-4 leading-7 text-jamoko-text/75">{item.text}</p>
               </div>
             ))}
           </div>
@@ -208,11 +208,11 @@ export default function AltonaerReifendienstPage() {
 
       <section className="px-6 py-16 sm:px-8 md:py-24">
         <div className="mx-auto max-w-6xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#E5C58B]">Technische Ergebnisse</p>
-          <h2 className="mt-4 max-w-3xl text-3xl font-light leading-tight text-white sm:text-4xl">Weniger Bilddaten. Saubere Grundlagen.</h2>
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--jamoko-gold)]">Technische Ergebnisse</p>
+          <h2 className="mt-4 max-w-3xl text-3xl font-light leading-tight text-jamoko-text sm:text-4xl">Weniger Bilddaten. Saubere Grundlagen.</h2>
           <div className="mt-8 rounded-3xl border border-[#1AC7A4]/30 bg-[#1AC7A4]/[0.06] p-7 sm:p-9">
-            <p className="text-4xl font-light text-[#1AC7A4] sm:text-5xl">Rund 86 % kleiner</p>
-            <p className="mt-4 max-w-3xl leading-8 text-white/80">
+            <p className="text-4xl font-light text-[var(--jamoko-teal)] sm:text-5xl">Rund 86 % kleiner</p>
+            <p className="mt-4 max-w-3xl leading-8 text-jamoko-text/80">
               Die größten WebP-Varianten der acht verwendeten Fotos umfassen
               zusammen rund 1,6 MB statt 11,5 MB für die Originaldateien.
             </p>
@@ -225,12 +225,12 @@ export default function AltonaerReifendienstPage() {
           <div className="mt-10 grid gap-x-12 gap-y-8 md:grid-cols-2">
             {technicalResults.map((item) => (
               <div key={item.title} className="border-t border-white/10 pt-6">
-                <h3 className="text-xl font-medium text-white">{item.title}</h3>
-                <p className="mt-4 leading-7 text-white/75">{item.text}</p>
+                <h3 className="text-xl font-medium text-jamoko-text">{item.title}</h3>
+                <p className="mt-4 leading-7 text-jamoko-text/75">{item.text}</p>
               </div>
             ))}
           </div>
-          <p className="mt-10 max-w-3xl border-t border-white/10 pt-6 leading-7 text-white/75">
+          <p className="mt-10 max-w-3xl border-t border-white/10 pt-6 leading-7 text-jamoko-text/75">
             Zur technischen Qualitätssicherung wurden Build, Codeprüfung,
             Browserdarstellung, Sitemap und robots.txt erfolgreich geprüft.
           </p>
@@ -245,7 +245,7 @@ export default function AltonaerReifendienstPage() {
             online klarer zeigen möchtest, sprechen wir über einen passenden Auftritt.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4">
-            <Link href="/kontakt" className="inline-flex min-h-12 items-center gap-3 rounded-full bg-[#001821] px-7 py-4 text-sm font-medium text-white transition hover:-translate-y-0.5">
+            <Link href="/kontakt" className="inline-flex min-h-12 items-center gap-3 rounded-full bg-calm-navy px-7 py-4 text-sm font-medium text-jamoko-text transition hover:-translate-y-0.5">
               Website anfragen <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
             <a href={liveUrl} className="inline-flex min-h-12 items-center gap-2 text-sm font-semibold underline underline-offset-4">

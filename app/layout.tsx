@@ -4,6 +4,8 @@ import { Header } from "@/components/landing/Header";
 import { StructuredData, siteJsonLd } from "./structured-data";
 import "./globals.css";
 import "./brand-v3.css";
+import "./theme.css";
+import { themeInitScript } from "@/components/landing/theme";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://jamoko.de"),
@@ -43,7 +45,10 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#001821",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f8f7f3" },
+    { media: "(prefers-color-scheme: dark)", color: "#001821" },
+  ],
 };
 
 export default function RootLayout({
@@ -52,7 +57,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="de">
+    <html lang="de" suppressHydrationWarning>
+      <head><script dangerouslySetInnerHTML={{ __html: themeInitScript }} /></head>
       <body>
         <StructuredData data={siteJsonLd} />
         <a
@@ -61,7 +67,7 @@ export default function RootLayout({
         >
           Zum Inhalt springen
         </a>
-        <div className="brand-shell relative flex min-h-screen flex-col overflow-x-hidden bg-[#001821] text-jamoko-text">
+        <div className="brand-shell relative flex min-h-screen flex-col overflow-x-hidden bg-calm-navy text-jamoko-text">
           <div className="relative z-20">
             <Header />
           </div>

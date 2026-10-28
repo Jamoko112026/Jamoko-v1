@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ArrowRight, Menu, X } from "lucide-react";
+import { ThemeControl } from "./ThemeControl";
 import { Brand } from "./Brand";
 import styles from "./Chrome.module.css";
 
@@ -99,7 +100,7 @@ export function Header() {
     const handleKey = (event: KeyboardEvent) => {
       if (event.key === "Escape") { setOpen(false); toggleRef.current?.focus(); }
       if (event.key !== "Tab") return;
-      const items = Array.from(headerRef.current?.querySelectorAll<HTMLElement>("a, button, summary") ?? []).filter(el => el.getClientRects().length > 0);
+      const items = Array.from(headerRef.current?.querySelectorAll<HTMLElement>("a, button, summary, input") ?? []).filter(el => el.getClientRects().length > 0);
       const first = items[0], last = items[items.length - 1];
       if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
       if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
@@ -123,6 +124,7 @@ export function Header() {
           {navItems.map(item => <Link key={item.href} href={item.href} aria-current={isActivePath(pathname,item.href) ? "page" : undefined}>{item.label}</Link>)}
         </nav>
         <Link href={href} className={styles.headerCTA}>{cta}<ArrowRight size={16} aria-hidden="true" /></Link>
+        <ThemeControl />
         <details className={styles.mobileMenu} open={open} onToggle={event => setOpen(event.currentTarget.open)}>
           <summary ref={toggleRef} className={styles.menuButton} aria-label={open ? "Navigation schließen" : "Navigation öffnen"} aria-controls="mobile-navigation">
             <Menu size={23} aria-hidden="true" className={styles.menuOpenIcon} />

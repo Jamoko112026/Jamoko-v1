@@ -26,10 +26,10 @@ export default function ReifendienstDemoPage() {
       <section className="px-6 py-16 sm:px-8 md:py-24">
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#E5C58B]">
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--jamoko-gold)]">
               Demo
             </p>
-            <h1 className="mt-5 text-4xl font-light leading-tight text-white sm:text-5xl md:text-6xl">
+            <h1 className="mt-5 text-4xl font-light leading-tight text-jamoko-text sm:text-5xl md:text-6xl">
               Website-Demo für einen lokalen Reifendienst.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-jamoko-text-dim">
@@ -44,7 +44,7 @@ export default function ReifendienstDemoPage() {
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
           </div>
-          <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-white/10 bg-[#06252f]">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-white/10 bg-calm-panel">
             <Image
               src="/ard/Hero_1920w_ARDlook.jpg"
               alt="Demo-Ansicht für einen lokalen Reifendienst"
@@ -66,10 +66,10 @@ export default function ReifendienstDemoPage() {
               className="v3-fact rounded-3xl border border-white/10 bg-white/[0.025] p-7"
             >
               <CheckCircle2
-                className="h-5 w-5 text-[#1AC7A4]"
+                className="h-5 w-5 text-[var(--jamoko-teal)]"
                 aria-hidden="true"
               />
-              <h2 className="mt-6 text-lg font-medium text-white">{point}</h2>
+              <h2 className="mt-6 text-lg font-medium text-jamoko-text">{point}</h2>
             </article>
           ))}
         </div>

@@ -75,7 +75,7 @@ export function ContactForm() {
       <p className="mt-5 text-sm leading-6 text-calm-muted">
         Alternativ direkt per E-Mail an{" "}
         <a
-          className="font-medium text-calm-gold underline-offset-4 hover:underline"
+          className="font-medium text-[var(--jamoko-gold)] underline-offset-4 hover:underline"
           href="mailto:moin@jamoko.de"
         >
           moin@jamoko.de
@@ -84,7 +84,7 @@ export function ContactForm() {
 
       <button
         type="submit"
-        className="mt-7 inline-flex items-center gap-2 rounded-md bg-calm-gold px-5 py-3 text-sm font-semibold text-calm-navy transition hover:bg-calm-green"
+        className="mt-7 inline-flex items-center gap-2 rounded-md bg-calm-gold px-5 py-3 text-sm font-semibold text-[#001821] transition hover:bg-calm-green"
       >
         <Send className="h-4 w-4" aria-hidden="true" />
         Nachricht vorbereiten

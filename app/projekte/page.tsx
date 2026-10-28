@@ -98,10 +98,10 @@ const projects: Project[] = [
 ];
 
 const statusStyles: Record<Project["status"], string> = {
-  Kundenprojekt: "border-[#1AC7A4]/30 bg-[#001821]/90 text-[#1AC7A4]",
-  Demo: "border-[#1AC7A4]/50 bg-[#001821]/95 text-[#1AC7A4]",
-  "In Arbeit": "border-[#E5C58B]/35 bg-[#E5C58B]/10 text-[#E5C58B]",
-  Konzept: "border-white/15 bg-white/10 text-white/70",
+  Kundenprojekt: "border-[#1AC7A4]/30 bg-calm-navy/90 text-[var(--jamoko-teal)]",
+  Demo: "border-[#1AC7A4]/50 bg-calm-navy/95 text-[var(--jamoko-teal)]",
+  "In Arbeit": "border-[#E5C58B]/35 bg-[#E5C58B]/10 text-[var(--jamoko-gold)]",
+  Konzept: "border-white/15 bg-white/10 text-jamoko-text/70",
 };
 
 export default function ProjectsPage() {
@@ -110,17 +110,17 @@ export default function ProjectsPage() {
       <section className="v3-page-header px-6 py-16 sm:px-8 md:py-24">
         <div className="mx-auto max-w-6xl">
           <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#E5C58B]">
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--jamoko-gold)]">
               Portfolio
             </p>
-            <h1 className="mt-5 text-4xl font-light leading-tight text-white sm:text-5xl md:text-6xl">
+            <h1 className="mt-5 text-4xl font-light leading-tight text-jamoko-text sm:text-5xl md:text-6xl">
               Unsere Projekte
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-jamoko-text-dim">
               Ausgewählte Projekte zeigen, wie wir Unternehmen dabei
               unterstützen, klarer, ruhiger und digital sichtbarer zu werden.
             </p>
-            <p className="mt-8 max-w-3xl rounded-2xl border border-[#E5C58B]/25 bg-[#E5C58B]/[0.06] p-5 leading-relaxed text-white/75 sm:p-6">
+            <p className="mt-8 max-w-3xl rounded-2xl border border-[#E5C58B]/25 bg-[#E5C58B]/[0.06] p-5 leading-relaxed text-jamoko-text/75 sm:p-6">
               Konzeptprojekte zeigen, wie JaMoKo digitale Auftritte für
               unterschiedliche Branchen entwickeln kann. Sie sind keine
               Kundenreferenzen.
@@ -166,13 +166,13 @@ export default function ProjectsPage() {
                 </div>
 
                 <div className={styles.caption}>
-                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#E5C58B]">
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--jamoko-gold)]">
                     {project.industry}
                   </p>
-                  <h2 className="mt-4 text-2xl font-medium text-white">
+                  <h2 className="mt-4 text-2xl font-medium text-jamoko-text">
                     {project.title}
                   </h2>
-                  <p className="mt-4 flex-1 leading-relaxed text-white/70">
+                  <p className="mt-4 flex-1 leading-relaxed text-jamoko-text/70">
                     {project.description}
                   </p>
 
@@ -206,7 +206,7 @@ export default function ProjectsPage() {
           </p>
           <Link
             href="/kontakt"
-            className="mt-8 inline-flex items-center gap-3 rounded-full bg-[#001821] px-7 py-4 text-sm font-medium text-white transition hover:-translate-y-0.5"
+            className="mt-8 inline-flex items-center gap-3 rounded-full bg-calm-navy px-7 py-4 text-sm font-medium text-jamoko-text transition hover:-translate-y-0.5"
           >
             Projekt besprechen
             <ArrowRight className="h-4 w-4" aria-hidden="true" />

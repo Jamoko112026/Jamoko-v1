@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Mail, Send } from "lucide-react";
 
 const inputClass =
-  "mt-2 w-full rounded-xl border border-[#69838C] bg-white px-4 py-3.5 text-base text-[#102A33] placeholder:text-[#38545E] focus:border-[#067563] focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-[#067563]";
+  "mt-2 w-full rounded-xl border border-[#69838C] bg-calm-panel px-4 py-3.5 text-base text-[var(--jamoko-ink)] placeholder:text-[var(--jamoko-ink-muted)] focus:border-[#067563] focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-[#067563]";
 
 function getField(formData: FormData, name: string) {
   return String(formData.get(name) ?? "").trim();
@@ -47,10 +47,10 @@ export function DigitalStartForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="rounded-[2rem] border border-[#102A33]/10 bg-white p-6 shadow-[0_24px_80px_rgba(0,24,33,0.12)] sm:p-9"
+      className="rounded-[2rem] border border-[#102A33]/10 bg-calm-panel p-6 shadow-[0_24px_80px_rgba(0,24,33,0.12)] sm:p-9"
     >
       <div className="grid gap-5 sm:grid-cols-2">
-        <label className="block text-sm font-semibold text-[#102A33]">
+        <label className="block text-sm font-semibold text-[var(--jamoko-ink)]">
           Dein Name
           <input
             className={inputClass}
@@ -60,7 +60,7 @@ export function DigitalStartForm() {
             placeholder="Wie darf ich dich ansprechen?"
           />
         </label>
-        <label className="block text-sm font-semibold text-[#102A33]">
+        <label className="block text-sm font-semibold text-[var(--jamoko-ink)]">
           Unternehmen oder Tätigkeit
           <input
             className={inputClass}
@@ -69,7 +69,7 @@ export function DigitalStartForm() {
             placeholder="Was machst du?"
           />
         </label>
-        <label className="block text-sm font-semibold text-[#102A33]">
+        <label className="block text-sm font-semibold text-[var(--jamoko-ink)]">
           E-Mail
           <input
             className={inputClass}
@@ -80,8 +80,8 @@ export function DigitalStartForm() {
             placeholder="name@beispiel.de"
           />
         </label>
-        <label className="block text-sm font-semibold text-[#102A33]">
-          Telefon <span className="font-normal text-[#38545E]">(optional)</span>
+        <label className="block text-sm font-semibold text-[var(--jamoko-ink)]">
+          Telefon <span className="font-normal text-[var(--jamoko-ink-muted)]">(optional)</span>
           <input
             className={inputClass}
             name="phone"
@@ -92,7 +92,7 @@ export function DigitalStartForm() {
         </label>
       </div>
 
-      <label className="mt-5 block text-sm font-semibold text-[#102A33]">
+      <label className="mt-5 block text-sm font-semibold text-[var(--jamoko-ink)]">
         Was beschäftigt dich gerade?
         <textarea
           className={`${inputClass} min-h-36 resize-y`}
@@ -102,9 +102,9 @@ export function DigitalStartForm() {
         />
       </label>
 
-      <label className="mt-5 block text-sm font-semibold text-[#102A33]">
+      <label className="mt-5 block text-sm font-semibold text-[var(--jamoko-ink)]">
         Was soll sich verbessern?{" "}
-        <span className="font-normal text-[#38545E]">(optional)</span>
+        <span className="font-normal text-[var(--jamoko-ink-muted)]">(optional)</span>
         <textarea
           className={`${inputClass} min-h-28 resize-y`}
           name="goal"
@@ -112,9 +112,9 @@ export function DigitalStartForm() {
         />
       </label>
 
-      <label className="mt-5 block text-sm font-semibold text-[#102A33]">
+      <label className="mt-5 block text-sm font-semibold text-[var(--jamoko-ink)]">
         Vorhandener Link{" "}
-        <span className="font-normal text-[#38545E]">(optional)</span>
+        <span className="font-normal text-[var(--jamoko-ink-muted)]">(optional)</span>
         <input
           className={inputClass}
           name="link"
@@ -127,21 +127,21 @@ export function DigitalStartForm() {
 
       <button
         type="submit"
-        className="mt-7 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-[#001821] px-6 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#013542] sm:w-auto"
+        className="mt-7 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-calm-navy px-6 py-3.5 text-sm font-semibold text-jamoko-text transition hover:-translate-y-0.5 hover:bg-calm-panel sm:w-auto"
       >
         <Send className="h-4 w-4" aria-hidden="true" />
         E-Mail an Mo vorbereiten
       </button>
 
-      <div className="mt-5 flex items-start gap-3 text-sm leading-6 text-[#38545E]">
-        <Mail className="mt-1 h-4 w-4 shrink-0 text-[#067563]" aria-hidden="true" />
+      <div className="mt-5 flex items-start gap-3 text-sm leading-6 text-[var(--jamoko-ink-muted)]">
+        <Mail className="mt-1 h-4 w-4 shrink-0 text-[var(--jamoko-teal-accessible)]" aria-hidden="true" />
         <p>
           Danach öffnet sich dein Mailprogramm. Du kannst alles noch einmal
           prüfen, bevor du die Nachricht sendest. Es entsteht kein Auftrag. Mehr
           zum Umgang mit deinen Angaben steht im{" "}
           <Link
             href="/datenschutz"
-            className="font-semibold text-[#067563] underline-offset-4 hover:underline"
+            className="font-semibold text-[var(--jamoko-teal-accessible)] underline-offset-4 hover:underline"
           >
             Datenschutz
           </Link>

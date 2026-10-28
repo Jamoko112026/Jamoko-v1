@@ -24,7 +24,7 @@ export function CTASection({
           <p className="mt-5 text-lg leading-8 text-calm-paper/75">{text}</p>
           <Link
             href={buttonHref}
-            className="mt-8 inline-flex items-center gap-2 rounded-md bg-calm-gold px-5 py-3 text-sm font-semibold text-calm-navy transition hover:bg-calm-green"
+            className="mt-8 inline-flex items-center gap-2 rounded-md bg-calm-gold px-5 py-3 text-sm font-semibold text-[#001821] transition hover:bg-calm-green"
           >
             <Mail className="h-4 w-4" aria-hidden="true" />
             {buttonLabel}

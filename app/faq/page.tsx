@@ -35,10 +35,10 @@ export default function FaqPage() {
         <section className="v3-page-header px-6 py-16 sm:px-8 md:py-24">
           <div className="mx-auto max-w-6xl">
             <div className="max-w-3xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#E5C58B]">
+              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--jamoko-gold)]">
                 FAQ
               </p>
-              <h1 className="mt-5 text-4xl font-light leading-tight text-white sm:text-5xl md:text-6xl">
+              <h1 className="mt-5 text-4xl font-light leading-tight text-jamoko-text sm:text-5xl md:text-6xl">
                 Häufige Fragen
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-jamoko-text-dim">
@@ -56,9 +56,9 @@ export default function FaqPage() {
                 key={item.question}
                 className="group rounded-3xl border border-white/10 bg-white/[0.025] p-6 open:border-[#E5C58B]/35 open:bg-white/[0.045]"
               >
-                <summary className="flex cursor-pointer items-start justify-between gap-6 text-left text-lg font-medium text-white">
+                <summary className="flex cursor-pointer items-start justify-between gap-6 text-left text-lg font-medium text-jamoko-text">
                   <span>{item.question}</span>
-                  <span className="mt-1 text-[#E5C58B] transition group-open:rotate-45">
+                  <span className="mt-1 text-[var(--jamoko-gold)] transition group-open:rotate-45">
                     +
                   </span>
                 </summary>
@@ -79,7 +79,7 @@ export default function FaqPage() {
             </p>
             <Link
               href="/kontakt"
-              className="mt-8 inline-flex items-center gap-3 rounded-full bg-[#001821] px-7 py-4 text-sm font-medium text-white transition hover:-translate-y-0.5"
+              className="mt-8 inline-flex items-center gap-3 rounded-full bg-calm-navy px-7 py-4 text-sm font-medium text-jamoko-text transition hover:-translate-y-0.5"
             >
               <MessageCircle className="h-4 w-4" aria-hidden="true" />
               Kostenlos kennenlernen
