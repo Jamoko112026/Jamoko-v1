@@ -40,9 +40,7 @@ export default function ContactPage() {
               Direkter Kontakt
             </h1>
             <p className="mt-6 text-lg leading-8 text-calm-muted">
-              Ob neue Website, Digitalbegleitung oder Digital-Check: Erzähl uns
-              kurz, wo es hakt und was du verändern möchtest. Ein paar Sätze zu
-              deinem Betrieb und deinem Alltag reichen völlig aus.
+              Erzähl uns kurz, wo du bei deiner Website oder im digitalen Alltag Hilfe brauchst. Geht es um eine bestehende Seite? Schick uns den Link und sag uns, was deine Kunden dort leichter finden oder erledigen sollen.
             </p>
           </div>
 

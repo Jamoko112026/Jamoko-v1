@@ -152,6 +152,10 @@ export default function PricingPage() {
           Anforderungen besprechen wir vorab separat; neue Wünsche nach der
           Abnahme gelten als Erweiterung.
         </p>
+        <p>
+          Du möchtest einzelne Stellen deiner bestehenden Website verbessern? Dafür erhältst du nach der Durchsicht ein eigenes Angebot.
+          {" "}<Link href="/mini-site#bestehende-website" className="underline underline-offset-4">Mehr zur Überarbeitung</Link>
+        </p>
       </TextSection>
 
       <section className="border-y border-white/10 bg-white/[0.025] px-6 py-20 sm:px-8 md:py-28">
