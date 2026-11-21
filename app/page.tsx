@@ -64,9 +64,10 @@ function ServicesSection() {
             <p className={styles.index}>01 / Sichtbar werden</p>
             <h3>Websites &amp;<br />digitale Sichtbarkeit</h3>
             <p>Eine klare Website, die zeigt, wer du bist, was du anbietest und wie man dich erreicht.</p>
-            <Link className={styles.textLink} href="/mini-site">JaMoKo Website ansehen <ArrowRight size={19} aria-hidden="true" /></Link>
+            <Link className={styles.textLink} href="/mini-site">Website-Angebot ansehen <ArrowRight size={19} aria-hidden="true" /></Link>
+            <Link className={styles.textLink} href="/mini-site#bestehende-website">Bestehende Website verbessern <ArrowRight size={19} aria-hidden="true" /></Link>
             <div id="pricing" className={styles.offer}>
-              <p className={styles.price}>ab 1.490 €</p>
+              <p className={styles.price}>Neue Website ab 1.490 €</p>
               <p>Bis zu 5 Inhaltsseiten · 1 gebündelte Korrekturrunde</p>
               <p className={styles.terms}>In der Regel 2–3 Wochen nach vollständigem Onboarding.<br />50 % zum Start · 50 % zum Abschluss.</p>
               <Link className={styles.textLink} href="/preise">Leistungsumfang &amp; Preise <ArrowRight size={19} aria-hidden="true" /></Link>
