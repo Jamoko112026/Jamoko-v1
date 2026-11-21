@@ -11,16 +11,16 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "JaMoKo Website – Webdesign für lokale Unternehmen",
+  title: "Webdesign in Hamburg – Websites erstellen und überarbeiten",
   description:
-    "Klare Websites für lokale Betriebe, Handwerker und Selbstständige. Individuell gestaltet, mobil optimiert und persönlich umgesetzt.",
+    "Webdesign aus Hamburg für kleine Betriebe. Lass eine neue Website erstellen oder deine bestehende Seite gezielt verbessern. Umfang und Preis klären wir vorab.",
   alternates: {
     canonical: "https://jamoko.de/mini-site",
   },
   openGraph: {
-    title: "JaMoKo Website – Webdesign für lokale Unternehmen",
+    title: "Webdesign in Hamburg – Websites erstellen und überarbeiten",
     description:
-      "Klare Websites für lokale Betriebe, Handwerker und Selbstständige. Individuell gestaltet, mobil optimiert und persönlich umgesetzt.",
+      "Webdesign aus Hamburg für kleine Betriebe. Lass eine neue Website erstellen oder deine bestehende Seite gezielt verbessern. Umfang und Preis klären wir vorab.",
     url: "https://jamoko.de/mini-site",
     images: [
       {
@@ -136,7 +136,7 @@ function TextSection({
   children: ReactNode;
 }) {
   return (
-    <section className="v3-paper px-6 py-20 sm:px-8 md:py-28">
+    <section id="bestehende-website" className="scroll-mt-24 v3-paper px-6 py-20 sm:px-8 md:py-28">
       <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.86fr_1.14fr] lg:items-start">
         <SectionHeading eyebrow={eyebrow} title={title} />
         <div className="space-y-5 text-base leading-8 text-jamoko-text-dim">
@@ -163,9 +163,7 @@ export default function JamokoWebsitePage() {
               </span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-jamoko-text-dim">
-              Du kennst dein Geschäft. Wir bringen auf den Punkt, was dich
-              ausmacht – und bauen daraus eine klare Website, auf der Menschen
-              schnell verstehen, warum sie bei dir richtig sind.
+              Wir gestalten neue Websites für kleine Betriebe und überarbeiten bestehende Seiten. Gemeinsam schauen wir, was deine Kunden finden oder erledigen möchten.
             </p>
             <Link
               href="/kontakt"
@@ -179,13 +177,14 @@ export default function JamokoWebsitePage() {
       </section>
 
       <TextSection
-        eyebrow="Einfach statt kompliziert"
-        title="Du brauchst keine komplizierte Website."
+        eyebrow="Überarbeitung"
+        title="Bestehende Website verbessern"
       >
         <p>
-          Menschen wollen schnell wissen, was du machst, ob du zu ihnen passt
-          und wie sie dich erreichen. Genau darauf konzentrieren wir uns.
+          Deine Kunden rufen an, weil sie eine Leistung oder den Weg zur Anfrage auf deiner Seite nicht finden? Zeig uns die Stelle. Wir prüfen, was sich auf deiner vorhandenen Website ändern lässt, und vereinbaren Umfang und Preis vor der Umsetzung.
         </p>
+        <p><Link href="/kontakt" className="underline underline-offset-4">Überarbeitung anfragen</Link></p>
+        <p><Link href="/projekte/altonaer-reifendienst" className="underline underline-offset-4">Einblick in unsere Arbeit beim Altonaer Reifendienst</Link></p>
       </TextSection>
 
       <section className="border-y border-white/10 bg-white/[0.025] px-6 py-20 sm:px-8 md:py-28">
@@ -221,7 +220,7 @@ export default function JamokoWebsitePage() {
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <SectionHeading
             eyebrow="Leistungsumfang"
-            title="Was enthalten ist"
+            title="Was eine neue Website enthält"
             intro="Der Standardumfang ist klar definiert und auf einen ruhigen, verständlichen Auftritt ausgerichtet."
           />
           <div className="v3-list rounded-3xl border border-white/10 bg-white/[0.025] p-7 sm:p-8">
