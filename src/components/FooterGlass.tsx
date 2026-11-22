@@ -27,7 +27,7 @@ const legal = [
 const social = [
   {
     label: "JaMoKo auf Instagram",
-    href: "https://www.instagram.com/jamoko30",
+    href: "https://www.instagram.com/jamoko.hamburg/",
     icon: Instagram,
   },
   {
