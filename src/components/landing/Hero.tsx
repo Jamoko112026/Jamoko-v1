@@ -1,63 +1,55 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { CalendarDays, Phone } from "lucide-react";
 import styles from "./Hero.module.css";
 
 export function Hero() {
   return (
     <section id="hero" aria-labelledby="hero-title" className={styles.section}>
-      <div className={styles.media}>
-        <Image
-          src="/hero/jamoko-hamburg-hero-v3.png"
-          alt="Blick über den Hamburger Hafen mit Elbphilharmonie, Schiffen und Containerkränen unter einem weiten Wolkenhimmel."
-          fill
-          priority
-          sizes="100vw"
-          className={styles.photo}
-        />
-      </div>
       <div className={styles.inner}>
-        <div className={styles.masthead}>
-          <p className={styles.eyebrow}>JaMoKo · Aus Hamburg</p>
-          <p className={styles.principle}>Erst Mensch, dann Marke, dann Mechanik.</p>
-        </div>
-
-        <h1 id="hero-title" className={styles.title}>
-          Menschen verstehen.
-          <span>Digitales verbinden.</span>
-        </h1>
-
-        <div className={styles.composition}>
-          <div className={styles.copy}>
-            <p className={styles.intro}>
-              JaMoKo verbindet Menschen, Prozesse und digitale Möglichkeiten.
-            </p>
-            <nav className={styles.paths} aria-label="Leistungswege">
-              <Link className={styles.path} href="/mini-site">
-                <span className={styles.pathNumber} aria-hidden="true">01</span>
-                <span className={styles.pathCopy}>
-                  <span className={styles.pathTitle}>Websites &amp; digitale Sichtbarkeit</span>
-                  <span className={styles.pathDescription}>Deine Arbeit verständlich zeigen.</span>
-                </span>
-                <ArrowRight className={styles.pathArrow} size={26} aria-hidden="true" />
-              </Link>
-              <a className={styles.path} href="#digitalbegleitung">
-                <span className={styles.pathNumber} aria-hidden="true">02</span>
-                <span className={styles.pathCopy}>
-                  <span className={styles.pathTitle}>Digitalbegleitung</span>
-                  <span className={styles.pathDescription}>Mehr Ordnung in deinen digitalen Alltag bringen.</span>
-                </span>
-                <ArrowRight className={styles.pathArrow} size={26} aria-hidden="true" />
-              </a>
-            </nav>
-            <Link className={styles.compass} href="/digital-kompass">
-              Noch offen, wo du anfangen sollst?
-              <span>
-                Zum Digital-Kompass <ArrowRight size={18} aria-hidden="true" />
-              </span>
+        <div className={styles.copy}>
+          <p className={styles.eyebrow}>Websites &amp; Digitalbegleitung · Hamburg</p>
+          <h1 id="hero-title" className={styles.title}>
+            Deine Website soll dir <span>Arbeit abnehmen.</span>
+          </h1>
+          <p className={styles.intro}>
+            Wir bauen und verbessern Websites für kleine Betriebe. Und wir kümmern uns darum,
+            dass Anfragen, Termine und E-Mails auch bei dir im Alltag zusammenpassen.
+          </p>
+          <div className={styles.actions}>
+            <Link className={styles.primary} href="/kontakt">Projekt besprechen</Link>
+            <Link className={styles.secondary} href="/mini-site#bestehende-website">
+              Bestehende Website verbessern
             </Link>
           </div>
+          <Link className={styles.digital} href="#digitalbegleitung">Zur Digitalbegleitung</Link>
         </div>
+
+        <aside className={styles.example} aria-labelledby="hero-example-title">
+          <div className={styles.media}>
+            <Image
+              src="/hero/jamoko-hamburg-hero-v3.png"
+              alt=""
+              fill
+              sizes="(min-width: 1400px) 530px, (min-width: 850px) 40vw, 90vw"
+              className={styles.photo}
+            />
+          </div>
+          <div className={styles.caption}>
+            <p className={styles.exampleLabel}>Aus der Praxis · Hausmeisterservice</p>
+            <p id="hero-example-title" className={styles.exampleTitle}>Zwei Termine, zwei Wege.</p>
+          </div>
+          <dl className={styles.routes}>
+            <div className={styles.route}>
+              <dt><Phone size={19} aria-hidden="true" /> Rückruf</dt>
+              <dd>15 Minuten · direkt buchbar</dd>
+            </div>
+            <div className={styles.route}>
+              <dt><CalendarDays size={20} aria-hidden="true" /> Besichtigung</dt>
+              <dd>30 Minuten · persönlich bestätigt</dd>
+            </div>
+          </dl>
+        </aside>
       </div>
     </section>
   );
