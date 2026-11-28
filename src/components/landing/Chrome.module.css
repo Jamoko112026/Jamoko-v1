@@ -40,6 +40,12 @@
   border-radius: .7rem;
 }
 
+/* Show the existing signet without the dark margin baked into the image. */
+.header .signet {
+  clip-path: inset(11.7% 12.9% 15% 12.7% round 18%);
+  transform: translateY(1.65%) scale(1.25);
+}
+
 .wordmark {
   display: block;
   font-family: var(--font-headline);
